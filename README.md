@@ -25,5 +25,5 @@ Russian only. Sorry ¯\_(ツ)_/¯
 
 ## License
 
-Calamity Kingdom uses the MIT license. Please file an issue if you have any questions or if you'd like to share how you're using this project.
+Calamity Kingdom uses the GNU AGPLv3 license. Please file an issue if you have any questions or if you'd like to share how you're using this project.
 
