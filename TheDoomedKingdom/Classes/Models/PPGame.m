@@ -39,7 +39,6 @@ static PPGame *instance = nil;
         self.kingdom = [PPKingdom new];
         self.player = [PPPlayer new];
         
-#warning - Hardcoded data
         self.player.name = @"Вася";
         
         self.dangers = @[];

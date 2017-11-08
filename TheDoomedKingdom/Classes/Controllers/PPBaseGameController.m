@@ -177,13 +177,6 @@
         }
     }
     
-#warning - TICK TIME
-    //    BOOL presented = self.dController && self.dController.view.superview;
-    //
-    //    if (!presented) {
-    //        [self performSelector:@selector(timerTick) withObject:nil afterDelay:1];
-    //    }
-    
     // FIRE
     NSArray *firedDangers = [[PPGame instance] firedDangers];
     
@@ -253,7 +246,7 @@
         
         [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:NO];
         
-        PPDangerProgressController *cntroller = [PPDangerProgressController showWithDanger:nil
+        __block PPDangerProgressController *cntroller = [PPDangerProgressController showWithDanger:nil
                                                                                 andAbility:nil andCompletionBlock:^(BOOL result) {
                                                                                     [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:YES];
                                                                                     [cntroller hide:nil];
