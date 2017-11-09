@@ -185,7 +185,7 @@
 		D51D03351C97E6C200FE1467 /* LibraryIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LibraryIcon@2x.png"; sourceTree = "<group>"; };
 		D51D033E1C97EB6900FE1467 /* PPLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLibraryViewController.h; sourceTree = "<group>"; };
 		D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLibraryViewController.m; sourceTree = "<group>"; };
-		D524122F1C5C8DBD00EB1FF4 /* TheDoomedKingdom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheDoomedKingdom.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D524122F1C5C8DBD00EB1FF4 /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52412331C5C8DBD00EB1FF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D52412351C5C8DBD00EB1FF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D52412361C5C8DBD00EB1FF4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -396,7 +396,7 @@
 		D52412301C5C8DBD00EB1FF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D524122F1C5C8DBD00EB1FF4 /* TheDoomedKingdom.app */,
+				D524122F1C5C8DBD00EB1FF4 /* Calamity.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -741,7 +741,7 @@
 			);
 			name = TheDoomedKingdom;
 			productName = TheDoomedKingdom;
-			productReference = D524122F1C5C8DBD00EB1FF4 /* TheDoomedKingdom.app */;
+			productReference = D524122F1C5C8DBD00EB1FF4 /* Calamity.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1078,7 +1078,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calamity.kingdom;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calamity;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1096,7 +1096,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.calamity.kingdom;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Calamity;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
