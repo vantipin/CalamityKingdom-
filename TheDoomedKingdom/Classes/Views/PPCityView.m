@@ -37,7 +37,8 @@
         [self.progressBar updateToCurrentValue:currValue animated:YES];
         
         if (self.currLiveLabel) {
-            [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
+            [self.currLiveLabel setHidden:YES];
+//            [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
 //            [self.currLiveLabel.layer setMasksToBounds:NO];
 //            self.currLiveLabel.layer.shadowRadius = 6.;
 //            self.currLiveLabel.layer.shadowColor = [UIColor darkGrayColor].CGColor;

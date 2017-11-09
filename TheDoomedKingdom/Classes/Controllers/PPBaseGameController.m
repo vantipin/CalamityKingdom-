@@ -126,7 +126,7 @@
         }
     }
     
-    self.timeLabel.text = [NSString stringWithFormat:@"День: %li\nЧас: %li", (long)([[PPGame instance] currentTimeHours] / 24), (long)[[PPGame instance] currentTimeHours] % 24];
+    self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] currentTimeHours] / 24)];
     
     [self.viewTypeButton setHidden:![[PPGame instance] visionAffectedTime]];
 }
