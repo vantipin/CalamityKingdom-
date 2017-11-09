@@ -131,6 +131,10 @@
     [self.viewTypeButton setHidden:![[PPGame instance] visionAffectedTime]];
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)checkAndRedraw
 {
     //    if (self.dController && self.dController.view.superview && [self.dController class] != [PPCityInfoController class]) {

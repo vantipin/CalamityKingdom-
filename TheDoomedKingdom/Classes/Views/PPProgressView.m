@@ -9,7 +9,7 @@
 #import "PPProgressView.h"
 #import "PPDangerProgressController.h"
 
-#define DurationPerImage 0.125
+#define DurationPerImage 0.2
 
 typedef void(^CompletionBlock)(BOOL result);
 
@@ -21,6 +21,22 @@ typedef void(^CompletionBlock)(BOOL result);
 @end
 
 @implementation PPProgressView
+
+- (void)animatePlayerWithImages:(NSArray *)anImages nextImage:(NSInteger)next {
+    NSInteger index = next % anImages.count;
+    UIImage *newImage = anImages[index];
+    __weak __typeof(self) weakSelf = self;
+    __block NSInteger nextIndex = index + 1;
+    
+    [UIView transitionWithView:self.playerImageView
+                      duration:DurationPerImage
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    animations:^{
+                        self.playerImageView.image = newImage;
+                    } completion:^(BOOL finished) {
+                        [weakSelf animatePlayerWithImages:anImages nextImage:nextIndex];
+                    }];
+}
 
 - (void)initWithAbility:(PPAbility *)ability
               andDanger:(PPDanger *)danger
@@ -52,7 +68,11 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
                        [UIImage imageNamed:@"3_2.png"],];
         }
         
-        self.playerImageView.image = [UIImage animatedImageWithImages:images duration:DurationPerImage * images.count];
+        
+        self.playerImageView.image = images.firstObject;
+        [self animatePlayerWithImages:images nextImage:1];
+        
+//        self.playerImageView.image = [UIImage animatedImageWithImages:images duration:DurationPerImage * images.count];
         
         NSInteger hoursToRemove = ability.timeToDestroyDanger;
         self.currentValue = 0.;

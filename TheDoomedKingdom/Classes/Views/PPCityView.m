@@ -31,13 +31,18 @@
         if (self.popularityLabel) {
             NSInteger cityPopularity = city.currentMagePopularity;
             self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)cityPopularity];
+            
+            [self.currLiveLabel setHidden:NO];
+            [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
+        } else {
+            [self.currLiveLabel setHidden:YES];
         }
         
         NSInteger currValue = 100 - (100 * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount);
         [self.progressBar updateToCurrentValue:currValue animated:YES];
         
         if (self.currLiveLabel) {
-            [self.currLiveLabel setHidden:YES];
+//            [self.currLiveLabel setHidden:YES];
 //            [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
 //            [self.currLiveLabel.layer setMasksToBounds:NO];
 //            self.currLiveLabel.layer.shadowRadius = 6.;
