@@ -36,4 +36,15 @@ typedef NS_ENUM(NSInteger, PPAbilityType) {
 #define ABILITIES_REGEN_VALUE_IN_HOUR 1.
 #define AnimationDuration 0.3
 
+
+#pragma mark - Parse game constants
+
+#define DisasterIdKey @"id_disaster"
+#define NameKey @"name"
+#define TypeKey "type"
+#define MinDmgKey @"min_dmg"
+#define MaxDmgKey @"max_dmg"
+#define DayKey @"day"
+#define DescriptionKey @"description"
+
 #endif /* PPGlobalConstants_h */
