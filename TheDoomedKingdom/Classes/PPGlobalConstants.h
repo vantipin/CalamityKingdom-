@@ -17,11 +17,6 @@ typedef NS_ENUM(NSInteger, PPAbilityType) {
     PPAbilityTypeNobody,
 };
 
-typedef NS_ENUM(NSInteger, PPCityViewType) {
-    PPCityViewTypeDefault = 0,
-    PPCityViewTypeVision = 1,
-};
-
 #define PopupSize CGSizeMake(769., 497)
 #define LibraryPopupSize CGSizeMake(699., 451.)
 
@@ -39,8 +34,6 @@ typedef NS_ENUM(NSInteger, PPCityViewType) {
 #define MaxAbilityValue 100
 
 #define ABILITIES_REGEN_VALUE_IN_HOUR 1.
-
-
-#define CityShieldAbsorbValue 0.9
+#define AnimationDuration 0.3
 
 #endif /* PPGlobalConstants_h */

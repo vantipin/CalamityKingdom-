@@ -14,11 +14,6 @@
 
 - (void)setCity:(PPCity *)city
 {
-    [self setCity:city forVisionType:PPCityViewTypeDefault];
-}
-
-- (void)setCity:(PPCity *)city forVisionType:(PPCityViewType)viewType
-{
     _city = city;
     
     if (city) {
@@ -76,16 +71,8 @@
             self.cityIconImageView.image = [UIImage imageNamed:cityNameString];
 //        }
         
-        BOOL inDanger = NO;
-        
-        if (viewType == PPCityViewTypeDefault) {
-            inDanger = city.cityInDanger;
-        } else {
-            inDanger = [[PPGame instance] cityInVisionDanger:city];
-        }
-        
-        self.cityIconImageView.alpha = viewType == PPCityViewTypeDefault ? 1. : 0.7;
-        
+        BOOL inDanger = city.cityInDanger;
+                
         UIView *view = [self viewWithTag:666];
         
         if (view) {

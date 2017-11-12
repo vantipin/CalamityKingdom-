@@ -35,7 +35,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" id="ran-GL-1db">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.31" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
@@ -387,6 +387,85 @@
                                     <outlet property="currLiveLabel" destination="pFK-xh-hrX" id="KCt-Rv-aMu"/>
                                     <outlet property="nameLabel" destination="bgk-TO-0K6" id="9fc-FX-e1n"/>
                                     <outlet property="progressBar" destination="3eI-Hf-9Lb" id="P8d-so-Z2W"/>
+                                </connections>
+                            </view>
+                            <view tag="2" contentMode="scaleToFill" id="RA1-Dy-JRw" userLabel="Mid City 2" customClass="PPCityView">
+                                <rect key="frame" x="424" y="402" width="121" height="177"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="dna-4E-vEX">
+                                        <rect key="frame" x="-55" y="-54" width="245" height="253"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Town2City.png" id="mRG-Fd-hSI">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </imageView>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="laQ-sl-qfh">
+                                        <rect key="frame" x="-58" y="-65" width="244" height="201"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IqB-dO-nCY">
+                                        <rect key="frame" x="0.0" y="116" width="121" height="14"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="XRc-hN-RcQ" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="136" width="121" height="19"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="initialFillColor">
+                                                <color key="value" red="0.69019607839999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="oneThirdFillColor">
+                                                <color key="value" red="1" green="0.96690991319999997" blue="0.072569683339999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="finalFillColor">
+                                                <color key="value" red="0.4823529412" green="0.69019607839999997" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="twoThirdsFillColor">
+                                                <color key="value" red="0.39226083579999999" green="0.92827248090000003" blue="0.24482029420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLabels" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="XQw-jl-JcU">
+                                        <rect key="frame" x="0.0" y="155" width="121" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <size key="shadowOffset" width="1" height="1"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="cityIconImageView" destination="mRG-Fd-hSI" id="T9i-Ay-1oK"/>
+                                    <outlet property="currLiveLabel" destination="XQw-jl-JcU" id="jxX-6M-Yb1"/>
+                                    <outlet property="nameLabel" destination="IqB-dO-nCY" id="ap9-5s-Tbe"/>
+                                    <outlet property="progressBar" destination="XRc-hN-RcQ" id="HWj-rL-R9h"/>
                                 </connections>
                             </view>
                             <view tag="3" contentMode="scaleToFill" id="5t7-P9-heo" userLabel="Mid City 3" customClass="PPCityView">
@@ -888,91 +967,20 @@
                                     <action selector="plusHour:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zb3-l1-UFM"/>
                                 </connections>
                             </button>
-                            <view tag="2" contentMode="scaleToFill" id="RA1-Dy-JRw" userLabel="Mid City 2" customClass="PPCityView">
-                                <rect key="frame" x="424" y="402" width="121" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="dna-4E-vEX">
-                                        <rect key="frame" x="-55" y="-54" width="245" height="253"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Town2City.png" id="mRG-Fd-hSI">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="116"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="laQ-sl-qfh">
-                                        <rect key="frame" x="-58" y="-65" width="244" height="201"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IqB-dO-nCY">
-                                        <rect key="frame" x="0.0" y="116" width="121" height="14"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="XRc-hN-RcQ" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="0.0" y="136" width="121" height="19"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="initialFillColor">
-                                                <color key="value" red="0.69019607839999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="oneThirdFillColor">
-                                                <color key="value" red="1" green="0.96690991319999997" blue="0.072569683339999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="finalFillColor">
-                                                <color key="value" red="0.4823529412" green="0.69019607839999997" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="twoThirdsFillColor">
-                                                <color key="value" red="0.39226083579999999" green="0.92827248090000003" blue="0.24482029420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <real key="value" value="3"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
-                                                <integer key="value" value="0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                <integer key="value" value="100"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLabels" value="NO"/>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                                <integer key="value" value="2"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
-                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="XQw-jl-JcU">
-                                        <rect key="frame" x="0.0" y="155" width="121" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <outlet property="cityIconImageView" destination="mRG-Fd-hSI" id="T9i-Ay-1oK"/>
-                                    <outlet property="currLiveLabel" destination="XQw-jl-JcU" id="jxX-6M-Yb1"/>
-                                    <outlet property="nameLabel" destination="IqB-dO-nCY" id="ap9-5s-Tbe"/>
-                                    <outlet property="progressBar" destination="XRc-hN-RcQ" id="HWj-rL-R9h"/>
-                                </connections>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TQw-EL-DfX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TQw-EL-DfX" userLabel="Library Button">
                                 <rect key="frame" x="839" y="20" width="165" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="LibraryIcon.png"/>
                                 <connections>
                                     <action selector="libraryPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IbR-TK-LdH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="a1c-L9-4Ur" userLabel="Update Button">
+                                <rect key="frame" x="8" y="624" width="70" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="UpdateIcon"/>
+                                <connections>
+                                    <action selector="updatePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7SE-wF-zAj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -995,6 +1003,24 @@
                         <outletCollection property="playerAbilities" destination="8lk-kh-RgO" id="7Fa-B7-oh9"/>
                         <outletCollection property="playerAbilities" destination="upl-G4-0UY" id="Wgy-yN-iDG"/>
                         <outletCollection property="cityViews" destination="JEW-Kb-Unq" id="bDP-wG-yaR"/>
+                        <outletCollection property="fieldControls" destination="lzs-oW-krg" id="00p-eX-Sk0"/>
+                        <outletCollection property="fieldControls" destination="DbW-M0-GQE" id="x8Z-2n-GNR"/>
+                        <outletCollection property="fieldControls" destination="8lk-kh-RgO" id="548-od-dL8"/>
+                        <outletCollection property="fieldControls" destination="upl-G4-0UY" id="pp3-Qr-Pvy"/>
+                        <outletCollection property="fieldControls" destination="TQw-EL-DfX" id="wKt-QO-afg"/>
+                        <outletCollection property="fieldControls" destination="cDS-Xw-leI" id="IcX-AI-4Jn"/>
+                        <outletCollection property="fieldControls" destination="l3H-nL-SlY" id="t0I-ng-cF7"/>
+                        <outletCollection property="fieldControls" destination="aBR-5O-zJm" id="iGk-Fo-8PS"/>
+                        <outletCollection property="fieldControls" destination="lpk-Xq-SOg" id="vbN-yd-FLm"/>
+                        <outletCollection property="fieldControls" destination="4HH-8l-0Ea" id="qSz-6K-A8f"/>
+                        <outletCollection property="fieldControls" destination="JEW-Kb-Unq" id="lF5-t1-bQT"/>
+                        <outletCollection property="fieldControls" destination="uDi-qT-ezR" id="d4J-tz-24w"/>
+                        <outletCollection property="fieldControls" destination="5t7-P9-heo" id="CdL-fO-Qwn"/>
+                        <outletCollection property="fieldControls" destination="RA1-Dy-JRw" id="BA4-ct-ct9"/>
+                        <outletCollection property="fieldControls" destination="aKP-e2-9QP" id="7vW-hk-e5O"/>
+                        <outletCollection property="fieldControls" destination="sz0-MV-4F1" id="JM9-6W-F1m"/>
+                        <outletCollection property="fieldControls" destination="N93-Zd-ITk" id="PqZ-T9-ukD"/>
+                        <outletCollection property="fieldControls" destination="a1c-L9-4Ur" id="Jrr-DO-Qlf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1530,7 +1556,7 @@
         <!--Library View Controller-->
         <scene sceneID="DwD-On-ZoM">
             <objects>
-                <viewController storyboardIdentifier="PPLibraryControllerId" id="VNF-sH-iy2" customClass="PPLibraryViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPLibraryControllerId" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="VNF-sH-iy2" customClass="PPLibraryViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HiC-iR-EZn">
                         <rect key="frame" x="0.0" y="0.0" width="699" height="421"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1695,6 +1721,7 @@
         <image name="TelekinesisIcon.png" width="78" height="69"/>
         <image name="Town1City.png" width="129" height="116"/>
         <image name="Town2City.png" width="129" height="116"/>
+        <image name="UpdateIcon" width="36" height="48"/>
         <image name="VillageFishermansCity.png" width="135" height="119"/>
         <image name="VillageLumbererCity.png" width="135" height="119"/>
         <image name="VillageVariorsCity.png" width="135" height="119"/>

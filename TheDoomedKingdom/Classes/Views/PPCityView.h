@@ -22,6 +22,4 @@
 
 @property (nonatomic, strong) PPCity *city;
 
-- (void)setCity:(PPCity *)city forVisionType:(PPCityViewType)viewType;
-
 @end

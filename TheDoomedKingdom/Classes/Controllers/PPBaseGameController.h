@@ -20,11 +20,8 @@
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *cityViews;
 
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *playerAbilities;
-@property (weak, nonatomic) IBOutlet UIButton *viewTypeButton;
 
 - (IBAction)plusHour:(id)sender;
-- (IBAction)activateVision:(id)sender;
-- (IBAction)changeViewType:(id)sender;
 
 - (IBAction)libraryPressed:(id)sender;
 

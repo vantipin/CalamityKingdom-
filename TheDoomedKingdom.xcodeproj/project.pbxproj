@@ -164,12 +164,14 @@
 		D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5141C969AE1002D3E77 /* PBMiddleProgress@2x.png */; };
 		D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5151C969AE1002D3E77 /* PBMiddle.png */; };
 		D5CFB51A1C969AE1002D3E77 /* PBMiddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */; };
+		EF4E2941C1CE20A89BFA82C9 /* libPods-TheDoomedKingdom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5CED44F41C5E37A400D9256F /* PaperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaperView.h; sourceTree = "<group>"; };
 		5CED44F51C5E37A400D9256F /* PaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperView.m; sourceTree = "<group>"; };
 		5CED44F91C5E3FD100D9256F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TheDoomedKingdom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D51D03251C975DD100FE1467 /* ProgressStripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressStripe.png; sourceTree = "<group>"; };
 		D51D03261C975DD100FE1467 /* ProgressStripe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ProgressStripe@2x.png"; sourceTree = "<group>"; };
 		D51D03291C97E0A700FE1467 /* library.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = library.tsv; sourceTree = "<group>"; };
@@ -364,6 +366,8 @@
 		D5CFB5151C969AE1002D3E77 /* PBMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBMiddle.png; sourceTree = "<group>"; };
 		D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddle@2x.png"; sourceTree = "<group>"; };
 		D5EB55361C6745480085CA22 /* PPCalamityKingdom.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCalamityKingdom.pch; sourceTree = "<group>"; };
+		DEB8AAEF6ADD4DBF62811809 /* Pods-TheDoomedKingdom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDoomedKingdom.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom.release.xcconfig"; sourceTree = "<group>"; };
+		ED32AF1F93B64CC5D4F1788A /* Pods-TheDoomedKingdom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDoomedKingdom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -379,17 +383,29 @@
 				D52412571C5C8E2800EB1FF4 /* QuartzCore.framework in Frameworks */,
 				D52412581C5C8E2800EB1FF4 /* SystemConfiguration.framework in Frameworks */,
 				D524124A1C5C8DE400EB1FF4 /* Foundation.framework in Frameworks */,
+				EF4E2941C1CE20A89BFA82C9 /* libPods-TheDoomedKingdom.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A854AC7B2D67906B837B6CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ED32AF1F93B64CC5D4F1788A /* Pods-TheDoomedKingdom.debug.xcconfig */,
+				DEB8AAEF6ADD4DBF62811809 /* Pods-TheDoomedKingdom.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D52412261C5C8DBD00EB1FF4 = {
 			isa = PBXGroup;
 			children = (
 				D52412311C5C8DBD00EB1FF4 /* TheDoomedKingdom */,
 				D52412301C5C8DBD00EB1FF4 /* Products */,
+				8A854AC7B2D67906B837B6CD /* Pods */,
+				DAE09AC17C6891461DA8103D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -724,6 +740,14 @@
 			path = TYMProgressBarView;
 			sourceTree = "<group>";
 		};
+		DAE09AC17C6891461DA8103D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -731,9 +755,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D52412461C5C8DBD00EB1FF4 /* Build configuration list for PBXNativeTarget "TheDoomedKingdom" */;
 			buildPhases = (
+				19CDF86C46BE6980FB8C651C /* [CP] Check Pods Manifest.lock */,
 				D524122B1C5C8DBD00EB1FF4 /* Sources */,
 				D524122C1C5C8DBD00EB1FF4 /* Frameworks */,
 				D524122D1C5C8DBD00EB1FF4 /* Resources */,
+				D13CFC960947CD9FB9B5C8B8 /* [CP] Embed Pods Frameworks */,
+				A49091C0DF0D76322714E49C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -903,6 +930,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		19CDF86C46BE6980FB8C651C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheDoomedKingdom-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A49091C0DF0D76322714E49C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom-resources.sh",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D13CFC960947CD9FB9B5C8B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D524122B1C5C8DBD00EB1FF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1011,7 +1092,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1057,7 +1138,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -1067,6 +1148,7 @@
 		};
 		D52412471C5C8DBD00EB1FF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED32AF1F93B64CC5D4F1788A /* Pods-TheDoomedKingdom.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
@@ -1086,6 +1168,7 @@
 		};
 		D52412481C5C8DBD00EB1FF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DEB8AAEF6ADD4DBF62811809 /* Pods-TheDoomedKingdom.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";

@@ -217,18 +217,4 @@ static PPGame *instance = nil;
     [[NSNotificationCenter defaultCenter] postNotificationName:@"UPDATE" object:nil];
 }
 
-- (BOOL)visionAffectedTime
-{
-    NSArray *affectedDangers = [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(timeToAppear > %@) AND (self.predefinedCity != nil)", @(self.currentTimeHours)]];
-    
-    return (affectedDangers && affectedDangers.count > 0);
-}
-
-- (BOOL)cityInVisionDanger:(PPCity *)city
-{
-    NSArray *affectedDangers = [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.predefinedCity == %@) AND (self.removed == NO)", city]];
-    
-    return (affectedDangers && affectedDangers.count > 0);
-}
-
 @end

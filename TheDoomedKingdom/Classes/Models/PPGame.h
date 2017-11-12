@@ -33,11 +33,6 @@
 
 - (NSArray *)firedDangers; // Dangers for apply default damage
 
-// Visison methods
-- (NSArray *)dangersAffectedWithVision; // Dangers for apply with vision to cities
-- (BOOL)visionAffectedTime; // Check current vision state
-- (BOOL)cityInVisionDanger:(PPCity *)city; // Check City for Predefined danger
-
 // Free dangers (whose time has come) and free (from dangers) cities to randomize and apply dangers
 - (NSArray *)dangersToApply;
 - (NSArray *)freeCities;

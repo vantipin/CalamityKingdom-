@@ -24,15 +24,41 @@
 @interface PPBaseGameController ()
 
 @property (nonatomic, strong) PPCityDangerController *dController;
-@property (nonatomic, assign) PPCityViewType viewType;
+@property (strong, nonatomic) IBOutletCollection(UIView) NSArray *fieldControls;
 
 @end
 
 @implementation PPBaseGameController
+- (IBAction)updatePressed:(id)sender {
+    [self parseGameAnimatable:YES];
+}
+
+- (void)parseGameAnimatable:(BOOL)withAnimation {
+    [SVProgressHUD show];
+    
+    [UIView animateWithDuration:withAnimation ? AnimationDuration : 0 animations:^{
+        for (UIView *view in _fieldControls) {
+            view.alpha = 0;
+        }
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[PPGame instance] parseGame];
+        [SVProgressHUD dismiss];
+        [self checkAndRedraw];
+        
+        [UIView animateWithDuration:AnimationDuration animations:^{
+            for (UIView *view in _fieldControls) {
+                view.alpha = 1;
+            }
+        }];
+    });
+    
+    
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _viewType = PPCityViewTypeDefault;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"UPDATE" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearUI:) name:@"CLEAR" object:nil];
@@ -49,7 +75,6 @@
     self.playerName.text = player.name;
     self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)[player totalPopularity]];
     
-    self.viewType = PPCityViewTypeDefault;
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -101,16 +126,13 @@
 
 - (void)redrawInterface
 {
-    [self.viewTypeButton setHidden:![[PPGame instance] visionAffectedTime]];
-    
-    [self.viewTypeButton setTitle:(self.viewType == PPCityViewTypeDefault ? @"Обычный режим" : @"Режим предвидения") forState:UIControlStateNormal];
     
     NSArray *cities = [[[PPGame instance] kingdom] cities];
     
     for (PPCityView *view in self.cityViews) {
         if (view.tag < cities.count) {
             PPCity *city = cities[view.tag];
-            [view setCity:city forVisionType:self.viewType];
+            [view setCity:city];
         }
     }
     
@@ -127,8 +149,6 @@
     }
     
     self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] currentTimeHours] / 24)];
-    
-    [self.viewTypeButton setHidden:![[PPGame instance] visionAffectedTime]];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -215,21 +235,18 @@
         }
         
         [self checkAndRedraw];
-        
-        BOOL visionTime = [[PPGame instance] visionAffectedTime];
-        
-        if (self.viewType == PPCityViewTypeVision && !visionTime) {
-            self.viewType = PPCityViewTypeDefault;
-        }
     }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self parseGameAnimatable:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    [[PPGame instance] parseGame];
-    [self checkAndRedraw];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -242,85 +259,9 @@
     [self timerTick];
 }
 
-- (IBAction)activateVision:(id)sender
-{
-    PPGame *game = [PPGame instance];
-    
-    if (![game visionAffectedTime]) {
-        
-        [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:NO];
-        
-        __block PPDangerProgressController *cntroller = [PPDangerProgressController showWithDanger:nil
-                                                                                andAbility:nil andCompletionBlock:^(BOOL result) {
-                                                                                    [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:YES];
-                                                                                    [cntroller hide:nil];
-                                                                                    
-                                                                                    NSArray *affectedDangers = [game dangersAffectedWithVision];
-                                                                                    NSArray *allCities = game.kingdom.cities;
-                                                                                    NSMutableArray *usedCities = [@[] mutableCopy];
-                                                                                    
-                                                                                    for (PPDanger *danger in affectedDangers) {
-                                                                                        NSMutableArray *freeCities = [[[PPGame instance] freeCities] mutableCopy];
-                                                                                        
-                                                                                        if (freeCities) {
-                                                                                            [freeCities removeObjectsInArray:usedCities];
-                                                                                        }
-                                                                                        
-                                                                                        NSMutableArray *currentlyNotFree = [allCities mutableCopy];
-                                                                                        [currentlyNotFree removeObjectsInArray:usedCities];
-                                                                                        
-                                                                                        if (freeCities && freeCities.count > 0) {
-                                                                                            NSInteger randomIndex = arc4random() % freeCities.count;
-                                                                                            PPCity *affectedCity = freeCities[randomIndex];
-                                                                                            
-                                                                                            danger.predefinedCity = affectedCity;
-                                                                                            [usedCities addObject:affectedCity];
-                                                                                        } else if (currentlyNotFree && currentlyNotFree.count > 0) {
-                                                                                            NSInteger randomIndex = arc4random() % currentlyNotFree.count;
-                                                                                            PPCity *affectedCity = currentlyNotFree[randomIndex];
-                                                                                            
-                                                                                            danger.predefinedCity = affectedCity;
-                                                                                            [usedCities addObject:affectedCity];
-                                                                                        } else {
-                                                                                            NSInteger randomIndex = arc4random() % allCities.count;
-                                                                                            PPCity *affectedCity = allCities[randomIndex];
-                                                                                            
-                                                                                            danger.predefinedCity = affectedCity;
-                                                                                            [usedCities addObject:affectedCity];
-                                                                                        }
-                                                                                        
-                                                                                    }
-                                                                                    
-                                                                                    self.viewType = PPCityViewTypeVision;
-                                                                                }];
-        
-    }
-}
-
-- (IBAction)changeViewType:(id)sender
-{
-    if ([[PPGame instance] visionAffectedTime]) {
-        [self inverseViewType];
-    }
-}
-
 - (IBAction)libraryPressed:(id)sender
 {
     [PPLibraryViewController show];
-}
-
-- (void)inverseViewType
-{
-    self.viewType = self.viewType == PPCityViewTypeDefault ? PPCityViewTypeVision : PPCityViewTypeDefault;
-}
-
-- (void)setViewType:(PPCityViewType)viewType
-{
-    if (viewType != _viewType) {
-        _viewType = viewType;
-        
-        [self redrawInterface];
-    }
 }
 
 @end
