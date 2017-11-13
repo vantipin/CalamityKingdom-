@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PPGlobalConstants.h"
 
 @interface PPAbility : NSObject
 

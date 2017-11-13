@@ -7,7 +7,6 @@
 //
 
 #import "PPAbility.h"
-#import "PPGlobalConstants.h"
 
 @implementation PPAbility
 @synthesize value;

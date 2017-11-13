@@ -16,6 +16,16 @@
 #import "PPCity.h"
 #import "PPLibraryItem.h"
 
+#import "GoogleDocsServiceLayer.h"
+#import "PPTable.h"
+
+@interface PPGame()
+
+@property (nonatomic) NSArray *sheets;
+@property (nonatomic) PPSheet loadedSheets;
+
+@end
+
 @implementation PPGame
 
 static PPGame *instance = nil;
@@ -32,23 +42,86 @@ static PPGame *instance = nil;
     return instance;
 }
 
+- (void)reinitGame {
+    self.kingdom = [PPKingdom new];
+    self.player = [PPPlayer new];
+    
+    self.loadedSheets = 0;
+//    PPSheetCities + PPSheetDisasters + PPSheetReplies + PPSheetEndings + PPSheetArchimags + PPSheetLibrary + PPSheetEvents + PPSheetEventReplies + PPSheetConstants
+    self.sheets = @[
+                    [PPTable objectWithUrl:CitiesSheetUrl type:PPSheetCities],
+                    [PPTable objectWithUrl:DisasterSheetUrl type:PPSheetDisasters],
+                    [PPTable objectWithUrl:RepliesSheetUrl type:PPSheetReplies],
+                    [PPTable objectWithUrl:EndingsSheetUrl type:PPSheetEndings],
+                    [PPTable objectWithUrl:ArchimagsSheetUrl type:PPSheetArchimags],
+                    [PPTable objectWithUrl:LibrarySheetUrl type:PPSheetLibrary],
+                    [PPTable objectWithUrl:EventsSheetUrl type:PPSheetEvents],
+                    [PPTable objectWithUrl:EventRepliesSheetUrl type:PPSheetEventReplies],
+                    [PPTable objectWithUrl:ConstantsSheetUrl type:PPSheetConstants]
+                    ];
+    
+    self.player.name = @"Вася";
+    
+    self.dangers = @[];
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        self.kingdom = [PPKingdom new];
-        self.player = [PPPlayer new];
-        
-        self.player.name = @"Вася";
-        
-        self.dangers = @[];
+        [self reinitGame];
     }
     
     return self;
 }
 
+- (void)updateGame:(PPGameCallback)completion {
+//    [GoogleDocsServiceLayer sheetsForWorksheetKey:@"1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0"  callback:^(NSArray *objects, NSError *error) {
+//        if (error) {
+//            if (completion) {
+//                completion(NO, error);
+//            }
+//
+//            return;
+//        } else {
+//            NSLog(@"worksheets = %@", objects);
+//
+//            NSLog(@"213412");
+//        }
+//    }];
+    
+    __weak __typeof(self) weakSelf = self;
+    __block NSError *updateError = nil;
+    
+    for (PPTable *table in self.sheets) {
+        NSLog(@"START LOADING");
+        
+        [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId callback:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                
+            } else {
+                updateError = error;
+            }
+            
+            NSLog(@"loaded %li", (long)table.sheet);
+            weakSelf.loadedSheets += table.sheet;
+            
+            if (weakSelf.loadedSheets == PPSheetAll) {
+                NSLog(@"all loaded! with error = %@", updateError != nil ? @"YES" : @"NO");
+            }
+        }];
+    }
+}
+
 - (void)parseGame
 {
+    [self reinitGame];
+    
+    [self updateGame:^(BOOL success, NSError *error) {
+        NSLog(@"success = %@", success ? @"YES" : @"NO");
+    }];
+    
+    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"tsv"];
     
     NSArray *cities = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];

@@ -68,6 +68,7 @@
 		D5530FBC1CA03FB10064A220 /* TownRuined@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB61CA03FB10064A220 /* TownRuined@2x.png */; };
 		D5530FBD1CA03FB10064A220 /* CapitalCityRuined.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB71CA03FB10064A220 /* CapitalCityRuined.png */; };
 		D5530FBE1CA03FB10064A220 /* CapitalCityRuined@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB81CA03FB10064A220 /* CapitalCityRuined@2x.png */; };
+		D559CD7A1FBA5B400053D8C2 /* PPTable.m in Sources */ = {isa = PBXBuildFile; fileRef = D559CD791FBA5B400053D8C2 /* PPTable.m */; };
 		D55E4F7A1C877B5000320667 /* Stamp.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F781C877B5000320667 /* Stamp.png */; };
 		D55E4F7B1C877B5000320667 /* Stamp@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F791C877B5000320667 /* Stamp@2x.png */; };
 		D55E4F841C87807600320667 /* ChaosIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F7C1C87807600320667 /* ChaosIcon.png */; };
@@ -264,6 +265,8 @@
 		D5530FB61CA03FB10064A220 /* TownRuined@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TownRuined@2x.png"; sourceTree = "<group>"; };
 		D5530FB71CA03FB10064A220 /* CapitalCityRuined.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CapitalCityRuined.png; sourceTree = "<group>"; };
 		D5530FB81CA03FB10064A220 /* CapitalCityRuined@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CapitalCityRuined@2x.png"; sourceTree = "<group>"; };
+		D559CD781FBA5B400053D8C2 /* PPTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPTable.h; sourceTree = "<group>"; };
+		D559CD791FBA5B400053D8C2 /* PPTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPTable.m; sourceTree = "<group>"; };
 		D55E4F781C877B5000320667 /* Stamp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stamp.png; sourceTree = "<group>"; };
 		D55E4F791C877B5000320667 /* Stamp@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Stamp@2x.png"; sourceTree = "<group>"; };
 		D55E4F7C1C87807600320667 /* ChaosIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChaosIcon.png; sourceTree = "<group>"; };
@@ -524,6 +527,8 @@
 				D524127A1C5CCDC600EB1FF4 /* PPValue.m */,
 				D51D032B1C97E11700FE1467 /* PPLibraryItem.h */,
 				D51D032C1C97E11700FE1467 /* PPLibraryItem.m */,
+				D559CD781FBA5B400053D8C2 /* PPTable.h */,
+				D559CD791FBA5B400053D8C2 /* PPTable.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1001,6 +1006,7 @@
 				D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */,
 				D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */,
 				D52413781C5E353300EB1FF4 /* PPDangerView.m in Sources */,
+				D559CD7A1FBA5B400053D8C2 /* PPTable.m in Sources */,
 				D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */,
 				D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */,
 				D52412341C5C8DBD00EB1FF4 /* main.m in Sources */,

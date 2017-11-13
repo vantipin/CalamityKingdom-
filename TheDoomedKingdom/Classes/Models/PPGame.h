@@ -9,9 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "PPKingdom.h"
 #import "PPPlayer.h"
-#import "PPGlobalConstants.h"
 
 @class PPCity;
+
+typedef void (^PPGameCallback)(BOOL success, NSError *error);
 
 @interface PPGame : NSObject
 

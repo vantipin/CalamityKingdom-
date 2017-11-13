@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PPGlobalConstants.h"
 @class PPDanger;
 
 @interface PPCity : NSObject
