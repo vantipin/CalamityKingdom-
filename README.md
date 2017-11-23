@@ -2,7 +2,6 @@
 
 ![Calamity Kingdom](https://cloud.githubusercontent.com/assets/16136204/24752473/9fec2312-1ad6-11e7-9ea5-690e86f70eb7.jpg)
 
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 [![Platform](https://img.shields.io/badge/platform-iOS-lightgrey.svg)]()
 [![Language](https://img.shields.io/badge/language-objc-green.svg)]()
 
