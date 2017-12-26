@@ -174,8 +174,6 @@
                     PPDanger *cityDanger = city.currentDanger;
                     
                     if (!cityDanger.inProgress) {
-                        danger.timeToAppear = cityDanger.timeToAppear + cityDanger.maxTimeForDanger + 1 + arc4random() % 3;
-                    } else {
                         danger.timeToAppear += 1 + arc4random() % 3;
                     }
                 } else {

@@ -29,6 +29,15 @@
     [self recalculateCurrentRatingWithDanger:danger andAbilityType:PPAbilityTypeNobody];
 }
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"identifier" : @"id",
+             @"name": @"name",
+             @"cityDescription": @"description",
+             @"initPeopleCount": @"people"
+             };
+}
+
 -(void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
                            andAbilityType:(PPAbilityType)abilityType
 {
@@ -56,6 +65,11 @@
 - (void)setRating:(CGFloat)rating
 {
     _rating = MAX(MIN(1., rating), 0.);
+}
+
+- (void)setInitPeopleCount:(NSInteger)initPeopleCount {
+    _initPeopleCount = initPeopleCount;
+    _currPeopleCount = initPeopleCount;
 }
 
 @end

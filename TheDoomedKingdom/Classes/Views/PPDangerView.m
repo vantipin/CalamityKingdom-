@@ -26,7 +26,6 @@
         
         self.descrLabel.text = [danger.dangerDescription stringByReplacingOccurrencesOfString:@"gorodname" withString:cityName];
         
-        [self.dangerLevelImageView setImage:[UIImage imageNamed:[danger dangelLevelIcon]]];
         [self.dangerTypeImageView setImage:[UIImage imageNamed:[danger dangerTypeIcon]]];
         
 //        self.dangerLevelName.text = [NSString stringWithFormat:@"Уровень угрозы: %@", [danger dangelLevelName]];

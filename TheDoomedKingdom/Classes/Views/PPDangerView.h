@@ -19,7 +19,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *dangerTypeImageView;
 @property (nonatomic, weak) IBOutlet UILabel *dangerTypeName;
 
-@property (nonatomic, weak) IBOutlet UIImageView *dangerLevelImageView;
 @property (nonatomic, weak) IBOutlet UILabel *dangerLevelName;
 
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *abilities;

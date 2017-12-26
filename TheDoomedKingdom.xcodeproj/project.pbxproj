@@ -111,9 +111,6 @@
 		D588F2DA1C84D96A0054FE61 /* ending_victory.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A01C84D96A0054FE61 /* ending_victory.png */; };
 		D588F2DB1C84D96A0054FE61 /* GameField.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A11C84D96A0054FE61 /* GameField.png */; };
 		D588F2DC1C84D96A0054FE61 /* GameField@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A21C84D96A0054FE61 /* GameField@2x.png */; };
-		D588F2DD1C84D96A0054FE61 /* icon_danger_hight.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A31C84D96A0054FE61 /* icon_danger_hight.png */; };
-		D588F2DE1C84D96A0054FE61 /* icon_danger_low.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A41C84D96A0054FE61 /* icon_danger_low.png */; };
-		D588F2DF1C84D96A0054FE61 /* icon_danger_medium.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A51C84D96A0054FE61 /* icon_danger_medium.png */; };
 		D588F2E01C84D96A0054FE61 /* intro1.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A61C84D96A0054FE61 /* intro1.png */; };
 		D588F2E11C84D96A0054FE61 /* intro2.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A71C84D96A0054FE61 /* intro2.png */; };
 		D588F2E21C84D96A0054FE61 /* PopupBg.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2A81C84D96A0054FE61 /* PopupBg.png */; };
@@ -165,6 +162,7 @@
 		D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5141C969AE1002D3E77 /* PBMiddleProgress@2x.png */; };
 		D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5151C969AE1002D3E77 /* PBMiddle.png */; };
 		D5CFB51A1C969AE1002D3E77 /* PBMiddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */; };
+		D5EE66FA1FF2FA5E000E862B /* PPGoogleBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */; };
 		EF4E2941C1CE20A89BFA82C9 /* libPods-TheDoomedKingdom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */; };
 /* End PBXBuildFile section */
 
@@ -306,9 +304,6 @@
 		D588F2A01C84D96A0054FE61 /* ending_victory.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ending_victory.png; sourceTree = "<group>"; };
 		D588F2A11C84D96A0054FE61 /* GameField.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameField.png; sourceTree = "<group>"; };
 		D588F2A21C84D96A0054FE61 /* GameField@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GameField@2x.png"; sourceTree = "<group>"; };
-		D588F2A31C84D96A0054FE61 /* icon_danger_hight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_danger_hight.png; sourceTree = "<group>"; };
-		D588F2A41C84D96A0054FE61 /* icon_danger_low.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_danger_low.png; sourceTree = "<group>"; };
-		D588F2A51C84D96A0054FE61 /* icon_danger_medium.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_danger_medium.png; sourceTree = "<group>"; };
 		D588F2A61C84D96A0054FE61 /* intro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro1.png; sourceTree = "<group>"; };
 		D588F2A71C84D96A0054FE61 /* intro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = intro2.png; sourceTree = "<group>"; };
 		D588F2A81C84D96A0054FE61 /* PopupBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PopupBg.png; sourceTree = "<group>"; };
@@ -369,6 +364,8 @@
 		D5CFB5151C969AE1002D3E77 /* PBMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBMiddle.png; sourceTree = "<group>"; };
 		D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddle@2x.png"; sourceTree = "<group>"; };
 		D5EB55361C6745480085CA22 /* PPCalamityKingdom.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCalamityKingdom.pch; sourceTree = "<group>"; };
+		D5EE66F81FF2FA5E000E862B /* PPGoogleBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPGoogleBaseModel.h; sourceTree = "<group>"; };
+		D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPGoogleBaseModel.m; sourceTree = "<group>"; };
 		DEB8AAEF6ADD4DBF62811809 /* Pods-TheDoomedKingdom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDoomedKingdom.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom.release.xcconfig"; sourceTree = "<group>"; };
 		ED32AF1F93B64CC5D4F1788A /* Pods-TheDoomedKingdom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheDoomedKingdom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheDoomedKingdom/Pods-TheDoomedKingdom.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -509,6 +506,7 @@
 		D52412621C5C954C00EB1FF4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D5EE66F71FF2F9FE000E862B /* Google */,
 				D52412631C5C956000EB1FF4 /* PPPlayer.h */,
 				D52412641C5C956000EB1FF4 /* PPPlayer.m */,
 				D52412661C5C958B00EB1FF4 /* PPDanger.h */,
@@ -655,9 +653,6 @@
 				D55E4F7F1C87807600320667 /* GypnosIcon@2x.png */,
 				D5CFB4FA1C930542002D3E77 /* HypnoPBIcon.png */,
 				D5CFB4FB1C930542002D3E77 /* HypnoPBIcon@2x.png */,
-				D588F2A31C84D96A0054FE61 /* icon_danger_hight.png */,
-				D588F2A41C84D96A0054FE61 /* icon_danger_low.png */,
-				D588F2A51C84D96A0054FE61 /* icon_danger_medium.png */,
 				D588F2A61C84D96A0054FE61 /* intro1.png */,
 				D588F2A71C84D96A0054FE61 /* intro2.png */,
 				D58AA6001C88DCD10051F53C /* MagIcon.png */,
@@ -745,6 +740,15 @@
 			path = TYMProgressBarView;
 			sourceTree = "<group>";
 		};
+		D5EE66F71FF2F9FE000E862B /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				D5EE66F81FF2FA5E000E862B /* PPGoogleBaseModel.h */,
+				D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
 		DAE09AC17C6891461DA8103D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -817,7 +821,6 @@
 			files = (
 				D5530FBB1CA03FB10064A220 /* TownRuined.png in Resources */,
 				D5CFB5081C930542002D3E77 /* HypnoPBIcon.png in Resources */,
-				D588F2DE1C84D96A0054FE61 /* icon_danger_low.png in Resources */,
 				D51D03381C97E6C200FE1467 /* LibraryBackButton.png in Resources */,
 				D588F2C61C84D96A0054FE61 /* 4_3.png in Resources */,
 				D588F2CF1C84D96A0054FE61 /* CapitalCity@2x.png in Resources */,
@@ -825,7 +828,6 @@
 				D588F3031C84D9940054FE61 /* main_music.mp3 in Resources */,
 				D588F2BF1C84D96A0054FE61 /* 1_2.png in Resources */,
 				D5CFB50F1C930542002D3E77 /* PBBig@2x.png in Resources */,
-				D588F2DF1C84D96A0054FE61 /* icon_danger_medium.png in Resources */,
 				D55E4F891C87807600320667 /* AppealIcon@2x.png in Resources */,
 				D57C36581C85C8BB006CBA2D /* DomCasual.ttf in Resources */,
 				D55E4F881C87807600320667 /* AppealIcon.png in Resources */,
@@ -906,7 +908,6 @@
 				D588F2DC1C84D96A0054FE61 /* GameField@2x.png in Resources */,
 				D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */,
 				D588F2F01C84D96A0054FE61 /* VillageVariorsCity@2x.png in Resources */,
-				D588F2DD1C84D96A0054FE61 /* icon_danger_hight.png in Resources */,
 				D5CFB50A1C930542002D3E77 /* PBSmallProgress.png in Resources */,
 				D52412AB1C5DE92700EB1FF4 /* replics.tsv in Resources */,
 				D588F2D91C84D96A0054FE61 /* ending_defeat_popularity.png in Resources */,
@@ -1029,6 +1030,7 @@
 				D52412711C5CAA3000EB1FF4 /* PPKingdom.m in Sources */,
 				D52412781C5CC53E00EB1FF4 /* PPDangerResult.m in Sources */,
 				D5B4E0451C9150E300CDCDC0 /* PPProgressView.m in Sources */,
+				D5EE66FA1FF2FA5E000E862B /* PPGoogleBaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

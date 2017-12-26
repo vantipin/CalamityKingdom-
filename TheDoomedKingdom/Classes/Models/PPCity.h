@@ -6,10 +6,10 @@
 //  Copyright © 2016 PP. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PPGoogleBaseModel.h"
 @class PPDanger;
 
-@interface PPCity : NSObject
+@interface PPCity : PPGoogleBaseModel
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *cityDescription;

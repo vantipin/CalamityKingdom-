@@ -96,9 +96,26 @@ static PPGame *instance = nil;
     for (PPTable *table in self.sheets) {
         NSLog(@"START LOADING");
         
-        [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId callback:^(NSArray *objects, NSError *error) {
-            if (!error) {
+        Class modelClass = [PPGoogleBaseModel class];
+        
+        switch (table.sheet) {
+            case PPSheetCities:
+                modelClass = [PPCity class];
+                break;
                 
+            case PPSheetDisasters:
+                modelClass = [PPDanger class];
+                break;
+                
+            default:
+                break;
+        }
+        
+        
+        
+        [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
+            if (!error) {
+                NSLog(@"loaded objects = %@", objects);
             } else {
                 updateError = error;
             }
@@ -153,7 +170,6 @@ static PPGame *instance = nil;
             danger.name = dangerArr[1];
             danger.dangerDescription = dangerArr[9];
             
-            danger.dangerLevel = [dangerArr[2] integerValue];
             danger.dangerType = [dangerArr[3] integerValue];
             
            
@@ -173,8 +189,6 @@ static PPGame *instance = nil;
             
             
             danger.timeToAppear = [dangerAppearTime randomValue];
-            
-            danger.maxTimeForDanger = danger.timeToAppear + [dangerArr[4] integerValue];
             
             [parsedDangers addObject:danger];
         }
@@ -267,12 +281,7 @@ static PPGame *instance = nil;
 
 - (NSArray *)firedDangers
 {
-    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (self.maxTimeForDanger <= %@) AND (self.inProgress == NO)", @(self.currentTimeHours)]];
-}
-
-- (NSArray *)dangersAffectedWithVision
-{
-    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (timeToAppear <= %@) AND (self.affectedCity == nil)", @(self.currentTimeHours + VisionHours)]];
+    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (self.timeToAppear <= %@) AND (self.inProgress == NO)", @(self.currentTimeHours)]];
 }
 
 - (NSArray *)dangersToApply

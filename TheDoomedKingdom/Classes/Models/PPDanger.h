@@ -6,7 +6,7 @@
 //  Copyright © 2016 PP. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PPGoogleBaseModel.h"
 @class PPAbility;
 @class PPCity;
 @class PPDangerResult;
@@ -26,13 +26,12 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
     PPDangerTypeMax,
 };
 
-@interface PPDanger : NSObject
+@interface PPDanger : PPGoogleBaseModel
 
 @property (nonatomic) NSString *dangerId;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *dangerDescription;
 
-@property (nonatomic, assign) PPDangerLevel dangerLevel;
 @property (nonatomic, assign) PPDangerType dangerType;
 
 @property (nonatomic) PPDangerResult *result;
@@ -40,7 +39,6 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 @property (nonatomic, readonly) NSArray *abilitiesToRemove;
 
 @property (nonatomic, assign) NSInteger timeToAppear;
-@property (nonatomic, assign) NSInteger maxTimeForDanger;
 
 @property (nonatomic) PPCity *affectedCity;
 @property (nonatomic, assign) BOOL removed;
@@ -49,10 +47,6 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 @property (nonatomic) PPCity *predefinedCity;
 @property (nonatomic, assign) NSInteger predefinedTime;
 
-- (NSInteger)dangerDuration;
-- (NSInteger)dangerLeftDuration;
-- (NSString *)dangelLevelName;
-- (NSString *)dangelLevelIcon;
 - (NSString *)dangelTypeName;
 - (NSString *)dangerTypeIcon;
 

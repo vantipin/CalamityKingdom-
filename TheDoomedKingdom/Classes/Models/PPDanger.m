@@ -26,7 +26,7 @@
     if (self) {
         NSMutableArray *abilities = [@[] mutableCopy];
         
-        for (PPAbilityType type = 0; type < PPAbilityTypeNobody; type++) {
+        for (PPAbilityType type = PPAbilityTypeTelekinesis; type < PPAbilityTypeNobody; type++) {
             PPAbility *ability = [PPAbility new];
             ability.abilityType = type;
             [abilities addObject:ability];
@@ -40,62 +40,16 @@
     return self;
 }
 
-- (NSInteger)dangerDuration
-{
-    return (self.maxTimeForDanger - self.timeToAppear);
-}
-
-- (NSInteger)dangerLeftDuration
-{
-    return (self.maxTimeForDanger - [[PPGame instance] currentTimeHours]);
-}
-
-- (NSString *)dangelLevelName
-{
-    NSString *levelName = @"SIMPLELEVEL";
-    
-    switch (self.dangerLevel) {
-        case PPDangerLevelImperator:
-            levelName = @"Императорский";
-            break;
-            
-        case PPDangerLevelKing:
-            levelName = @"Королевский";
-            break;
-            
-        case PPDangerLevelKolhoz:
-            levelName = @"Колхозный";
-            break;
-            
-        default:
-            break;
-    }
-    
-    return levelName;
-}
-
-- (NSString *)dangelLevelIcon
-{
-    NSString *levelName = @"SIMPLELEVEL";
-    
-    switch (self.dangerLevel) {
-        case PPDangerLevelImperator:
-            levelName = @"icon_danger_hight.png";
-            break;
-            
-        case PPDangerLevelKing:
-            levelName = @"icon_danger_medium.png";
-            break;
-            
-        case PPDangerLevelKolhoz:
-            levelName = @"icon_danger_low.png";
-            break;
-            
-        default:
-            break;
-    }
-    
-    return levelName;
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"dangerId" : @"id_disaster",
+             @"name": @"name",
+             @"dangerDescription": @"description",
+             @"dangerType": @"type",
+             @"minValue": @"min_dmg",
+             @"maxValue": @"max_dmg",
+             @"timeToAppear": @"day",
+             };
 }
 
 - (NSString *)dangelTypeName
