@@ -89,54 +89,110 @@ static PPGame *instance = nil;
 //            NSLog(@"213412");
 //        }
 //    }];
-    
-    __weak __typeof(self) weakSelf = self;
-    __block NSError *updateError = nil;
-    
-    for (PPTable *table in self.sheets) {
-        NSLog(@"START LOADING");
-        
-        Class modelClass = [PPGoogleBaseModel class];
-        
-        switch (table.sheet) {
-            case PPSheetCities:
-                modelClass = [PPCity class];
-                break;
-                
-            case PPSheetDisasters:
-                modelClass = [PPDanger class];
-                break;
-                
-            default:
-                break;
-        }
-        
-        
-        
-        [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
-            if (!error) {
-                NSLog(@"loaded objects = %@", objects);
-            } else {
-                updateError = error;
-            }
-            
-            NSLog(@"loaded %li", (long)table.sheet);
-            weakSelf.loadedSheets += table.sheet;
-            
-            if (weakSelf.loadedSheets == PPSheetAll) {
-                NSLog(@"all loaded! with error = %@", updateError != nil ? @"YES" : @"NO");
-            }
-        }];
-    }
+    NSLog(@"START LOADING");
+    [self loadSheet:0 completion:completion];
 }
 
-- (void)parseGame
-{
+- (void)loadSheet:(NSInteger)sheetIndex completion:(PPGameCallback)completion {
+    if (sheetIndex >= self.sheets.count) {
+        NSLog(@"Sheet index ERRROR!");
+        return;
+    }
+    
+    __weak __typeof(self) weakSelf = self;
+    
+    
+    PPTable *table = self.sheets[sheetIndex];
+    
+    __block PPSheet loadedSheet = table.sheet;
+    
+    Class modelClass = [PPGoogleBaseModel class];
+    NSString *status = @"";
+    
+    switch (table.sheet) {
+        case PPSheetCities:
+            modelClass = [PPCity class];
+            status = @"Парсим города";
+            break;
+            
+        case PPSheetDisasters:
+            modelClass = [PPDanger class];
+            status = @"Парсим опасности";
+            break;
+            
+        case PPSheetReplies:
+            status = @"Парсим результаты опасностей";
+            break;
+            
+        case PPSheetEvents:
+            status = @"Парсим события";
+            break;
+            
+        case PPSheetArchimags:
+            status = @"Парсим архимагов";
+            break;
+            
+        case PPSheetLibrary:
+            status = @"Парсим библиотеку";
+            break;
+            
+        case PPSheetEventReplies:
+            status = @"Парсим результаты событий";
+            break;
+            
+        case PPSheetConstants:
+            status = @"Парсим константы";
+            break;
+            
+        case PPSheetEndings:
+            status = @"Парсим концовки";
+            break;
+
+        default:
+            break;
+    }
+    
+    [SVProgressHUD showWithStatus:status];
+
+    
+    [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
+        
+        NSLog(@"loaded %li", (long)table.sheet);
+        
+        if (!error) {
+            NSLog(@"loaded objects = %@", objects);
+            
+            weakSelf.loadedSheets += loadedSheet;
+            
+            if (weakSelf.loadedSheets == PPSheetAll) {
+                NSLog(@"all loaded! without error!!!");
+                
+                if (completion) {
+                    completion(YES, nil);
+                }
+            } else {
+                [weakSelf loadSheet:sheetIndex + 1 completion:completion];
+            }
+        } else {
+            NSLog(@"SHEET ERROR!!! = %@", error);
+            
+            if (completion) {
+                completion(NO, error);
+            }
+            
+        }
+        
+    }];
+}
+
+- (void)parseGameWithUpdate:(BOOL)withUpdate completion:(PPGameCallback)completion {
     [self reinitGame];
     
-    [self updateGame:^(BOOL success, NSError *error) {
-        NSLog(@"success = %@", success ? @"YES" : @"NO");
-    }];
+    if (withUpdate) {
+        [SVProgressHUD show];
+        
+        [self updateGame:completion];
+    }
     
     
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"tsv"];

@@ -42,18 +42,36 @@
         }
     }];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[PPGame instance] parseGame];
-        [SVProgressHUD dismiss];
-        [self checkAndRedraw];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(withAnimation ? 0.01 : 1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (!withAnimation) {
+            [SVProgressHUD dismiss];
+            [self checkAndRedraw];
+            
+            [UIView animateWithDuration:AnimationDuration animations:^{
+                for (UIView *view in _fieldControls) {
+                    view.alpha = 1;
+                }
+            }];
+        }
         
-        [UIView animateWithDuration:AnimationDuration animations:^{
-            for (UIView *view in _fieldControls) {
-                view.alpha = 1;
+        [[PPGame instance] parseGameWithUpdate:withAnimation completion:^(BOOL success, NSError *error) {
+            if (success) {
+                [SVProgressHUD showSuccessWithStatus:@"Игра успешно обновлена!"];
+            } else {
+                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"ОЙ-ЕЙ-ЕЙ! Ошибка при обновлении: %@", error.localizedDescription]];
             }
+            
+            [self checkAndRedraw];
+            
+            [UIView animateWithDuration:AnimationDuration animations:^{
+                for (UIView *view in _fieldControls) {
+                    view.alpha = 1;
+                }
+            }];
+            
         }];
+        
     });
-    
     
 }
 

@@ -30,7 +30,7 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 @property (nonatomic, readonly) NSInteger leftTimeHours; // Time left for trigger ending
 
 + (PPGame *)instance;
-- (void)parseGame;
+- (void)parseGameWithUpdate:(BOOL)withUpdate completion:(PPGameCallback)completion;
 
 - (NSArray *)firedDangers; // Dangers for apply default damage
 
