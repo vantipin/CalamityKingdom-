@@ -25,6 +25,7 @@
 		D51D21412000288E0076811C /* ExclamationMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D213F2000288D0076811C /* ExclamationMark@2x.png */; };
 		D51D2144200029320076811C /* PPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D2143200029320076811C /* PPConstant.m */; };
 		D51D214720002A880076811C /* PPEnding.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D214620002A880076811C /* PPEnding.m */; };
+		D51D214A2000303E0076811C /* PPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D21492000303E0076811C /* PPEvent.m */; };
 		D52412341C5C8DBD00EB1FF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412331C5C8DBD00EB1FF4 /* main.m */; };
 		D52412371C5C8DBD00EB1FF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412361C5C8DBD00EB1FF4 /* AppDelegate.m */; };
 		D524123D1C5C8DBD00EB1FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D524123B1C5C8DBD00EB1FF4 /* Main.storyboard */; };
@@ -196,6 +197,8 @@
 		D51D2143200029320076811C /* PPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPConstant.m; sourceTree = "<group>"; };
 		D51D214520002A880076811C /* PPEnding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEnding.h; sourceTree = "<group>"; };
 		D51D214620002A880076811C /* PPEnding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEnding.m; sourceTree = "<group>"; };
+		D51D21482000303E0076811C /* PPEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEvent.h; sourceTree = "<group>"; };
+		D51D21492000303E0076811C /* PPEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEvent.m; sourceTree = "<group>"; };
 		D524122F1C5C8DBD00EB1FF4 /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52412331C5C8DBD00EB1FF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D52412351C5C8DBD00EB1FF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -541,6 +544,8 @@
 				D51D2143200029320076811C /* PPConstant.m */,
 				D51D214520002A880076811C /* PPEnding.h */,
 				D51D214620002A880076811C /* PPEnding.m */,
+				D51D21482000303E0076811C /* PPEvent.h */,
+				D51D21492000303E0076811C /* PPEvent.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1029,6 +1034,7 @@
 				D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */,
 				D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */,
 				D52412341C5C8DBD00EB1FF4 /* main.m in Sources */,
+				D51D214A2000303E0076811C /* PPEvent.m in Sources */,
 				D51D214720002A880076811C /* PPEnding.m in Sources */,
 				D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */,
 				D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */,

@@ -16,6 +16,7 @@
 #import "PPCity.h"
 #import "PPConstant.h"
 #import "PPLibraryItem.h"
+#import "PPEvent.h"
 
 #import "GoogleDocsServiceLayer.h"
 #import "PPTable.h"
