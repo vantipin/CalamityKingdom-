@@ -21,6 +21,10 @@
 		D51D033C1C97E6C200FE1467 /* LibraryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03341C97E6C200FE1467 /* LibraryIcon.png */; };
 		D51D033D1C97E6C200FE1467 /* LibraryIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03351C97E6C200FE1467 /* LibraryIcon@2x.png */; };
 		D51D03401C97EB6900FE1467 /* PPLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */; };
+		D51D21402000288E0076811C /* ExclamationMark.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D213E2000288D0076811C /* ExclamationMark.png */; };
+		D51D21412000288E0076811C /* ExclamationMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D213F2000288D0076811C /* ExclamationMark@2x.png */; };
+		D51D2144200029320076811C /* PPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D2143200029320076811C /* PPConstant.m */; };
+		D51D214720002A880076811C /* PPEnding.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D214620002A880076811C /* PPEnding.m */; };
 		D52412341C5C8DBD00EB1FF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412331C5C8DBD00EB1FF4 /* main.m */; };
 		D52412371C5C8DBD00EB1FF4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412361C5C8DBD00EB1FF4 /* AppDelegate.m */; };
 		D524123D1C5C8DBD00EB1FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D524123B1C5C8DBD00EB1FF4 /* Main.storyboard */; };
@@ -186,6 +190,12 @@
 		D51D03351C97E6C200FE1467 /* LibraryIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LibraryIcon@2x.png"; sourceTree = "<group>"; };
 		D51D033E1C97EB6900FE1467 /* PPLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLibraryViewController.h; sourceTree = "<group>"; };
 		D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLibraryViewController.m; sourceTree = "<group>"; };
+		D51D213E2000288D0076811C /* ExclamationMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExclamationMark.png; sourceTree = "<group>"; };
+		D51D213F2000288D0076811C /* ExclamationMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ExclamationMark@2x.png"; sourceTree = "<group>"; };
+		D51D2142200029320076811C /* PPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPConstant.h; sourceTree = "<group>"; };
+		D51D2143200029320076811C /* PPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPConstant.m; sourceTree = "<group>"; };
+		D51D214520002A880076811C /* PPEnding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEnding.h; sourceTree = "<group>"; };
+		D51D214620002A880076811C /* PPEnding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEnding.m; sourceTree = "<group>"; };
 		D524122F1C5C8DBD00EB1FF4 /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D52412331C5C8DBD00EB1FF4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D52412351C5C8DBD00EB1FF4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -527,6 +537,10 @@
 				D51D032C1C97E11700FE1467 /* PPLibraryItem.m */,
 				D559CD781FBA5B400053D8C2 /* PPTable.h */,
 				D559CD791FBA5B400053D8C2 /* PPTable.m */,
+				D51D2142200029320076811C /* PPConstant.h */,
+				D51D2143200029320076811C /* PPConstant.m */,
+				D51D214520002A880076811C /* PPEnding.h */,
+				D51D214620002A880076811C /* PPEnding.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -598,6 +612,8 @@
 		D588F2831C84D96A0054FE61 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D51D213E2000288D0076811C /* ExclamationMark.png */,
+				D51D213F2000288D0076811C /* ExclamationMark@2x.png */,
 				D5530FB31CA03FB10064A220 /* VillageRuined.png */,
 				D5530FB41CA03FB10064A220 /* VillageRuined@2x.png */,
 				D5530FB51CA03FB10064A220 /* TownRuined.png */,
@@ -883,6 +899,7 @@
 				D55E4F8F1C8782F100320667 /* Patch@2x.png in Resources */,
 				D51D033C1C97E6C200FE1467 /* LibraryIcon.png in Resources */,
 				D52412A91C5DE8B500EB1FF4 /* dangers.tsv in Resources */,
+				D51D21402000288E0076811C /* ExclamationMark.png in Resources */,
 				D588F2D71C84D96A0054FE61 /* danger_plages.png in Resources */,
 				D588F2ED1C84D96A0054FE61 /* VillageLumbererCity.png in Resources */,
 				D55E4F7A1C877B5000320667 /* Stamp.png in Resources */,
@@ -913,6 +930,7 @@
 				D588F2D91C84D96A0054FE61 /* ending_defeat_popularity.png in Resources */,
 				D5CFB5031C930542002D3E77 /* TelePBIcon@2x.png in Resources */,
 				D588F2CC1C84D96A0054FE61 /* AbilityButtonBg@2x.png in Resources */,
+				D51D21412000288E0076811C /* ExclamationMark@2x.png in Resources */,
 				D51D03271C975DD100FE1467 /* ProgressStripe.png in Resources */,
 				D5CFB51A1C969AE1002D3E77 /* PBMiddle@2x.png in Resources */,
 				D58AA5FC1C88CFFB0051F53C /* Clock@2x.png in Resources */,
@@ -1011,6 +1029,7 @@
 				D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */,
 				D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */,
 				D52412341C5C8DBD00EB1FF4 /* main.m in Sources */,
+				D51D214720002A880076811C /* PPEnding.m in Sources */,
 				D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */,
 				D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */,
 				D52413791C5E353300EB1FF4 /* PPDangerAbilityView.m in Sources */,
@@ -1024,6 +1043,7 @@
 				D524127B1C5CCDC600EB1FF4 /* PPValue.m in Sources */,
 				D524135E1C5E33C900EB1FF4 /* SoundController.m in Sources */,
 				D52413601C5E33C900EB1FF4 /* PPDangerProgressController.m in Sources */,
+				D51D2144200029320076811C /* PPConstant.m in Sources */,
 				D524129C1C5D685100EB1FF4 /* EAColourfulProgressView.m in Sources */,
 				D524137A1C5E353300EB1FF4 /* PPClosePopupView.m in Sources */,
 				D59517001C8C9961000C4278 /* SSDrawingUtilities.m in Sources */,

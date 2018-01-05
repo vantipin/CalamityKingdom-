@@ -10,4 +10,13 @@
 
 @implementation PPLibraryItem
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"identifier" : @"id",
+             @"itemName": @"name",
+             @"itemDescription": @"text",
+             @"day": @"day"
+             };
+}
+
 @end

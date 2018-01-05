@@ -14,10 +14,12 @@
 #import "PPValue.h"
 #import "PPDangerResult.h"
 #import "PPCity.h"
+#import "PPConstant.h"
 #import "PPLibraryItem.h"
 
 #import "GoogleDocsServiceLayer.h"
 #import "PPTable.h"
+#import "PPEnding.h"
 
 @interface PPGame()
 
@@ -133,6 +135,7 @@ static PPGame *instance = nil;
             break;
             
         case PPSheetLibrary:
+            modelClass = [PPLibraryItem class];
             status = @"Парсим библиотеку";
             break;
             
@@ -141,10 +144,12 @@ static PPGame *instance = nil;
             break;
             
         case PPSheetConstants:
+            modelClass = [PPConstant class];
             status = @"Парсим константы";
             break;
             
         case PPSheetEndings:
+            modelClass = [PPEnding class];
             status = @"Парсим концовки";
             break;
 
