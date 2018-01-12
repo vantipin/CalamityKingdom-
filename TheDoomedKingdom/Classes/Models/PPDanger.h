@@ -28,7 +28,6 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 
 @interface PPDanger : PPGoogleBaseModel
 
-@property (nonatomic) NSString *dangerId;
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSString *dangerDescription;
 

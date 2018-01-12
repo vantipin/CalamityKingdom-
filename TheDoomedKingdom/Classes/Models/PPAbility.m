@@ -12,6 +12,18 @@
 @synthesize value;
 @synthesize abilityName;
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"dangerId" : @"id_disaster",
+             @"identifier" : @"id_reply",
+             @"abilityName" : @"text",
+             @"abilityDescription": @"result",
+             @"abilityType": @"type",
+             @"value": @"cost",
+             @"timeToDestroyDanger": @"time",
+             };
+}
+
 - (NSString *)abilityIcon
 {
     NSString *name = @"ability_chaos.png";

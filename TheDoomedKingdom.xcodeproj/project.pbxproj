@@ -67,6 +67,7 @@
 		D52413791C5E353300EB1FF4 /* PPDangerAbilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D524136F1C5E353300EB1FF4 /* PPDangerAbilityView.m */; };
 		D524137A1C5E353300EB1FF4 /* PPClosePopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413711C5E353300EB1FF4 /* PPClosePopupView.m */; };
 		D524137B1C5E353300EB1FF4 /* PPCityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413731C5E353300EB1FF4 /* PPCityView.m */; };
+		D550645520097158009BCA36 /* PPArchimage.m in Sources */ = {isa = PBXBuildFile; fileRef = D550645420097158009BCA36 /* PPArchimage.m */; };
 		D5530FB91CA03FB10064A220 /* VillageRuined.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB31CA03FB10064A220 /* VillageRuined.png */; };
 		D5530FBA1CA03FB10064A220 /* VillageRuined@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB41CA03FB10064A220 /* VillageRuined@2x.png */; };
 		D5530FBB1CA03FB10064A220 /* TownRuined.png in Resources */ = {isa = PBXBuildFile; fileRef = D5530FB51CA03FB10064A220 /* TownRuined.png */; };
@@ -270,6 +271,8 @@
 		D52413721C5E353300EB1FF4 /* PPClosePopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPClosePopupView.h; sourceTree = "<group>"; };
 		D52413731C5E353300EB1FF4 /* PPCityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPCityView.m; sourceTree = "<group>"; };
 		D52413741C5E353300EB1FF4 /* PPCityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCityView.h; sourceTree = "<group>"; };
+		D550645320097158009BCA36 /* PPArchimage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPArchimage.h; sourceTree = "<group>"; };
+		D550645420097158009BCA36 /* PPArchimage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPArchimage.m; sourceTree = "<group>"; };
 		D5530FB31CA03FB10064A220 /* VillageRuined.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VillageRuined.png; sourceTree = "<group>"; };
 		D5530FB41CA03FB10064A220 /* VillageRuined@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VillageRuined@2x.png"; sourceTree = "<group>"; };
 		D5530FB51CA03FB10064A220 /* TownRuined.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TownRuined.png; sourceTree = "<group>"; };
@@ -520,32 +523,34 @@
 			isa = PBXGroup;
 			children = (
 				D5EE66F71FF2F9FE000E862B /* Google */,
-				D52412631C5C956000EB1FF4 /* PPPlayer.h */,
-				D52412641C5C956000EB1FF4 /* PPPlayer.m */,
+				D52412691C5C95B500EB1FF4 /* PPAbility.h */,
+				D524126A1C5C95B500EB1FF4 /* PPAbility.m */,
+				D550645320097158009BCA36 /* PPArchimage.h */,
+				D550645420097158009BCA36 /* PPArchimage.m */,
+				D524126C1C5CA42100EB1FF4 /* PPCity.h */,
+				D524126D1C5CA42100EB1FF4 /* PPCity.m */,
+				D51D2142200029320076811C /* PPConstant.h */,
+				D51D2143200029320076811C /* PPConstant.m */,
 				D52412661C5C958B00EB1FF4 /* PPDanger.h */,
 				D52412671C5C958B00EB1FF4 /* PPDanger.m */,
 				D52412761C5CC53E00EB1FF4 /* PPDangerResult.h */,
 				D52412771C5CC53E00EB1FF4 /* PPDangerResult.m */,
-				D52412691C5C95B500EB1FF4 /* PPAbility.h */,
-				D524126A1C5C95B500EB1FF4 /* PPAbility.m */,
-				D524126C1C5CA42100EB1FF4 /* PPCity.h */,
-				D524126D1C5CA42100EB1FF4 /* PPCity.m */,
-				D524126F1C5CAA3000EB1FF4 /* PPKingdom.h */,
-				D52412701C5CAA3000EB1FF4 /* PPKingdom.m */,
-				D52412721C5CACBA00EB1FF4 /* PPGame.h */,
-				D52412731C5CACBA00EB1FF4 /* PPGame.m */,
-				D52412791C5CCDC600EB1FF4 /* PPValue.h */,
-				D524127A1C5CCDC600EB1FF4 /* PPValue.m */,
-				D51D032B1C97E11700FE1467 /* PPLibraryItem.h */,
-				D51D032C1C97E11700FE1467 /* PPLibraryItem.m */,
-				D559CD781FBA5B400053D8C2 /* PPTable.h */,
-				D559CD791FBA5B400053D8C2 /* PPTable.m */,
-				D51D2142200029320076811C /* PPConstant.h */,
-				D51D2143200029320076811C /* PPConstant.m */,
 				D51D214520002A880076811C /* PPEnding.h */,
 				D51D214620002A880076811C /* PPEnding.m */,
 				D51D21482000303E0076811C /* PPEvent.h */,
 				D51D21492000303E0076811C /* PPEvent.m */,
+				D52412721C5CACBA00EB1FF4 /* PPGame.h */,
+				D52412731C5CACBA00EB1FF4 /* PPGame.m */,
+				D524126F1C5CAA3000EB1FF4 /* PPKingdom.h */,
+				D52412701C5CAA3000EB1FF4 /* PPKingdom.m */,
+				D51D032B1C97E11700FE1467 /* PPLibraryItem.h */,
+				D51D032C1C97E11700FE1467 /* PPLibraryItem.m */,
+				D52412631C5C956000EB1FF4 /* PPPlayer.h */,
+				D52412641C5C956000EB1FF4 /* PPPlayer.m */,
+				D559CD781FBA5B400053D8C2 /* PPTable.h */,
+				D559CD791FBA5B400053D8C2 /* PPTable.m */,
+				D52412791C5CCDC600EB1FF4 /* PPValue.h */,
+				D524127A1C5CCDC600EB1FF4 /* PPValue.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1037,6 +1042,7 @@
 				D51D214A2000303E0076811C /* PPEvent.m in Sources */,
 				D51D214720002A880076811C /* PPEnding.m in Sources */,
 				D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */,
+				D550645520097158009BCA36 /* PPArchimage.m in Sources */,
 				D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */,
 				D52413791C5E353300EB1FF4 /* PPDangerAbilityView.m in Sources */,
 				D52413611C5E33C900EB1FF4 /* PPCityInfoController.m in Sources */,

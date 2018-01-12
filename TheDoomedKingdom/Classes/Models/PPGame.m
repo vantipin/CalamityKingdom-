@@ -21,6 +21,7 @@
 #import "GoogleDocsServiceLayer.h"
 #import "PPTable.h"
 #import "PPEnding.h"
+#import "PPArchimage.h"
 
 @interface PPGame()
 
@@ -53,14 +54,14 @@ static PPGame *instance = nil;
 //    PPSheetCities + PPSheetDisasters + PPSheetReplies + PPSheetEndings + PPSheetArchimags + PPSheetLibrary + PPSheetEvents + PPSheetEventReplies + PPSheetConstants
     self.sheets = @[
                     [PPTable objectWithUrl:CitiesSheetUrl type:PPSheetCities],
+                    [PPTable objectWithUrl:ConstantsSheetUrl type:PPSheetConstants],
+                    [PPTable objectWithUrl:EndingsSheetUrl type:PPSheetEndings],
                     [PPTable objectWithUrl:DisasterSheetUrl type:PPSheetDisasters],
                     [PPTable objectWithUrl:RepliesSheetUrl type:PPSheetReplies],
-                    [PPTable objectWithUrl:EndingsSheetUrl type:PPSheetEndings],
                     [PPTable objectWithUrl:ArchimagsSheetUrl type:PPSheetArchimags],
                     [PPTable objectWithUrl:LibrarySheetUrl type:PPSheetLibrary],
                     [PPTable objectWithUrl:EventsSheetUrl type:PPSheetEvents],
                     [PPTable objectWithUrl:EventRepliesSheetUrl type:PPSheetEventReplies],
-                    [PPTable objectWithUrl:ConstantsSheetUrl type:PPSheetConstants]
                     ];
     
     self.player.name = @"Вася";
@@ -124,14 +125,17 @@ static PPGame *instance = nil;
             break;
             
         case PPSheetReplies:
+            modelClass = [PPAbility class];
             status = @"Парсим результаты опасностей";
             break;
             
         case PPSheetEvents:
+            modelClass = [PPEvent class];
             status = @"Парсим события";
             break;
             
         case PPSheetArchimags:
+            modelClass = [PPArchimage class];
             status = @"Парсим архимагов";
             break;
             

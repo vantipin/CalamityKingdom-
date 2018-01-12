@@ -6,9 +6,12 @@
 //  Copyright © 2016 PP. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PPGoogleBaseModel.h"
 
-@interface PPAbility : NSObject
+@interface PPAbility : PPGoogleBaseModel
+
+@property (nonatomic) NSString *dangerId;
+
 
 // MAGE ABILITY
 @property (nonatomic, assign) PPAbilityType abilityType;

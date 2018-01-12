@@ -42,7 +42,7 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"dangerId" : @"id_disaster",
+             @"identifier" : @"id_disaster",
              @"name": @"name",
              @"dangerDescription": @"description",
              @"dangerType": @"type",
