@@ -22,6 +22,7 @@
 #import "PPTable.h"
 #import "PPEnding.h"
 #import "PPArchimage.h"
+#import "PPEventAbility.h"
 
 @interface PPGame()
 
@@ -97,6 +98,58 @@ static PPGame *instance = nil;
     [self loadSheet:0 completion:completion];
 }
 
+- (void)configureObjects:(NSArray *)objects forSheet:(PPSheet)sheet {
+    NSLog(@"filtered objects = %@", objects);
+    
+    switch (sheet) {
+        case PPSheetCities:
+            
+            break;
+            
+        case PPSheetDisasters:
+
+            break;
+            
+        case PPSheetReplies:
+
+            
+            break;
+            
+        case PPSheetEvents:
+
+            
+            break;
+            
+        case PPSheetArchimags:
+
+            
+            break;
+            
+        case PPSheetLibrary:
+
+            
+            break;
+            
+        case PPSheetEventReplies:
+
+            
+            break;
+            
+        case PPSheetConstants:
+
+            
+            break;
+            
+        case PPSheetEndings:
+
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
 - (void)loadSheet:(NSInteger)sheetIndex completion:(PPGameCallback)completion {
     if (sheetIndex >= self.sheets.count) {
         NSLog(@"Sheet index ERRROR!");
@@ -145,6 +198,7 @@ static PPGame *instance = nil;
             break;
             
         case PPSheetEventReplies:
+            modelClass = [PPEventAbility class];
             status = @"Парсим результаты событий";
             break;
             
@@ -167,10 +221,13 @@ static PPGame *instance = nil;
     
     [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
         
-        NSLog(@"loaded %li", (long)table.sheet);
+        NSLog(@"\n\n+++ loaded %li", (long)table.sheet);
         
         if (!error) {
-            NSLog(@"loaded objects = %@", objects);
+            
+            
+            NSArray *filteredObjects = [objects filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"identifier != nil"]];
+            [self configureObjects:filteredObjects forSheet:loadedSheet];
             
             weakSelf.loadedSheets += loadedSheet;
             
@@ -232,7 +289,7 @@ static PPGame *instance = nil;
     for (NSArray *dangerArr in dangers) {
         if (dangerArr.count == 10) {
             PPDanger *danger = [PPDanger new];
-            danger.dangerId = dangerArr[0];
+            danger.identifier = dangerArr[0];
             danger.name = dangerArr[1];
             danger.dangerDescription = dangerArr[9];
             
@@ -268,7 +325,7 @@ static PPGame *instance = nil;
     
     for (NSArray *replArr in replics) {
         if (replArr.count == 8) {
-            PPDanger *danger = [[parsedDangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.dangerId == %@", replArr[1]]] lastObject];
+            PPDanger *danger = [[parsedDangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", replArr[1]]] lastObject];
             
             if (danger) {
                 PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @([replArr[2] integerValue] - 1)]] lastObject];

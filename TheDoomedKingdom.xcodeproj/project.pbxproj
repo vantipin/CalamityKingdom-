@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CED44FA1C5E3FD100D9256F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CED44F91C5E3FD100D9256F /* Images.xcassets */; };
+		D51224C5200D57410006C6E3 /* PPEventAbility.m in Sources */ = {isa = PBXBuildFile; fileRef = D51224C4200D57410006C6E3 /* PPEventAbility.m */; };
 		D51D03271C975DD100FE1467 /* ProgressStripe.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03251C975DD100FE1467 /* ProgressStripe.png */; };
 		D51D03281C975DD100FE1467 /* ProgressStripe@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03261C975DD100FE1467 /* ProgressStripe@2x.png */; };
 		D51D032A1C97E0A700FE1467 /* library.tsv in Resources */ = {isa = PBXBuildFile; fileRef = D51D03291C97E0A700FE1467 /* library.tsv */; };
@@ -177,6 +178,8 @@
 		5CED44F51C5E37A400D9256F /* PaperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaperView.m; sourceTree = "<group>"; };
 		5CED44F91C5E3FD100D9256F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TheDoomedKingdom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D51224C3200D57410006C6E3 /* PPEventAbility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventAbility.h; sourceTree = "<group>"; };
+		D51224C4200D57410006C6E3 /* PPEventAbility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEventAbility.m; sourceTree = "<group>"; };
 		D51D03251C975DD100FE1467 /* ProgressStripe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProgressStripe.png; sourceTree = "<group>"; };
 		D51D03261C975DD100FE1467 /* ProgressStripe@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ProgressStripe@2x.png"; sourceTree = "<group>"; };
 		D51D03291C97E0A700FE1467 /* library.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = library.tsv; sourceTree = "<group>"; };
@@ -539,6 +542,8 @@
 				D51D214620002A880076811C /* PPEnding.m */,
 				D51D21482000303E0076811C /* PPEvent.h */,
 				D51D21492000303E0076811C /* PPEvent.m */,
+				D51224C3200D57410006C6E3 /* PPEventAbility.h */,
+				D51224C4200D57410006C6E3 /* PPEventAbility.m */,
 				D52412721C5CACBA00EB1FF4 /* PPGame.h */,
 				D52412731C5CACBA00EB1FF4 /* PPGame.m */,
 				D524126F1C5CAA3000EB1FF4 /* PPKingdom.h */,
@@ -1035,6 +1040,7 @@
 				D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */,
 				D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */,
 				D52413781C5E353300EB1FF4 /* PPDangerView.m in Sources */,
+				D51224C5200D57410006C6E3 /* PPEventAbility.m in Sources */,
 				D559CD7A1FBA5B400053D8C2 /* PPTable.m in Sources */,
 				D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */,
 				D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */,
