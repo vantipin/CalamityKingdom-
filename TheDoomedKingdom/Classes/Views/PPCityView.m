@@ -48,6 +48,8 @@
         
         NSString *cityNameString = @"";
         
+#warning - Check city type
+        
         if ([city.name isEqualToString:@"Удачбург"]) {
             cityNameString = @"CapitalCity.png";
         } else if ([city.name isEqualToString:@"Потехогорск"]) {

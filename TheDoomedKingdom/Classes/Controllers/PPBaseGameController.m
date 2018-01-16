@@ -45,7 +45,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(withAnimation ? 0.01 : 1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         if (!withAnimation) {
             [SVProgressHUD dismiss];
-            [self checkAndRedraw];
+            [self redrawInterface];
             
             [UIView animateWithDuration:AnimationDuration animations:^{
                 for (UIView *view in _fieldControls) {
@@ -207,6 +207,8 @@
     //        [self.dController hide:nil];
     //    }
     
+    NSMutableArray *dangersInProgress = [@[] mutableCopy];
+    
     NSArray *dangerToApply = [[PPGame instance] dangersToApply];
     
     if (dangerToApply && dangerToApply.count > 0) {
@@ -225,7 +227,10 @@
                 } else {
                     city.currentDanger = danger;
                     danger.affectedCity = city;
+                    danger.inProgress = YES;
                     danger.predefinedCity = nil;
+                    
+                    [dangersInProgress addObject:danger];
                 }
             } else {
                 NSArray *freeCities = [[PPGame instance] freeCities];
@@ -240,6 +245,10 @@
                     PPCity *affectedCity = freeCities[randomIndex];
                     affectedCity.currentDanger = danger;
                     danger.affectedCity = affectedCity;
+                    danger.predefinedCity = nil;
+                    danger.inProgress = YES;
+                    
+                    [dangersInProgress addObject:danger];
                 }
             }
         }
@@ -258,7 +267,11 @@
         }
     }
     
+    for (PPDanger *danger in dangersInProgress) {
+        danger.inProgress = NO;
+    }
     
+    [dangersInProgress removeAllObjects];
     
     [self redrawInterface];
 }

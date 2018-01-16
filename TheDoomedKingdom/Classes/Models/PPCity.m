@@ -34,7 +34,8 @@
              @"identifier" : @"id",
              @"name": @"name",
              @"cityDescription": @"description",
-             @"initPeopleCount": @"people"
+             @"initPeopleCount": @"people",
+             @"type" : @"type"
              };
 }
 
@@ -70,6 +71,10 @@
 - (void)setInitPeopleCount:(NSInteger)initPeopleCount {
     _initPeopleCount = initPeopleCount;
     _currPeopleCount = initPeopleCount;
+}
+
+- (void)setCurrentDanger:(PPDanger *)currentDanger {
+    _currentDanger = currentDanger;
 }
 
 @end

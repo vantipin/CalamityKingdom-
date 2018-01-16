@@ -21,7 +21,7 @@
 
 @property (nonatomic, strong) PPDanger *currentDanger;
 
-
+@property (nonatomic) NSInteger type;
 
 @property (nonatomic, assign, readonly) BOOL cityInDanger;
 

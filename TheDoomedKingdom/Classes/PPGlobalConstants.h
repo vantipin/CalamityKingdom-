@@ -42,6 +42,11 @@ typedef NS_ENUM(NSUInteger, PPSheet) {
 #define MinAbilityValue 0
 #define MaxAbilityValue 100
 
+#define InitialManaValue 100
+#define InitialKingRep 100
+#define InitialPeopleRep 100
+#define InitialCorrupt 0
+
 #define ABILITIES_REGEN_VALUE_IN_DAY 20
 #define AnimationDuration 0.3
 

@@ -17,7 +17,10 @@
 {
     self = [super init];
     if (self) {
-
+        self.mana = InitialManaValue;
+        self.kingRep = InitialKingRep;
+        self.peopleRep = InitialPeopleRep;
+        self.corrupt = InitialCorrupt;
     }
     
     return self;
