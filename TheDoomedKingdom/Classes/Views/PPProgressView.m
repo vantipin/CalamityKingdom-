@@ -86,21 +86,21 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
         self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)hoursToRemove];
     }
     
-    [self performSelector:@selector(checkvalue) withObject:nil afterDelay:1.2];
+    [self performSelector:@selector(checkvalue) withObject:nil afterDelay:0.8];
 }
 
 - (void)checkvalue
 {
-    NSInteger timeToDestroy = self.ability.timeToDestroyDanger;
+    NSInteger timeToDestroy = 1;
     
     if (self.currentValue < timeToDestroy) {
         self.currentValue += 1;
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TICK" object:nil];
-        [self.progressBar setProgress:(CGFloat)(self.currentValue) / (CGFloat)timeToDestroy animated:YES duration:0.8];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"TICK" object:nil];
+        [self.progressBar setProgress:1 animated:YES duration:3];
         
         
-        self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)timeToDestroy];
-        [self performSelector:@selector(checkvalue) withObject:nil afterDelay:0.8];
+//        self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)timeToDestroy];
+        [self performSelector:@selector(checkvalue) withObject:nil afterDelay:3.1];
     } else {
         if (self.completionBlock) {
             self.completionBlock(YES);

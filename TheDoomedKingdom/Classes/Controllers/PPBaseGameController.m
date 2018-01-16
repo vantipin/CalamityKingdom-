@@ -98,7 +98,7 @@
 
 - (void)updateUI:(NSNotification *)notification
 {
-    [self checkAndRedraw];
+    [self redrawInterface];
 }
 
 - (void)clearUI:(NSNotification *)notification
