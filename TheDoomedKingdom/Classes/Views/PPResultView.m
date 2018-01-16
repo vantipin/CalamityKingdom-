@@ -27,13 +27,15 @@
     PPCity *affCity = [danger affectedCity];
     [affCity recalculateCurrentRatingWithDanger:danger andAbilityType:ability.abilityType];
     
-    for (PPAbility *pAbility in [[[PPGame instance] player] abilities]) {
-        if (pAbility.abilityType == ability.abilityType) {
-            pAbility.value -= ability.value;
-            break;
-        }
-    }
+    [[PPGame instance] player].mana -= ability.value;
     
+//    for (PPAbility *pAbility in [[[PPGame instance] player] abilities]) {
+//        if (pAbility.abilityType == ability.abilityType) {
+//            pAbility.value -= ability.value;
+//            break;
+//        }
+//    }
+//
     [[SoundController sharedInstance] playBattleWin];
     
     self.finalLabel.text = [NSString stringWithFormat:@"Жертвы: %li                   Популярность: %li", (long)died, (long)affCity.currentMagePopularity];

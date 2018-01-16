@@ -142,6 +142,8 @@
     self.dController = (PPCityDangerController *)[PPCityInfoController showWithCity:city];
 }
 
+
+
 - (void)redrawInterface
 {
     
@@ -157,16 +159,42 @@
     PPPlayer *player = [PPGame instance].player;
     self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)[player totalPopularity]];
     
-    NSArray *abilities = player.abilities;
-    
     for (PPPlayerAbilityView *view in self.playerAbilities) {
-        if (view.tag < abilities.count) {
-            PPAbility *ability = abilities[view.tag];
-            [view setAbility:ability];
+        NSInteger abIndex = view.tag;
+        
+        PPAbility *ability = [PPAbility new];
+        
+        switch (abIndex) {
+            case 0:
+                ability.abilityName = @"Мана";
+                ability.value = player.mana;
+                break;
+                
+            case 1:
+                ability.abilityName = @"Расположение короля";
+                ability.value = player.kingRep;
+                break;
+                
+            case 2:
+                ability.abilityName = @"Расположение народа";
+                ability.value = player.peopleRep;
+                break;
+                
+            case 3:
+                ability.abilityName = @"Коррапт";
+                ability.value = player.corrupt;
+                break;
+                
+            default:
+                break;
         }
+        
+        [view setAbility:ability];
+        
     }
+
     
-    self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] currentTimeHours] / 24)];
+    self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] currentTimeHours])];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -246,9 +274,10 @@
     if ([[PPGame instance] leftTimeHours] <= 0) {
         [EndingsViewController triggerEndingWithController:self];
     } else {
-        for (PPAbility *abil in [[[PPGame instance] player] abilities]) {
-            abil.value += ABILITIES_REGEN_VALUE_IN_HOUR;
-        }
+        [[PPGame instance] player].mana += ABILITIES_REGEN_VALUE_IN_DAY;
+//        for (PPAbility *abil in [ abilities]) {
+//            abil.value += ABILITIES_REGEN_VALUE_IN_HOUR;
+//        }
         
         [self checkAndRedraw];
     }

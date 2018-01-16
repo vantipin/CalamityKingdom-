@@ -81,19 +81,6 @@ static PPGame *instance = nil;
 }
 
 - (void)updateGame:(PPGameCallback)completion {
-//    [GoogleDocsServiceLayer sheetsForWorksheetKey:@"1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0"  callback:^(NSArray *objects, NSError *error) {
-//        if (error) {
-//            if (completion) {
-//                completion(NO, error);
-//            }
-//
-//            return;
-//        } else {
-//            NSLog(@"worksheets = %@", objects);
-//
-//            NSLog(@"213412");
-//        }
-//    }];
     NSLog(@"START LOADING");
     [self loadSheet:0 completion:completion];
 }
@@ -389,7 +376,7 @@ static PPGame *instance = nil;
 
 - (NSInteger)leftTimeHours
 {
-    return (GameDaysCount * HoursInDay - self.currentTimeHours);
+    return (GameDaysCount - self.currentTimeHours);
 }
 
 - (NSArray *)liveDangers

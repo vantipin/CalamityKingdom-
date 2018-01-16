@@ -17,18 +17,28 @@
 {
     self = [super init];
     if (self) {
-        self.abilities = [@[] mutableCopy];
-        
-        for (PPAbilityType type = 0; type < PPAbilityTypeNobody; type++) {
-            PPAbility *ability = [PPAbility new];
-            ability.abilityType = type;
-            ability.value = 100;
-            [self.abilities addObject:ability];
-        }
+
     }
     
     return self;
 }
+
+- (void)setMana:(NSInteger)mana {
+    _mana = MIN(MAX(mana, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setKingRep:(NSInteger)kingRep {
+    _kingRep = MIN(MAX(kingRep, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setPeopleRep:(NSInteger)peopleRep {
+    _peopleRep = MIN(MAX(peopleRep, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setCorrupt:(NSInteger)corrupt {
+    _corrupt = MIN(MAX(corrupt, MinAbilityValue), MaxAbilityValue);
+}
+
 - (CGFloat)totalPopularity
 
 {

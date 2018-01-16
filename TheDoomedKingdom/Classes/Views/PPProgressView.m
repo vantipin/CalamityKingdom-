@@ -84,25 +84,6 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
         self.dangerImageView.image = [UIImage imageNamed:[danger dangerTypeIcon]];
         
         self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)hoursToRemove];
-    } else {
-    
-        
-        self.abilityActionStringLabel.text = @"Кастуем предвидение";
-        
-        NSArray *images = @[[UIImage imageNamed:@"1_1.png"],
-                            [UIImage imageNamed:@"1_2.png"],
-                            [UIImage imageNamed:@"2_1.png"],
-                            [UIImage imageNamed:@"2_2.png"],];
-        
-        self.playerImageView.image = [UIImage animatedImageWithImages:images duration:DurationPerImage * images.count];
-        NSInteger hoursToRemove = VisionCost;
-        
-        self.currentValue = 0.;
-        [self.progressBar setProgress:0.];
-        
-        [[SoundController sharedInstance] playCasting];
-        self.dangerImageView.image = [UIImage imageNamed:@"danger_curse.png"];
-        self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)hoursToRemove];
     }
     
     [self performSelector:@selector(checkvalue) withObject:nil afterDelay:1.2];
@@ -110,7 +91,7 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
 
 - (void)checkvalue
 {
-    NSInteger timeToDestroy = nil == self.ability ? VisionCost : self.ability.timeToDestroyDanger;
+    NSInteger timeToDestroy = self.ability.timeToDestroyDanger;
     
     if (self.currentValue < timeToDestroy) {
         self.currentValue += 1;

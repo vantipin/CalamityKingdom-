@@ -22,23 +22,12 @@
     _ability = ability;
     
     self.nameLabel.text = ability.abilityName;
-//    [self.abilityTypeImageView setImage:[UIImage imageNamed:[ability abilityIcon]]];
-    
+
     self.spentValueLabel.text = [NSString stringWithFormat:@"-%li", (long)ability.value];
     self.spentTimeLabel.text = [NSString stringWithFormat:@"%liч", (long)ability.timeToDestroyDanger];
     [self.timeProgress setProgress:(CGFloat)ability.timeToDestroyDanger / 12.f];
-    
-    NSInteger playerAbilityValue = 0;
-    NSArray *pAbilities = [[[PPGame instance] player] abilities];
-    
-    for (PPAbility *pAb in pAbilities) {
-        if (pAb.abilityType == ability.abilityType) {
-            playerAbilityValue = pAb.value;
-            break;
-        }
-    }
-    
-    self.enabled = playerAbilityValue >= ability.value;
+
+    self.enabled = [[PPGame instance] player].mana >= ability.value;
 }
 
 - (void)setEnabled:(BOOL)enabled

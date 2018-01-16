@@ -14,7 +14,11 @@
 @property (nonatomic, strong) NSString *name;
 
 @property (nonatomic, assign) NSString *playerProfileIcon;
-@property (nonatomic, strong) NSMutableArray *abilities;
+@property (nonatomic) NSInteger mana;
+@property (nonatomic) NSInteger kingRep;
+@property (nonatomic) NSInteger peopleRep;
+@property (nonatomic) NSInteger corrupt;
+//@property (nonatomic, strong) NSMutableArray *abilities;
 
 - (CGFloat)totalPopularity;
 
