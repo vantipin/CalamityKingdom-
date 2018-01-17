@@ -17,6 +17,7 @@
 @property (nonatomic, assign) PPAbilityType abilityType;
 @property (nonatomic, assign) NSInteger value;
 
+@property (nonatomic, assign) CGFloat coef;
 @property (nonatomic, assign) NSInteger timeToDestroyDanger;
 
 @property (nonatomic, strong) NSString *abilityName;

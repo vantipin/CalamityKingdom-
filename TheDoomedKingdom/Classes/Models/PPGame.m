@@ -89,19 +89,51 @@ static PPGame *instance = nil;
     NSLog(@"filtered objects = %@", objects);
     
     switch (sheet) {
-        case PPSheetCities:
+        case PPSheetCities: {
+            for (PPCity *city in objects) {
+                city.currPeopleCount = city.initPeopleCount;
+            }
             
+            [self.kingdom.cities addObjectsFromArray:objects];
             break;
+        }
             
-        case PPSheetDisasters:
-
+        case PPSheetDisasters: {
+            for (PPDanger *danger in objects) {
+                PPValue *peopleToDie = [PPValue new];
+                peopleToDie.minValue = danger.minValue;
+                peopleToDie.maxValue = danger.maxValue;
+                
+                danger.result.peopleCountToDie = @[peopleToDie];
+            }
+            
+            self.dangers = objects;
             break;
+        }
             
-        case PPSheetReplies:
-
-            
+        case PPSheetReplies: {
+            for (PPAbility *ability in objects) {
+                PPDanger *danger = [[self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", ability.dangerId]] lastObject];
+                
+                if (danger) {
+                    PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @(ability.abilityType - 1)]] lastObject];
+                    
+                    if (currAbility) {
+                        NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
+                        PPValue *dieValue = dieArray[0];
+                        PPValue *modifiedValue = [PPValue new];
+                        
+                        CGFloat modifier = ability.coef;
+                        modifiedValue.minValue = dieValue.minValue * modifier;
+                        modifiedValue.maxValue = dieValue.maxValue * modifier;
+                        [dieArray addObject:modifiedValue];
+                        
+                        danger.result.peopleCountToDie = [dieArray copy];
+                    }
+                }
+            }
             break;
-            
+        }
         case PPSheetEvents:
 
             
@@ -113,8 +145,7 @@ static PPGame *instance = nil;
             break;
             
         case PPSheetLibrary:
-
-            
+            self.libraryItems = objects;
             break;
             
         case PPSheetEventReplies:
@@ -249,115 +280,115 @@ static PPGame *instance = nil;
     }
     
     
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"tsv"];
-    
-    NSArray *cities = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-    
-    for (NSArray *cityArray in cities) {
-        if (cityArray.count == 4) {
-            PPCity *city = [PPCity new];
-            city.name = cityArray[1];
-            city.initPeopleCount = [cityArray[2] integerValue];
-            city.currPeopleCount = city.initPeopleCount;
-            city.cityDescription = cityArray[3];
-            
-            [self.kingdom.cities addObject:city];
-        }
-    }
-    
-//    NSLog(@"cities = %@", self.kingdom.cities);
-    
-    filePath = [[NSBundle mainBundle] pathForResource:@"dangers" ofType:@"tsv"];
-    
-    NSArray *dangers = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-    
-    NSMutableArray *parsedDangers = [@[] mutableCopy];
-    
-    for (NSArray *dangerArr in dangers) {
-        if (dangerArr.count == 10) {
-            PPDanger *danger = [PPDanger new];
-            danger.identifier = dangerArr[0];
-            danger.name = dangerArr[1];
-            danger.dangerDescription = dangerArr[9];
-            
-            danger.dangerType = [dangerArr[3] integerValue];
-            
-           
-            
-            PPValue *peopleToDie = [PPValue new];
-            peopleToDie.minValue = [dangerArr[5] integerValue];
-            peopleToDie.maxValue = [dangerArr[6] integerValue];
-            
-            NSMutableArray *dieArray = [@[] mutableCopy];
-//#warning first with replics
-            dieArray[0] = peopleToDie;
-            danger.result.peopleCountToDie = [dieArray copy];
-            
-            PPValue *dangerAppearTime = [PPValue new];
-            dangerAppearTime.minValue = [dangerArr[7] integerValue] * HoursInDay;
-            dangerAppearTime.maxValue = [dangerArr[8] integerValue] * HoursInDay;
-            
-            
-            danger.timeToAppear = [dangerAppearTime randomValue];
-            
-            [parsedDangers addObject:danger];
-        }
-    }
-    
-//    NSLog(@"parsedDangers = %@", parsedDangers);
-    
-    filePath = [[NSBundle mainBundle] pathForResource:@"replics" ofType:@"tsv"];
-    
-    NSArray *replics = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-    
-    for (NSArray *replArr in replics) {
-        if (replArr.count == 8) {
-            PPDanger *danger = [[parsedDangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", replArr[1]]] lastObject];
-            
-            if (danger) {
-                PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @([replArr[2] integerValue] - 1)]] lastObject];
-                
-                if (currAbility) {
-                    currAbility.abilityName = replArr[3];
-                    currAbility.value = [replArr[4] integerValue];
-                    currAbility.timeToDestroyDanger = [replArr[5] integerValue];
-                    
-                    NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
-                    PPValue *dieValue = dieArray[0];
-                    PPValue *modifiedValue = [PPValue new];
-                    
-                    CGFloat modifier = [replArr[6] floatValue];
-                    modifiedValue.minValue = dieValue.minValue * modifier;
-                    modifiedValue.maxValue = dieValue.maxValue * modifier;
-                    [dieArray addObject:modifiedValue];
-                    
-                    danger.result.peopleCountToDie = [dieArray copy];
-                    
-                    currAbility.abilityDescription = replArr[7];
-                }
-            }
-        }
-    }
-    
-    self.dangers = [parsedDangers copy];
-    
-    filePath = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"tsv"];
-    
-    NSArray *items = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-    
-    NSMutableArray *libItems = [@[] mutableCopy];
-    
-    for (NSArray *itemArr in items) {
-        if (itemArr.count == 3) {
-            PPLibraryItem *item = [PPLibraryItem new];
-            
-            item.itemName = itemArr[1];
-            item.itemDescription = itemArr[2];
-            [libItems addObject:item];
-        }
-    }
-    
-    self.libraryItems = [libItems copy];
+//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"tsv"];
+//    
+//    NSArray *cities = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
+//    
+//    for (NSArray *cityArray in cities) {
+//        if (cityArray.count == 4) {
+//            PPCity *city = [PPCity new];
+//            city.name = cityArray[1];
+//            city.initPeopleCount = [cityArray[2] integerValue];
+//            city.currPeopleCount = city.initPeopleCount;
+//            city.cityDescription = cityArray[3];
+//            
+//            [self.kingdom.cities addObject:city];
+//        }
+//    }
+//    
+////    NSLog(@"cities = %@", self.kingdom.cities);
+//    
+//    filePath = [[NSBundle mainBundle] pathForResource:@"dangers" ofType:@"tsv"];
+//    
+//    NSArray *dangers = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
+//    
+//    NSMutableArray *parsedDangers = [@[] mutableCopy];
+//    
+//    for (NSArray *dangerArr in dangers) {
+//        if (dangerArr.count == 10) {
+//            PPDanger *danger = [PPDanger new];
+//            danger.identifier = dangerArr[0];
+//            danger.name = dangerArr[1];
+//            danger.dangerDescription = dangerArr[9];
+//            
+//            danger.dangerType = [dangerArr[3] integerValue];
+//            
+//           
+//            
+//            PPValue *peopleToDie = [PPValue new];
+//            peopleToDie.minValue = [dangerArr[5] integerValue];
+//            peopleToDie.maxValue = [dangerArr[6] integerValue];
+//            
+//            NSMutableArray *dieArray = [@[] mutableCopy];
+////#warning first with replics
+//            dieArray[0] = peopleToDie;
+//            danger.result.peopleCountToDie = [dieArray copy];
+//            
+//            PPValue *dangerAppearTime = [PPValue new];
+//            dangerAppearTime.minValue = [dangerArr[7] integerValue] * HoursInDay;
+//            dangerAppearTime.maxValue = [dangerArr[8] integerValue] * HoursInDay;
+//            
+//            
+//            danger.timeToAppear = [dangerAppearTime randomValue];
+//            
+//            [parsedDangers addObject:danger];
+//        }
+//    }
+//    
+////    NSLog(@"parsedDangers = %@", parsedDangers);
+//    
+//    filePath = [[NSBundle mainBundle] pathForResource:@"replics" ofType:@"tsv"];
+//    
+//    NSArray *replics = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
+//    
+//    for (NSArray *replArr in replics) {
+//        if (replArr.count == 8) {
+//            PPDanger *danger = [[parsedDangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", replArr[1]]] lastObject];
+//            
+//            if (danger) {
+//                PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @([replArr[2] integerValue] - 1)]] lastObject];
+//                
+//                if (currAbility) {
+//                    currAbility.abilityName = replArr[3];
+//                    currAbility.value = [replArr[4] integerValue];
+//                    currAbility.timeToDestroyDanger = [replArr[5] integerValue];
+//                    
+//                    NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
+//                    PPValue *dieValue = dieArray[0];
+//                    PPValue *modifiedValue = [PPValue new];
+//                    
+//                    CGFloat modifier = [replArr[6] floatValue];
+//                    modifiedValue.minValue = dieValue.minValue * modifier;
+//                    modifiedValue.maxValue = dieValue.maxValue * modifier;
+//                    [dieArray addObject:modifiedValue];
+//                    
+//                    danger.result.peopleCountToDie = [dieArray copy];
+//                    
+//                    currAbility.abilityDescription = replArr[7];
+//                }
+//            }
+//        }
+//    }
+//    
+//    self.dangers = [parsedDangers copy];
+//    
+//    filePath = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"tsv"];
+//    
+//    NSArray *items = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
+//    
+//    NSMutableArray *libItems = [@[] mutableCopy];
+//    
+//    for (NSArray *itemArr in items) {
+//        if (itemArr.count == 3) {
+//            PPLibraryItem *item = [PPLibraryItem new];
+//            
+//            item.itemName = itemArr[1];
+//            item.itemDescription = itemArr[2];
+//            [libItems addObject:item];
+//        }
+//    }
+//    
+//    self.libraryItems = [libItems copy];
 }
 
 - (NSArray *)shuffledLibraryItems

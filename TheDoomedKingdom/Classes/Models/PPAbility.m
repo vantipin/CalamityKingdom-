@@ -21,6 +21,7 @@
              @"abilityType": @"type",
              @"value": @"cost",
              @"timeToDestroyDanger": @"time",
+             @"coef": @"coef"
              };
 }
 
