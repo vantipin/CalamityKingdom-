@@ -21,7 +21,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *dangerImageView;
 
 @property (nonatomic, weak) IBOutlet UILabel *abilityActionStringLabel;
-@property (nonatomic, weak) IBOutlet UILabel *hoursLabel;
 
 @property (nonatomic, weak) IBOutlet PPProgressBarView *progressBar;
 

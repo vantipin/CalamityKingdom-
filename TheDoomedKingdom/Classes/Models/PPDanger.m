@@ -14,7 +14,7 @@
 
 @interface PPDanger()
 
-@property (nonatomic, strong, readwrite) NSArray *abilitiesToRemove;
+//@property (nonatomic, strong, readwrite) NSArray *abilitiesToRemove;
 
 @end
 
@@ -24,15 +24,8 @@
 {
     self = [super init];
     if (self) {
-        NSMutableArray *abilities = [@[] mutableCopy];
-        
-        for (PPAbilityType type = PPAbilityTypeTelekinesis; type < PPAbilityTypeNobody; type++) {
-            PPAbility *ability = [PPAbility new];
-            ability.abilityType = type;
-            [abilities addObject:ability];
-        }
-        
-        self.abilitiesToRemove = [abilities copy];
+
+        self.abilitiesToRemove = @[];
         self.removed = NO;
         self.result = [PPDangerResult new];
     }

@@ -1203,13 +1203,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zIh-hO-adv">
-                                <rect key="frame" x="51" y="374" width="667" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
-                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="KVh-oo-uFt">
                                 <rect key="frame" x="20" y="110" width="230" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1230,7 +1223,6 @@
                         <connections>
                             <outlet property="abilityActionStringLabel" destination="gC5-Sh-EGr" id="Q4w-qs-QlR"/>
                             <outlet property="dangerImageView" destination="Bg9-1l-21b" id="hXd-lP-iOO"/>
-                            <outlet property="hoursLabel" destination="zIh-hO-adv" id="3MB-ar-sX6"/>
                             <outlet property="playerImageView" destination="KVh-oo-uFt" id="3xF-RR-xLN"/>
                             <outlet property="progressBar" destination="YIo-PQ-DfX" id="2er-7E-m0H"/>
                         </connections>
@@ -1293,35 +1285,12 @@
                                         <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patch.png" id="Ffr-fM-biB">
-                                        <rect key="frame" x="55" y="69" width="56" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4ч" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ppI-Yq-m54">
-                                        <rect key="frame" x="82" y="76" width="28" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="24"/>
-                                        <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock.png" id="Nnh-fs-EMk">
-                                        <rect key="frame" x="59" y="76" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="B2o-M1-qdI" customClass="SSPieProgressView">
-                                        <rect key="frame" x="63" y="78" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="abilityTypeImageView" destination="tzX-JW-GVm" id="Zy9-mt-StH"/>
                                     <outlet property="nameLabel" destination="Aas-zd-9FZ" id="81e-5W-CbU"/>
-                                    <outlet property="spentTimeLabel" destination="ppI-Yq-m54" id="nOB-6d-qzT"/>
                                     <outlet property="spentValueLabel" destination="Xx9-i6-KOB" id="q5P-ep-AsQ"/>
-                                    <outlet property="timeProgress" destination="B2o-M1-qdI" id="vWT-Yr-JWX"/>
                                 </connections>
                             </view>
                             <view tag="2" contentMode="scaleToFill" id="f8j-Lb-Dqp" customClass="PPDangerAbilityView">
@@ -1355,35 +1324,12 @@
                                         <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patch.png" id="iwq-XP-uUv">
-                                        <rect key="frame" x="55" y="69" width="56" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4ч" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Da-8p-xMl">
-                                        <rect key="frame" x="82" y="76" width="28" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="24"/>
-                                        <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock.png" id="mKm-bQ-s38">
-                                        <rect key="frame" x="59" y="76" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="6uo-rP-HHW" customClass="SSPieProgressView">
-                                        <rect key="frame" x="63" y="78" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="abilityTypeImageView" destination="Tum-cv-Jn2" id="FOg-Si-TzM"/>
                                     <outlet property="nameLabel" destination="0uV-aL-15h" id="Dfv-aq-Wq1"/>
-                                    <outlet property="spentTimeLabel" destination="6Da-8p-xMl" id="FAH-xn-Tjk"/>
                                     <outlet property="spentValueLabel" destination="cBf-yz-z5f" id="UMf-Lt-ZGF"/>
-                                    <outlet property="timeProgress" destination="6uo-rP-HHW" id="W59-RD-fhh"/>
                                 </connections>
                             </view>
                             <view tag="1" contentMode="scaleToFill" id="Hxi-DK-mxb" customClass="PPDangerAbilityView">
@@ -1417,35 +1363,12 @@
                                         <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patch.png" id="65N-b1-2DT">
-                                        <rect key="frame" x="55" y="69" width="56" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4ч" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9mk-VX-b0c">
-                                        <rect key="frame" x="82" y="76" width="28" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="24"/>
-                                        <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock.png" id="JzG-Vf-Yl4">
-                                        <rect key="frame" x="59" y="76" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="4ot-ND-Hdi" customClass="SSPieProgressView">
-                                        <rect key="frame" x="63" y="78" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="abilityTypeImageView" destination="PzS-3B-4lb" id="7Pc-IY-aJq"/>
                                     <outlet property="nameLabel" destination="hOx-Y4-a9I" id="QKm-m0-VkF"/>
-                                    <outlet property="spentTimeLabel" destination="9mk-VX-b0c" id="qg7-DS-aCN"/>
                                     <outlet property="spentValueLabel" destination="YxG-Di-yj4" id="zZ9-js-AjP"/>
-                                    <outlet property="timeProgress" destination="4ot-ND-Hdi" id="Zn8-OV-ZR4"/>
                                 </connections>
                             </view>
                             <view tag="3" contentMode="scaleToFill" id="vrV-B9-EHY" customClass="PPDangerAbilityView">
@@ -1479,35 +1402,12 @@
                                         <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Patch.png" id="FJo-s4-CDh">
-                                        <rect key="frame" x="55" y="69" width="56" height="33"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4ч" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EVE-Hf-h14">
-                                        <rect key="frame" x="82" y="76" width="28" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="24"/>
-                                        <color key="textColor" red="0.17254901960784313" green="0.14117647058823529" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock.png" id="q9s-Yx-vg7">
-                                        <rect key="frame" x="59" y="76" width="20" height="20"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" id="KeO-lQ-ZIO" customClass="SSPieProgressView">
-                                        <rect key="frame" x="63" y="78" width="16" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="abilityTypeImageView" destination="q6p-69-grz" id="dyA-ou-tyb"/>
                                     <outlet property="nameLabel" destination="YdE-ZN-9Pd" id="NEU-OF-xoR"/>
-                                    <outlet property="spentTimeLabel" destination="EVE-Hf-h14" id="mkT-gN-rxQ"/>
                                     <outlet property="spentValueLabel" destination="zhe-VN-w9q" id="oXM-Ve-R8c"/>
-                                    <outlet property="timeProgress" destination="KeO-lQ-ZIO" id="bH1-qo-m20"/>
                                 </connections>
                             </view>
                             <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dHm-X8-jpF">
@@ -1700,7 +1600,6 @@
         <image name="AppealIcon.png" width="97" height="83"/>
         <image name="CapitalCity.png" width="144" height="144"/>
         <image name="ChaosIcon.png" width="70" height="81"/>
-        <image name="Clock.png" width="20" height="20"/>
         <image name="ClosePopupIcon.png" width="41" height="41"/>
         <image name="GameField.png" width="1024" height="768"/>
         <image name="GypnosIcon.png" width="75" height="77"/>

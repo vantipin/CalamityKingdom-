@@ -74,7 +74,6 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
         
 //        self.playerImageView.image = [UIImage animatedImageWithImages:images duration:DurationPerImage * images.count];
         
-        NSInteger hoursToRemove = ability.timeToDestroyDanger;
         self.currentValue = 0.;
         
         [self.progressBar setProgress:0.];
@@ -83,7 +82,6 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
         
         self.dangerImageView.image = [UIImage imageNamed:[danger dangerTypeIcon]];
         
-        self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)hoursToRemove];
     }
     
     [self performSelector:@selector(checkvalue) withObject:nil afterDelay:0.8];
@@ -98,8 +96,6 @@ andCompletionBlock:(void (^)(BOOL))aCompletionBlock
 //        [[NSNotificationCenter defaultCenter] postNotificationName:@"TICK" object:nil];
         [self.progressBar setProgress:1 animated:YES duration:3];
         
-        
-//        self.hoursLabel.text = [NSString stringWithFormat:@"%li часов / %li", (long)self.currentValue, (long)timeToDestroy];
         [self performSelector:@selector(checkvalue) withObject:nil afterDelay:3.1];
     } else {
         if (self.completionBlock) {

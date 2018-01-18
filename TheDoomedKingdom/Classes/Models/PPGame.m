@@ -116,20 +116,20 @@ static PPGame *instance = nil;
                 PPDanger *danger = [[self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", ability.dangerId]] lastObject];
                 
                 if (danger) {
-                    PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @(ability.abilityType - 1)]] lastObject];
+                    NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
+                    PPValue *dieValue = dieArray[0];
+                    PPValue *modifiedValue = [PPValue new];
                     
-                    if (currAbility) {
-                        NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
-                        PPValue *dieValue = dieArray[0];
-                        PPValue *modifiedValue = [PPValue new];
-                        
-                        CGFloat modifier = ability.coef;
-                        modifiedValue.minValue = dieValue.minValue * modifier;
-                        modifiedValue.maxValue = dieValue.maxValue * modifier;
-                        [dieArray addObject:modifiedValue];
-                        
-                        danger.result.peopleCountToDie = [dieArray copy];
-                    }
+                    CGFloat modifier = ability.coef;
+                    modifiedValue.minValue = dieValue.minValue * modifier;
+                    modifiedValue.maxValue = dieValue.maxValue * modifier;
+                    [dieArray addObject:modifiedValue];
+                    
+                    danger.result.peopleCountToDie = [dieArray copy];
+                    
+                    danger.abilitiesToRemove = [danger.abilitiesToRemove arrayByAddingObject:ability];
+                    
+                    ability.abilityType--;
                 }
             }
             break;

@@ -24,8 +24,6 @@
     self.nameLabel.text = ability.abilityName;
 
     self.spentValueLabel.text = [NSString stringWithFormat:@"-%li", (long)ability.value];
-    self.spentTimeLabel.text = [NSString stringWithFormat:@"%liч", (long)ability.timeToDestroyDanger];
-    [self.timeProgress setProgress:(CGFloat)ability.timeToDestroyDanger / 12.f];
 
     self.enabled = [[PPGame instance] player].mana >= ability.value;
 }

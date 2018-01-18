@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PPAbility.h"
 //#import "PaperView.h"
-#import "SSPieProgressView.h"
+//#import "SSPieProgressView.h"
 
 @interface PPDangerAbilityView : UIView
 
@@ -17,8 +17,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *abilityTypeImageView;
 
 @property (nonatomic, weak) IBOutlet UILabel *spentValueLabel;
-@property (nonatomic, weak) IBOutlet UILabel *spentTimeLabel;
-@property (nonatomic, weak) IBOutlet SSPieProgressView *timeProgress;
 
 @property (nonatomic, strong) PPAbility *ability;
 
