@@ -28,7 +28,7 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 @property (nonatomic, readonly) NSArray *liveDangers; // All not removed dangers
 @property (nonatomic, readonly) NSArray *usedDangers; // All removed dangers
 
-@property (nonatomic, assign) NSInteger currentTimeHours; // Current time in hours
+@property (nonatomic, assign) NSInteger daysCount; // Current time in hours
 @property (nonatomic, readonly) NSInteger leftTimeHours; // Time left for trigger ending
 
 + (PPGame *)instance;

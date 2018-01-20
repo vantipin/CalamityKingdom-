@@ -166,22 +166,22 @@
         
         switch (abIndex) {
             case 0:
-                ability.abilityName = @"Мана";
+                ability.abilityName = [PPGame instance].gameConstants.mana.name;
                 ability.value = player.mana;
                 break;
                 
             case 1:
-                ability.abilityName = @"Расположение короля";
+                ability.abilityName = [PPGame instance].gameConstants.king_rep.name;
                 ability.value = player.kingRep;
                 break;
                 
             case 2:
-                ability.abilityName = @"Расположение народа";
+                ability.abilityName = [PPGame instance].gameConstants.people_rep.name;
                 ability.value = player.peopleRep;
                 break;
                 
             case 3:
-                ability.abilityName = @"Коррапт";
+                ability.abilityName = [PPGame instance].gameConstants.corrupt.name;
                 ability.value = player.corrupt;
                 break;
                 
@@ -194,7 +194,7 @@
     }
 
     
-    self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] currentTimeHours])];
+    self.timeLabel.text = [NSString stringWithFormat:@"День: %li", (long)([[PPGame instance] daysCount])];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
@@ -278,20 +278,13 @@
 
 - (void)timerTick
 {
-    
-    [PPGame instance].currentTimeHours += 1;
-    
-    
-    
+    [PPGame instance].daysCount += 1;
     
     if ([[PPGame instance] leftTimeHours] <= 0) {
         [EndingsViewController triggerEndingWithController:self];
     } else {
-        [[PPGame instance] player].mana += ABILITIES_REGEN_VALUE_IN_DAY;
-//        for (PPAbility *abil in [ abilities]) {
-//            abil.value += ABILITIES_REGEN_VALUE_IN_HOUR;
-//        }
-        
+        [[PPGame instance] player].mana += [PPGame instance].gameConstants.mana_regen.constValue.integerValue;
+
         [self checkAndRedraw];
     }
 }

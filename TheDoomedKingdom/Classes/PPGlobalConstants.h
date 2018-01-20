@@ -34,20 +34,11 @@ typedef NS_ENUM(NSUInteger, PPSheet) {
 #define PopupSize CGSizeMake(769., 497)
 #define LibraryPopupSize CGSizeMake(699., 451.)
 
-#define GameDaysCount 30
-#define HoursInDay 1
-
 #pragma mark - Abilities
 
 #define MinAbilityValue 0
 #define MaxAbilityValue 100
 
-#define InitialManaValue 100
-#define InitialKingRep 100
-#define InitialPeopleRep 100
-#define InitialCorrupt 0
-
-#define ABILITIES_REGEN_VALUE_IN_DAY 20
 #define AnimationDuration 0.3
 
 #pragma mark - Sheets constants

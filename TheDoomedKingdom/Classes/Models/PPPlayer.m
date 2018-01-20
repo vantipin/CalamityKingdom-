@@ -17,10 +17,10 @@
 {
     self = [super init];
     if (self) {
-        self.mana = InitialManaValue;
-        self.kingRep = InitialKingRep;
-        self.peopleRep = InitialPeopleRep;
-        self.corrupt = InitialCorrupt;
+        self.mana = [[PPGame instance].gameConstants.mana.constValue integerValue];
+        self.kingRep = [[PPGame instance].gameConstants.king_rep.constValue integerValue];
+        self.peopleRep = [[PPGame instance].gameConstants.people_rep.constValue integerValue];
+        self.corrupt = [[PPGame instance].gameConstants.corrupt.constValue integerValue];
     }
     
     return self;

@@ -7,6 +7,7 @@
 //
 
 #import "PPAbility.h"
+#import "PPGame.h"
 
 @implementation PPAbility
 @synthesize value;
@@ -53,34 +54,6 @@
     return name;
 }
 
-- (NSString *)defaultAbilityName
-{
-    NSString *name = @"DefaultName";
-    
-    switch (self.abilityType) {
-        case PPAbilityTypeAppeal:
-            name = @"Призыв";
-            break;
-            
-        case PPAbilityTypeHypnosis:
-            name = @"Гипноз";
-            break;
-            
-        case PPAbilityTypeChaos:
-            name = @"Хаос";
-            break;
-            
-        case PPAbilityTypeTelekinesis:
-            name = @"Телекинез";
-            break;
-            
-        default:
-            break;
-    }
-    
-    return name;
-}
-
 - (void)setValue:(NSInteger)aValue
 {
     value = MIN(MAX(aValue, MinAbilityValue), MaxAbilityValue);
@@ -96,19 +69,19 @@
     
     switch (self.abilityType) {
         case PPAbilityTypeAppeal:
-            name = @"Призыв";
+            name = [PPGame instance].gameConstants.ability_appeal.name;
             break;
             
         case PPAbilityTypeHypnosis:
-            name = @"Гипноз";
+            name = [PPGame instance].gameConstants.ability_hypnosis.name;
             break;
             
         case PPAbilityTypeChaos:
-            name = @"Хаос";
+            name = [PPGame instance].gameConstants.ability_chaos.name;
             break;
             
         case PPAbilityTypeTelekinesis:
-            name = @"Телекинез";
+            name = [PPGame instance].gameConstants.ability_telekinesis.name;
             break;
             
         default:
@@ -124,19 +97,19 @@
     
     switch (self.abilityType) {
         case PPAbilityTypeAppeal:
-            name = @"Призываем...";
+            name = [PPGame instance].gameConstants.ability_appeal_action.name;
             break;
             
         case PPAbilityTypeHypnosis:
-            name = @"Гипнотизируем...";
+            name = [PPGame instance].gameConstants.ability_hypnosis_action.name;
             break;
             
         case PPAbilityTypeChaos:
-            name = @"Вносим хаос...";
+            name = [PPGame instance].gameConstants.ability_chaos_action.name;
             break;
             
         case PPAbilityTypeTelekinesis:
-            name = @"Плющим и левитируем...";
+            name = [PPGame instance].gameConstants.ability_telekinesis_action.name;
             break;
             
         default:

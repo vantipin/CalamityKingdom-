@@ -345,7 +345,7 @@ static PPGame *instance = nil;
 
 - (NSInteger)leftTimeHours
 {
-    return (GameDaysCount - self.currentTimeHours);
+    return ([PPGame instance].gameConstants.days_count.constValue.integerValue - self.daysCount);
 }
 
 - (NSArray *)liveDangers
@@ -360,12 +360,12 @@ static PPGame *instance = nil;
 
 - (NSArray *)firedDangers
 {
-    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (self.timeToAppear <= %@) AND (self.inProgress == NO)", @(self.currentTimeHours)]];
+    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (self.timeToAppear <= %@) AND (self.inProgress == NO)", @(self.daysCount)]];
 }
 
 - (NSArray *)dangersToApply
 {
-    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (timeToAppear <= %@) AND (self.affectedCity == nil)", @(self.currentTimeHours)]];
+    return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"(self.removed == NO) AND (timeToAppear <= %@) AND (self.affectedCity == nil)", @(self.daysCount)]];
 }
 
 - (NSArray *)freeCities

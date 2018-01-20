@@ -24,7 +24,6 @@
 @property (nonatomic, strong) NSString *abilityDescription;
 
 - (NSString *)abilityIcon;
-- (NSString *)defaultAbilityName;
 - (NSString *)abilityActionString;
 
 @end
