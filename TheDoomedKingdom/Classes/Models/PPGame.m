@@ -49,7 +49,7 @@ static PPGame *instance = nil;
 
 - (void)reinitGame {
     self.kingdom = [PPKingdom new];
-    self.player = [PPPlayer new];
+    
     
     self.loadedSheets = 0;
 //    PPSheetCities + PPSheetDisasters + PPSheetReplies + PPSheetEndings + PPSheetArchimags + PPSheetLibrary + PPSheetEvents + PPSheetEventReplies + PPSheetConstants
@@ -74,7 +74,7 @@ static PPGame *instance = nil;
 {
     self = [super init];
     if (self) {
-        [self reinitGame];
+//        [self reinitGame];
     }
     
     return self;
@@ -300,6 +300,8 @@ static PPGame *instance = nil;
             
             if (weakSelf.loadedSheets == PPSheetAll) {
                 NSLog(@"all loaded! without error!!!");
+                
+                self.player = [PPPlayer new];
                 
                 if (completion) {
                     completion(YES, nil);
