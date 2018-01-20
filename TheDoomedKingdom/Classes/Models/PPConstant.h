@@ -14,7 +14,4 @@
 @property (nonatomic, strong) NSString *constDescription;
 @property (nonatomic, assign) NSNumber *constValue;
 
-
-
-
 @end

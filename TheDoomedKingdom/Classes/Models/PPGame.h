@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PPKingdom.h"
 #import "PPPlayer.h"
+#import "PPGameConstant.h"
 
 @class PPCity;
 
@@ -16,6 +17,7 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 
 @interface PPGame : NSObject
 
+@property (nonatomic) PPGameConstant *gameConstants;
 @property (nonatomic, strong) PPKingdom *kingdom; // Usless current kingdom model, remove in future (or use with multiple kingdoms)
 @property (nonatomic, strong) PPPlayer *player; // Current player with abilities and popularity
 @property (nonatomic, strong) NSArray *dangers; // All dangers

@@ -54,8 +54,8 @@ static PPGame *instance = nil;
     self.loadedSheets = 0;
 //    PPSheetCities + PPSheetDisasters + PPSheetReplies + PPSheetEndings + PPSheetArchimags + PPSheetLibrary + PPSheetEvents + PPSheetEventReplies + PPSheetConstants
     self.sheets = @[
-                    [PPTable objectWithUrl:CitiesSheetUrl type:PPSheetCities],
                     [PPTable objectWithUrl:ConstantsSheetUrl type:PPSheetConstants],
+                    [PPTable objectWithUrl:CitiesSheetUrl type:PPSheetCities],
                     [PPTable objectWithUrl:EndingsSheetUrl type:PPSheetEndings],
                     [PPTable objectWithUrl:DisasterSheetUrl type:PPSheetDisasters],
                     [PPTable objectWithUrl:RepliesSheetUrl type:PPSheetReplies],
@@ -153,10 +153,59 @@ static PPGame *instance = nil;
             
             break;
             
-        case PPSheetConstants:
-
+        case PPSheetConstants: {
+            PPGameConstant *gc = [PPGameConstant new];
+            
+            for (PPConstant *constant in objects) {
+                if ([constant.identifier isEqualToString:@"ability_hypnosis_action"]) {
+                    gc.ability_hypnosis_action = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_chaos_action"]) {
+                    gc.ability_chaos_action = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_telekinesis_action"]) {
+                    gc.ability_telekinesis_action = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_appeal_action"]) {
+                    gc.ability_appeal_action = constant;
+                } else if ([constant.identifier isEqualToString:@"danger_type_disaster"]) {
+                    gc.danger_type_disaster = constant;
+                } else if ([constant.identifier isEqualToString:@"danger_type_monsters"]) {
+                    gc.danger_type_monsters = constant;
+                } else if ([constant.identifier isEqualToString:@"danger_type_plague"]) {
+                    gc.danger_type_plague = constant;
+                } else if ([constant.identifier isEqualToString:@"danger_type_curse"]) {
+                    gc.danger_type_curse = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_appeal"]) {
+                    gc.ability_appeal = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_hypnosis"]) {
+                    gc.ability_hypnosis = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_chaos"]) {
+                    gc.ability_chaos = constant;
+                } else if ([constant.identifier isEqualToString:@"ability_telekinesis"]) {
+                    gc.ability_telekinesis = constant;
+                } else if ([constant.identifier isEqualToString:@"corrupt"]) {
+                    gc.corrupt = constant;
+                } else if ([constant.identifier isEqualToString:@"mana"]) {
+                    gc.mana = constant;
+                } else if ([constant.identifier isEqualToString:@"king_rep"]) {
+                    gc.king_rep = constant;
+                } else if ([constant.identifier isEqualToString:@"people_rep"]) {
+                    gc.people_rep = constant;
+                } else if ([constant.identifier isEqualToString:@"mana_regen"]) {
+                    gc.mana_regen = constant;
+                } else if ([constant.identifier isEqualToString:@"mana_to_king_rep"]) {
+                    gc.mana_to_king_rep = constant;
+                } else if ([constant.identifier isEqualToString:@"mana_to_corrupt"]) {
+                    gc.mana_to_corrupt = constant;
+                } else if ([constant.identifier isEqualToString:@"mana_to_people_rep"]) {
+                    gc.mana_to_people_rep = constant;
+                } else if ([constant.identifier isEqualToString:@"days_count"]) {
+                    gc.days_count = constant;
+                }   
+            }
+            
+            self.gameConstants = gc;
             
             break;
+        }
             
         case PPSheetEndings:
 
@@ -278,117 +327,6 @@ static PPGame *instance = nil;
         
         [self updateGame:completion];
     }
-    
-    
-//    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"cities" ofType:@"tsv"];
-//
-//    NSArray *cities = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-//
-//    for (NSArray *cityArray in cities) {
-//        if (cityArray.count == 4) {
-//            PPCity *city = [PPCity new];
-//            city.name = cityArray[1];
-//            city.initPeopleCount = [cityArray[2] integerValue];
-//            city.currPeopleCount = city.initPeopleCount;
-//            city.cityDescription = cityArray[3];
-//
-//            [self.kingdom.cities addObject:city];
-//        }
-//    }
-//
-////    NSLog(@"cities = %@", self.kingdom.cities);
-//
-//    filePath = [[NSBundle mainBundle] pathForResource:@"dangers" ofType:@"tsv"];
-//
-//    NSArray *dangers = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-//
-//    NSMutableArray *parsedDangers = [@[] mutableCopy];
-//
-//    for (NSArray *dangerArr in dangers) {
-//        if (dangerArr.count == 10) {
-//            PPDanger *danger = [PPDanger new];
-//            danger.identifier = dangerArr[0];
-//            danger.name = dangerArr[1];
-//            danger.dangerDescription = dangerArr[9];
-//
-//            danger.dangerType = [dangerArr[3] integerValue];
-//
-//
-//
-//            PPValue *peopleToDie = [PPValue new];
-//            peopleToDie.minValue = [dangerArr[5] integerValue];
-//            peopleToDie.maxValue = [dangerArr[6] integerValue];
-//
-//            NSMutableArray *dieArray = [@[] mutableCopy];
-////#warning first with replics
-//            dieArray[0] = peopleToDie;
-//            danger.result.peopleCountToDie = [dieArray copy];
-//
-//            PPValue *dangerAppearTime = [PPValue new];
-//            dangerAppearTime.minValue = [dangerArr[7] integerValue] * HoursInDay;
-//            dangerAppearTime.maxValue = [dangerArr[8] integerValue] * HoursInDay;
-//
-//
-//            danger.timeToAppear = [dangerAppearTime randomValue];
-//
-//            [parsedDangers addObject:danger];
-//        }
-//    }
-//
-////    NSLog(@"parsedDangers = %@", parsedDangers);
-//
-//    filePath = [[NSBundle mainBundle] pathForResource:@"replics" ofType:@"tsv"];
-//
-//    NSArray *replics = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-//
-//    for (NSArray *replArr in replics) {
-//        if (replArr.count == 8) {
-//            PPDanger *danger = [[parsedDangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", replArr[1]]] lastObject];
-//
-//            if (danger) {
-//                PPAbility *currAbility = [[danger.abilitiesToRemove filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.abilityType == %@",  @([replArr[2] integerValue] - 1)]] lastObject];
-//
-//                if (currAbility) {
-//                    currAbility.abilityName = replArr[3];
-//                    currAbility.value = [replArr[4] integerValue];
-//                    currAbility.timeToDestroyDanger = [replArr[5] integerValue];
-//
-//                    NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
-//                    PPValue *dieValue = dieArray[0];
-//                    PPValue *modifiedValue = [PPValue new];
-//
-//                    CGFloat modifier = [replArr[6] floatValue];
-//                    modifiedValue.minValue = dieValue.minValue * modifier;
-//                    modifiedValue.maxValue = dieValue.maxValue * modifier;
-//                    [dieArray addObject:modifiedValue];
-//
-//                    danger.result.peopleCountToDie = [dieArray copy];
-//
-//                    currAbility.abilityDescription = replArr[7];
-//                }
-//            }
-//        }
-//    }
-//
-//    self.dangers = [parsedDangers copy];
-//
-//    filePath = [[NSBundle mainBundle] pathForResource:@"library" ofType:@"tsv"];
-//
-//    NSArray *items = [NSArray arrayWithContentsOfCSVFile:filePath options:CHCSVParserOptionsRecognizesBackslashesAsEscapes delimiter:'\t'];
-//
-//    NSMutableArray *libItems = [@[] mutableCopy];
-//
-//    for (NSArray *itemArr in items) {
-//        if (itemArr.count == 3) {
-//            PPLibraryItem *item = [PPLibraryItem new];
-//
-//            item.itemName = itemArr[1];
-//            item.itemDescription = itemArr[2];
-//            [libItems addObject:item];
-//        }
-//    }
-//
-//    self.libraryItems = [libItems copy];
 }
 
 - (NSArray *)shuffledLibraryItems
