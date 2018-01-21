@@ -13,8 +13,8 @@
 #import "PPDangerResult.h"
 
 @interface PPDanger()
-
-//@property (nonatomic, strong, readwrite) NSArray *abilitiesToRemove;
+@property (nonatomic, readwrite) PPDangerResult *result;
+@property (nonatomic, strong, readwrite) NSArray *abilitiesToRemove;
 
 @end
 
@@ -100,5 +100,10 @@
     
     return levelType;
 }
+
+- (void)appendAbility:(PPAbility *)ability {
+    self.abilitiesToRemove = [self.abilitiesToRemove arrayByAddingObject:ability];
+}
+
 
 @end

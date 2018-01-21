@@ -33,9 +33,9 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 
 @property (nonatomic, assign) PPDangerType dangerType;
 
-@property (nonatomic) PPDangerResult *result;
+@property (nonatomic, readonly) PPDangerResult *result;
 
-@property (nonatomic) NSArray *abilitiesToRemove;
+@property (nonatomic, readonly) NSArray *abilitiesToRemove;
 
 @property (nonatomic, assign) NSInteger minValue;
 @property (nonatomic, assign) NSInteger maxValue;
@@ -52,5 +52,6 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 - (NSString *)dangelTypeName;
 - (NSString *)dangerTypeIcon;
 
+- (void)appendAbility:(PPAbility *)ability;
 
 @end

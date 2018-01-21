@@ -127,7 +127,7 @@ static PPGame *instance = nil;
                     
                     danger.result.peopleCountToDie = [dieArray copy];
                     
-                    danger.abilitiesToRemove = [danger.abilitiesToRemove arrayByAddingObject:ability];
+                    [danger appendAbility:ability];
                     
                     ability.abilityType--;
                 }
@@ -217,6 +217,93 @@ static PPGame *instance = nil;
     }
 }
 
+- (NSString *)sheetNameBySheet:(PPSheet)sheet {
+    NSString *sheetName = @"DefaultName";
+    
+    switch (sheet) {
+        case PPSheetCities: {
+            sheetName = @"Cities";
+            break;
+        }
+            
+        case PPSheetDisasters: {
+            sheetName = @"Disasters";
+            break;
+        }
+            
+        case PPSheetReplies: {
+            sheetName = @"Replies";
+            break;
+        }
+        case PPSheetEvents:
+            sheetName = @"Events";
+            break;
+            
+        case PPSheetArchimags:
+            sheetName = @"Archimags";
+            break;
+            
+        case PPSheetLibrary:
+            sheetName = @"Library";
+            break;
+            
+        case PPSheetEventReplies:
+            sheetName = @"EventReplies";
+            break;
+            
+        case PPSheetConstants: {
+            sheetName = @"Constants";
+            break;
+        }
+            
+        case PPSheetEndings: {
+            sheetName = @"Endings";
+            break;
+        }
+            
+        default:
+            break;
+    }
+    
+    return sheetName;
+}
+
+- (NSData *)jsonDataForObject:(id)obj
+{
+    return [NSJSONSerialization dataWithJSONObject:obj options:NSJSONWritingPrettyPrinted error:nil];
+}
+
+- (NSString *)filePathBySheet:(PPSheet)sheet
+{
+    NSString *fileName = [self sheetNameBySheet:sheet];
+    NSString *type = @"json";
+    
+    NSString *bookSettingsPath = [NSString stringWithFormat:@"%@.%@", fileName, type];
+    
+    NSString *docDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *filePath = [docDir stringByAppendingPathComponent:bookSettingsPath];
+    
+    return filePath;
+}
+
+
+- (void)saveObjects:(NSArray *)objects forSheet:(PPSheet)sheet {
+    return;
+    NSMutableArray *jsons = [@[] mutableCopy];
+    
+    for (PPGoogleBaseModel *model in objects) {
+        NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:model];
+        [jsons addObject:JSONDictionary];
+    }
+    
+    NSData *jsonData = [self jsonDataForObject:jsons];
+    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:4];
+    NSLog(@"saved json = %@", jsonString);
+    NSLog(@"1234");
+    
+    [jsonData writeToFile:[self filePathBySheet:sheet] atomically:YES];
+}
+
 - (void)loadSheet:(NSInteger)sheetIndex completion:(PPGameCallback)completion {
     if (sheetIndex >= self.sheets.count) {
         NSLog(@"Sheet index ERRROR!");
@@ -295,6 +382,7 @@ static PPGame *instance = nil;
             
             NSArray *filteredObjects = [objects filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"identifier != nil"]];
             [self configureObjects:filteredObjects forSheet:loadedSheet];
+            [self saveObjects:filteredObjects forSheet:loadedSheet];
             
             weakSelf.loadedSheets += loadedSheet;
             

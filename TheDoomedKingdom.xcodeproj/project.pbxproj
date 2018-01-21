@@ -385,6 +385,8 @@
 		D5CFB5141C969AE1002D3E77 /* PBMiddleProgress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddleProgress@2x.png"; sourceTree = "<group>"; };
 		D5CFB5151C969AE1002D3E77 /* PBMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBMiddle.png; sourceTree = "<group>"; };
 		D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddle@2x.png"; sourceTree = "<group>"; };
+		D5D555A42015567900C2C9A2 /* SmartJSONAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartJSONAdapter.h; sourceTree = "<group>"; };
+		D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartJSONAdapter.m; sourceTree = "<group>"; };
 		D5EB55361C6745480085CA22 /* PPCalamityKingdom.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCalamityKingdom.pch; sourceTree = "<group>"; };
 		D5EE66F81FF2FA5E000E862B /* PPGoogleBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPGoogleBaseModel.h; sourceTree = "<group>"; };
 		D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPGoogleBaseModel.m; sourceTree = "<group>"; };
@@ -561,6 +563,8 @@
 				D559CD791FBA5B400053D8C2 /* PPTable.m */,
 				D52412791C5CCDC600EB1FF4 /* PPValue.h */,
 				D524127A1C5CCDC600EB1FF4 /* PPValue.m */,
+				D5D555A42015567900C2C9A2 /* SmartJSONAdapter.h */,
+				D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -619,9 +623,17 @@
 			path = EAColourfulProgressView;
 			sourceTree = "<group>";
 		};
+		D571221A20153FD90011A60E /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GameObjects;
+			sourceTree = "<group>";
+		};
 		D588F2821C84D96A0054FE61 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D571221A20153FD90011A60E /* GameObjects */,
 				D588F2F71C84D9940054FE61 /* Sounds */,
 				D588F2FE1C84D9940054FE61 /* Fonts */,
 				D588F2831C84D96A0054FE61 /* Images */,
