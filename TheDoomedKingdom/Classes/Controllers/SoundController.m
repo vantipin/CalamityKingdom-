@@ -92,22 +92,26 @@ static SoundController *instance = nil;
 }
 
 //play danger
--(void)playDanger {
+- (void)playDanger {
     [self playSoundWithName:@"danger_happen" withExtension:@"wav"];
 }
 
 //play battle loosing
--(void)playBattleLost {
+- (void)playBattleLost {
     [self playSoundWithName:@"battle_loosing" withExtension:@"wav"];
 }
 
 //play battle winning
--(void)playBattleWin {
+- (void)playBattleWin {
     [self playSoundWithName:@"battle_win" withExtension:@"wav"];
 }
 
+- (void)playSoundName:(NSString *)soundName {
+    [self playSoundWithName:soundName withExtension:@"wav"];
+}
+
 //play time ticking
--(void)playTicking {
+- (void)playTicking {
     [self playSoundWithName:@"time_ticking" withExtension:@"wav"];
 }
 

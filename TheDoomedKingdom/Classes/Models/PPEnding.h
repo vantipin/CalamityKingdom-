@@ -11,6 +11,7 @@
 @interface PPEnding : PPGoogleBaseModel
 
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic, assign) NSInteger imageType; // must be enum type
+@property (nonatomic, assign) NSString *imageName;
+@property (nonatomic) NSString *endingSound;
 
 @end

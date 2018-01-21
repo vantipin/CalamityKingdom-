@@ -14,6 +14,6 @@
 
 
 
-//-(void)setPaperView;
+//- (void)setPaperView;
 
 @end

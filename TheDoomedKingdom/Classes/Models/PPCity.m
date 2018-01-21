@@ -39,7 +39,7 @@
              };
 }
 
--(void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
+- (void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
                            andAbilityType:(PPAbilityType)abilityType
 {
     if (danger && !danger.removed) {

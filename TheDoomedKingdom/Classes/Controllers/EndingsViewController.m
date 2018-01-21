@@ -9,6 +9,8 @@
 #import "EndingsViewController.h"
 #import "IntroViewController.h"
 #import "SoundController.h"
+#import "PPEnding.h"
+#import "PPGame.h"
 
 #define ending_victory @"Безмятежное Королевство спасено от ужасных бедствий - и все благодаря вам! Глядя на ликующих жителей из окон собственной башни, подаренной вам королем, вы как-то не хотите вспоминать о том, что это именно из-за вас эти ужасные бедствия и начались.\nКто старое помянет - тому глаз вон!"
 
@@ -46,12 +48,11 @@
     [super viewWillAppear:animated];
     
 #warning set correct ending
-//    float ending = arc4random() % 3;
-    [self setEnding:arc4random() % 3];
-//    NSLog(@"%f",ending);
+    NSArray *endings = [PPGame instance].endings;
+    [self setEnding:endings[arc4random() % endings.count]];
+
     displayinTextInProcess = true;
     self.textViewInfo.text = @"";
-    //self.imageInfo.image = nil;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,43 +60,21 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)setEnding:(int)ending {
-    
-    NSString *text = nil;
-    NSString *imageName = nil;
+- (void)setEnding:(PPEnding *)ending {
     [[SoundController sharedInstance] pause];
-    switch (ending) {
-        case 0:
-            //win
-            text = ending_victory;
-            imageName = @"ending_victory.png";
-            [[SoundController sharedInstance] playBattleWin];
-            break;
-        case 1:
-            //loose fame
-            text = ending_loose_fame;
-            imageName = @"ending_defeat_popularity.png";
-            [[SoundController sharedInstance] playBattleLost];
-            break;
-            
-        default:
-            //lose destruction
-            text = ending_loose_destruction;
-            imageName = @"ending_defeat_destroyed.png";
-            [[SoundController sharedInstance] playBattleLost];
-            break;
-    }
     
     self.imageInfo.alpha = 0;
+    NSString *text = ending.text;
+    UIImage *image = [UIImage imageNamed:ending.imageName];
+    [[SoundController sharedInstance] playSoundName:ending.endingSound];
+    
     [UIView animateWithDuration:0.3 animations:^{
         self.imageInfo.alpha = 1;
-        UIImage *image = [UIImage imageNamed:imageName];
         self.imageInfo.image = image;
-        NSLog(@"%@",image);
-    } completion:^(BOOL finished) {
-    }];
+    } completion:nil];
     
     float timeToDisplayChar = 0.003;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),^{
         for (int i = 0; i < text.length; i++) {
             dispatch_async(dispatch_get_main_queue(),^{

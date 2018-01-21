@@ -207,11 +207,11 @@ static PPGame *instance = nil;
             break;
         }
             
-        case PPSheetEndings:
-
-            
+        case PPSheetEndings: {
+            self.endings = objects;
             break;
-            
+        }
+
         default:
             break;
     }

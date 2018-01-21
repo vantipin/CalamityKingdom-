@@ -14,7 +14,8 @@
     return @{
              @"identifier" : @"ending_id",
              @"text": @"text",
-             @"imageType": @"image_type",
+             @"imageName": @"image_name",
+             @"endingSound" : @"ending_sound",
              };
 }
 

@@ -18,16 +18,19 @@
 - (void)playCasting;
 
 //play danger
--(void)playDanger;
+- (void)playDanger;
 
 //play battle loosing
--(void)playBattleLost;
+- (void)playBattleLost;
 
 //play battle winning
--(void)playBattleWin;
+- (void)playBattleWin;
+
+//play sound with name
+- (void)playSoundName:(NSString *)soundName;
 
 //play time ticking
--(void)playTicking;
+- (void)playTicking;
 
 - (void)pause;
 - (void)resume;
