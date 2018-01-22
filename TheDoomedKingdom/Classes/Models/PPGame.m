@@ -140,7 +140,7 @@ static PPGame *instance = nil;
 }
 
 - (void)configureObjects:(NSArray *)objects forSheet:(PPSheet)sheet {
-    NSLog(@"filtered objects = %@", objects);
+//    NSLog(@"filtered objects = %@", objects);
     
     switch (sheet) {
         case PPSheetCities: {
