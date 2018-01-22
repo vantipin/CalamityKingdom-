@@ -292,7 +292,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [self parseGameAnimatable:YES];
+    [self parseGameAnimatable:NO];
 }
 
 - (void)viewDidAppear:(BOOL)animated

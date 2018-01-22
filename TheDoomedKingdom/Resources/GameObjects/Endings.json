@@ -1,0 +1,62 @@
+[
+  {
+    "ending_sound" : "battle_win",
+    "ending_id" : "1",
+    "image_name" : "ending_victory",
+    "text" : "Безмятежное Королевство спасено от ужасных бедствий - и все благодаря вам! Глядя на ликующих жителей из окон собственной башни, подаренной вам королем, вы как-то не хотите вспоминать о том, что это именно из-за вас эти ужасные бедствия и начались.\\nКто старое помянет - тому глаз вон!"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "2",
+    "image_name" : "ending_defeat_popularity",
+    "text" : "Вам удалось спасти Безмятежное Королевство от полного разрушения, но не удалось вернуть расположение его жителей. Поэтому на рассвете по приказу короля вас повесили под крики разгневанной толпы.\\nХорошо, что архимага не убить петлей. Придется поискать другое королевство, где вам будут рады."
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "3",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "Вам не удалось спасти Безмятежное Королевство и все сдохли. Теперь по Удачбургу маршируют зомби-нацисты, в Потехограде мутанты доедают остатки жителей, а Блинска вообще больше не существует.\\nПридется поискать другое королевство, где жители еще живы."
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "4",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "Как известно, одеяло - надежнейшая защита от демонов и чудовищ. Однако оно не спасло вас от отравленных кинжалов, лопат и дорожных знаков королевских убийц. Вас изрезали, закопали и оштрафовали. Жизнь великого архимага закончилась, а королевство без вашей защиты оказалось обречено на гибель."
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "5",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 5"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "6",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 6"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "7",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 7"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "8",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 8"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "9",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 9"
+  },
+  {
+    "ending_sound" : "battle_loosing",
+    "ending_id" : "10",
+    "image_name" : "ending_defeat_destroyed",
+    "text" : "test 10"
+  }
+]

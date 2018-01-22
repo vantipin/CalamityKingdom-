@@ -148,6 +148,16 @@
 		D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D59516FC1C8C9961000C4278 /* SSPieProgressView.m */; };
 		D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D59516FF1C8C9961000C4278 /* TYMProgressBarView.m */; };
 		D5A7BE402013ED41005721D2 /* PPGameConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A7BE3F2013ED41005721D2 /* PPGameConstant.m */; };
+		D5AD957420167FF20026E5B8 /* SmartJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */; };
+		D5AD957E201684A40026E5B8 /* Endings.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD9575201684A30026E5B8 /* Endings.json */; };
+		D5AD957F201684A40026E5B8 /* Constants.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD9576201684A30026E5B8 /* Constants.json */; };
+		D5AD9580201684A40026E5B8 /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD9577201684A30026E5B8 /* Events.json */; };
+		D5AD9581201684A40026E5B8 /* EventReplies.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD9578201684A30026E5B8 /* EventReplies.json */; };
+		D5AD9582201684A40026E5B8 /* Replies.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD9579201684A30026E5B8 /* Replies.json */; };
+		D5AD9583201684A40026E5B8 /* Library.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD957A201684A30026E5B8 /* Library.json */; };
+		D5AD9584201684A40026E5B8 /* Archimags.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD957B201684A30026E5B8 /* Archimags.json */; };
+		D5AD9585201684A40026E5B8 /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD957C201684A30026E5B8 /* Cities.json */; };
+		D5AD9586201684A40026E5B8 /* Disasters.json in Resources */ = {isa = PBXBuildFile; fileRef = D5AD957D201684A40026E5B8 /* Disasters.json */; };
 		D5B4E0411C9148C800CDCDC0 /* PBSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B4E03F1C9148C800CDCDC0 /* PBSmall.png */; };
 		D5B4E0421C9148C800CDCDC0 /* PBSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B4E0401C9148C800CDCDC0 /* PBSmall@2x.png */; };
 		D5B4E0451C9150E300CDCDC0 /* PPProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B4E0441C9150E300CDCDC0 /* PPProgressView.m */; };
@@ -361,6 +371,15 @@
 		D59516FF1C8C9961000C4278 /* TYMProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMProgressBarView.m; sourceTree = "<group>"; };
 		D5A7BE3E2013ED41005721D2 /* PPGameConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPGameConstant.h; sourceTree = "<group>"; };
 		D5A7BE3F2013ED41005721D2 /* PPGameConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPGameConstant.m; sourceTree = "<group>"; };
+		D5AD9575201684A30026E5B8 /* Endings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Endings.json; sourceTree = "<group>"; };
+		D5AD9576201684A30026E5B8 /* Constants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Constants.json; sourceTree = "<group>"; };
+		D5AD9577201684A30026E5B8 /* Events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
+		D5AD9578201684A30026E5B8 /* EventReplies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EventReplies.json; sourceTree = "<group>"; };
+		D5AD9579201684A30026E5B8 /* Replies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Replies.json; sourceTree = "<group>"; };
+		D5AD957A201684A30026E5B8 /* Library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Library.json; sourceTree = "<group>"; };
+		D5AD957B201684A30026E5B8 /* Archimags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Archimags.json; sourceTree = "<group>"; };
+		D5AD957C201684A30026E5B8 /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		D5AD957D201684A40026E5B8 /* Disasters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Disasters.json; sourceTree = "<group>"; };
 		D5B4E03F1C9148C800CDCDC0 /* PBSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBSmall.png; sourceTree = "<group>"; };
 		D5B4E0401C9148C800CDCDC0 /* PBSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBSmall@2x.png"; sourceTree = "<group>"; };
 		D5B4E0431C9150E300CDCDC0 /* PPProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPProgressView.h; sourceTree = "<group>"; };
@@ -626,6 +645,15 @@
 		D571221A20153FD90011A60E /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				D5AD957B201684A30026E5B8 /* Archimags.json */,
+				D5AD957C201684A30026E5B8 /* Cities.json */,
+				D5AD9576201684A30026E5B8 /* Constants.json */,
+				D5AD957D201684A40026E5B8 /* Disasters.json */,
+				D5AD9575201684A30026E5B8 /* Endings.json */,
+				D5AD9578201684A30026E5B8 /* EventReplies.json */,
+				D5AD9577201684A30026E5B8 /* Events.json */,
+				D5AD957A201684A30026E5B8 /* Library.json */,
+				D5AD9579201684A30026E5B8 /* Replies.json */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -891,6 +919,7 @@
 				D588F2C51C84D96A0054FE61 /* 4_2.png in Resources */,
 				D588F2EB1C84D96A0054FE61 /* VillageFishermansCity.png in Resources */,
 				D588F2E21C84D96A0054FE61 /* PopupBg.png in Resources */,
+				D5AD9585201684A40026E5B8 /* Cities.json in Resources */,
 				D588F2FF1C84D9940054FE61 /* battle_loosing.wav in Resources */,
 				D5B4E0421C9148C800CDCDC0 /* PBSmall@2x.png in Resources */,
 				D588F2D31C84D96A0054FE61 /* curse_ground.png in Resources */,
@@ -900,12 +929,14 @@
 				D5530FBA1CA03FB10064A220 /* VillageRuined@2x.png in Resources */,
 				D588F2C01C84D96A0054FE61 /* 2_1.png in Resources */,
 				D51D03281C975DD100FE1467 /* ProgressStripe@2x.png in Resources */,
+				D5AD9583201684A40026E5B8 /* Library.json in Resources */,
 				D588F2D81C84D96A0054FE61 /* ending_defeat_destroyed.png in Resources */,
 				D588F2EE1C84D96A0054FE61 /* VillageLumbererCity@2x.png in Resources */,
 				D588F2CE1C84D96A0054FE61 /* CapitalCity.png in Resources */,
 				D5B4E0411C9148C800CDCDC0 /* PBSmall.png in Resources */,
 				D5CFB5091C930542002D3E77 /* HypnoPBIcon@2x.png in Resources */,
 				D588F2D11C84D96A0054FE61 /* ClosePopupIcon@2x.png in Resources */,
+				D5AD957F201684A40026E5B8 /* Constants.json in Resources */,
 				D588F2D41C84D96A0054FE61 /* danger_curse.png in Resources */,
 				D5530FBE1CA03FB10064A220 /* CapitalCityRuined@2x.png in Resources */,
 				D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */,
@@ -915,14 +946,18 @@
 				D588F2C41C84D96A0054FE61 /* 4_1.png in Resources */,
 				D51D03391C97E6C200FE1467 /* LibraryBackButton@2x.png in Resources */,
 				D52412421C5C8DBD00EB1FF4 /* LaunchScreen.storyboard in Resources */,
+				D5AD9581201684A40026E5B8 /* EventReplies.json in Resources */,
 				D55E4F851C87807600320667 /* ChaosIcon@2x.png in Resources */,
 				D5CFB5041C930542002D3E77 /* ChaosPBIcon.png in Resources */,
 				D5CFB50E1C930542002D3E77 /* PBBig.png in Resources */,
 				D55E4F841C87807600320667 /* ChaosIcon.png in Resources */,
 				D588F2E01C84D96A0054FE61 /* intro1.png in Resources */,
 				D5CFB5021C930542002D3E77 /* TelePBIcon.png in Resources */,
+				D5AD9582201684A40026E5B8 /* Replies.json in Resources */,
 				D588F2D61C84D96A0054FE61 /* danger_monsters.png in Resources */,
+				D5AD957E201684A40026E5B8 /* Endings.json in Resources */,
 				D588F2D01C84D96A0054FE61 /* ClosePopupIcon.png in Resources */,
+				D5AD9580201684A40026E5B8 /* Events.json in Resources */,
 				D588F2E71C84D96A0054FE61 /* Town1City.png in Resources */,
 				D588F3011C84D9940054FE61 /* casting.m4a in Resources */,
 				D588F2EF1C84D96A0054FE61 /* VillageVariorsCity.png in Resources */,
@@ -947,6 +982,7 @@
 				D588F2D21C84D96A0054FE61 /* curse_glow.png in Resources */,
 				D588F2DA1C84D96A0054FE61 /* ending_victory.png in Resources */,
 				D55E4F861C87807600320667 /* GypnosIcon.png in Resources */,
+				D5AD9586201684A40026E5B8 /* Disasters.json in Resources */,
 				D524123F1C5C8DBD00EB1FF4 /* Assets.xcassets in Resources */,
 				D588F2E31C84D96A0054FE61 /* PopupBg@2x.png in Resources */,
 				D58AA5FB1C88CFFB0051F53C /* Clock.png in Resources */,
@@ -977,6 +1013,7 @@
 				D588F3001C84D9940054FE61 /* battle_win.wav in Resources */,
 				D588F2EA1C84D96A0054FE61 /* Town2City@2x.png in Resources */,
 				D5CFB5051C930542002D3E77 /* ChaosPBIcon@2x.png in Resources */,
+				D5AD9584201684A40026E5B8 /* Archimags.json in Resources */,
 				D524123D1C5C8DBD00EB1FF4 /* Main.storyboard in Resources */,
 				D588F2E11C84D96A0054FE61 /* intro2.png in Resources */,
 				D5CFB5171C969AE1002D3E77 /* PBMiddleProgress.png in Resources */,
@@ -1066,6 +1103,7 @@
 				D51D214720002A880076811C /* PPEnding.m in Sources */,
 				D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */,
 				D550645520097158009BCA36 /* PPArchimage.m in Sources */,
+				D5AD957420167FF20026E5B8 /* SmartJSONAdapter.m in Sources */,
 				D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */,
 				D52413791C5E353300EB1FF4 /* PPDangerAbilityView.m in Sources */,
 				D52413611C5E33C900EB1FF4 /* PPCityInfoController.m in Sources */,

@@ -12,4 +12,6 @@
 
 @property (nonatomic) NSString *identifier;
 
++ (BOOL)withoutNil;
+
 @end

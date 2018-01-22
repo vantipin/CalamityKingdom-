@@ -23,6 +23,7 @@
 #import "PPEnding.h"
 #import "PPArchimage.h"
 #import "PPEventAbility.h"
+#import "SmartJSONAdapter.h"
 
 @interface PPGame()
 
@@ -83,6 +84,59 @@ static PPGame *instance = nil;
 - (void)updateGame:(PPGameCallback)completion {
     NSLog(@"START LOADING");
     [self loadSheet:0 completion:completion];
+}
+
+- (void)loadGameOffline:(PPGameCallback)completion {
+    NSString *type = @"json";
+    
+    for (PPTable *table in self.sheets) {
+        NSString *fileName = [self sheetNameBySheet:table.sheet];
+        NSString *filePath = [self filePathBySheet:table.sheet];
+        
+        if (![[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            NSString *bundleSettingsPath = [[NSBundle mainBundle] pathForResource:fileName ofType:type];
+            
+            if (bundleSettingsPath && [[NSFileManager defaultManager] fileExistsAtPath:bundleSettingsPath]) {
+                [[NSFileManager defaultManager] copyItemAtPath:bundleSettingsPath toPath:filePath error:nil];
+            }
+        }
+        
+        NSData *jsonData = [NSData dataWithContentsOfFile:filePath];
+
+        NSError *error = nil;
+        
+        if (jsonData && jsonData.length > 0) {
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
+            
+            if (!error) {
+                NSMutableArray *objects = [@[] mutableCopy];
+                
+                for (NSDictionary *obj in jsonArray) {
+                    Class modelClass = [self modelClassBySheet:table.sheet];
+                    PPGoogleBaseModel *model = [SmartJSONAdapter modelOfClass:modelClass fromJSONDictionary:obj error:&error];
+                    
+                    if (!model || error) {
+                        NSLog(@"error = %@, model = %@", error, model);
+                        completion(NO, error);
+                        return;
+                    }
+                    
+                    [objects addObject:model];
+                }
+                
+                [self configureObjects:objects forSheet:table.sheet];
+                
+            } else {
+                NSLog(@"NSJSONSerialization ERROR = %@", error);
+                completion(NO, error);
+                return;
+            }
+        }
+    }
+    
+    self.player = [PPPlayer new];
+    
+    completion(YES, nil);
 }
 
 - (void)configureObjects:(NSArray *)objects forSheet:(PPSheet)sheet {
@@ -288,20 +342,114 @@ static PPGame *instance = nil;
 
 
 - (void)saveObjects:(NSArray *)objects forSheet:(PPSheet)sheet {
-    return;
+    
     NSMutableArray *jsons = [@[] mutableCopy];
     
     for (PPGoogleBaseModel *model in objects) {
-        NSDictionary *JSONDictionary = [MTLJSONAdapter JSONDictionaryFromModel:model];
+        NSDictionary *JSONDictionary = [SmartJSONAdapter JSONDictionaryFromModel:model];
         [jsons addObject:JSONDictionary];
     }
     
     NSData *jsonData = [self jsonDataForObject:jsons];
-    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:4];
-    NSLog(@"saved json = %@", jsonString);
-    NSLog(@"1234");
+//    NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:4];
+//    NSLog(@"saved json = %@", jsonString);
+//    NSLog(@"1234");
     
     [jsonData writeToFile:[self filePathBySheet:sheet] atomically:YES];
+}
+
+- (Class)modelClassBySheet:(PPSheet)sheet {
+    Class modelClass = [PPGoogleBaseModel class];
+    
+    switch (sheet) {
+        case PPSheetCities:
+            modelClass = [PPCity class];
+            break;
+            
+        case PPSheetDisasters:
+            modelClass = [PPDanger class];
+            break;
+            
+        case PPSheetReplies:
+            modelClass = [PPAbility class];
+            break;
+            
+        case PPSheetEvents:
+            modelClass = [PPEvent class];
+            break;
+            
+        case PPSheetArchimags:
+            modelClass = [PPArchimage class];
+            break;
+            
+        case PPSheetLibrary:
+            modelClass = [PPLibraryItem class];
+            break;
+            
+        case PPSheetEventReplies:
+            modelClass = [PPEventAbility class];
+            break;
+            
+        case PPSheetConstants:
+            modelClass = [PPConstant class];
+            break;
+            
+        case PPSheetEndings:
+            modelClass = [PPEnding class];
+            break;
+            
+        default:
+            break;
+    }
+    
+    return modelClass;
+}
+
+- (NSString *)updateStatusBySheet:(PPSheet)sheet {
+    NSString *status = @"";
+    
+    switch (sheet) {
+        case PPSheetCities:
+            status = @"Парсим города";
+            break;
+            
+        case PPSheetDisasters:
+            status = @"Парсим опасности";
+            break;
+            
+        case PPSheetReplies:
+            status = @"Парсим результаты опасностей";
+            break;
+            
+        case PPSheetEvents:
+            status = @"Парсим события";
+            break;
+            
+        case PPSheetArchimags:
+            status = @"Парсим архимагов";
+            break;
+            
+        case PPSheetLibrary:
+            status = @"Парсим библиотеку";
+            break;
+            
+        case PPSheetEventReplies:
+            status = @"Парсим результаты событий";
+            break;
+            
+        case PPSheetConstants:
+            status = @"Парсим константы";
+            break;
+            
+        case PPSheetEndings:
+            status = @"Парсим концовки";
+            break;
+            
+        default:
+            break;
+    }
+    
+    return status;
 }
 
 - (void)loadSheet:(NSInteger)sheetIndex completion:(PPGameCallback)completion {
@@ -317,65 +465,15 @@ static PPGame *instance = nil;
     
     __block PPSheet loadedSheet = table.sheet;
     
-    Class modelClass = [PPGoogleBaseModel class];
-    NSString *status = @"";
-    
-    switch (table.sheet) {
-        case PPSheetCities:
-            modelClass = [PPCity class];
-            status = @"Парсим города";
-            break;
-            
-        case PPSheetDisasters:
-            modelClass = [PPDanger class];
-            status = @"Парсим опасности";
-            break;
-            
-        case PPSheetReplies:
-            modelClass = [PPAbility class];
-            status = @"Парсим результаты опасностей";
-            break;
-            
-        case PPSheetEvents:
-            modelClass = [PPEvent class];
-            status = @"Парсим события";
-            break;
-            
-        case PPSheetArchimags:
-            modelClass = [PPArchimage class];
-            status = @"Парсим архимагов";
-            break;
-            
-        case PPSheetLibrary:
-            modelClass = [PPLibraryItem class];
-            status = @"Парсим библиотеку";
-            break;
-            
-        case PPSheetEventReplies:
-            modelClass = [PPEventAbility class];
-            status = @"Парсим результаты событий";
-            break;
-            
-        case PPSheetConstants:
-            modelClass = [PPConstant class];
-            status = @"Парсим константы";
-            break;
-            
-        case PPSheetEndings:
-            modelClass = [PPEnding class];
-            status = @"Парсим концовки";
-            break;
+    Class modelClass = [self modelClassBySheet:table.sheet];
+    NSString *status = [self updateStatusBySheet:table.sheet];
 
-        default:
-            break;
-    }
-    
     [SVProgressHUD showWithStatus:status];
 
     
     [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
         
-        NSLog(@"\n\n+++ loaded %li", (long)table.sheet);
+//        NSLog(@"\n\n+++ loaded %li", (long)table.sheet);
         
         if (!error) {
             
@@ -416,6 +514,8 @@ static PPGame *instance = nil;
         [SVProgressHUD show];
         
         [self updateGame:completion];
+    } else {
+        [self loadGameOffline:completion];
     }
 }
 

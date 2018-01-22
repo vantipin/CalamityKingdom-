@@ -1,0 +1,128 @@
+[
+  {
+    "id" : "ability_hypnosis_action",
+    "value" : null,
+    "description" : null,
+    "name" : "Гипнотизируем..."
+  },
+  {
+    "id" : "ability_chaos_action",
+    "value" : null,
+    "description" : null,
+    "name" : "Вносим хаос..."
+  },
+  {
+    "id" : "ability_telekinesis_action",
+    "value" : null,
+    "description" : null,
+    "name" : "Плющим и левитируем..."
+  },
+  {
+    "id" : "ability_appeal_action",
+    "value" : null,
+    "description" : null,
+    "name" : "Призываем..."
+  },
+  {
+    "id" : "danger_type_disaster",
+    "value" : null,
+    "description" : null,
+    "name" : "Стихийное бедствие"
+  },
+  {
+    "id" : "danger_type_monsters",
+    "value" : null,
+    "description" : null,
+    "name" : "Нашествие чудовищ"
+  },
+  {
+    "id" : "danger_type_plague",
+    "value" : null,
+    "description" : null,
+    "name" : "Моровое поветрие"
+  },
+  {
+    "id" : "danger_type_curse",
+    "value" : null,
+    "description" : null,
+    "name" : "Проклятие"
+  },
+  {
+    "id" : "ability_appeal",
+    "value" : null,
+    "description" : null,
+    "name" : "Призыв"
+  },
+  {
+    "id" : "ability_hypnosis",
+    "value" : null,
+    "description" : null,
+    "name" : "Гипноз"
+  },
+  {
+    "id" : "ability_chaos",
+    "value" : null,
+    "description" : null,
+    "name" : "Хаос"
+  },
+  {
+    "id" : "ability_telekinesis",
+    "value" : null,
+    "description" : null,
+    "name" : "Телекинез"
+  },
+  {
+    "id" : "corrupt",
+    "value" : "0",
+    "description" : "Стартовый коррапт",
+    "name" : "Коррапт демонов"
+  },
+  {
+    "id" : "mana",
+    "value" : "100",
+    "description" : "Стартовое кол-во маны",
+    "name" : "Мана"
+  },
+  {
+    "id" : "king_rep",
+    "value" : "100",
+    "description" : "Стартовое расположение короля",
+    "name" : "Расположение короля"
+  },
+  {
+    "id" : "people_rep",
+    "value" : "100",
+    "description" : "Стартовое расположение народа",
+    "name" : "Расположение народа"
+  },
+  {
+    "id" : "mana_regen",
+    "value" : "20",
+    "description" : "Регенерация маны в сутки",
+    "name" : "Реген маны"
+  },
+  {
+    "id" : "mana_to_king_rep",
+    "value" : "1",
+    "description" : null,
+    "name" : "Курс маны к реп.короля"
+  },
+  {
+    "id" : "mana_to_corrupt",
+    "value" : "0,5",
+    "description" : null,
+    "name" : "Курс маны к коррапту демонов"
+  },
+  {
+    "id" : "mana_to_people_rep",
+    "value" : "1",
+    "description" : null,
+    "name" : "Курс маны к счастью народа"
+  },
+  {
+    "id" : "days_count",
+    "value" : "30",
+    "description" : null,
+    "name" : "Количество дней"
+  }
+]

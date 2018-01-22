@@ -11,10 +11,9 @@
 @implementation SmartJSONAdapter
 
 - (NSSet *)serializablePropertyKeys:(NSSet *)propertyKeys
-                           forModel:(id<SmartJSONAdapting>)model
-{
-    if ([[model class] respondsToSelector:@selector(withoutNil)]
-        && [[model class] withoutNil]) {
+                           forModel:(MTLModel *)model
+{    
+    if ([[model class] respondsToSelector:@selector(withoutNil)] && [[model class] withoutNil]) {
         NSMutableSet *propertyKeys_ = [propertyKeys mutableCopy];
         
         [propertyKeys enumerateObjectsUsingBlock:^(NSString *_Nonnull propertyKey,
@@ -23,14 +22,17 @@
                 [propertyKeys_ removeObject:propertyKey];
             }
         }];
+        
         propertyKeys = [propertyKeys_ copy];
     }
+    
     if ([[model class] respondsToSelector:@selector(propertyKeysForJSONRepresentation)]) {
         NSMutableSet *propertyKeys_ = [propertyKeys mutableCopy];
         [propertyKeys_ minusSet:[[model class] propertyKeysForJSONRepresentation]];
         
         propertyKeys = [propertyKeys_ copy];
     }
+    
     return propertyKeys;
 }
 

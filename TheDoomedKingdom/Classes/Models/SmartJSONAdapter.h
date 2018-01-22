@@ -8,7 +8,7 @@
 
 #import <Mantle/Mantle.h>
 
-@protocol SmartJSONAdapting <MTLJSONSerializing>
+@protocol SmartJSONAdapting <MTLJSONSerializing, NSObject>
 
 @optional
 /// whitelist only if present
@@ -21,6 +21,6 @@
 @interface SmartJSONAdapter : MTLJSONAdapter
 
 - (NSSet *)serializablePropertyKeys:(NSSet *)propertyKeys
-                           forModel:(id<SmartJSONAdapting>)model;
+                           forModel:(MTLModel *)model;
 
 @end

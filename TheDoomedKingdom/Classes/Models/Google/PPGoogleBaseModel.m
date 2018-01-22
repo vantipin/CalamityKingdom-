@@ -20,8 +20,13 @@
     return [self googleDocsDateJSONTransformer];
 }
 
-//- (NSDictionary *)dictionaryValue {
-//    return [self dictionaryWithValuesForKeys:self.class.JSONKeyPathsByPropertyKey.allValues];
-//}
++ (BOOL)withoutNil{
+    return YES;
+}
+
+- (NSDictionary *)dictionaryValue {
+    NSArray *keys = self.class.JSONKeyPathsByPropertyKey.allKeys;
+    return [self dictionaryWithValuesForKeys:keys];
+}
 
 @end
