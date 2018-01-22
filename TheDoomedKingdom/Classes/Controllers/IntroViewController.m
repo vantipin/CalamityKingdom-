@@ -96,7 +96,7 @@
             self.imageInfo.alpha = 1;
             self.imageInfo.image = [UIImage imageNamed:@"intro2.png"];
         } completion:^(BOOL finished) {
-            [[SoundController sharedInstance] playDanger];
+            [[SoundController sharedInstance] playEvent];
         }];
     }
     

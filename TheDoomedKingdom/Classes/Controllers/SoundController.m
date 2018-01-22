@@ -92,7 +92,7 @@ static SoundController *instance = nil;
 }
 
 //play danger
-- (void)playDanger {
+- (void)playEvent {
     [self playSoundWithName:@"danger_happen" withExtension:@"wav"];
 }
 

@@ -18,7 +18,7 @@
 - (void)playCasting;
 
 //play danger
-- (void)playDanger;
+- (void)playEvent;
 
 //play battle loosing
 - (void)playBattleLost;

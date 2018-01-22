@@ -212,7 +212,7 @@
     NSArray *dangerToApply = [[PPGame instance] dangersToApply];
     
     if (dangerToApply && dangerToApply.count > 0) {
-        BOOL wasDanger = NO;
+//        BOOL wasDanger = NO;
         
         for (PPDanger *danger in dangerToApply) {
             if (danger.predefinedCity) {
@@ -236,10 +236,10 @@
                 NSArray *freeCities = [[PPGame instance] freeCities];
                 
                 if (freeCities && freeCities.count > 0) {
-                    if (!wasDanger) {
-                        [[SoundController sharedInstance] playDanger];
-                        wasDanger = YES;
-                    }
+//                    if (!wasDanger) {
+//                        [[SoundController sharedInstance] playEvent];
+//                        wasDanger = YES;
+//                    }
                     
                     NSInteger randomIndex = arc4random() % freeCities.count;
                     PPCity *affectedCity = freeCities[randomIndex];
