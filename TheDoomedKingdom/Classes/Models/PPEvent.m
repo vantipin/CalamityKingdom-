@@ -17,6 +17,19 @@
 
 @implementation PPEvent
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.ifMana = -1;
+        self.ifCorrupt = -1;
+        self.ifKingRep = -1;
+        self.ifPeopleRep = -1;
+    }
+    
+    return self;
+}
+
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"identifier" : @"id",
@@ -29,6 +42,25 @@
              @"ifCorrupt" : @"if_corrupt",
              @"eventDescription" : @"description",
              };
+}
+
++ (NSValueTransformer *)zeroTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
+        return str.length > 0 ? @(str.integerValue) : @(-1);
+    } reverseBlock:^(NSNumber *eventValue) {
+        return eventValue.integerValue != -1 ? [NSString stringWithFormat:@"%li", eventValue.integerValue] : @"";
+    }];
+}
+
++ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key {
+    if ([key isEqualToString:@"if_mana"] ||
+        [key isEqualToString:@"if_king_rep"] ||
+        [key isEqualToString:@"if_people_rep"] ||
+        [key isEqualToString:@"if_corrupt"]) {
+        return [PPEvent zeroTransformer];
+    }
+    
+    return nil;
 }
 
 - (void)setDayString:(NSString *)dayString {
