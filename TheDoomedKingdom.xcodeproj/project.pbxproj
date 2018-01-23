@@ -47,7 +47,6 @@
 		D52412741C5CACBA00EB1FF4 /* PPGame.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412731C5CACBA00EB1FF4 /* PPGame.m */; };
 		D52412781C5CC53E00EB1FF4 /* PPDangerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = D52412771C5CC53E00EB1FF4 /* PPDangerResult.m */; };
 		D524127B1C5CCDC600EB1FF4 /* PPValue.m in Sources */ = {isa = PBXBuildFile; fileRef = D524127A1C5CCDC600EB1FF4 /* PPValue.m */; };
-		D52412801C5CE0BF00EB1FF4 /* CHCSVParser.m in Sources */ = {isa = PBXBuildFile; fileRef = D524127F1C5CE0BF00EB1FF4 /* CHCSVParser.m */; };
 		D524129C1C5D685100EB1FF4 /* EAColourfulProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D524129B1C5D685100EB1FF4 /* EAColourfulProgressView.m */; };
 		D524135E1C5E33C900EB1FF4 /* SoundController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524134C1C5E33C900EB1FF4 /* SoundController.m */; };
 		D524135F1C5E33C900EB1FF4 /* PPDangerResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524134E1C5E33C900EB1FF4 /* PPDangerResultController.m */; };
@@ -140,8 +139,6 @@
 		D58AA5FC1C88CFFB0051F53C /* Clock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D58AA5FA1C88CFFB0051F53C /* Clock@2x.png */; };
 		D58AA6021C88DCD10051F53C /* MagIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D58AA6001C88DCD10051F53C /* MagIcon.png */; };
 		D58AA6031C88DCD10051F53C /* MagIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D58AA6011C88DCD10051F53C /* MagIcon@2x.png */; };
-		D59517001C8C9961000C4278 /* SSDrawingUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D59516FA1C8C9961000C4278 /* SSDrawingUtilities.m */; };
-		D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D59516FC1C8C9961000C4278 /* SSPieProgressView.m */; };
 		D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = D59516FF1C8C9961000C4278 /* TYMProgressBarView.m */; };
 		D5A7BE402013ED41005721D2 /* PPGameConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A7BE3F2013ED41005721D2 /* PPGameConstant.m */; };
 		D5AD957420167FF20026E5B8 /* SmartJSONAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */; };
@@ -243,8 +240,6 @@
 		D52412771C5CC53E00EB1FF4 /* PPDangerResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPDangerResult.m; sourceTree = "<group>"; };
 		D52412791C5CCDC600EB1FF4 /* PPValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPValue.h; sourceTree = "<group>"; };
 		D524127A1C5CCDC600EB1FF4 /* PPValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPValue.m; sourceTree = "<group>"; };
-		D524127E1C5CE0BF00EB1FF4 /* CHCSVParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCSVParser.h; sourceTree = "<group>"; };
-		D524127F1C5CE0BF00EB1FF4 /* CHCSVParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCSVParser.m; sourceTree = "<group>"; };
 		D524129A1C5D685100EB1FF4 /* EAColourfulProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAColourfulProgressView.h; sourceTree = "<group>"; };
 		D524129B1C5D685100EB1FF4 /* EAColourfulProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAColourfulProgressView.m; sourceTree = "<group>"; };
 		D524134C1C5E33C900EB1FF4 /* SoundController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundController.m; sourceTree = "<group>"; };
@@ -355,10 +350,6 @@
 		D58AA5FA1C88CFFB0051F53C /* Clock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Clock@2x.png"; sourceTree = "<group>"; };
 		D58AA6001C88DCD10051F53C /* MagIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MagIcon.png; sourceTree = "<group>"; };
 		D58AA6011C88DCD10051F53C /* MagIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MagIcon@2x.png"; sourceTree = "<group>"; };
-		D59516F91C8C9961000C4278 /* SSDrawingUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSDrawingUtilities.h; sourceTree = "<group>"; };
-		D59516FA1C8C9961000C4278 /* SSDrawingUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSDrawingUtilities.m; sourceTree = "<group>"; };
-		D59516FB1C8C9961000C4278 /* SSPieProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSPieProgressView.h; sourceTree = "<group>"; };
-		D59516FC1C8C9961000C4278 /* SSPieProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSPieProgressView.m; sourceTree = "<group>"; };
 		D59516FE1C8C9961000C4278 /* TYMProgressBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYMProgressBarView.h; sourceTree = "<group>"; };
 		D59516FF1C8C9961000C4278 /* TYMProgressBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYMProgressBarView.m; sourceTree = "<group>"; };
 		D5A7BE3E2013ED41005721D2 /* PPGameConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPGameConstant.h; sourceTree = "<group>"; };
@@ -579,21 +570,10 @@
 		D524127C1C5CDCBC00EB1FF4 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				D59516F81C8C9961000C4278 /* SSPieProgressView */,
 				D59516FD1C8C9961000C4278 /* TYMProgressBarView */,
 				D52412991C5D685100EB1FF4 /* EAColourfulProgressView */,
-				D524127D1C5CE0BF00EB1FF4 /* CHCSVParser */,
 			);
 			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		D524127D1C5CE0BF00EB1FF4 /* CHCSVParser */ = {
-			isa = PBXGroup;
-			children = (
-				D524127E1C5CE0BF00EB1FF4 /* CHCSVParser.h */,
-				D524127F1C5CE0BF00EB1FF4 /* CHCSVParser.m */,
-			);
-			path = CHCSVParser;
 			sourceTree = "<group>";
 		};
 		D524128C1C5D31B300EB1FF4 /* Views */ = {
@@ -782,17 +762,6 @@
 				D588F3071C84D9D00054FE61 /* Lasco-Regular.otf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		D59516F81C8C9961000C4278 /* SSPieProgressView */ = {
-			isa = PBXGroup;
-			children = (
-				D59516F91C8C9961000C4278 /* SSDrawingUtilities.h */,
-				D59516FA1C8C9961000C4278 /* SSDrawingUtilities.m */,
-				D59516FB1C8C9961000C4278 /* SSPieProgressView.h */,
-				D59516FC1C8C9961000C4278 /* SSPieProgressView.m */,
-			);
-			path = SSPieProgressView;
 			sourceTree = "<group>";
 		};
 		D59516FD1C8C9961000C4278 /* TYMProgressBarView */ = {
@@ -1081,7 +1050,6 @@
 				D51224C5200D57410006C6E3 /* PPEventAbility.m in Sources */,
 				D559CD7A1FBA5B400053D8C2 /* PPTable.m in Sources */,
 				D59517021C8C9961000C4278 /* TYMProgressBarView.m in Sources */,
-				D59517011C8C9961000C4278 /* SSPieProgressView.m in Sources */,
 				D52412341C5C8DBD00EB1FF4 /* main.m in Sources */,
 				D51D214A2000303E0076811C /* PPEvent.m in Sources */,
 				D51D214720002A880076811C /* PPEnding.m in Sources */,
@@ -1096,7 +1064,6 @@
 				D5CFB5121C93054A002D3E77 /* PPProgressBarView.m in Sources */,
 				D52412741C5CACBA00EB1FF4 /* PPGame.m in Sources */,
 				D524137B1C5E353300EB1FF4 /* PPCityView.m in Sources */,
-				D52412801C5CE0BF00EB1FF4 /* CHCSVParser.m in Sources */,
 				D524127B1C5CCDC600EB1FF4 /* PPValue.m in Sources */,
 				D524135E1C5E33C900EB1FF4 /* SoundController.m in Sources */,
 				D52413601C5E33C900EB1FF4 /* PPDangerProgressController.m in Sources */,
@@ -1104,7 +1071,6 @@
 				D51D2144200029320076811C /* PPConstant.m in Sources */,
 				D524129C1C5D685100EB1FF4 /* EAColourfulProgressView.m in Sources */,
 				D524137A1C5E353300EB1FF4 /* PPClosePopupView.m in Sources */,
-				D59517001C8C9961000C4278 /* SSDrawingUtilities.m in Sources */,
 				D52412711C5CAA3000EB1FF4 /* PPKingdom.m in Sources */,
 				D52412781C5CC53E00EB1FF4 /* PPDangerResult.m in Sources */,
 				D5B4E0451C9150E300CDCDC0 /* PPProgressView.m in Sources */,

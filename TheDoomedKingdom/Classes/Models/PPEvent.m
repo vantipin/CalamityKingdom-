@@ -48,7 +48,7 @@
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
         return str.length > 0 ? @(str.integerValue) : @(-1);
     } reverseBlock:^(NSNumber *eventValue) {
-        return eventValue.integerValue != -1 ? [NSString stringWithFormat:@"%li", eventValue.integerValue] : @"";
+        return eventValue.integerValue != -1 ? [NSString stringWithFormat:@"%li", (long)eventValue.integerValue] : @"";
     }];
 }
 

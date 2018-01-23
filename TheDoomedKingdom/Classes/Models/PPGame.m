@@ -10,7 +10,6 @@
 #import "PPDanger.h"
 #import <CoreGraphics/CoreGraphics.h>
 
-#import "CHCSVParser.h"
 #import "PPValue.h"
 #import "PPDangerResult.h"
 #import "PPCity.h"
@@ -113,7 +112,7 @@ static PPGame *instance = nil;
                 
                 for (NSDictionary *obj in jsonArray) {
                     Class modelClass = [self modelClassBySheet:table.sheet];
-                    PPGoogleBaseModel *model = [SmartJSONAdapter modelOfClass:modelClass fromJSONDictionary:obj error:&error];
+                    PPGoogleBaseModel *model = [MTLJSONAdapter modelOfClass:modelClass fromJSONDictionary:obj error:&error];
                     
                     if (!model || error) {
                         NSLog(@"error = %@, model = %@", error, model);
@@ -535,7 +534,7 @@ static PPGame *instance = nil;
 
 - (NSInteger)leftTimeHours
 {
-    return ([PPGame instance].gameConstants.days_count.constValue.integerValue - self.daysCount);
+    return ([[PPGame instance].gameConstants.days_count.constValue integerValue] - self.daysCount);
 }
 
 - (NSArray *)liveDangers

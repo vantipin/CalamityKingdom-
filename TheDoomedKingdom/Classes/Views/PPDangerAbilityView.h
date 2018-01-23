@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PPAbility.h"
-//#import "PaperView.h"
-//#import "SSPieProgressView.h"
+
 
 @interface PPDangerAbilityView : UIView
 

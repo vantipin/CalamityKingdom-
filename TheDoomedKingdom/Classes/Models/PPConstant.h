@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSString *constDescription;
-@property (nonatomic, assign) NSNumber *constValue;
+@property (nonatomic, strong) NSNumber *constValue;
 
 @end
