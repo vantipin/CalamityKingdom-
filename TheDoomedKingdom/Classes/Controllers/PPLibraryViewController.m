@@ -41,7 +41,7 @@
 {
     _selectedItemIndex = selectedItemIndex;
     
-    if (self.libraryItems > 0) {
+    if (self.libraryItems.count > 0) {
         selectedItemIndex %= self.libraryItems.count;
         
         PPLibraryItem *item = self.libraryItems[selectedItemIndex];

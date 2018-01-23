@@ -520,8 +520,12 @@ static PPGame *instance = nil;
 
 - (NSArray *)shuffledLibraryItems
 {
-    NSMutableArray *shuffledElements = [self.libraryItems mutableCopy];
+    NSMutableArray *shuffledElements = [[self.libraryItems filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.day == %li", [PPGame instance].daysCount]] mutableCopy];
     NSUInteger count = [shuffledElements count];
+    
+    if (count == 0) {
+        return @[];
+    }
     
     for (NSUInteger elementIndex = 0; elementIndex < count - 1; ++elementIndex) {
         NSInteger nElements = count - elementIndex;
