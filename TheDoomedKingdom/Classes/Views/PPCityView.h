@@ -11,7 +11,7 @@
 #import "EAColourfulProgressView.h"
 //#import "PaperView.h"
 
-@interface PPCityView : UIView
+@interface PPCityView : UIView <CAAnimationDelegate>
 
 @property (nonatomic, weak) IBOutlet UIImageView *cityIconImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
