@@ -16,8 +16,8 @@
     
     self.nameLabel.text = ability.abilityName;
     
-    [self.progressBar setProgress:ability.value / 100.];
-    [self.valueLabel setText:[NSString stringWithFormat:@"%li", (long)ability.value]];
+    [self.progressBar setProgress:ability.manaCost / 100.];
+    [self.valueLabel setText:[NSString stringWithFormat:@"%li", (long)ability.manaCost]];
 }
 
 @end

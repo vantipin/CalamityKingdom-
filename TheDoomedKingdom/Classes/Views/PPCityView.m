@@ -36,42 +36,38 @@
         NSInteger currValue = 100 - (100 * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount);
         [self.progressBar updateToCurrentValue:currValue animated:YES];
         
-        if (self.currLiveLabel) {
-//            [self.currLiveLabel setHidden:YES];
-//            [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
-//            [self.currLiveLabel.layer setMasksToBounds:NO];
-//            self.currLiveLabel.layer.shadowRadius = 6.;
-//            self.currLiveLabel.layer.shadowColor = [UIColor darkGrayColor].CGColor;
-//            self.currLiveLabel.layer.shadowOffset = CGSizeMake(2., 2.);
-//            self.currLiveLabel.layer.shadowOpacity = 0.5;
-        }
-        
         NSString *cityNameString = @"";
         
-#warning - Check city type
-        
-        if ([city.name isEqualToString:@"Удачбург"]) {
-            cityNameString = @"CapitalCity.png";
-        } else if ([city.name isEqualToString:@"Потехогорск"]) {
-            cityNameString = @"Town2City.png";
-        } else if ([city.name isEqualToString:@"Счастьеградск"]) {
-            cityNameString = @"Town1City.png";
-        } else if ([city.name isEqualToString:@"Васьки"] || [city.name isEqualToString:@"Овнище"]) {
-            cityNameString = @"VillageLumbererCity.png";
-        } else if ([city.name isEqualToString:@"Кайфобад"] || [city.name isEqualToString:@"Блинск"]) {
-            cityNameString = @"VillageVariorsCity.png";
-        } else if ([city.name isEqualToString:@"Чпокино"] || [city.name isEqualToString:@"Новопозорнино"]) {
-            cityNameString = @"VillageFishermansCity.png";
+        switch (city.type) {
+            case 1:
+                cityNameString = @"CapitalCity.png";
+                break;
+                
+            case 2:
+                cityNameString = @"Town2City.png";
+                break;
+                
+            case 3:
+                cityNameString = @"Town1City.png";
+                break;
+                
+            case 4:
+                cityNameString = @"VillageLumbererCity.png";
+                break;
+                
+            case 5:
+                cityNameString = @"VillageVariorsCity.png";
+                break;
+                
+            case 6:
+                cityNameString = @"VillageFishermansCity.png";
+                break;
+                
+            default:
+                break;
         }
         
-//            if (city.initPeopleCount >= 10000 && city.initPeopleCount < 20000) {
-//                cityNameString = @"MidCity.png";
-//            } else if (city.initPeopleCount < 10000) {
-//                cityNameString = @"SmallCity.png";
-//            }
-//            
-            self.cityIconImageView.image = [UIImage imageNamed:cityNameString];
-//        }
+        self.cityIconImageView.image = [UIImage imageNamed:cityNameString];
         
         BOOL inDanger = city.cityInDanger;
                 

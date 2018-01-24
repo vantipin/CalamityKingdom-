@@ -167,22 +167,22 @@
         switch (abIndex) {
             case 0:
                 ability.abilityName = [PPGame instance].gameConstants.mana.name;
-                ability.value = player.mana;
+                ability.manaCost = player.mana;
                 break;
                 
             case 1:
                 ability.abilityName = [PPGame instance].gameConstants.king_rep.name;
-                ability.value = player.kingRep;
+                ability.manaCost = player.kingRep;
                 break;
                 
             case 2:
                 ability.abilityName = [PPGame instance].gameConstants.people_rep.name;
-                ability.value = player.peopleRep;
+                ability.manaCost = player.peopleRep;
                 break;
                 
             case 3:
                 ability.abilityName = [PPGame instance].gameConstants.corrupt.name;
-                ability.value = player.corrupt;
+                ability.manaCost = player.corrupt;
                 break;
                 
             default:

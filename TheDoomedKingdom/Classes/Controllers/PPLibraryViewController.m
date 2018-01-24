@@ -18,6 +18,8 @@
 
 @property (nonatomic) NSArray *libraryItems;
 @property (nonatomic) NSInteger selectedItemIndex;
+@property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -41,10 +43,11 @@
 {
     _selectedItemIndex = selectedItemIndex;
     
-    if (self.libraryItems.count > 0) {
-        selectedItemIndex %= self.libraryItems.count;
-        
+    if (self.libraryItems.count > 0) {        
         PPLibraryItem *item = self.libraryItems[selectedItemIndex];
+        
+        [self.backButton setHidden:selectedItemIndex == 0];
+        [self.nextButton setHidden:selectedItemIndex == self.libraryItems.count - 1];
         
         [UIView transitionWithView:self.nameLabel duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
             self.nameLabel.text = item.itemName;
@@ -53,6 +56,9 @@
         [UIView transitionWithView:self.descrLabel duration:0.5f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
             self.descrLabel.text = item.itemDescription;
         } completion:nil];
+    } else {
+        [self.nextButton setHidden:YES];
+        [self.backButton setHidden:YES];
     }
 }
 

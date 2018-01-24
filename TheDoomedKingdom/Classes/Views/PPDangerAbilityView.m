@@ -23,9 +23,9 @@
     
     self.nameLabel.text = ability.abilityName;
 
-    self.spentValueLabel.text = [NSString stringWithFormat:@"-%li", (long)ability.value];
+    self.spentValueLabel.text = [NSString stringWithFormat:@"-%li", (long)ability.manaCost];
 
-    self.enabled = [[PPGame instance] player].mana >= ability.value;
+    self.enabled = [[PPGame instance] player].mana >= ability.manaCost;
 }
 
 - (void)setEnabled:(BOOL)enabled

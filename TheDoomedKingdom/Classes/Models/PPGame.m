@@ -49,7 +49,7 @@ static PPGame *instance = nil;
 
 - (void)reinitGame {
     self.kingdom = [PPKingdom new];
-    self.daysCount = 0;
+    self.daysCount = 1;
     
     self.loadedSheets = 0;
 //    PPSheetCities + PPSheetDisasters + PPSheetReplies + PPSheetEndings + PPSheetArchimags + PPSheetLibrary + PPSheetEvents + PPSheetEventReplies + PPSheetConstants

@@ -10,7 +10,7 @@
 #import "PPGame.h"
 
 @implementation PPAbility
-@synthesize value;
+@synthesize manaCost;
 @synthesize abilityName;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -20,7 +20,10 @@
              @"abilityName" : @"text",
              @"abilityDescription": @"result",
              @"abilityType": @"type",
-             @"value": @"cost",
+             @"manaCost": @"mana",
+             @"kingRepCost": @"king_rep",
+             @"peopleRepCost": @"people_rep",
+             @"corruptCost": @"corrupt",
              @"timeToDestroyDanger": @"time",
              @"coef": @"coef"
              };
@@ -54,9 +57,20 @@
     return name;
 }
 
-- (void)setValue:(NSInteger)aValue
-{
-    value = MIN(MAX(aValue, MinAbilityValue), MaxAbilityValue);
+- (void)setManaCost:(NSInteger)aManaCost {
+    manaCost = MIN(MAX(aManaCost, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setKingRepCost:(NSInteger)kingRepCost {
+    _kingRepCost = MIN(MAX(kingRepCost, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setPeopleRepCost:(NSInteger)peopleRepCost {
+    _peopleRepCost = MIN(MAX(peopleRepCost, MinAbilityValue), MaxAbilityValue);
+}
+
+- (void)setCorruptCost:(NSInteger)corruptCost {
+    _corruptCost = MIN(MAX(corruptCost, MinAbilityValue), MaxAbilityValue);
 }
 
 - (NSString *)abilityName

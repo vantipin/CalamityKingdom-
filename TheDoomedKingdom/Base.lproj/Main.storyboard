@@ -1460,7 +1460,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="699" height="451"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="nWY-om-B1Q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="nWY-om-B1Q">
                                 <rect key="frame" x="63" y="126" width="572" height="197"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
@@ -1483,7 +1483,7 @@
                                     <action selector="nextPressed:" destination="VNF-sH-iy2" eventType="touchUpInside" id="h3u-Qq-fPl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i10-OS-3D9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="i10-OS-3D9">
                                 <rect key="frame" x="63" y="69" width="572" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="46"/>
@@ -1496,8 +1496,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="699" height="421"/>
                     <connections>
+                        <outlet property="backButton" destination="la5-U4-KGu" id="O2Z-H0-sk1"/>
                         <outlet property="descrLabel" destination="nWY-om-B1Q" id="OO3-DB-ZjH"/>
                         <outlet property="nameLabel" destination="i10-OS-3D9" id="wsl-Hh-9rU"/>
+                        <outlet property="nextButton" destination="5Z4-UB-kCj" id="bwm-37-NaJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qKu-3v-log" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -15,7 +15,11 @@
 
 // MAGE ABILITY
 @property (nonatomic, assign) PPAbilityType abilityType;
-@property (nonatomic, assign) NSInteger value;
+@property (nonatomic, assign) NSInteger manaCost;
+
+@property (nonatomic, assign) NSInteger kingRepCost;
+@property (nonatomic, assign) NSInteger peopleRepCost;
+@property (nonatomic, assign) NSInteger corruptCost;
 
 @property (nonatomic, assign) CGFloat coef;
 @property (nonatomic, assign) NSInteger timeToDestroyDanger;
