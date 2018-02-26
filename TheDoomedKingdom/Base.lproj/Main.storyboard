@@ -233,10 +233,6 @@
                                 <rect key="frame" x="456" y="208" width="144" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="kkU-Bs-5mz">
-                                        <rect key="frame" x="-63" y="-18" width="279" height="254"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapitalCity.png" id="hoN-Sy-uFC">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -254,8 +250,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="NP6-7j-BQ6">
-                                        <rect key="frame" x="-54" y="-33" width="245" height="204"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="capital.png" id="NP6-7j-BQ6">
+                                        <rect key="frame" x="-25" y="-25" width="194" height="194"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pfO-In-g1h">
@@ -312,6 +308,10 @@
                                         <color key="shadowColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="kkU-Bs-5mz">
+                                        <rect key="frame" x="45" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -321,16 +321,12 @@
                                     <outlet property="progressBar" destination="sXy-UQ-psz" id="OGa-SL-3ou"/>
                                 </connections>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" id="aKP-e2-9QP" userLabel="Mid City 1" customClass="PPCityView">
-                                <rect key="frame" x="630" y="46" width="116" height="170"/>
+                            <view tag="1" contentMode="scaleToFill" misplaced="YES" id="aKP-e2-9QP" userLabel="Mid City 1" customClass="PPCityView">
+                                <rect key="frame" x="620" y="46" width="135" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="QGB-WL-7Ma">
-                                        <rect key="frame" x="-64" y="-64" width="245" height="254"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageVariorsCity.png" id="hEj-Id-Tis">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="119"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" id="hEj-Id-Tis">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -346,12 +342,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="xOe-iN-JeG">
-                                        <rect key="frame" x="-54" y="-66" width="235" height="201"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warrior.png" id="xOe-iN-JeG">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="pFK-xh-hrX">
-                                        <rect key="frame" x="0.0" y="151" width="116" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="pFK-xh-hrX">
+                                        <rect key="frame" x="0.0" y="151" width="135" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
@@ -360,8 +356,8 @@
                                         <color key="shadowColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="3eI-Hf-9Lb" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="0.0" y="130" width="116" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="3eI-Hf-9Lb" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="130" width="135" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -395,8 +391,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgk-TO-0K6">
-                                        <rect key="frame" x="0.0" y="115" width="116" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgk-TO-0K6">
+                                        <rect key="frame" x="0.0" y="115" width="135" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -404,6 +400,10 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="QGB-WL-7Ma">
+                                        <rect key="frame" x="40" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -413,25 +413,21 @@
                                     <outlet property="progressBar" destination="3eI-Hf-9Lb" id="P8d-so-Z2W"/>
                                 </connections>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" id="RA1-Dy-JRw" userLabel="Mid City 2" customClass="PPCityView">
-                                <rect key="frame" x="424" y="402" width="121" height="177"/>
+                            <view tag="2" contentMode="scaleToFill" misplaced="YES" id="RA1-Dy-JRw" userLabel="Mid City 2" customClass="PPCityView">
+                                <rect key="frame" x="424" y="402" width="129" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="dna-4E-vEX">
-                                        <rect key="frame" x="-55" y="-54" width="245" height="253"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Town2City.png" id="mRG-Fd-hSI">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="116"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town2City.png" id="mRG-Fd-hSI">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="laQ-sl-qfh">
-                                        <rect key="frame" x="-58" y="-65" width="244" height="201"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="town2.png" id="laQ-sl-qfh">
+                                        <rect key="frame" x="-25" y="-25" width="179" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IqB-dO-nCY">
-                                        <rect key="frame" x="0.0" y="116" width="121" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IqB-dO-nCY">
+                                        <rect key="frame" x="0.0" y="116" width="129" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -439,8 +435,8 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="XRc-hN-RcQ" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="0.0" y="136" width="121" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="XRc-hN-RcQ" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="136" width="129" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -474,8 +470,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="XQw-jl-JcU">
-                                        <rect key="frame" x="0.0" y="155" width="121" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="XQw-jl-JcU">
+                                        <rect key="frame" x="0.0" y="155" width="129" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -483,6 +479,10 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="dna-4E-vEX">
+                                        <rect key="frame" x="37" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -492,16 +492,12 @@
                                     <outlet property="progressBar" destination="XRc-hN-RcQ" id="HWj-rL-R9h"/>
                                 </connections>
                             </view>
-                            <view tag="3" contentMode="scaleToFill" id="5t7-P9-heo" userLabel="Mid City 3" customClass="PPCityView">
-                                <rect key="frame" x="719" y="380" width="107" height="170"/>
+                            <view tag="3" contentMode="scaleToFill" misplaced="YES" id="5t7-P9-heo" userLabel="Mid City 3" customClass="PPCityView">
+                                <rect key="frame" x="710" y="377" width="129" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="wdl-q9-Yov">
-                                        <rect key="frame" x="-73" y="-62" width="262" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Town1City.png" id="wGV-4d-LVJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="107" height="111"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town1City.png" id="wGV-4d-LVJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="129" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -517,12 +513,12 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="ALX-rt-lgR">
-                                        <rect key="frame" x="-54" y="-70" width="245" height="201"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="town.png" id="ALX-rt-lgR">
+                                        <rect key="frame" x="-25" y="-25" width="179" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ih1-2E-yjJ">
-                                        <rect key="frame" x="0.0" y="112" width="107" height="14"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ih1-2E-yjJ">
+                                        <rect key="frame" x="0.0" y="117" width="129" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -530,8 +526,8 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="LKn-XO-J3E" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="0.0" y="129" width="107" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="LKn-XO-J3E" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="134" width="129" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -565,8 +561,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="OEQ-Ft-TP0">
-                                        <rect key="frame" x="0.0" y="148" width="107" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="OEQ-Ft-TP0">
+                                        <rect key="frame" x="0.0" y="153" width="129" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
@@ -575,6 +571,10 @@
                                         <color key="shadowColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="wdl-q9-Yov">
+                                        <rect key="frame" x="37" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -584,16 +584,12 @@
                                     <outlet property="progressBar" destination="LKn-XO-J3E" id="U1k-XQ-5z4"/>
                                 </connections>
                             </view>
-                            <view tag="4" contentMode="scaleToFill" id="uDi-qT-ezR" userLabel="Small City 4" customClass="PPCityView">
-                                <rect key="frame" x="586" y="551" width="116" height="179"/>
+                            <view tag="4" contentMode="scaleToFill" misplaced="YES" id="uDi-qT-ezR" userLabel="Small City 4" customClass="PPCityView">
+                                <rect key="frame" x="576" y="551" width="135" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="pHe-TW-PkA">
-                                        <rect key="frame" x="-69" y="-35" width="280" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageVariorsCity.png" id="ZLU-js-u0W">
-                                        <rect key="frame" x="0.0" y="0.0" width="116" height="119"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" id="ZLU-js-u0W">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -609,12 +605,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="5iv-K0-BGV">
-                                        <rect key="frame" x="-52" y="-62" width="245" height="204"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="warrior.png" id="5iv-K0-BGV">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vKX-eY-gCj">
-                                        <rect key="frame" x="0.0" y="116" width="116" height="14"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="pHe-TW-PkA">
+                                        <rect key="frame" x="40" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vKX-eY-gCj">
+                                        <rect key="frame" x="0.0" y="116" width="135" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -622,8 +622,8 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="4AS-Hd-LoT" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="0.0" y="132" width="116" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="4AS-Hd-LoT" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="132" width="135" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -657,8 +657,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="rcB-yl-PHV">
-                                        <rect key="frame" x="0.0" y="153" width="116" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="rcB-yl-PHV">
+                                        <rect key="frame" x="0.0" y="153" width="135" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
@@ -676,16 +676,12 @@
                                     <outlet property="progressBar" destination="4AS-Hd-LoT" id="Wg7-8h-wVF"/>
                                 </connections>
                             </view>
-                            <view tag="5" contentMode="scaleToFill" id="JEW-Kb-Unq" userLabel="Small City 5" customClass="PPCityView">
-                                <rect key="frame" x="140" y="486" width="112" height="167"/>
+                            <view tag="5" contentMode="scaleToFill" misplaced="YES" id="JEW-Kb-Unq" userLabel="Small City 5" customClass="PPCityView">
+                                <rect key="frame" x="130" y="486" width="135" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="Z4j-yT-dGu">
-                                        <rect key="frame" x="-52" y="-75" width="245" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageLumbererCity.png" id="K54-7F-5JS">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="105"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" id="K54-7F-5JS">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -701,12 +697,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="0R6-HV-8SE">
-                                        <rect key="frame" x="-52" y="-88" width="245" height="201"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lumberer.png" id="0R6-HV-8SE">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VG6-uA-30r">
-                                        <rect key="frame" x="4" y="104" width="112" height="14"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="Z4j-yT-dGu">
+                                        <rect key="frame" x="40" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VG6-uA-30r">
+                                        <rect key="frame" x="0.0" y="119" width="135" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -714,8 +714,8 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="CO5-f8-2uk" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="4" y="120" width="112" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="CO5-f8-2uk" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="135" width="135" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -749,8 +749,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" id="bhA-qT-pRD">
-                                        <rect key="frame" x="4" y="141" width="112" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" id="bhA-qT-pRD">
+                                        <rect key="frame" x="0.0" y="156" width="135" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
@@ -772,12 +772,8 @@
                                 <rect key="frame" x="184" y="260" width="135" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="Sar-sO-IjD">
-                                        <rect key="frame" x="-55" y="-33" width="255" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageFishermansCity.png" id="kHa-dK-vIo">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="114"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" id="kHa-dK-vIo">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -793,8 +789,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="K1f-aH-lCe">
-                                        <rect key="frame" x="-51" y="-55" width="245" height="204"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fisherman.png" id="K1f-aH-lCe">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="msh-NS-rPG">
@@ -851,6 +847,10 @@
                                         <color key="shadowColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="Sar-sO-IjD">
+                                        <rect key="frame" x="40" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -864,12 +864,8 @@
                                 <rect key="frame" x="880" y="477" width="135" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="GrB-5O-Lfh">
-                                        <rect key="frame" x="-52" y="-35" width="250" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageFishermansCity.png" id="PNg-9d-N9T">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="114"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" id="PNg-9d-N9T">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -885,8 +881,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="pEH-3z-0fI">
-                                        <rect key="frame" x="-51" y="-63" width="242" height="205"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="fisherman.png" id="pEH-3z-0fI">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="54y-Q8-98D">
@@ -943,6 +939,10 @@
                                         <color key="shadowColor" red="0.33333333333333331" green="0.33333333333333331" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="GrB-5O-Lfh">
+                                        <rect key="frame" x="40" y="2" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -952,16 +952,12 @@
                                     <outlet property="progressBar" destination="OxW-eI-aEc" id="uiV-2m-dgz"/>
                                 </connections>
                             </view>
-                            <view tag="8" contentMode="scaleToFill" id="aBR-5O-zJm" userLabel="Small City 8" customClass="PPCityView">
-                                <rect key="frame" x="385" y="15" width="112" height="167"/>
+                            <view tag="8" contentMode="scaleToFill" misplaced="YES" id="aBR-5O-zJm" userLabel="Small City 8" customClass="PPCityView">
+                                <rect key="frame" x="375" y="15" width="135" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_ground.png" id="daT-hb-mit">
-                                        <rect key="frame" x="-52" y="-75" width="245" height="249"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VillageLumbererCity.png" id="8K7-kO-Xpd">
-                                        <rect key="frame" x="0.0" y="0.0" width="112" height="105"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" id="8K7-kO-Xpd">
+                                        <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -977,12 +973,16 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curse_glow.png" id="04B-MX-Xye">
-                                        <rect key="frame" x="-52" y="-88" width="245" height="201"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="6666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="lumberer.png" id="04B-MX-Xye">
+                                        <rect key="frame" x="-25" y="-25" width="185" height="169"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ndq-dw-ZJ7">
-                                        <rect key="frame" x="4" y="104" width="112" height="14"/>
+                                    <imageView hidden="YES" userInteractionEnabled="NO" tag="666" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="quest_popup.png" id="daT-hb-mit">
+                                        <rect key="frame" x="40" y="0.0" width="54" height="75"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ndq-dw-ZJ7">
+                                        <rect key="frame" x="0.0" y="119" width="135" height="14"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -990,8 +990,8 @@
                                         <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <size key="shadowOffset" width="1" height="1"/>
                                     </label>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" id="g5i-b4-d7B" customClass="EAColourfulProgressView">
-                                        <rect key="frame" x="4" y="120" width="112" height="19"/>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" misplaced="YES" id="g5i-b4-d7B" customClass="EAColourfulProgressView">
+                                        <rect key="frame" x="0.0" y="135" width="135" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
@@ -1025,8 +1025,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="D9X-Pn-lQG">
-                                        <rect key="frame" x="4" y="141" width="112" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" id="D9X-Pn-lQG">
+                                        <rect key="frame" x="0.0" y="156" width="135" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="16"/>
@@ -1718,9 +1718,14 @@
         <image name="VillageLumbererCity.png" width="135" height="119"/>
         <image name="VillageVariorsCity.png" width="135" height="119"/>
         <image name="background.png" width="1008" height="756"/>
-        <image name="curse_glow.png" width="457" height="521"/>
-        <image name="curse_ground.png" width="415" height="194"/>
+        <image name="capital.png" width="194" height="194"/>
         <image name="ending_victory.png" width="682" height="752"/>
+        <image name="fisherman.png" width="185" height="169"/>
         <image name="intro1.png" width="1991" height="1458"/>
+        <image name="lumberer.png" width="185" height="169"/>
+        <image name="quest_popup.png" width="54" height="71"/>
+        <image name="town.png" width="179" height="166"/>
+        <image name="town2.png" width="179" height="166"/>
+        <image name="warrior.png" width="185" height="169"/>
     </resources>
 </document>

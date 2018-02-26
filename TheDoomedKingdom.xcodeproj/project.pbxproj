@@ -21,8 +21,6 @@
 		D51D033C1C97E6C200FE1467 /* LibraryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03341C97E6C200FE1467 /* LibraryIcon.png */; };
 		D51D033D1C97E6C200FE1467 /* LibraryIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D03351C97E6C200FE1467 /* LibraryIcon@2x.png */; };
 		D51D03401C97EB6900FE1467 /* PPLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */; };
-		D51D21402000288E0076811C /* ExclamationMark.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D213E2000288D0076811C /* ExclamationMark.png */; };
-		D51D21412000288E0076811C /* ExclamationMark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D51D213F2000288D0076811C /* ExclamationMark@2x.png */; };
 		D51D2144200029320076811C /* PPConstant.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D2143200029320076811C /* PPConstant.m */; };
 		D51D214720002A880076811C /* PPEnding.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D214620002A880076811C /* PPEnding.m */; };
 		D51D214A2000303E0076811C /* PPEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = D51D21492000303E0076811C /* PPEvent.m */; };
@@ -102,8 +100,6 @@
 		D588F2CF1C84D96A0054FE61 /* CapitalCity@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2951C84D96A0054FE61 /* CapitalCity@2x.png */; };
 		D588F2D01C84D96A0054FE61 /* ClosePopupIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2961C84D96A0054FE61 /* ClosePopupIcon.png */; };
 		D588F2D11C84D96A0054FE61 /* ClosePopupIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2971C84D96A0054FE61 /* ClosePopupIcon@2x.png */; };
-		D588F2D21C84D96A0054FE61 /* curse_glow.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2981C84D96A0054FE61 /* curse_glow.png */; };
-		D588F2D31C84D96A0054FE61 /* curse_ground.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F2991C84D96A0054FE61 /* curse_ground.png */; };
 		D588F2D41C84D96A0054FE61 /* danger_curse.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F29A1C84D96A0054FE61 /* danger_curse.png */; };
 		D588F2D51C84D96A0054FE61 /* danger_elements.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F29B1C84D96A0054FE61 /* danger_elements.png */; };
 		D588F2D61C84D96A0054FE61 /* danger_monsters.png in Resources */ = {isa = PBXBuildFile; fileRef = D588F29C1C84D96A0054FE61 /* danger_monsters.png */; };
@@ -154,6 +150,20 @@
 		D5B4E0411C9148C800CDCDC0 /* PBSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B4E03F1C9148C800CDCDC0 /* PBSmall.png */; };
 		D5B4E0421C9148C800CDCDC0 /* PBSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5B4E0401C9148C800CDCDC0 /* PBSmall@2x.png */; };
 		D5B4E0451C9150E300CDCDC0 /* PPProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B4E0441C9150E300CDCDC0 /* PPProgressView.m */; };
+		D5C2F3F82044A778008A2F81 /* town2.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F12044A776008A2F81 /* town2.png */; };
+		D5C2F3F92044A778008A2F81 /* warrior.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F22044A777008A2F81 /* warrior.png */; };
+		D5C2F3FA2044A778008A2F81 /* capital.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F32044A777008A2F81 /* capital.png */; };
+		D5C2F3FB2044A778008A2F81 /* town.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F42044A777008A2F81 /* town.png */; };
+		D5C2F3FD2044A778008A2F81 /* lumberer.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F62044A778008A2F81 /* lumberer.png */; };
+		D5C2F3FE2044A778008A2F81 /* fisherman.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3F72044A778008A2F81 /* fisherman.png */; };
+		D5C2F4012044B50D008A2F81 /* quest_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F3FF2044B50A008A2F81 /* quest_popup.png */; };
+		D5C2F4022044B50D008A2F81 /* quest_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4002044B50B008A2F81 /* quest_popup@2x.png */; };
+		D5C2F4092044B678008A2F81 /* warrior@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4032044B677008A2F81 /* warrior@2x.png */; };
+		D5C2F40A2044B678008A2F81 /* capital@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4042044B678008A2F81 /* capital@2x.png */; };
+		D5C2F40B2044B678008A2F81 /* fisherman@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4052044B678008A2F81 /* fisherman@2x.png */; };
+		D5C2F40C2044B678008A2F81 /* town2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4062044B678008A2F81 /* town2@2x.png */; };
+		D5C2F40D2044B678008A2F81 /* town@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4072044B678008A2F81 /* town@2x.png */; };
+		D5C2F40E2044B678008A2F81 /* lumberer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5C2F4082044B678008A2F81 /* lumberer@2x.png */; };
 		D5CFB5021C930542002D3E77 /* TelePBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB4F41C930542002D3E77 /* TelePBIcon.png */; };
 		D5CFB5031C930542002D3E77 /* TelePBIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB4F51C930542002D3E77 /* TelePBIcon@2x.png */; };
 		D5CFB5041C930542002D3E77 /* ChaosPBIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB4F61C930542002D3E77 /* ChaosPBIcon.png */; };
@@ -198,8 +208,6 @@
 		D51D03351C97E6C200FE1467 /* LibraryIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LibraryIcon@2x.png"; sourceTree = "<group>"; };
 		D51D033E1C97EB6900FE1467 /* PPLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPLibraryViewController.h; sourceTree = "<group>"; };
 		D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPLibraryViewController.m; sourceTree = "<group>"; };
-		D51D213E2000288D0076811C /* ExclamationMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExclamationMark.png; sourceTree = "<group>"; };
-		D51D213F2000288D0076811C /* ExclamationMark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ExclamationMark@2x.png"; sourceTree = "<group>"; };
 		D51D2142200029320076811C /* PPConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPConstant.h; sourceTree = "<group>"; };
 		D51D2143200029320076811C /* PPConstant.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPConstant.m; sourceTree = "<group>"; };
 		D51D214520002A880076811C /* PPEnding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEnding.h; sourceTree = "<group>"; };
@@ -310,8 +318,6 @@
 		D588F2951C84D96A0054FE61 /* CapitalCity@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CapitalCity@2x.png"; sourceTree = "<group>"; };
 		D588F2961C84D96A0054FE61 /* ClosePopupIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ClosePopupIcon.png; sourceTree = "<group>"; };
 		D588F2971C84D96A0054FE61 /* ClosePopupIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ClosePopupIcon@2x.png"; sourceTree = "<group>"; };
-		D588F2981C84D96A0054FE61 /* curse_glow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curse_glow.png; sourceTree = "<group>"; };
-		D588F2991C84D96A0054FE61 /* curse_ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = curse_ground.png; sourceTree = "<group>"; };
 		D588F29A1C84D96A0054FE61 /* danger_curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danger_curse.png; sourceTree = "<group>"; };
 		D588F29B1C84D96A0054FE61 /* danger_elements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danger_elements.png; sourceTree = "<group>"; };
 		D588F29C1C84D96A0054FE61 /* danger_monsters.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = danger_monsters.png; sourceTree = "<group>"; };
@@ -367,6 +373,20 @@
 		D5B4E0401C9148C800CDCDC0 /* PBSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBSmall@2x.png"; sourceTree = "<group>"; };
 		D5B4E0431C9150E300CDCDC0 /* PPProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPProgressView.h; sourceTree = "<group>"; };
 		D5B4E0441C9150E300CDCDC0 /* PPProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPProgressView.m; sourceTree = "<group>"; };
+		D5C2F3F12044A776008A2F81 /* town2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = town2.png; sourceTree = "<group>"; };
+		D5C2F3F22044A777008A2F81 /* warrior.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = warrior.png; sourceTree = "<group>"; };
+		D5C2F3F32044A777008A2F81 /* capital.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = capital.png; sourceTree = "<group>"; };
+		D5C2F3F42044A777008A2F81 /* town.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = town.png; sourceTree = "<group>"; };
+		D5C2F3F62044A778008A2F81 /* lumberer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lumberer.png; sourceTree = "<group>"; };
+		D5C2F3F72044A778008A2F81 /* fisherman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fisherman.png; sourceTree = "<group>"; };
+		D5C2F3FF2044B50A008A2F81 /* quest_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest_popup.png; sourceTree = "<group>"; };
+		D5C2F4002044B50B008A2F81 /* quest_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "quest_popup@2x.png"; sourceTree = "<group>"; };
+		D5C2F4032044B677008A2F81 /* warrior@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warrior@2x.png"; sourceTree = "<group>"; };
+		D5C2F4042044B678008A2F81 /* capital@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capital@2x.png"; sourceTree = "<group>"; };
+		D5C2F4052044B678008A2F81 /* fisherman@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fisherman@2x.png"; sourceTree = "<group>"; };
+		D5C2F4062044B678008A2F81 /* town2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "town2@2x.png"; sourceTree = "<group>"; };
+		D5C2F4072044B678008A2F81 /* town@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "town@2x.png"; sourceTree = "<group>"; };
+		D5C2F4082044B678008A2F81 /* lumberer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lumberer@2x.png"; sourceTree = "<group>"; };
 		D5CFB4F41C930542002D3E77 /* TelePBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TelePBIcon.png; sourceTree = "<group>"; };
 		D5CFB4F51C930542002D3E77 /* TelePBIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TelePBIcon@2x.png"; sourceTree = "<group>"; };
 		D5CFB4F61C930542002D3E77 /* ChaosPBIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChaosPBIcon.png; sourceTree = "<group>"; };
@@ -640,6 +660,20 @@
 		D588F2831C84D96A0054FE61 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D5C2F3F32044A777008A2F81 /* capital.png */,
+				D5C2F4042044B678008A2F81 /* capital@2x.png */,
+				D5C2F3F72044A778008A2F81 /* fisherman.png */,
+				D5C2F4052044B678008A2F81 /* fisherman@2x.png */,
+				D5C2F3F62044A778008A2F81 /* lumberer.png */,
+				D5C2F4082044B678008A2F81 /* lumberer@2x.png */,
+				D5C2F3F42044A777008A2F81 /* town.png */,
+				D5C2F4072044B678008A2F81 /* town@2x.png */,
+				D5C2F3F12044A776008A2F81 /* town2.png */,
+				D5C2F4062044B678008A2F81 /* town2@2x.png */,
+				D5C2F3F22044A777008A2F81 /* warrior.png */,
+				D5C2F4032044B677008A2F81 /* warrior@2x.png */,
+				D5C2F3FF2044B50A008A2F81 /* quest_popup.png */,
+				D5C2F4002044B50B008A2F81 /* quest_popup@2x.png */,
 				D588F2841C84D96A0054FE61 /* 1_1.png */,
 				D588F2851C84D96A0054FE61 /* 1_2.png */,
 				D588F2861C84D96A0054FE61 /* 2_1.png */,
@@ -666,8 +700,6 @@
 				D58AA5FA1C88CFFB0051F53C /* Clock@2x.png */,
 				D588F2961C84D96A0054FE61 /* ClosePopupIcon.png */,
 				D588F2971C84D96A0054FE61 /* ClosePopupIcon@2x.png */,
-				D588F2981C84D96A0054FE61 /* curse_glow.png */,
-				D588F2991C84D96A0054FE61 /* curse_ground.png */,
 				D588F29A1C84D96A0054FE61 /* danger_curse.png */,
 				D588F29B1C84D96A0054FE61 /* danger_elements.png */,
 				D588F29C1C84D96A0054FE61 /* danger_monsters.png */,
@@ -675,8 +707,6 @@
 				D588F29E1C84D96A0054FE61 /* ending_defeat_destroyed.png */,
 				D588F29F1C84D96A0054FE61 /* ending_defeat_popularity.png */,
 				D588F2A01C84D96A0054FE61 /* ending_victory.png */,
-				D51D213E2000288D0076811C /* ExclamationMark.png */,
-				D51D213F2000288D0076811C /* ExclamationMark@2x.png */,
 				D588F2A11C84D96A0054FE61 /* GameField.png */,
 				D588F2A21C84D96A0054FE61 /* GameField@2x.png */,
 				D55E4F7E1C87807600320667 /* GypnosIcon.png */,
@@ -878,18 +908,19 @@
 				D5AD9585201684A40026E5B8 /* Cities.json in Resources */,
 				D588F2FF1C84D9940054FE61 /* battle_loosing.wav in Resources */,
 				D5B4E0421C9148C800CDCDC0 /* PBSmall@2x.png in Resources */,
-				D588F2D31C84D96A0054FE61 /* curse_ground.png in Resources */,
 				D5CFB50B1C930542002D3E77 /* PBSmallProgress@2x.png in Resources */,
 				D5CFB5061C930542002D3E77 /* SummonPBIcon.png in Resources */,
 				D55E4F871C87807600320667 /* GypnosIcon@2x.png in Resources */,
 				D5530FBA1CA03FB10064A220 /* VillageRuined@2x.png in Resources */,
 				D588F2C01C84D96A0054FE61 /* 2_1.png in Resources */,
 				D51D03281C975DD100FE1467 /* ProgressStripe@2x.png in Resources */,
+				D5C2F40B2044B678008A2F81 /* fisherman@2x.png in Resources */,
 				D5AD9583201684A40026E5B8 /* Library.json in Resources */,
 				D588F2D81C84D96A0054FE61 /* ending_defeat_destroyed.png in Resources */,
 				D588F2EE1C84D96A0054FE61 /* VillageLumbererCity@2x.png in Resources */,
 				D588F2CE1C84D96A0054FE61 /* CapitalCity.png in Resources */,
 				D5B4E0411C9148C800CDCDC0 /* PBSmall.png in Resources */,
+				D5C2F40C2044B678008A2F81 /* town2@2x.png in Resources */,
 				D5CFB5091C930542002D3E77 /* HypnoPBIcon@2x.png in Resources */,
 				D588F2D11C84D96A0054FE61 /* ClosePopupIcon@2x.png in Resources */,
 				D5AD957F201684A40026E5B8 /* Constants.json in Resources */,
@@ -903,6 +934,7 @@
 				D51D03391C97E6C200FE1467 /* LibraryBackButton@2x.png in Resources */,
 				D52412421C5C8DBD00EB1FF4 /* LaunchScreen.storyboard in Resources */,
 				D5AD9581201684A40026E5B8 /* EventReplies.json in Resources */,
+				D5C2F4022044B50D008A2F81 /* quest_popup@2x.png in Resources */,
 				D55E4F851C87807600320667 /* ChaosIcon@2x.png in Resources */,
 				D5CFB5041C930542002D3E77 /* ChaosPBIcon.png in Resources */,
 				D5CFB50E1C930542002D3E77 /* PBBig.png in Resources */,
@@ -914,13 +946,13 @@
 				D5AD957E201684A40026E5B8 /* Endings.json in Resources */,
 				D588F2D01C84D96A0054FE61 /* ClosePopupIcon.png in Resources */,
 				D5AD9580201684A40026E5B8 /* Events.json in Resources */,
+				D5C2F3F92044A778008A2F81 /* warrior.png in Resources */,
 				D588F2E71C84D96A0054FE61 /* Town1City.png in Resources */,
 				D588F3011C84D9940054FE61 /* casting.m4a in Resources */,
 				D588F2EF1C84D96A0054FE61 /* VillageVariorsCity.png in Resources */,
 				D58AA6031C88DCD10051F53C /* MagIcon@2x.png in Resources */,
 				D55E4F8F1C8782F100320667 /* Patch@2x.png in Resources */,
 				D51D033C1C97E6C200FE1467 /* LibraryIcon.png in Resources */,
-				D51D21402000288E0076811C /* ExclamationMark.png in Resources */,
 				D588F2D71C84D96A0054FE61 /* danger_plages.png in Resources */,
 				D588F2ED1C84D96A0054FE61 /* VillageLumbererCity.png in Resources */,
 				D55E4F7A1C877B5000320667 /* Stamp.png in Resources */,
@@ -931,45 +963,53 @@
 				D57C36591C85C8BB006CBA2D /* Lasco-Bold.otf in Resources */,
 				D588F2C31C84D96A0054FE61 /* 3_2.png in Resources */,
 				D51D033A1C97E6C200FE1467 /* LibraryPaperBg.png in Resources */,
+				D5C2F3FB2044A778008A2F81 /* town.png in Resources */,
 				D51D033B1C97E6C200FE1467 /* LibraryPaperBg@2x.png in Resources */,
 				D55E4F8A1C87807600320667 /* TelekinesisIcon.png in Resources */,
-				D588F2D21C84D96A0054FE61 /* curse_glow.png in Resources */,
 				D588F2DA1C84D96A0054FE61 /* ending_victory.png in Resources */,
 				D55E4F861C87807600320667 /* GypnosIcon.png in Resources */,
 				D5AD9586201684A40026E5B8 /* Disasters.json in Resources */,
 				D524123F1C5C8DBD00EB1FF4 /* Assets.xcassets in Resources */,
+				D5C2F3F82044A778008A2F81 /* town2.png in Resources */,
 				D588F2E31C84D96A0054FE61 /* PopupBg@2x.png in Resources */,
 				D58AA5FB1C88CFFB0051F53C /* Clock.png in Resources */,
 				5CED44FA1C5E3FD100D9256F /* Images.xcassets in Resources */,
 				D55E4F8B1C87807600320667 /* TelekinesisIcon@2x.png in Resources */,
 				D51D03371C97E6C200FE1467 /* LibraryNextButton@2x.png in Resources */,
+				D5C2F40E2044B678008A2F81 /* lumberer@2x.png in Resources */,
 				D588F2C21C84D96A0054FE61 /* 3_1.png in Resources */,
 				D588F2DC1C84D96A0054FE61 /* GameField@2x.png in Resources */,
 				D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */,
+				D5C2F40D2044B678008A2F81 /* town@2x.png in Resources */,
 				D588F2F01C84D96A0054FE61 /* VillageVariorsCity@2x.png in Resources */,
 				D5CFB50A1C930542002D3E77 /* PBSmallProgress.png in Resources */,
 				D588F2D91C84D96A0054FE61 /* ending_defeat_popularity.png in Resources */,
 				D5CFB5031C930542002D3E77 /* TelePBIcon@2x.png in Resources */,
+				D5C2F40A2044B678008A2F81 /* capital@2x.png in Resources */,
 				D588F2CC1C84D96A0054FE61 /* AbilityButtonBg@2x.png in Resources */,
-				D51D21412000288E0076811C /* ExclamationMark@2x.png in Resources */,
 				D51D03271C975DD100FE1467 /* ProgressStripe.png in Resources */,
+				D5C2F3FE2044A778008A2F81 /* fisherman.png in Resources */,
 				D5CFB51A1C969AE1002D3E77 /* PBMiddle@2x.png in Resources */,
 				D58AA5FC1C88CFFB0051F53C /* Clock@2x.png in Resources */,
 				D5CFB50C1C930542002D3E77 /* PBBigProgress.png in Resources */,
+				D5C2F4012044B50D008A2F81 /* quest_popup.png in Resources */,
 				D588F2D51C84D96A0054FE61 /* danger_elements.png in Resources */,
 				D588F2EC1C84D96A0054FE61 /* VillageFishermansCity@2x.png in Resources */,
 				D51D033D1C97E6C200FE1467 /* LibraryIcon@2x.png in Resources */,
 				D588F2E91C84D96A0054FE61 /* Town2City.png in Resources */,
 				D588F2DB1C84D96A0054FE61 /* GameField.png in Resources */,
 				D588F2E61C84D96A0054FE61 /* RatingIcon@2x.png in Resources */,
+				D5C2F3FA2044A778008A2F81 /* capital.png in Resources */,
 				D5530FBC1CA03FB10064A220 /* TownRuined@2x.png in Resources */,
 				D588F3001C84D9940054FE61 /* battle_win.wav in Resources */,
 				D588F2EA1C84D96A0054FE61 /* Town2City@2x.png in Resources */,
 				D5CFB5051C930542002D3E77 /* ChaosPBIcon@2x.png in Resources */,
 				D5AD9584201684A40026E5B8 /* Archimags.json in Resources */,
 				D524123D1C5C8DBD00EB1FF4 /* Main.storyboard in Resources */,
+				D5C2F4092044B678008A2F81 /* warrior@2x.png in Resources */,
 				D588F2E11C84D96A0054FE61 /* intro2.png in Resources */,
 				D5CFB5171C969AE1002D3E77 /* PBMiddleProgress.png in Resources */,
+				D5C2F3FD2044A778008A2F81 /* lumberer.png in Resources */,
 				D588F2CD1C84D96A0054FE61 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

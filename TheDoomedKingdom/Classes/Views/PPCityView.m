@@ -121,8 +121,8 @@
     trashView.alpha = 0;
     
     BOOL show = count % 2 == 1;
-    CGFloat fromOpacity = show ? 0.5 : 1.0;
-    CGFloat toOpacity = show ? 1.0 : 0.5;
+    CGFloat fromOpacity = show ? 0.0 : 1.0;
+    CGFloat toOpacity = show ? 1.0 : 0.0;
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
     animation.fromValue = @(fromOpacity);
@@ -134,9 +134,11 @@
     [self.cityIconImageView.layer addAnimation:animation forKey:@"test"];
 }
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    [self.cityIconImageView.layer removeAllAnimations];
-    [self animateCityDander];
-}
+//- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+//
+//
+//    [self.cityIconImageView.layer removeAllAnimations];
+//    [self animateCityDander];
+//}
 
 @end
