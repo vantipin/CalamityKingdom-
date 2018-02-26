@@ -86,13 +86,10 @@
         }
         
         view = [self viewWithTag:6666];
+        view.alpha = 0.;
         
         if (view) {
             [view setHidden:!inDanger];
-        }
-        
-        if (inDanger) {
-            self.cityIconImageView.layer.shadowOpacity = 0.5;
         }
         
         [self animateCityDander];
@@ -100,8 +97,11 @@
 }
 
 - (void)stopAnimations {
-    self.cityIconImageView.layer.shadowOpacity = 0;
-    [self.cityIconImageView.layer removeAllAnimations];
+    UIView *trashView = [self viewWithTag:6666];
+    trashView.alpha = 0;
+    
+    trashView = [self viewWithTag:666];
+    trashView.alpha = 0;
 }
 
 - (void)animateCityDander
@@ -111,27 +111,31 @@
         return;
     }
     
-    
-    static int count = 0;
-    count++;
     UIView *trashView = [self viewWithTag:6666];
-    trashView.alpha = 0;
+    BOOL show = trashView.alpha == 0;
     
-    trashView = [self viewWithTag:666];
-    trashView.alpha = 0;
-    
-    BOOL show = count % 2 == 1;
-    CGFloat fromOpacity = show ? 0.0 : 1.0;
-    CGFloat toOpacity = show ? 1.0 : 0.0;
-    
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
-    animation.fromValue = @(fromOpacity);
-    animation.toValue = @(toOpacity);
-    animation.duration = 0.5;
-    [animation setRemovedOnCompletion:NO];
-    animation.delegate = self;
-    
-    [self.cityIconImageView.layer addAnimation:animation forKey:@"test"];
+    [UIView animateWithDuration:0.5 animations:^{
+        trashView.alpha = show ? 1 : 0;
+    } completion:^(BOOL finished) {
+        [self animateCityDander];
+    }];
+//    
+//    static int count = 0;
+//    count++;
+//
+//    
+//    BOOL show = count % 2 == 1;
+//    CGFloat fromOpacity = show ? 0.0 : 1.0;
+//    CGFloat toOpacity = show ? 1.0 : 0.0;
+//    
+//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"shadowOpacity"];
+//    animation.fromValue = @(fromOpacity);
+//    animation.toValue = @(toOpacity);
+//    animation.duration = 0.5;
+//    [animation setRemovedOnCompletion:NO];
+//    animation.delegate = self;
+//    
+//    [self.cityIconImageView.layer addAnimation:animation forKey:@"test"];
 }
 
 //- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {

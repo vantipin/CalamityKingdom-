@@ -1,128 +1,128 @@
 [
   {
-    "name" : "Гипнотизируем...",
     "id" : "ability_hypnosis_action",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Гипнотизируем..."
   },
   {
-    "name" : "Вносим хаос...",
     "id" : "ability_chaos_action",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Вносим хаос..."
   },
   {
-    "name" : "Плющим и левитируем...",
     "id" : "ability_telekinesis_action",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Плющим и левитируем..."
   },
   {
-    "name" : "Призываем...",
     "id" : "ability_appeal_action",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Призываем..."
   },
   {
-    "name" : "Стихийное бедствие",
     "id" : "danger_type_disaster",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Стихийное бедствие"
   },
   {
-    "name" : "Нашествие чудовищ",
     "id" : "danger_type_monsters",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Нашествие чудовищ"
   },
   {
-    "name" : "Моровое поветрие",
     "id" : "danger_type_plague",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Моровое поветрие"
   },
   {
-    "name" : "Проклятие",
     "id" : "danger_type_curse",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Проклятие"
   },
   {
-    "name" : "Призыв",
     "id" : "ability_appeal",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Призыв"
   },
   {
-    "name" : "Гипноз",
     "id" : "ability_hypnosis",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Гипноз"
   },
   {
-    "name" : "Хаос",
     "id" : "ability_chaos",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Хаос"
   },
   {
-    "name" : "Телекинез",
     "id" : "ability_telekinesis",
     "value" : null,
-    "description" : null
+    "description" : null,
+    "name" : "Телекинез"
   },
   {
-    "name" : "Коррапт демонов",
     "id" : "corrupt",
     "value" : "0",
-    "description" : "Стартовый коррапт"
+    "description" : "Стартовый коррапт",
+    "name" : "Коррапт демонов"
   },
   {
-    "name" : "Мана",
     "id" : "mana",
     "value" : "100",
-    "description" : "Стартовое кол-во маны"
+    "description" : "Стартовое кол-во маны",
+    "name" : "Мана"
   },
   {
-    "name" : "Расположение короля",
     "id" : "king_rep",
     "value" : "100",
-    "description" : "Стартовое расположение короля"
+    "description" : "Стартовое расположение короля",
+    "name" : "Расположение короля"
   },
   {
-    "name" : "Расположение народа",
     "id" : "people_rep",
     "value" : "100",
-    "description" : "Стартовое расположение народа"
+    "description" : "Стартовое расположение народа",
+    "name" : "Расположение народа"
   },
   {
-    "name" : "Реген маны",
     "id" : "mana_regen",
     "value" : "20",
-    "description" : "Регенерация маны в сутки"
+    "description" : "Регенерация маны в сутки",
+    "name" : "Реген маны"
   },
   {
-    "name" : "Курс маны к реп.короля",
     "id" : "mana_to_king_rep",
     "value" : "1",
-    "description" : null
+    "description" : null,
+    "name" : "Курс маны к реп.короля"
   },
   {
-    "name" : "Курс маны к коррапту демонов",
     "id" : "mana_to_corrupt",
     "value" : "0,5",
-    "description" : null
+    "description" : null,
+    "name" : "Курс маны к коррапту демонов"
   },
   {
-    "name" : "Курс маны к счастью народа",
     "id" : "mana_to_people_rep",
     "value" : "1",
-    "description" : null
+    "description" : null,
+    "name" : "Курс маны к счастью народа"
   },
   {
-    "name" : "Количество дней",
     "id" : "days_count",
     "value" : "30",
-    "description" : null
+    "description" : null,
+    "name" : "Количество дней"
   }
 ]
