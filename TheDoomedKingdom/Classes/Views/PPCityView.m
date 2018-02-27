@@ -10,6 +10,12 @@
 #import "PPGame.h"
 #import <QuartzCore/QuartzCore.h>
 
+@interface PPCityView()
+
+@property (nonatomic) NSInteger animationCycle;
+
+@end
+
 @implementation PPCityView
 
 - (void)configureShadow {
@@ -78,11 +84,11 @@
         BOOL inDanger = city.cityInDanger;
         
         
-        
         UIView *view = [self viewWithTag:666];
         
         if (view) {
             [view setHidden:!inDanger];
+            view.alpha = 1;
         }
         
         view = [self viewWithTag:6666];
@@ -92,6 +98,7 @@
             [view setHidden:!inDanger];
         }
         
+        self.animationCycle++;
         [self animateCityDander];
     }
 }
@@ -101,7 +108,7 @@
     trashView.alpha = 0;
     
     trashView = [self viewWithTag:666];
-    trashView.alpha = 0;
+    [trashView setHidden:YES];
 }
 
 - (void)animateCityDander
@@ -113,11 +120,14 @@
     
     UIView *trashView = [self viewWithTag:6666];
     BOOL show = trashView.alpha == 0;
+    __block NSInteger animationCycle = self.animationCycle;
     
     [UIView animateWithDuration:0.5 animations:^{
         trashView.alpha = show ? 1 : 0;
     } completion:^(BOOL finished) {
-        [self animateCityDander];
+        if (animationCycle == self.animationCycle) {
+            [self animateCityDander];
+        }
     }];
 //    
 //    static int count = 0;

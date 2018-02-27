@@ -116,11 +116,14 @@
                                        selector: @selector(buttonEnabled) userInfo: nil repeats: NO];
     }
     else {
-        //restart the game
-        IntroViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"IntroStoryId"];
-        if (controller) {
-            self.view.window.rootViewController = controller;
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            IntroViewController *controller = [self.storyboard instantiateInitialViewController];
+            
+            if (controller) {
+                [UIApplication sharedApplication].delegate.window.rootViewController = controller;
+            }
+        });
+        
     }
 }
 

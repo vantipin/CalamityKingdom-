@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSString *name;
 
-@property (nonatomic, assign) NSString *playerProfileIcon;
+@property (nonatomic) NSString *playerProfileIcon;
 @property (nonatomic) NSInteger mana;
 @property (nonatomic) NSInteger kingRep;
 @property (nonatomic) NSInteger peopleRep;

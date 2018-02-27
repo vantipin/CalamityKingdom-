@@ -10,8 +10,8 @@
 #define PPGlobalConstants_h
 
 typedef NS_ENUM(NSInteger, PPAbilityType) {
-    PPAbilityTypeTelekinesis = 0,
-    PPAbilityTypeAppeal = 1,
+    PPAbilityTypeTelekinesis = 1,
+    PPAbilityTypeAppeal = 2,
     PPAbilityTypeHypnosis,
     PPAbilityTypeChaos,
     PPAbilityTypeNobody,

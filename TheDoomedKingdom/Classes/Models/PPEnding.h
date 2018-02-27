@@ -11,7 +11,7 @@
 @interface PPEnding : PPGoogleBaseModel
 
 @property (nonatomic, strong) NSString *text;
-@property (nonatomic, assign) NSString *imageName;
+@property (nonatomic) NSString *imageName;
 @property (nonatomic) NSString *endingSound;
 
 @end

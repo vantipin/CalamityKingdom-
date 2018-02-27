@@ -181,8 +181,6 @@ static PPGame *instance = nil;
                     danger.result.peopleCountToDie = [dieArray copy];
                     
                     [danger appendAbility:ability];
-                    
-                    ability.abilityType--;
                 }
             }
             break;

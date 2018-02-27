@@ -51,7 +51,7 @@
         return self.diedPeople;
     }
     
-    NSInteger indexForResult = self.helpAbilityType + 1;
+    NSInteger indexForResult = self.helpAbilityType;
     
     if (self.helpAbilityType == PPAbilityTypeNobody) {
         self.diedPeople = [self defaultDieCount];
