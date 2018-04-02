@@ -10,6 +10,7 @@
 
 @interface PPEvent()
 
+@property (nonatomic, readwrite) NSArray *abilities;
 @property (nonatomic) NSString *dayString;
 @property (nonatomic, readwrite) NSRange dayRange;
 
@@ -21,10 +22,11 @@
 {
     self = [super init];
     if (self) {
-        self.ifMana = -1;
-        self.ifCorrupt = -1;
-        self.ifKingRep = -1;
-        self.ifPeopleRep = -1;
+        self.abilities = @[];
+        self.ifMana = UndefValue;
+        self.ifCorrupt = UndefValue;
+        self.ifKingRep = UndefValue;
+        self.ifPeopleRep = UndefValue;
     }
     
     return self;
@@ -73,6 +75,36 @@
         NSInteger max = [numbers[1] integerValue];
         self.dayRange = NSMakeRange(min, max + 1 - min);
     }
+}
+
+- (void)appendAbility:(id)ability {
+    NSMutableArray *abs = [self.abilities mutableCopy];
+    [abs addObject:ability];
+    self.abilities = [abs copy];
+}
+
+- (NSString *)eventTypeIcon {
+    switch (self.type) {
+        case 1:
+        return @"EventKingIcon.png";
+        
+        case 2:
+        return @"EventDemonIcon.png";
+        
+        case 3:
+        return @"EventMagIcon.png";
+        
+        case 4:
+        return @"EventSwordsIcon.png";
+        
+        case 5:
+        return @"EventTorchIcon.png";
+        
+        default:
+        break;
+    }
+    
+    return @"";
 }
 
 @end

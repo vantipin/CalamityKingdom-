@@ -45,6 +45,37 @@
     }    
 }
 
+- (void)setEvent:(PPEvent *)event {
+    _event = event;
+
+    if (event) {
+        self.descrLabel.text = event.eventDescription;
+        [self.dangerTypeImageView setImage:[UIImage imageNamed:[event eventTypeIcon]]];
+
+        self.dangerTypeName.text = [event name];
+        
+        NSArray *eventAbilities = event.abilities;
+        
+        for (PPDangerAbilityView *view in self.abilities) {
+            if (view.tag < eventAbilities.count) {
+                PPEventAbility *ability = eventAbilities[view.tag];
+                [view setEventAbility:ability];
+                
+                UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(eventPressed:)];
+                [view addGestureRecognizer:tapRecognizer];
+            }
+        }
+    }
+}
+
+- (void)eventPressed:(UITapGestureRecognizer *)tap {
+    PPDangerAbilityView *view = (PPDangerAbilityView *)tap.view;
+    PPEventAbility *ability = view.eventAbility;
+    
+    
+}
+
+
 - (void)abilityPressed:(UITapGestureRecognizer *)tap
 {
     PPDangerAbilityView *view = (PPDangerAbilityView *)tap.view;
@@ -58,7 +89,7 @@
     __block PPDangerProgressController *cntroller = [PPDangerProgressController showWithDanger:_city.currentDanger andAbility:ability andCompletionBlock:^(BOOL result) {
         [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:YES];
         [cntroller hide:nil];
-        [PPDangerResultController showWithDanger:_city.currentDanger andAbility:ability];
+        [PPDangerResultController showWithDanger:self->_city.currentDanger andAbility:ability];
     }];
     
 }

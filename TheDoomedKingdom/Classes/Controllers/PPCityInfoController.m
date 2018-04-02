@@ -13,9 +13,6 @@
 
 #define CityInfoControllerId @"CityInfoControllerId"
 
-
-#define mainStoryboard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
-
 @implementation PPCityInfoController
 
 - (void)viewDidLoad {

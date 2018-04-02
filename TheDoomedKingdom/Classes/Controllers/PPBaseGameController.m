@@ -37,7 +37,7 @@
     [SVProgressHUD show];
     
     [UIView animateWithDuration:withAnimation ? AnimationDuration : 0 animations:^{
-        for (UIView *view in _fieldControls) {
+        for (UIView *view in self->_fieldControls) {
             view.alpha = 0;
         }
     }];
@@ -48,7 +48,7 @@
             [self redrawInterface];
             
             [UIView animateWithDuration:AnimationDuration animations:^{
-                for (UIView *view in _fieldControls) {
+                for (UIView *view in self->_fieldControls) {
                     view.alpha = 1;
                 }
             }];
@@ -64,7 +64,7 @@
             [self checkAndRedraw];
             
             [UIView animateWithDuration:AnimationDuration animations:^{
-                for (UIView *view in _fieldControls) {
+                for (UIView *view in self->_fieldControls) {
                     view.alpha = 1;
                 }
             }];
@@ -281,7 +281,7 @@
     [PPGame instance].daysCount += 1;
     
     if ([[PPGame instance] leftTimeHours] <= 0) {
-        [EndingsViewController triggerEndingWithController:self];
+        [EndingsViewController triggerEndingWithController:self endingId:WON_ENDING_ID];
     } else {
         [[PPGame instance] player].mana += [PPGame instance].gameConstants.mana_regen.constValue.integerValue;
 

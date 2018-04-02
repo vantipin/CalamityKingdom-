@@ -21,6 +21,7 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 @property (nonatomic, strong) PPKingdom *kingdom; // Usless current kingdom model, remove in future (or use with multiple kingdoms)
 @property (nonatomic, strong) PPPlayer *player; // Current player with abilities and popularity
 @property (nonatomic, strong) NSArray *dangers; // All dangers
+@property (nonatomic, strong) NSArray *events;
 @property (nonatomic) NSArray *endings; // Game endings
 
 

@@ -9,6 +9,11 @@
 #ifndef PPCalamityKingdom_pch
 #define PPCalamityKingdom_pch
 
+#define mainStoryboard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
+#define UndefValue -1
+#define WON_ENDING_ID 1
+#define DEFEAT_ENDING_ID 3
+
 @import Foundation;
 @import UIKit;
 @import CoreGraphics;

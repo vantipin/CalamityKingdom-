@@ -23,6 +23,8 @@
 #import "PPArchimage.h"
 #import "PPEventAbility.h"
 #import "SmartJSONAdapter.h"
+#import "PPEvent.h"
+#import "PPEventAbility.h"
 
 @interface PPGame()
 
@@ -185,11 +187,11 @@ static PPGame *instance = nil;
             }
             break;
         }
-        case PPSheetEvents:
-
+        case PPSheetEvents: {
+            self.events = objects;
             
             break;
-            
+        }
         case PPSheetArchimags:
 
             
@@ -199,10 +201,17 @@ static PPGame *instance = nil;
             self.libraryItems = objects;
             break;
             
-        case PPSheetEventReplies:
-
+        case PPSheetEventReplies: {
+            for (PPEventAbility *ability in objects) {
+                PPEvent *event = [[self.events filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", ability.eventId]] lastObject];
+                
+                if (event) {
+                    [event appendAbility:ability];
+                }
+            }
             
             break;
+        }
             
         case PPSheetConstants: {
             PPGameConstant *gc = [PPGameConstant new];

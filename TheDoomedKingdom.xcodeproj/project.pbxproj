@@ -53,7 +53,6 @@
 		D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413541C5E33C900EB1FF4 /* PPCityDangerController.m */; };
 		D52413631C5E33C900EB1FF4 /* PPBaseGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413561C5E33C900EB1FF4 /* PPBaseGameController.m */; };
 		D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413581C5E33C900EB1FF4 /* IntroViewController.m */; };
-		D52413651C5E33C900EB1FF4 /* EndingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524135A1C5E33C900EB1FF4 /* EndingViewController.m */; };
 		D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */; };
 		D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413671C5E353300EB1FF4 /* PPResultView.m */; };
 		D52413771C5E353300EB1FF4 /* PPPlayerAbilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D524136B1C5E353300EB1FF4 /* PPPlayerAbilityView.m */; };
@@ -183,6 +182,17 @@
 		D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5141C969AE1002D3E77 /* PBMiddleProgress@2x.png */; };
 		D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5151C969AE1002D3E77 /* PBMiddle.png */; };
 		D5CFB51A1C969AE1002D3E77 /* PBMiddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */; };
+		D5D0CC6F2072D41700CEF068 /* EventTorchIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC652072D41500CEF068 /* EventTorchIcon@2x.png */; };
+		D5D0CC702072D41700CEF068 /* EventTorchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC662072D41600CEF068 /* EventTorchIcon.png */; };
+		D5D0CC712072D41700CEF068 /* EventSwordsIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC672072D41600CEF068 /* EventSwordsIcon@2x.png */; };
+		D5D0CC722072D41700CEF068 /* EventDemonIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC682072D41600CEF068 /* EventDemonIcon.png */; };
+		D5D0CC732072D41700CEF068 /* EventKingIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC692072D41600CEF068 /* EventKingIcon@2x.png */; };
+		D5D0CC742072D41700CEF068 /* EventMagIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6A2072D41600CEF068 /* EventMagIcon.png */; };
+		D5D0CC752072D41700CEF068 /* EventMagIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6B2072D41600CEF068 /* EventMagIcon@2x.png */; };
+		D5D0CC762072D41700CEF068 /* EventSwordsIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6C2072D41700CEF068 /* EventSwordsIcon.png */; };
+		D5D0CC772072D41700CEF068 /* EventDemonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6D2072D41700CEF068 /* EventDemonIcon@2x.png */; };
+		D5D0CC782072D41700CEF068 /* EventKingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */; };
+		D5D0CC7B2072D74000CEF068 /* PPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */; };
 		D5EE66FA1FF2FA5E000E862B /* PPGoogleBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */; };
 		EF4E2941C1CE20A89BFA82C9 /* libPods-TheDoomedKingdom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */; };
 /* End PBXBuildFile section */
@@ -264,8 +274,6 @@
 		D52413571C5E33C900EB1FF4 /* PPBaseGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseGameController.h; sourceTree = "<group>"; };
 		D52413581C5E33C900EB1FF4 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		D52413591C5E33C900EB1FF4 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
-		D524135A1C5E33C900EB1FF4 /* EndingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingViewController.m; sourceTree = "<group>"; };
-		D524135B1C5E33C900EB1FF4 /* EndingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingViewController.h; sourceTree = "<group>"; };
 		D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingsViewController.m; sourceTree = "<group>"; };
 		D524135D1C5E33C900EB1FF4 /* EndingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingsViewController.h; sourceTree = "<group>"; };
 		D52413671C5E353300EB1FF4 /* PPResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResultView.m; sourceTree = "<group>"; };
@@ -407,6 +415,18 @@
 		D5CFB5141C969AE1002D3E77 /* PBMiddleProgress@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddleProgress@2x.png"; sourceTree = "<group>"; };
 		D5CFB5151C969AE1002D3E77 /* PBMiddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PBMiddle.png; sourceTree = "<group>"; };
 		D5CFB5161C969AE1002D3E77 /* PBMiddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PBMiddle@2x.png"; sourceTree = "<group>"; };
+		D5D0CC652072D41500CEF068 /* EventTorchIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EventTorchIcon@2x.png"; sourceTree = "<group>"; };
+		D5D0CC662072D41600CEF068 /* EventTorchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventTorchIcon.png; sourceTree = "<group>"; };
+		D5D0CC672072D41600CEF068 /* EventSwordsIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EventSwordsIcon@2x.png"; sourceTree = "<group>"; };
+		D5D0CC682072D41600CEF068 /* EventDemonIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventDemonIcon.png; sourceTree = "<group>"; };
+		D5D0CC692072D41600CEF068 /* EventKingIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EventKingIcon@2x.png"; sourceTree = "<group>"; };
+		D5D0CC6A2072D41600CEF068 /* EventMagIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventMagIcon.png; sourceTree = "<group>"; };
+		D5D0CC6B2072D41600CEF068 /* EventMagIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EventMagIcon@2x.png"; sourceTree = "<group>"; };
+		D5D0CC6C2072D41700CEF068 /* EventSwordsIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventSwordsIcon.png; sourceTree = "<group>"; };
+		D5D0CC6D2072D41700CEF068 /* EventDemonIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "EventDemonIcon@2x.png"; sourceTree = "<group>"; };
+		D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventKingIcon.png; sourceTree = "<group>"; };
+		D5D0CC792072D74000CEF068 /* PPEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventViewController.h; sourceTree = "<group>"; };
+		D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEventViewController.m; sourceTree = "<group>"; };
 		D5D555A42015567900C2C9A2 /* SmartJSONAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartJSONAdapter.h; sourceTree = "<group>"; };
 		D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartJSONAdapter.m; sourceTree = "<group>"; };
 		D5EB55361C6745480085CA22 /* PPCalamityKingdom.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCalamityKingdom.pch; sourceTree = "<group>"; };
@@ -507,8 +527,6 @@
 			children = (
 				D524135D1C5E33C900EB1FF4 /* EndingsViewController.h */,
 				D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */,
-				D524135B1C5E33C900EB1FF4 /* EndingViewController.h */,
-				D524135A1C5E33C900EB1FF4 /* EndingViewController.m */,
 				D52413591C5E33C900EB1FF4 /* IntroViewController.h */,
 				D52413581C5E33C900EB1FF4 /* IntroViewController.m */,
 				D52413571C5E33C900EB1FF4 /* PPBaseGameController.h */,
@@ -525,6 +543,8 @@
 				D524134C1C5E33C900EB1FF4 /* SoundController.m */,
 				D51D033E1C97EB6900FE1467 /* PPLibraryViewController.h */,
 				D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */,
+				D5D0CC792072D74000CEF068 /* PPEventViewController.h */,
+				D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -660,6 +680,16 @@
 		D588F2831C84D96A0054FE61 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D5D0CC682072D41600CEF068 /* EventDemonIcon.png */,
+				D5D0CC6D2072D41700CEF068 /* EventDemonIcon@2x.png */,
+				D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */,
+				D5D0CC692072D41600CEF068 /* EventKingIcon@2x.png */,
+				D5D0CC6A2072D41600CEF068 /* EventMagIcon.png */,
+				D5D0CC6B2072D41600CEF068 /* EventMagIcon@2x.png */,
+				D5D0CC6C2072D41700CEF068 /* EventSwordsIcon.png */,
+				D5D0CC672072D41600CEF068 /* EventSwordsIcon@2x.png */,
+				D5D0CC662072D41600CEF068 /* EventTorchIcon.png */,
+				D5D0CC652072D41500CEF068 /* EventTorchIcon@2x.png */,
 				D5C2F3F32044A777008A2F81 /* capital.png */,
 				D5C2F4042044B678008A2F81 /* capital@2x.png */,
 				D5C2F3F72044A778008A2F81 /* fisherman.png */,
@@ -850,7 +880,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PP;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = PP;
 				TargetAttributes = {
 					D524122E1C5C8DBD00EB1FF4 = {
@@ -886,16 +916,19 @@
 				D5CFB5081C930542002D3E77 /* HypnoPBIcon.png in Resources */,
 				D51D03381C97E6C200FE1467 /* LibraryBackButton.png in Resources */,
 				D588F2C61C84D96A0054FE61 /* 4_3.png in Resources */,
+				D5D0CC772072D41700CEF068 /* EventDemonIcon@2x.png in Resources */,
 				D588F2CF1C84D96A0054FE61 /* CapitalCity@2x.png in Resources */,
 				D588F3041C84D9940054FE61 /* time_ticking.wav in Resources */,
 				D588F3031C84D9940054FE61 /* main_music.mp3 in Resources */,
 				D588F2BF1C84D96A0054FE61 /* 1_2.png in Resources */,
 				D5CFB50F1C930542002D3E77 /* PBBig@2x.png in Resources */,
 				D55E4F891C87807600320667 /* AppealIcon@2x.png in Resources */,
+				D5D0CC742072D41700CEF068 /* EventMagIcon.png in Resources */,
 				D57C36581C85C8BB006CBA2D /* DomCasual.ttf in Resources */,
 				D55E4F881C87807600320667 /* AppealIcon.png in Resources */,
 				D58AA6021C88DCD10051F53C /* MagIcon.png in Resources */,
 				D588F2E51C84D96A0054FE61 /* RatingIcon.png in Resources */,
+				D5D0CC722072D41700CEF068 /* EventDemonIcon.png in Resources */,
 				D55E4F7B1C877B5000320667 /* Stamp@2x.png in Resources */,
 				D588F2C11C84D96A0054FE61 /* 2_2.png in Resources */,
 				D5530FB91CA03FB10064A220 /* VillageRuined.png in Resources */,
@@ -928,6 +961,7 @@
 				D5530FBE1CA03FB10064A220 /* CapitalCityRuined@2x.png in Resources */,
 				D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */,
 				D57C365A1C85C8BB006CBA2D /* Lasco-Regular.otf in Resources */,
+				D5D0CC752072D41700CEF068 /* EventMagIcon@2x.png in Resources */,
 				D5CFB5071C930542002D3E77 /* SummonPBIcon@2x.png in Resources */,
 				D5CFB50D1C930542002D3E77 /* PBBigProgress@2x.png in Resources */,
 				D588F2C41C84D96A0054FE61 /* 4_1.png in Resources */,
@@ -940,7 +974,9 @@
 				D5CFB50E1C930542002D3E77 /* PBBig.png in Resources */,
 				D55E4F841C87807600320667 /* ChaosIcon.png in Resources */,
 				D588F2E01C84D96A0054FE61 /* intro1.png in Resources */,
+				D5D0CC732072D41700CEF068 /* EventKingIcon@2x.png in Resources */,
 				D5CFB5021C930542002D3E77 /* TelePBIcon.png in Resources */,
+				D5D0CC702072D41700CEF068 /* EventTorchIcon.png in Resources */,
 				D5AD9582201684A40026E5B8 /* Replies.json in Resources */,
 				D588F2D61C84D96A0054FE61 /* danger_monsters.png in Resources */,
 				D5AD957E201684A40026E5B8 /* Endings.json in Resources */,
@@ -959,6 +995,7 @@
 				D5530FBD1CA03FB10064A220 /* CapitalCityRuined.png in Resources */,
 				D51D03361C97E6C200FE1467 /* LibraryNextButton.png in Resources */,
 				D588F2BE1C84D96A0054FE61 /* 1_1.png in Resources */,
+				D5D0CC6F2072D41700CEF068 /* EventTorchIcon@2x.png in Resources */,
 				D55E4F8E1C8782F100320667 /* Patch.png in Resources */,
 				D57C36591C85C8BB006CBA2D /* Lasco-Bold.otf in Resources */,
 				D588F2C31C84D96A0054FE61 /* 3_2.png in Resources */,
@@ -972,17 +1009,20 @@
 				D524123F1C5C8DBD00EB1FF4 /* Assets.xcassets in Resources */,
 				D5C2F3F82044A778008A2F81 /* town2.png in Resources */,
 				D588F2E31C84D96A0054FE61 /* PopupBg@2x.png in Resources */,
+				D5D0CC712072D41700CEF068 /* EventSwordsIcon@2x.png in Resources */,
 				D58AA5FB1C88CFFB0051F53C /* Clock.png in Resources */,
 				5CED44FA1C5E3FD100D9256F /* Images.xcassets in Resources */,
 				D55E4F8B1C87807600320667 /* TelekinesisIcon@2x.png in Resources */,
 				D51D03371C97E6C200FE1467 /* LibraryNextButton@2x.png in Resources */,
 				D5C2F40E2044B678008A2F81 /* lumberer@2x.png in Resources */,
 				D588F2C21C84D96A0054FE61 /* 3_1.png in Resources */,
+				D5D0CC782072D41700CEF068 /* EventKingIcon.png in Resources */,
 				D588F2DC1C84D96A0054FE61 /* GameField@2x.png in Resources */,
 				D5CFB5181C969AE1002D3E77 /* PBMiddleProgress@2x.png in Resources */,
 				D5C2F40D2044B678008A2F81 /* town@2x.png in Resources */,
 				D588F2F01C84D96A0054FE61 /* VillageVariorsCity@2x.png in Resources */,
 				D5CFB50A1C930542002D3E77 /* PBSmallProgress.png in Resources */,
+				D5D0CC762072D41700CEF068 /* EventSwordsIcon.png in Resources */,
 				D588F2D91C84D96A0054FE61 /* ending_defeat_popularity.png in Resources */,
 				D5CFB5031C930542002D3E77 /* TelePBIcon@2x.png in Resources */,
 				D5C2F40A2044B678008A2F81 /* capital@2x.png in Resources */,
@@ -1100,8 +1140,8 @@
 				D52413791C5E353300EB1FF4 /* PPDangerAbilityView.m in Sources */,
 				D52413611C5E33C900EB1FF4 /* PPCityInfoController.m in Sources */,
 				D52412681C5C958B00EB1FF4 /* PPDanger.m in Sources */,
-				D52413651C5E33C900EB1FF4 /* EndingViewController.m in Sources */,
 				D5CFB5121C93054A002D3E77 /* PPProgressBarView.m in Sources */,
+				D5D0CC7B2072D74000CEF068 /* PPEventViewController.m in Sources */,
 				D52412741C5CACBA00EB1FF4 /* PPGame.m in Sources */,
 				D524137B1C5E353300EB1FF4 /* PPCityView.m in Sources */,
 				D524127B1C5CCDC600EB1FF4 /* PPValue.m in Sources */,
@@ -1152,12 +1192,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1204,12 +1246,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

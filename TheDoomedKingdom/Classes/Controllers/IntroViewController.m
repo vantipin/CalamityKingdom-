@@ -109,11 +109,12 @@
                 self.textViewInfo.textColor = kRGB(255, 254, 212, 1);
             });
 
-            [NSThread sleepForTimeInterval:displayinTextInProcess ? timeToDisplayChar : 0];
+            [NSThread sleepForTimeInterval:self->displayinTextInProcess ? timeToDisplayChar : 0];
         }
-        displayinTextInProcess = false;
-        displayingCursor ++;
-        if (displayingCursor > dataSource.count - 1) {
+        self->displayinTextInProcess = false;
+        self->displayingCursor ++;
+        
+        if (self->displayingCursor > self->dataSource.count - 1) {
             dispatch_async(dispatch_get_main_queue(),^{
                 [self.buttonContinue setTitle:@"Нажмите чтобы продолжить..." forState:UIControlStateNormal];
                 self.buttonContinue.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:33];

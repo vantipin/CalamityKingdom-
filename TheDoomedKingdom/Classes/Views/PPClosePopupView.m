@@ -16,6 +16,7 @@
     
     if (self.parent) {
         [self.parent hide:nil];
+        self.parent = nil;
     }
 }
 

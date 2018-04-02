@@ -16,8 +16,6 @@ typedef void(^CompletionBlock)(BOOL result);
 
 #define PPDangerProgressControllerID @"PPDangerProgressControllerID"
 
-#define mainStoryboard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
-
 @interface PPDangerProgressController() <PPCloseDelegate>
 
 @property (nonatomic, copy) CompletionBlock completionBlock;

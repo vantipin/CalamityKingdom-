@@ -12,7 +12,6 @@
 #import "PPLibraryItem.h"
 
 #define PPLibraryControllerId @"PPLibraryControllerId"
-#define mainStoryboard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
 
 @interface PPLibraryViewController ()
 

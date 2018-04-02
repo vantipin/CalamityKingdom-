@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PPCity.h"
+#import "PPEvent.h"
 #import "PPDanger.h"
 //#import "PaperView.h"
 
@@ -24,5 +25,6 @@
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *abilities;
 
 @property (nonatomic, strong) PPCity *city;
+@property (nonatomic, strong) PPEvent *event;
 
 @end

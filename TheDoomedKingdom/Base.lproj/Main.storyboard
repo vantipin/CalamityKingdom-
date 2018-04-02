@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="DomCasual.ttf">
             <string>DomCasualNormal</string>
-        </array>
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
         </array>
         <array key="Lasco-Regular.otf">
             <string>Lasco</string>
@@ -1691,6 +1688,172 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cTt-qK-xHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="262" y="-2491"/>
+        </scene>
+        <!--Event View Controller-->
+        <scene sceneID="ogY-fp-3gL">
+            <objects>
+                <viewController storyboardIdentifier="PPEventViewControllerID" id="00Q-FL-WEa" customClass="PPEventViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Nr-3r-JYL" customClass="PPDangerView">
+                        <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopupBg.png" id="Vxc-Ct-Xve">
+                                <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8IJ-fd-GCH">
+                                <rect key="frame" x="35" y="45" width="180" height="167"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stamp.png" id="6yz-5N-67t">
+                                <rect key="frame" x="35" y="136" width="91" height="88"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" id="KZ9-j3-anG" customClass="PPDangerAbilityView">
+                                <rect key="frame" x="35" y="259" width="346" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbilityButtonBg.png" id="QK2-dO-EMW" userLabel="BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TelekinesisIcon.png" id="Xg0-Yh-Puq">
+                                        <rect key="frame" x="9" y="0.0" width="103" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Wlb-9g-43j">
+                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="abilityTypeImageView" destination="Xg0-Yh-Puq" id="jQK-aK-MDF"/>
+                                    <outlet property="nameLabel" destination="Wlb-9g-43j" id="maR-hZ-fgr"/>
+                                </connections>
+                            </view>
+                            <view tag="2" contentMode="scaleToFill" id="etB-0Z-qJf" customClass="PPDangerAbilityView">
+                                <rect key="frame" x="35" y="365" width="346" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbilityButtonBg.png" id="Os5-Ze-Zoe" userLabel="BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GypnosIcon.png" id="2l2-NA-eVa">
+                                        <rect key="frame" x="4" y="4" width="103" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="06K-S8-kZ8">
+                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="abilityTypeImageView" destination="2l2-NA-eVa" id="rPn-eq-Akb"/>
+                                    <outlet property="nameLabel" destination="06K-S8-kZ8" id="mcf-hv-ioH"/>
+                                </connections>
+                            </view>
+                            <view tag="1" contentMode="scaleToFill" id="8Yr-hp-I8M" customClass="PPDangerAbilityView">
+                                <rect key="frame" x="389" y="259" width="346" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbilityButtonBg.png" id="aJp-yf-ULN" userLabel="BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppealIcon.png" id="nfB-4W-YOy">
+                                        <rect key="frame" x="12" y="2" width="109" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="OUM-va-cw7">
+                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="abilityTypeImageView" destination="nfB-4W-YOy" id="CG3-GN-mdU"/>
+                                    <outlet property="nameLabel" destination="OUM-va-cw7" id="JW5-uS-YBy"/>
+                                </connections>
+                            </view>
+                            <view tag="3" contentMode="scaleToFill" id="8pJ-lF-lph" customClass="PPDangerAbilityView">
+                                <rect key="frame" x="389" y="365" width="346" height="103"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AbilityButtonBg.png" id="31L-MU-eQb" userLabel="BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="346" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChaosIcon.png" id="rK1-yI-x2A">
+                                        <rect key="frame" x="9" y="0.0" width="103" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="h51-y1-nV6">
+                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="abilityTypeImageView" destination="rK1-yI-x2A" id="m7N-Fl-TjM"/>
+                                    <outlet property="nameLabel" destination="h51-y1-nV6" id="xKZ-aB-rcP"/>
+                                </connections>
+                            </view>
+                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aLw-xe-fMz">
+                                <rect key="frame" x="678" y="33" width="57" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ClosePopupIcon.png"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="XwI-pK-ewl">
+                                <rect key="frame" x="229" y="33" width="490" height="213"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="54"/>
+                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="foU-np-cV0">
+                                <rect key="frame" x="86" y="220" width="135" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Lasco" family="Lasco" pointSize="24"/>
+                                <color key="textColor" red="0.96862745100000003" green="0.45882352939999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="dangerTypeImageView" destination="8IJ-fd-GCH" id="XJQ-rG-TSx"/>
+                            <outlet property="dangerTypeName" destination="foU-np-cV0" id="GP9-75-377"/>
+                            <outlet property="descrLabel" destination="XwI-pK-ewl" id="ljh-ro-1p8"/>
+                            <outletCollection property="abilities" destination="KZ9-j3-anG" id="EY6-J0-Emw"/>
+                            <outletCollection property="abilities" destination="etB-0Z-qJf" id="14l-e8-7Ve"/>
+                            <outletCollection property="abilities" destination="8Yr-hp-I8M" id="uuX-hn-WlS"/>
+                            <outletCollection property="abilities" destination="8pJ-lF-lph" id="3uM-55-1In"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="769" height="497"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a3T-qL-ogH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="-137"/>
         </scene>
     </scenes>
     <resources>

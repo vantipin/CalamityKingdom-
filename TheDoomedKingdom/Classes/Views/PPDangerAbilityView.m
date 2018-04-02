@@ -28,6 +28,15 @@
     self.enabled = [[PPGame instance] player].mana >= ability.manaCost;
 }
 
+- (void)setEventAbility:(PPEventAbility *)eventAbility {
+    _eventAbility = eventAbility;
+    
+    self.nameLabel.text = eventAbility.abilityName;
+    PPPlayer *pl = [[PPGame instance] player];
+    
+    self.enabled = pl.mana >= eventAbility.mana;
+}
+
 - (void)setEnabled:(BOOL)enabled
 {
     _enabled = enabled;

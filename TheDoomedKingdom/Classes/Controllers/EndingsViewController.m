@@ -12,12 +12,6 @@
 #import "PPEnding.h"
 #import "PPGame.h"
 
-#define ending_victory @"Безмятежное Королевство спасено от ужасных бедствий - и все благодаря вам! Глядя на ликующих жителей из окон собственной башни, подаренной вам королем, вы как-то не хотите вспоминать о том, что это именно из-за вас эти ужасные бедствия и начались.\nКто старое помянет - тому глаз вон!"
-
-#define ending_loose_fame @"Вам удалось спасти Безмятежное Королевство от полного разрушения, но не удалось вернуть расположение его жителей. Поэтому на рассвете по приказу короля вас повесили под крики разгневанной толпы.\nХорошо, что архимага не убить петлей. Придется поискать другое королевство, где вам будут рады."
-
-#define ending_loose_destruction @"Вам не удалось спасти Безмятежное Королевство. Теперь по Удачбургу маршируют зомби-нацисты, в Потехограде мутанты доедают остатки жителей, а Блинска вообще больше не существует.\nПридется поискать другое королевство, где жители еще живы."
-
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
 #define filePathWithName(fileEndPath) [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] bundlePath],(fileEndPath)]
 
@@ -29,6 +23,8 @@
 @property (nonatomic) IBOutlet UIImageView *imageInfo;
 @property (nonatomic) IBOutlet UIButton *buttonContinue;
 @property (nonatomic) IBOutlet UITextView *textViewInfo;
+
+@property (nonatomic) NSInteger endingId;
 
 @end
 
@@ -47,9 +43,10 @@
     
     [super viewWillAppear:animated];
     
-#warning set correct ending
-    NSArray *endings = [PPGame instance].endings;
-    [self setEnding:endings[arc4random() % endings.count]];
+    NSString *endingIdString = [NSString stringWithFormat:@"%li", (long)self.endingId];
+    NSArray *endings = [[PPGame instance].endings filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", endingIdString]];
+    
+    [self setEnding:[endings lastObject]];
 
     displayinTextInProcess = true;
     self.textViewInfo.text = @"";
@@ -63,10 +60,12 @@
 - (void)setEnding:(PPEnding *)ending {
     [[SoundController sharedInstance] pause];
     
+    [[SoundController sharedInstance] playSoundName:ending.endingSound];
+    
+    
     self.imageInfo.alpha = 0;
     NSString *text = ending.text;
     UIImage *image = [UIImage imageNamed:ending.imageName];
-    [[SoundController sharedInstance] playSoundName:ending.endingSound];
     
     [UIView animateWithDuration:0.3 animations:^{
         self.imageInfo.alpha = 1;
@@ -84,9 +83,9 @@
                 self.textViewInfo.textColor = kRGB(255, 254, 212, 1);
             });
             
-            [NSThread sleepForTimeInterval:displayinTextInProcess ? timeToDisplayChar : 0];
+            [NSThread sleepForTimeInterval:self->displayinTextInProcess ? timeToDisplayChar : 0];
         }
-        displayinTextInProcess = false;
+        self->displayinTextInProcess = false;
         [self.buttonContinue setTitle:@"Нажмите чтобы начать заново." forState:UIControlStateNormal];
         self.buttonContinue.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:33];
     });
@@ -94,7 +93,7 @@
     
 }
 
-+ (void)triggerEndingWithController:(UIViewController *)controller {
++ (void)triggerEndingWithController:(UIViewController *)controller endingId:(NSInteger)endingId {
     EndingsViewController *endingController = [controller.storyboard instantiateViewControllerWithIdentifier:@"EndingStoryId"];
     if (controller) {
         controller.view.window.rootViewController = endingController;

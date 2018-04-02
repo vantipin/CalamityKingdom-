@@ -13,8 +13,6 @@
 
 #define PPCityDangerControllerId @"PPCityDangerControllerId"
 
-#define mainStoryboard [UIStoryboard storyboardWithName:@"Main" bundle:nil]
-
 @implementation PPCityDangerController
 
 - (void)viewDidLoad {

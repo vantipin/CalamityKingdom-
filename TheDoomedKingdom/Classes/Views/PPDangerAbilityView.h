@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "PPAbility.h"
-
+#import "PPEventAbility.h"
 
 @interface PPDangerAbilityView : UIView
 
@@ -18,6 +18,8 @@
 @property (nonatomic, weak) IBOutlet UILabel *spentValueLabel;
 
 @property (nonatomic, strong) PPAbility *ability;
+@property (nonatomic, strong) PPEventAbility *eventAbility;
+
 
 @property (nonatomic, assign) BOOL enabled;
 

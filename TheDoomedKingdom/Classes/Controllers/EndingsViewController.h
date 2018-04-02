@@ -12,6 +12,6 @@
 
 //call like
 //[EndingsViewController triggerEndingWithController:self];
-+ (void)triggerEndingWithController:(UIViewController *)controller;
++ (void)triggerEndingWithController:(UIViewController *)controller endingId:(NSInteger)endingId;
 
 @end

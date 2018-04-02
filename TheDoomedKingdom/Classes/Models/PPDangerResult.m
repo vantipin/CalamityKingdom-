@@ -24,8 +24,8 @@
     
     if (self) {
         self.helpAbilityType = PPAbilityTypeNobody;
-        self.diedPeople = -1;
-        self.diedDefault = -1;
+        self.diedPeople = UndefValue;
+        self.diedDefault = UndefValue;
     }
     
     return self;

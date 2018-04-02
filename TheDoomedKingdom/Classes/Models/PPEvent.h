@@ -21,5 +21,9 @@
 
 @property (nonatomic) NSString *eventDescription;
 
+@property (nonatomic, readonly) NSArray *abilities;
+
+- (void)appendAbility:(id)ability;
+- (NSString *)eventTypeIcon;
 
 @end
