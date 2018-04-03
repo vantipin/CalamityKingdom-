@@ -8,6 +8,7 @@
 
 #import "PPEventViewController.h"
 #import "PPDangerView.h"
+#import "UIImage+EVBlur.h"
 
 #define PPEventViewControllerID @"PPEventViewControllerID"
 
@@ -25,6 +26,20 @@
     closeView.tag = 9999;
     closeView.backgroundColor = [UIColor clearColor];
     [main.view addSubview:closeView];
+    
+    UIImageView *blurImageView = [[UIImageView alloc] initWithFrame:closeView.bounds];
+    blurImageView.backgroundColor = [UIColor clearColor];
+    [closeView addSubview:blurImageView];
+    
+    CGSize screenSize = CGSizeMake(1024, 768);
+    
+    UIImage *image = [UIImage imageFromView:[UIApplication sharedApplication].keyWindow.rootViewController.view withSize:screenSize];
+    
+    UIImage *blurredImage = [image blurImageWithRadius:5. iterations:3 tintColor:[UIColor colorWithWhite:0. alpha:0.7]];
+    
+    [UIView animateWithDuration:0.5 animations:^{
+        [blurImageView setImage:blurredImage];
+    }];
     
     PPEventViewController *controller = [mainStoryboard instantiateViewControllerWithIdentifier:PPEventViewControllerID];
     controller.event = event;
@@ -44,8 +59,6 @@
 }
 
 - (void)hide {
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"CLEAREVENT" object:nil];
-    
     UIViewController *main = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIView *closeView = [main.view viewWithTag:9999];
     
@@ -53,9 +66,6 @@
         [self.view setAlpha:0.];
     } completion:^(BOOL finished) {
         [closeView removeFromSuperview];
-        
-#warning - Game action here
-//        [[PPGame instance] checkState];
     }];
 }
 

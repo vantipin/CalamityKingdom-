@@ -55,7 +55,7 @@
 - (void)hide:(id)sender
 {
     if (!sender) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"CLEARDANGER" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:CLEARDANGER object:nil];
     }
     
     UIViewController *main = [UIApplication sharedApplication].keyWindow.rootViewController;

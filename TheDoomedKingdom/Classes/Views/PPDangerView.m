@@ -10,6 +10,7 @@
 #import "PPDangerAbilityView.h"
 #import "PPDangerProgressController.h"
 #import "PPDangerResultController.h"
+#import "PPEventResultController.h"
 
 @implementation PPDangerView
 
@@ -72,7 +73,7 @@
     PPDangerAbilityView *view = (PPDangerAbilityView *)tap.view;
     PPEventAbility *ability = view.eventAbility;
     
-    
+    [PPEventResultController showWithEventAbility:ability];
 }
 
 

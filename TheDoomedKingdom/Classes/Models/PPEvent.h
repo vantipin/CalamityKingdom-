@@ -12,7 +12,7 @@
 
 @property (nonatomic) NSString *name;
 @property (nonatomic) NSInteger type;
-@property (nonatomic, readonly) NSRange dayRange;
+@property (nonatomic, readonly) NSIndexSet *days;
 
 @property (nonatomic) NSInteger ifMana;
 @property (nonatomic) NSInteger ifKingRep;

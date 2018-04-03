@@ -80,6 +80,9 @@
 		D55E4F8B1C87807600320667 /* TelekinesisIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F831C87807600320667 /* TelekinesisIcon@2x.png */; };
 		D55E4F8E1C8782F100320667 /* Patch.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F8C1C8782F100320667 /* Patch.png */; };
 		D55E4F8F1C8782F100320667 /* Patch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D55E4F8D1C8782F100320667 /* Patch@2x.png */; };
+		D570C06F2074167D000C9E2F /* PPEventResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D570C06E2074167D000C9E2F /* PPEventResultView.m */; };
+		D570C07220741984000C9E2F /* PPEventResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = D570C07120741984000C9E2F /* PPEventResultController.m */; };
+		D570C07920742D80000C9E2F /* UIImage+EVBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = D570C07820742D80000C9E2F /* UIImage+EVBlur.m */; };
 		D57C36581C85C8BB006CBA2D /* DomCasual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D588F3051C84D9D00054FE61 /* DomCasual.ttf */; };
 		D57C36591C85C8BB006CBA2D /* Lasco-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D588F3061C84D9D00054FE61 /* Lasco-Bold.otf */; };
 		D57C365A1C85C8BB006CBA2D /* Lasco-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D588F3071C84D9D00054FE61 /* Lasco-Regular.otf */; };
@@ -310,6 +313,12 @@
 		D55E4F831C87807600320667 /* TelekinesisIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TelekinesisIcon@2x.png"; sourceTree = "<group>"; };
 		D55E4F8C1C8782F100320667 /* Patch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Patch.png; sourceTree = "<group>"; };
 		D55E4F8D1C8782F100320667 /* Patch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Patch@2x.png"; sourceTree = "<group>"; };
+		D570C06D2074167D000C9E2F /* PPEventResultView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventResultView.h; sourceTree = "<group>"; };
+		D570C06E2074167D000C9E2F /* PPEventResultView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEventResultView.m; sourceTree = "<group>"; };
+		D570C07020741984000C9E2F /* PPEventResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventResultController.h; sourceTree = "<group>"; };
+		D570C07120741984000C9E2F /* PPEventResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEventResultController.m; sourceTree = "<group>"; };
+		D570C07720742D80000C9E2F /* UIImage+EVBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+EVBlur.h"; sourceTree = "<group>"; };
+		D570C07820742D80000C9E2F /* UIImage+EVBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+EVBlur.m"; sourceTree = "<group>"; };
 		D588F2841C84D96A0054FE61 /* 1_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_1.png; sourceTree = "<group>"; };
 		D588F2851C84D96A0054FE61 /* 1_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1_2.png; sourceTree = "<group>"; };
 		D588F2861C84D96A0054FE61 /* 2_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2_1.png; sourceTree = "<group>"; };
@@ -539,6 +548,8 @@
 				D52413501C5E33C900EB1FF4 /* PPDangerProgressController.m */,
 				D524134F1C5E33C900EB1FF4 /* PPDangerResultController.h */,
 				D524134E1C5E33C900EB1FF4 /* PPDangerResultController.m */,
+				D570C07020741984000C9E2F /* PPEventResultController.h */,
+				D570C07120741984000C9E2F /* PPEventResultController.m */,
 				D524134D1C5E33C900EB1FF4 /* SoundController.h */,
 				D524134C1C5E33C900EB1FF4 /* SoundController.m */,
 				D51D033E1C97EB6900FE1467 /* PPLibraryViewController.h */,
@@ -610,6 +621,7 @@
 		D524127C1C5CDCBC00EB1FF4 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				D570C07320742CE2000C9E2F /* UIImageShadow */,
 				D59516FD1C8C9961000C4278 /* TYMProgressBarView */,
 				D52412991C5D685100EB1FF4 /* EAColourfulProgressView */,
 			);
@@ -635,6 +647,8 @@
 				D524136B1C5E353300EB1FF4 /* PPPlayerAbilityView.m */,
 				D52413681C5E353300EB1FF4 /* PPResultView.h */,
 				D52413671C5E353300EB1FF4 /* PPResultView.m */,
+				D570C06D2074167D000C9E2F /* PPEventResultView.h */,
+				D570C06E2074167D000C9E2F /* PPEventResultView.m */,
 				D5B4E0431C9150E300CDCDC0 /* PPProgressView.h */,
 				D5B4E0441C9150E300CDCDC0 /* PPProgressView.m */,
 			);
@@ -648,6 +662,15 @@
 				D524129B1C5D685100EB1FF4 /* EAColourfulProgressView.m */,
 			);
 			path = EAColourfulProgressView;
+			sourceTree = "<group>";
+		};
+		D570C07320742CE2000C9E2F /* UIImageShadow */ = {
+			isa = PBXGroup;
+			children = (
+				D570C07720742D80000C9E2F /* UIImage+EVBlur.h */,
+				D570C07820742D80000C9E2F /* UIImage+EVBlur.m */,
+			);
+			path = UIImageShadow;
 			sourceTree = "<group>";
 		};
 		D571221A20153FD90011A60E /* GameObjects */ = {
@@ -1118,6 +1141,7 @@
 				D524126E1C5CA42100EB1FF4 /* PPCity.m in Sources */,
 				D524126B1C5C95B500EB1FF4 /* PPAbility.m in Sources */,
 				D51D03401C97EB6900FE1467 /* PPLibraryViewController.m in Sources */,
+				D570C06F2074167D000C9E2F /* PPEventResultView.m in Sources */,
 				D52413631C5E33C900EB1FF4 /* PPBaseGameController.m in Sources */,
 				D52412371C5C8DBD00EB1FF4 /* AppDelegate.m in Sources */,
 				D52412651C5C956000EB1FF4 /* PPPlayer.m in Sources */,
@@ -1125,6 +1149,7 @@
 				D524135F1C5E33C900EB1FF4 /* PPDangerResultController.m in Sources */,
 				D52413771C5E353300EB1FF4 /* PPPlayerAbilityView.m in Sources */,
 				D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */,
+				D570C07220741984000C9E2F /* PPEventResultController.m in Sources */,
 				D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */,
 				D52413781C5E353300EB1FF4 /* PPDangerView.m in Sources */,
 				D51224C5200D57410006C6E3 /* PPEventAbility.m in Sources */,
@@ -1141,6 +1166,7 @@
 				D52413611C5E33C900EB1FF4 /* PPCityInfoController.m in Sources */,
 				D52412681C5C958B00EB1FF4 /* PPDanger.m in Sources */,
 				D5CFB5121C93054A002D3E77 /* PPProgressBarView.m in Sources */,
+				D570C07920742D80000C9E2F /* UIImage+EVBlur.m in Sources */,
 				D5D0CC7B2072D74000CEF068 /* PPEventViewController.m in Sources */,
 				D52412741C5CACBA00EB1FF4 /* PPGame.m in Sources */,
 				D524137B1C5E353300EB1FF4 /* PPCityView.m in Sources */,

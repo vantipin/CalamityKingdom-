@@ -41,6 +41,9 @@ typedef NS_ENUM(NSUInteger, PPSheet) {
 
 #define AnimationDuration 0.3
 
+#define CLEARDANGER @"CLEARDANGER"
+#define CLEAREVENT @"CLEAREVENT"
+
 #pragma mark - Sheets constants
 
 #define DisasterSheetUrl @"https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/od6"

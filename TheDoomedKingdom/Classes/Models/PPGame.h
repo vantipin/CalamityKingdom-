@@ -11,7 +11,7 @@
 #import "PPPlayer.h"
 #import "PPGameConstant.h"
 
-@class PPCity;
+@class PPCity, PPEvent;
 
 typedef void (^PPGameCallback)(BOOL success, NSError *error);
 
@@ -30,6 +30,8 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 
 @property (nonatomic, readonly) NSArray *liveDangers; // All not removed dangers
 @property (nonatomic, readonly) NSArray *usedDangers; // All removed dangers
+
+@property (nonatomic, readonly) PPEvent *currDayEvent; // Event for current day
 
 @property (nonatomic, assign) NSInteger daysCount; // Current time in hours
 @property (nonatomic, readonly) NSInteger leftTimeHours; // Time left for trigger ending

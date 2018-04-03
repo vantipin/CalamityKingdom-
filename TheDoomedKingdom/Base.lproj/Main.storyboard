@@ -1515,8 +1515,8 @@
                                 <color key="textColor" red="1" green="0.96078431372549022" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="X8x-E6-IhJ">
-                                <rect key="frame" x="86" y="220" width="135" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="X8x-E6-IhJ">
+                                <rect key="frame" x="35" y="220" width="180" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lasco" family="Lasco" pointSize="24"/>
                                 <color key="textColor" red="0.96862745098039216" green="0.45882352941176469" blue="0.1803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1637,7 +1637,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7eh-yx-yXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1760.5" y="-1536.5"/>
+            <point key="canvasLocation" x="1775" y="-1531"/>
+        </scene>
+        <!--Event Result Controller-->
+        <scene sceneID="l0x-oW-dmQ">
+            <objects>
+                <viewController storyboardIdentifier="PPEventResultControllerID" id="5fT-e5-nCh" customClass="PPEventResultController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b63-xd-Mdf" customClass="PPEventResultView">
+                        <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopupBg.png" id="Q7F-FL-6DV">
+                                <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EVENT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="YOL-07-aNG">
+                                <rect key="frame" x="42" y="41" width="684" height="415"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="56"/>
+                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <connections>
+                            <outlet property="resultDescriptionLabel" destination="YOL-07-aNG" id="XgP-kf-Eme"/>
+                        </connections>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="769" height="497"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esa-I9-dQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2701.5" y="-1497.5"/>
         </scene>
         <!--Endings View Controller-->
         <scene sceneID="YRk-RJ-xbk">
@@ -1703,10 +1735,6 @@
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="8IJ-fd-GCH">
                                 <rect key="frame" x="35" y="45" width="180" height="167"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stamp.png" id="6yz-5N-67t">
-                                <rect key="frame" x="35" y="136" width="91" height="88"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="KZ9-j3-anG" customClass="PPDangerAbilityView">
@@ -1817,11 +1845,6 @@
                                     <outlet property="nameLabel" destination="h51-y1-nV6" id="xKZ-aB-rcP"/>
                                 </connections>
                             </view>
-                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aLw-xe-fMz">
-                                <rect key="frame" x="678" y="33" width="57" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ClosePopupIcon.png"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="XwI-pK-ewl">
                                 <rect key="frame" x="229" y="33" width="490" height="213"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1829,8 +1852,8 @@
                                 <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="foU-np-cV0">
-                                <rect key="frame" x="86" y="220" width="135" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="foU-np-cV0">
+                                <rect key="frame" x="35" y="220" width="180" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Lasco" family="Lasco" pointSize="24"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.45882352939999999" blue="0.18039215689999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

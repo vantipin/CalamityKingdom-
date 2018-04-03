@@ -12,7 +12,7 @@
 
 @property (nonatomic, readwrite) NSArray *abilities;
 @property (nonatomic) NSString *dayString;
-@property (nonatomic, readwrite) NSRange dayRange;
+@property (nonatomic, readwrite) NSIndexSet *days;
 
 @end
 
@@ -70,10 +70,17 @@
     
     NSArray *numbers = [dayString componentsSeparatedByString:@", "];
     
+    
     if (numbers.count == 2) {
         NSInteger min = [numbers[0] integerValue];
         NSInteger max = [numbers[1] integerValue];
-        self.dayRange = NSMakeRange(min, max + 1 - min);
+        NSRange dayRange = NSMakeRange(min, max + 1 - min);
+        self.days = [NSIndexSet indexSetWithIndexesInRange:dayRange];
+    } else if (numbers.count == 1) {
+        NSInteger min = [numbers[0] integerValue];
+        self.days = [NSIndexSet indexSetWithIndex:min];
+    } else {
+        self.days = [NSIndexSet indexSet];
     }
 }
 

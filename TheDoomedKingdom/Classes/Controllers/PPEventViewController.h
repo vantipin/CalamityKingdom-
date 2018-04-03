@@ -14,5 +14,6 @@
 @property (nonatomic, strong) PPEvent *event;
 
 + (instancetype)showWithEvent:(PPEvent *)event;
+- (void)hide;
 
 @end

@@ -543,6 +543,29 @@ static PPGame *instance = nil;
     return shuffledElements;
 }
 
+- (PPEvent *)currDayEvent {
+    NSMutableArray *events = [@[] mutableCopy];
+    
+    for (PPEvent *event in self.events) {
+        if ([event.days containsIndex:[PPGame instance].daysCount]) {
+            BOOL manaSuitable = event.ifMana == UndefValue || (event.ifMana == self.player.mana);
+            BOOL peopleSuitable = event.ifPeopleRep == UndefValue || (event.ifPeopleRep == self.player.peopleRep);
+            BOOL kingSuitable = event.ifKingRep == UndefValue || (event.ifKingRep == self.player.kingRep);
+            BOOL corruptSuitable = event.ifCorrupt == UndefValue || (event.ifCorrupt == self.player.corrupt);
+            
+            if (manaSuitable && peopleSuitable && kingSuitable && corruptSuitable) {
+                [events addObject:event];
+            }
+        }
+    }
+    
+    if (events.count > 0) {
+        return events[arc4random() % events.count];
+    }
+    
+    return nil;
+}
+
 - (NSInteger)leftTimeHours
 {
     return ([[PPGame instance].gameConstants.days_count.constValue integerValue] - self.daysCount);
@@ -557,6 +580,7 @@ static PPGame *instance = nil;
 {
     return [self.dangers filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.removed == YES"]];
 }
+
 
 - (NSArray *)firedDangers
 {

@@ -19,11 +19,13 @@
 #import "SoundController.h"
 #import "EndingsViewController.h"
 #import "PPDangerProgressController.h"
+#import "PPEventViewController.h"
 #import "PPLibraryViewController.h"
 
 @interface PPBaseGameController ()
 
 @property (nonatomic, strong) PPCityDangerController *dController;
+@property (nonatomic, strong) PPEventViewController *eventController;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *fieldControls;
 
 @end
@@ -80,7 +82,9 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"UPDATE" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearUI:) name:@"CLEAR" object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearDANGER:) name:@"CLEARDANGER" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearDANGER:) name:CLEARDANGER object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearEvent:) name:CLEAREVENT object:nil];
+    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(plusHour:) name:@"TICK" object:nil];
     
@@ -108,14 +112,22 @@
     }
 }
 
+- (void)clearEvent:(NSNotification *)notification
+{
+    if (self.eventController && [self.eventController class] == [PPEventViewController class]) {
+        [self.eventController hide];
+        self.eventController = nil;
+    }
+}
+
 - (void)clearDANGER:(NSNotification *)notification
 {
     if (self.dController && [self.dController class] == [PPCityDangerController class]) {
         [self.dController hide:@(1)];
         self.dController = nil;
     }
-    
 }
+
 - (void)cityPressed:(UITapGestureRecognizer *)tap
 {
     PPCityView *view = (PPCityView *)[tap view];
@@ -132,21 +144,17 @@
     }
 }
 
-- (void)showResolveDangerPopup:(PPCity *)city
-{
+- (void)showResolveDangerPopup:(PPCity *)city {
     self.dController = [PPCityDangerController showWithCity:city];
 }
 
-- (void)showCityInfoPopup:(PPCity *)city
-{
+- (void)showCityInfoPopup:(PPCity *)city {
     self.dController = (PPCityDangerController *)[PPCityInfoController showWithCity:city];
 }
 
 
 
-- (void)redrawInterface
-{
-    
+- (void)redrawInterface {
     NSArray *cities = [[[PPGame instance] kingdom] cities];
     
     for (PPCityView *view in self.cityViews) {
@@ -274,10 +282,18 @@
     [dangersInProgress removeAllObjects];
     
     [self redrawInterface];
+    [self checkEvents];
 }
 
-- (void)timerTick
-{
+- (void)checkEvents {
+    PPEvent *event = [[PPGame instance] currDayEvent];
+    
+    if (event) {
+        self.eventController = [PPEventViewController showWithEvent:event];
+    }
+}
+
+- (void)timerTick {
     [PPGame instance].daysCount += 1;
     
     if ([[PPGame instance] leftTimeHours] <= 0) {
