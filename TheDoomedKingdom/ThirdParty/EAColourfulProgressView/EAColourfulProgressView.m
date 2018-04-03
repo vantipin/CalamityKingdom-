@@ -296,7 +296,7 @@ static NSUInteger const EAColourfulProgressViewNumberOfSegments = 3;
   if (!_finalLabel) {
     self.finalLabel = [[UILabel alloc] init];
     self.finalLabel.translatesAutoresizingMaskIntoConstraints = NO;
-    self.finalLabel.text = [NSString stringWithFormat:@"%zd", self.maximumValue];
+    self.finalLabel.text = [NSString stringWithFormat:@"%li", (long)self.maximumValue];
     self.finalLabel.textColor = self.labelTextColor;
     self.finalLabel.font = [UIFont fontWithName:@"Helvetica Neue" size:12];
     self.finalLabel.textAlignment = NSTextAlignmentRight;
