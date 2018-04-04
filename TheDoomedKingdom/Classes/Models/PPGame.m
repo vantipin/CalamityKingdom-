@@ -155,11 +155,8 @@ static PPGame *instance = nil;
             
         case PPSheetDisasters: {
             for (PPDanger *danger in objects) {
-                PPValue *peopleToDie = [PPValue new];
-                peopleToDie.minValue = danger.minValue;
-                peopleToDie.maxValue = danger.maxValue;
-                
-                danger.result.peopleCountToDie = @[peopleToDie];
+                danger.result.peopleCountToDie = @[@(danger.defaultDieCoef)];
+                danger.result.defaultDieCoef = danger.defaultDieCoef;
             }
             
             self.dangers = objects;
@@ -172,13 +169,7 @@ static PPGame *instance = nil;
                 
                 if (danger) {
                     NSMutableArray *dieArray = [danger.result.peopleCountToDie mutableCopy];
-                    PPValue *dieValue = dieArray[0];
-                    PPValue *modifiedValue = [PPValue new];
-                    
-                    CGFloat modifier = ability.damage;
-                    modifiedValue.minValue = dieValue.minValue * modifier;
-                    modifiedValue.maxValue = dieValue.maxValue * modifier;
-                    [dieArray addObject:modifiedValue];
+                    [dieArray addObject:@(ability.damage / 100.)];
                     
                     danger.result.peopleCountToDie = [dieArray copy];
                     

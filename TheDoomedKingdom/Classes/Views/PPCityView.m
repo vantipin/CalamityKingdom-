@@ -35,10 +35,7 @@
             self.descrLabel.text = city.cityDescription;
         }
         
-        if (self.popularityLabel) {
-            NSInteger cityPopularity = city.currentMagePopularity;
-            self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)cityPopularity];
-            
+        if (self.descrLabel) {
             [self.currLiveLabel setHidden:NO];
             [self.currLiveLabel setText:[NSString stringWithFormat:@"%li жителей (%li%% выживших)", (long)city.currPeopleCount, (long)(100. * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount)]];
         } else {

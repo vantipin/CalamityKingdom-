@@ -11,8 +11,7 @@
 
 @interface PPDangerResult()
 
-@property (nonatomic, assign) NSInteger diedPeople;
-@property (nonatomic, assign) NSInteger diedDefault;
+@property (nonatomic, assign) CGFloat diedPeople;
 
 @end
 
@@ -25,27 +24,13 @@
     if (self) {
         self.helpAbilityType = PPAbilityTypeNobody;
         self.diedPeople = UndefValue;
-        self.diedDefault = UndefValue;
     }
     
     return self;
 }
 
-//- (NSString *)helpResultWithType
-//{
-//    NSString *result = @"Default Result";
-//    NSInteger indexForResult = self.helpAbilityType;
-//    
-//    if (self.resultStrings && indexForResult < self.resultStrings.count) {
-//        result = self.resultStrings[indexForResult];
-//    } else {
-//        NSLog(@"helpResultWithType ERROR");
-//    }
-//    
-//    return result;
-//}
 
-- (NSInteger)peopleCountToDieWithType
+- (CGFloat)peopleCountToDieWithType
 {
     if (self.diedPeople >= 0) {
         return self.diedPeople;
@@ -54,51 +39,15 @@
     NSInteger indexForResult = self.helpAbilityType;
     
     if (self.helpAbilityType == PPAbilityTypeNobody) {
-        self.diedPeople = [self defaultDieCount];
+        self.diedPeople = self.defaultDieCoef;
         return self.diedPeople;
     }
     
     if (self.peopleCountToDie && indexForResult < self.peopleCountToDie.count) {
-        PPValue *value = self.peopleCountToDie[indexForResult];
-        self.diedPeople = [value randomValue];
-    } else {
-        NSLog(@"percentPeopleToDieWithType ERROR");
+        self.diedPeople = [self.peopleCountToDie[indexForResult] floatValue];
     }
     
     return self.diedPeople;
 }
-
-- (NSInteger)defaultDieCount
-{
-    if (self.diedDefault >= 0) {
-        return self.diedDefault;
-    }
-    
-    NSInteger indexForResult = 0;
-    
-    if (self.peopleCountToDie && indexForResult < self.peopleCountToDie.count) {
-        PPValue *value = self.peopleCountToDie[indexForResult];
-        self.diedDefault = [value randomValue];
-    } else {
-        NSLog(@"defaultDieCount ERROR");
-    }
-    
-    return self.diedDefault;
-}
-
-//- (NSInteger)ratingChangesWithType
-//{
-//    NSInteger result = 0;
-//    NSInteger indexForResult = self.helpAbilityType;
-//    
-//    if (self.ratingChanges && indexForResult < self.ratingChanges.count) {
-//        PPValue *value = self.ratingChanges[indexForResult];
-//        result = [value randomValue];
-//    } else {
-//        NSLog(@"ratingChangesWithType ERROR");
-//    }
-//    
-//    return result;
-//}
 
 @end

@@ -36,6 +36,7 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"identifier" : @"id_disaster",
+             @"defaultDieCoef" : @"default_die",
              @"name": @"name",
              @"dangerDescription": @"description",
              @"dangerType": @"type",

@@ -22,10 +22,10 @@
     
     self.resultDescriptionLabel.text = [ability.abilityDescription stringByReplacingOccurrencesOfString:@"gorodname" withString:cityName];
     
-    NSInteger died = [danger.result peopleCountToDieWithType];
+    [danger.result peopleCountToDieWithType];
     
     PPCity *affCity = [danger affectedCity];
-    [affCity recalculateCurrentRatingWithDanger:danger andAbilityType:ability.abilityType];
+    NSInteger died = [affCity recalculateCurrentRatingWithDanger:danger andAbilityType:ability.abilityType];
     
     [[PPGame instance] player].mana -= ability.manaCost;
     [[PPGame instance] player].kingRep -= ability.kingRepCost;
@@ -35,7 +35,7 @@
     
     [[SoundController sharedInstance] playBattleWin];
     
-    self.finalLabel.text = [NSString stringWithFormat:@"Жертвы: %li                   Популярность: %li", (long)died, (long)affCity.currentMagePopularity];
+    self.finalLabel.text = [NSString stringWithFormat:@"Жертвы: %li", (long)died];
     
     affCity.currentDanger = nil;
 }

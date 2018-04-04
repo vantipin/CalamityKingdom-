@@ -32,6 +32,7 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 @property (nonatomic) NSString *dangerDescription;
 
 @property (nonatomic, assign) PPDangerType dangerType;
+@property (nonatomic) CGFloat defaultDieCoef;
 
 @property (nonatomic, readonly) PPDangerResult *result;
 

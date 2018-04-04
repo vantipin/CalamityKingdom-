@@ -61,12 +61,8 @@
 - (void)hide {
     UIViewController *main = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIView *closeView = [main.view viewWithTag:9999];
-    
-    [UIView animateWithDuration:0.35 animations:^{
-        [self.view setAlpha:0.];
-    } completion:^(BOOL finished) {
-        [closeView removeFromSuperview];
-    }];
+
+    [closeView removeFromSuperview];
 }
 
 

@@ -92,12 +92,6 @@
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cityPressed:)];
         [view addGestureRecognizer:tapRecognizer];
     }
-    
-    PPPlayer *player = [PPGame instance].player;
-    self.playerName.text = player.name;
-    self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)[player totalPopularity]];
-    
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)updateUI:(NSNotification *)notification
@@ -165,7 +159,6 @@
     }
     
     PPPlayer *player = [PPGame instance].player;
-    self.popularityLabel.text = [NSString stringWithFormat:@"Популярность: %li", (long)[player totalPopularity]];
     
     for (PPPlayerAbilityView *view in self.playerAbilities) {
         NSInteger abIndex = view.tag;

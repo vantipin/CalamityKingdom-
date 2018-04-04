@@ -24,6 +24,28 @@
     if (ability.ending < 1) {
         [[SoundController sharedInstance] playBattleWin];
     }
+    
+    PPGameConstant *gc = [PPGame instance].gameConstants;
+    
+    NSMutableString *final = [NSMutableString string];
+    
+    if (ability.mana != 0) {
+        [final appendFormat:@"%@: %li", gc.mana.name, (long)ability.mana];
+    }
+    
+    if (ability.kingRep != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.king_rep.name, (long)ability.kingRep];
+    }
+    
+    if (ability.peopleRep != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.people_rep.name, (long)ability.peopleRep];
+    }
+    
+    if (ability.corrupt != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.corrupt.name, (long)ability.corrupt];
+    }
+    
+    self.finalLabel.text = final;
 }
 
 @end

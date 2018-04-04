@@ -29,7 +29,7 @@
     "ending" : 0,
     "cost" : 0,
     "result" : null,
-    "corrupt" : 5,
+    "corrupt" : 0,
     "king_rep" : 0,
     "text" : null,
     "id_reply" : "3",

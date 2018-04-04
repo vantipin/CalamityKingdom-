@@ -12,13 +12,10 @@
 
 @interface PPBaseGameController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *playerName;
-@property (weak, nonatomic) IBOutlet UILabel *popularityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *cityViews;
-
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *playerAbilities;
 
 - (IBAction)plusHour:(id)sender;

@@ -42,19 +42,4 @@
     _corrupt = MIN(MAX(corrupt, MinAbilityValue), MaxAbilityValue);
 }
 
-- (CGFloat)totalPopularity
-
-{
-    PPGame *game = [PPGame instance];
-    NSArray *cities = game.kingdom.cities;
-    
-    NSInteger resultPopularity = 0;
-    
-    for (PPCity *city in cities) {
-        resultPopularity += city.currentMagePopularity;
-    }
-    
-    return resultPopularity;
-}
-
 @end

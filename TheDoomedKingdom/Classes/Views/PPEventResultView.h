@@ -14,6 +14,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *resultDescriptionLabel;
 
 @property (nonatomic) PPEventAbility *eventAbility;
+@property (nonatomic, weak) IBOutlet UILabel *finalLabel;
 
 - (void)initWithEventAbility:(PPEventAbility *)ability;
 

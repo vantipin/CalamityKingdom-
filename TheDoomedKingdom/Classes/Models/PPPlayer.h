@@ -18,8 +18,5 @@
 @property (nonatomic) NSInteger kingRep;
 @property (nonatomic) NSInteger peopleRep;
 @property (nonatomic) NSInteger corrupt;
-//@property (nonatomic, strong) NSMutableArray *abilities;
-
-- (CGFloat)totalPopularity;
 
 @end

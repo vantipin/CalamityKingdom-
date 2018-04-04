@@ -19,6 +19,8 @@
 @property (nonatomic) NSInteger ifPeopleRep;
 @property (nonatomic) NSInteger ifCorrupt;
 
+@property (nonatomic) CGFloat defaultDiePercent;
+
 @property (nonatomic) NSString *eventDescription;
 
 @property (nonatomic, readonly) NSArray *abilities;

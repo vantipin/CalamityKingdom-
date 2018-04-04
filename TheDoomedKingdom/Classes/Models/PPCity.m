@@ -22,9 +22,9 @@
     return (nil != self.currentDanger);
 }
 
-- (void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
+- (NSInteger)recalculateCurrentRatingWithDanger:(PPDanger *)danger
 {
-    [self recalculateCurrentRatingWithDanger:danger andAbilityType:PPAbilityTypeNobody];
+    return [self recalculateCurrentRatingWithDanger:danger andAbilityType:PPAbilityTypeNobody];
 }
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -37,30 +37,26 @@
              };
 }
 
-- (void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
+- (NSInteger)recalculateCurrentRatingWithDanger:(PPDanger *)danger
                            andAbilityType:(PPAbilityType)abilityType
 {
+    NSInteger died = 0;
+    
     if (danger && !danger.removed) {
         PPDangerResult *result = danger.result;
         result.helpAbilityType = abilityType;
         
-        
-        
         if (abilityType == PPAbilityTypeNobody) {
-            NSInteger defaultCountToDie = MIN([result defaultDieCount], self.currPeopleCount);
-            self.currPeopleCount -= defaultCountToDie;
+            died = MIN(result.defaultDieCoef * self.initPeopleCount, self.currPeopleCount);
         } else {
-            NSInteger typedDie = MIN([result peopleCountToDieWithType], self.currPeopleCount);
-            self.currPeopleCount -= typedDie;
+            died = MIN([result peopleCountToDieWithType] * self.initPeopleCount, self.currPeopleCount);
         }
         
+        self.currPeopleCount -= died;
         danger.removed = YES;
     }
-}
-
-- (void)setRating:(CGFloat)rating
-{
-    _rating = MAX(MIN(1., rating), 0.);
+    
+    return died;
 }
 
 - (void)setInitPeopleCount:(NSInteger)initPeopleCount {

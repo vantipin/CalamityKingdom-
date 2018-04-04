@@ -16,7 +16,6 @@
 @property (nonatomic, weak) IBOutlet UIImageView *cityIconImageView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *descrLabel;
-@property (nonatomic, weak) IBOutlet UILabel *popularityLabel;
 @property (nonatomic, weak) IBOutlet UILabel *currLiveLabel;
 @property (nonatomic, weak) IBOutlet EAColourfulProgressView *progressBar;
 

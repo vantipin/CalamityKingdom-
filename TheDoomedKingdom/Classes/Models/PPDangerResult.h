@@ -13,14 +13,10 @@
 
 @property (nonatomic, assign) PPAbilityType helpAbilityType;
 
-//@property (nonatomic, strong) NSArray *resultStrings;
 @property (nonatomic, strong) NSArray *peopleCountToDie;
-//@property (nonatomic, strong) NSArray *ratingChanges;
 
-//- (NSString *)helpResultWithType;
-- (NSInteger)peopleCountToDieWithType;
+@property (nonatomic) CGFloat defaultDieCoef;
 
-- (NSInteger)defaultDieCount;
-//- (NSInteger)ratingChangesWithType;
+- (CGFloat)peopleCountToDieWithType;
 
 @end

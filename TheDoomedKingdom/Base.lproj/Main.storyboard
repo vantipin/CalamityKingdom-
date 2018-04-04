@@ -197,15 +197,6 @@
                                         <rect key="frame" x="25" y="7" width="132" height="134"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="wu1-bc-67T">
-                                        <rect key="frame" x="162" y="117" width="149" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <size key="shadowOffset" width="1" height="1"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -1081,7 +1072,6 @@
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
-                        <outlet property="popularityLabel" destination="wu1-bc-67T" id="Dcn-vX-qyD"/>
                         <outlet property="timeLabel" destination="l3H-nL-SlY" id="3uG-mg-cGP"/>
                         <outletCollection property="cityViews" destination="sz0-MV-4F1" id="BN0-ad-sVV"/>
                         <outletCollection property="cityViews" destination="RA1-Dy-JRw" id="NjO-Hg-vZb"/>
@@ -1203,13 +1193,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ClosePopupIcon.png"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="491-uU-s3d">
-                                <rect key="frame" x="249" y="151" width="475" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="35"/>
-                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iaC-Ra-3jh" customClass="EAColourfulProgressView">
                                 <rect key="frame" x="39" y="375" width="685" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1259,7 +1242,6 @@
                             <outlet property="currLiveLabel" destination="BRv-mZ-QAl" id="YsV-oW-hdF"/>
                             <outlet property="descrLabel" destination="ngm-mV-0sR" id="Usk-fG-XVg"/>
                             <outlet property="nameLabel" destination="VGr-N7-ELw" id="Xp9-Ih-CVh"/>
-                            <outlet property="popularityLabel" destination="491-uU-s3d" id="Yel-fX-4GD"/>
                             <outlet property="progressBar" destination="iaC-Ra-3jh" id="TbW-Vd-Kxk"/>
                         </connections>
                     </view>
@@ -1652,15 +1634,23 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EVENT" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="YOL-07-aNG">
-                                <rect key="frame" x="42" y="41" width="684" height="415"/>
+                                <rect key="frame" x="42" y="41" width="684" height="348"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="56"/>
+                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Q9b-JP-L8x">
+                                <rect key="frame" x="41" y="397" width="684" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
                                 <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <connections>
+                            <outlet property="finalLabel" destination="Q9b-JP-L8x" id="e0p-E6-R4n"/>
                             <outlet property="resultDescriptionLabel" destination="YOL-07-aNG" id="XgP-kf-Eme"/>
                         </connections>
                     </view>
@@ -1746,12 +1736,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TelekinesisIcon.png" id="Xg0-Yh-Puq">
-                                        <rect key="frame" x="9" y="0.0" width="103" height="90"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Wlb-9g-43j">
-                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Wlb-9g-43j">
+                                        <rect key="frame" x="19" y="11" width="308" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1760,7 +1746,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="abilityTypeImageView" destination="Xg0-Yh-Puq" id="jQK-aK-MDF"/>
                                     <outlet property="nameLabel" destination="Wlb-9g-43j" id="maR-hZ-fgr"/>
                                 </connections>
                             </view>
@@ -1773,12 +1758,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GypnosIcon.png" id="2l2-NA-eVa">
-                                        <rect key="frame" x="4" y="4" width="103" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="06K-S8-kZ8">
-                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="06K-S8-kZ8">
+                                        <rect key="frame" x="19" y="11" width="308" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1787,7 +1768,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="abilityTypeImageView" destination="2l2-NA-eVa" id="rPn-eq-Akb"/>
                                     <outlet property="nameLabel" destination="06K-S8-kZ8" id="mcf-hv-ioH"/>
                                 </connections>
                             </view>
@@ -1800,12 +1780,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppealIcon.png" id="nfB-4W-YOy">
-                                        <rect key="frame" x="12" y="2" width="109" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="OUM-va-cw7">
-                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="OUM-va-cw7">
+                                        <rect key="frame" x="19" y="11" width="308" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1814,7 +1790,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="abilityTypeImageView" destination="nfB-4W-YOy" id="CG3-GN-mdU"/>
                                     <outlet property="nameLabel" destination="OUM-va-cw7" id="JW5-uS-YBy"/>
                                 </connections>
                             </view>
@@ -1827,12 +1802,8 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <rect key="contentStretch" x="0.5" y="1" width="0.0" height="0.0"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChaosIcon.png" id="rK1-yI-x2A">
-                                        <rect key="frame" x="9" y="0.0" width="103" height="103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="h51-y1-nV6">
-                                        <rect key="frame" x="112" y="11" width="215" height="81"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Сплющить крокодилов сплющить крокодилов" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="h51-y1-nV6">
+                                        <rect key="frame" x="19" y="11" width="308" height="81"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="25"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1841,7 +1812,6 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <outlet property="abilityTypeImageView" destination="rK1-yI-x2A" id="m7N-Fl-TjM"/>
                                     <outlet property="nameLabel" destination="h51-y1-nV6" id="xKZ-aB-rcP"/>
                                 </connections>
                             </view>
@@ -1876,7 +1846,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a3T-qL-ogH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2622" y="-137"/>
+            <point key="canvasLocation" x="2621.5" y="-137.5"/>
         </scene>
     </scenes>
     <resources>

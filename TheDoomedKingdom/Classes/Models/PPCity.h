@@ -23,8 +23,8 @@
 
 @property (nonatomic, assign, readonly) BOOL cityInDanger;
 
-- (void)recalculateCurrentRatingWithDanger:(PPDanger *)danger;
-- (void)recalculateCurrentRatingWithDanger:(PPDanger *)danger
+- (NSInteger)recalculateCurrentRatingWithDanger:(PPDanger *)danger;
+- (NSInteger)recalculateCurrentRatingWithDanger:(PPDanger *)danger
                             andAbilityType:(PPAbilityType)abilityType;
 
 @end
