@@ -21,7 +21,7 @@
 @property (nonatomic, assign) NSInteger peopleRepCost;
 @property (nonatomic, assign) NSInteger corruptCost;
 
-@property (nonatomic, assign) CGFloat coef;
+@property (nonatomic, assign) CGFloat damage;
 @property (nonatomic, assign) NSInteger timeToDestroyDanger;
 
 @property (nonatomic, strong) NSString *abilityName;

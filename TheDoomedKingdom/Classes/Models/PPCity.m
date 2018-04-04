@@ -13,8 +13,6 @@
 
 @interface PPCity()
 
-@property (nonatomic, assign) CGFloat rating;
-
 @end
 
 @implementation PPCity
@@ -46,18 +44,15 @@
         PPDangerResult *result = danger.result;
         result.helpAbilityType = abilityType;
         
-        NSInteger defaultCountToDie = MIN([result defaultDieCount], self.currPeopleCount);
+        
         
         if (abilityType == PPAbilityTypeNobody) {
-            self.rating -= (CGFloat)defaultCountToDie / (CGFloat)self.initPeopleCount;
+            NSInteger defaultCountToDie = MIN([result defaultDieCount], self.currPeopleCount);
             self.currPeopleCount -= defaultCountToDie;
         } else {
             NSInteger typedDie = MIN([result peopleCountToDieWithType], self.currPeopleCount);
-            self.rating += ((CGFloat)defaultCountToDie - (CGFloat)typedDie) / (CGFloat)self.initPeopleCount;
             self.currPeopleCount -= typedDie;
         }
-        
-        self.currentMagePopularity = self.rating * self.currPeopleCount;
         
         danger.removed = YES;
     }

@@ -37,9 +37,6 @@ typedef NS_ENUM(NSInteger, PPDangerType) {
 
 @property (nonatomic, readonly) NSArray *abilitiesToRemove;
 
-@property (nonatomic, assign) NSInteger minValue;
-@property (nonatomic, assign) NSInteger maxValue;
-
 @property (nonatomic, assign) NSInteger timeToAppear;
 
 @property (nonatomic) PPCity *affectedCity;

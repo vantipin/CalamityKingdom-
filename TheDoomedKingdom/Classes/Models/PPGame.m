@@ -175,7 +175,7 @@ static PPGame *instance = nil;
                     PPValue *dieValue = dieArray[0];
                     PPValue *modifiedValue = [PPValue new];
                     
-                    CGFloat modifier = ability.coef;
+                    CGFloat modifier = ability.damage;
                     modifiedValue.minValue = dieValue.minValue * modifier;
                     modifiedValue.maxValue = dieValue.maxValue * modifier;
                     [dieArray addObject:modifiedValue];

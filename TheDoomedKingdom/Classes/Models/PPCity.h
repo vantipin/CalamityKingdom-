@@ -17,8 +17,6 @@
 @property (nonatomic, assign) NSInteger initPeopleCount;
 @property (nonatomic, assign) NSInteger currPeopleCount;
 
-@property (nonatomic, assign) CGFloat currentMagePopularity;
-
 @property (nonatomic, strong) PPDanger *currentDanger;
 
 @property (nonatomic) NSInteger type;

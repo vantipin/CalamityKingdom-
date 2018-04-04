@@ -39,8 +39,6 @@
              @"name": @"name",
              @"dangerDescription": @"description",
              @"dangerType": @"type",
-             @"minValue": @"min_dmg",
-             @"maxValue": @"max_dmg",
              @"timeToAppear": @"day",
              };
 }

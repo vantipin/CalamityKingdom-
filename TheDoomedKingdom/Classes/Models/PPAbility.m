@@ -25,7 +25,7 @@
              @"peopleRepCost": @"people_rep",
              @"corruptCost": @"corrupt",
              @"timeToDestroyDanger": @"time",
-             @"coef": @"coef"
+             @"damage": @"damage"
              };
 }
 
