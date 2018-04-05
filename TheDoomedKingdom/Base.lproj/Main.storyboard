@@ -204,7 +204,7 @@
                                 <rect key="frame" x="456" y="208" width="144" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapitalCity.png" id="hoN-Sy-uFC">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CapitalCity.png" highlightedImage="CapitalCityRuined.png" id="hoN-Sy-uFC">
                                         <rect key="frame" x="0.0" y="0.0" width="144" height="144"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,7 +296,7 @@
                                 <rect key="frame" x="620" y="46" width="135" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" id="hEj-Id-Tis">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" highlightedImage="VillageRuined.png" id="hEj-Id-Tis">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -388,7 +388,7 @@
                                 <rect key="frame" x="424" y="402" width="129" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town2City.png" id="mRG-Fd-hSI">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town2City.png" highlightedImage="TownRuined.png" id="mRG-Fd-hSI">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -467,7 +467,7 @@
                                 <rect key="frame" x="710" y="377" width="129" height="175"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town1City.png" id="wGV-4d-LVJ">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Town1City.png" highlightedImage="TownRuined.png" id="wGV-4d-LVJ">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -559,7 +559,7 @@
                                 <rect key="frame" x="576" y="551" width="135" height="179"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" id="ZLU-js-u0W">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageVariorsCity.png" highlightedImage="VillageRuined.png" id="ZLU-js-u0W">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -651,7 +651,7 @@
                                 <rect key="frame" x="130" y="486" width="135" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" id="K54-7F-5JS">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" highlightedImage="VillageRuined.png" id="K54-7F-5JS">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -743,7 +743,7 @@
                                 <rect key="frame" x="184" y="260" width="135" height="170"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" id="kHa-dK-vIo">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" highlightedImage="VillageRuined.png" id="kHa-dK-vIo">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -835,7 +835,7 @@
                                 <rect key="frame" x="880" y="477" width="135" height="172"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" id="PNg-9d-N9T">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageFishermansCity.png" highlightedImage="VillageRuined.png" id="PNg-9d-N9T">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -927,7 +927,7 @@
                                 <rect key="frame" x="375" y="15" width="135" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" id="8K7-kO-Xpd">
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="VillageLumbererCity.png" highlightedImage="VillageRuined.png" id="8K7-kO-Xpd">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="119"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1853,6 +1853,7 @@
         <image name="AbilityButtonBg.png" width="50" height="103"/>
         <image name="AppealIcon.png" width="97" height="83"/>
         <image name="CapitalCity.png" width="144" height="144"/>
+        <image name="CapitalCityRuined.png" width="144" height="144"/>
         <image name="ChaosIcon.png" width="70" height="81"/>
         <image name="ClosePopupIcon.png" width="41" height="41"/>
         <image name="GameField.png" width="1024" height="768"/>
@@ -1869,9 +1870,11 @@
         <image name="TelekinesisIcon.png" width="78" height="69"/>
         <image name="Town1City.png" width="129" height="116"/>
         <image name="Town2City.png" width="129" height="116"/>
+        <image name="TownRuined.png" width="129" height="116"/>
         <image name="UpdateIcon" width="36" height="48"/>
         <image name="VillageFishermansCity.png" width="135" height="119"/>
         <image name="VillageLumbererCity.png" width="135" height="119"/>
+        <image name="VillageRuined.png" width="135" height="119"/>
         <image name="VillageVariorsCity.png" width="135" height="119"/>
         <image name="background.png" width="1008" height="756"/>
         <image name="capital.png" width="194" height="194"/>

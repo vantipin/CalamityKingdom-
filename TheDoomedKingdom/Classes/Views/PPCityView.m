@@ -45,38 +45,42 @@
         NSInteger currValue = 100 - (100 * (CGFloat)city.currPeopleCount / (CGFloat)city.initPeopleCount);
         [self.progressBar updateToCurrentValue:currValue animated:YES];
         
-        NSString *cityNameString = @"";
-        
-        switch (city.type) {
-            case 1:
-                cityNameString = @"CapitalCity.png";
-                break;
-                
-            case 2:
-                cityNameString = @"Town2City.png";
-                break;
-                
-            case 3:
-                cityNameString = @"Town1City.png";
-                break;
-                
-            case 4:
-                cityNameString = @"VillageLumbererCity.png";
-                break;
-                
-            case 5:
-                cityNameString = @"VillageVariorsCity.png";
-                break;
-                
-            case 6:
-                cityNameString = @"VillageFishermansCity.png";
-                break;
-                
-            default:
-                break;
+        if (!self.cityIconImageView.image) {
+            NSString *cityNameString = @"";
+            
+            switch (city.type) {
+                case 1:
+                    cityNameString = @"CapitalCity.png";
+                    break;
+                    
+                case 2:
+                    cityNameString = @"Town2City.png";
+                    break;
+                    
+                case 3:
+                    cityNameString = @"Town1City.png";
+                    break;
+                    
+                case 4:
+                    cityNameString = @"VillageLumbererCity.png";
+                    break;
+                    
+                case 5:
+                    cityNameString = @"VillageVariorsCity.png";
+                    break;
+                    
+                case 6:
+                    cityNameString = @"VillageFishermansCity.png";
+                    break;
+                    
+                default:
+                    break;
+            }
+            
+            self.cityIconImageView.image = [UIImage imageNamed:cityNameString];
         }
         
-        self.cityIconImageView.image = [UIImage imageNamed:cityNameString];
+        self.cityIconImageView.highlighted = city.currPeopleCount == 0;
         
         BOOL inDanger = city.cityInDanger;
         

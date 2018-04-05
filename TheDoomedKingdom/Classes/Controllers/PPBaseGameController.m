@@ -274,8 +274,21 @@
     
     [dangersInProgress removeAllObjects];
     
-    [self redrawInterface];
-    [self checkEvents];
+    BOOL hasPeople = false;
+    
+    for (PPCity *city in [PPGame instance].kingdom.cities) {
+        if (city.currPeopleCount > 0) {
+            hasPeople = true;
+            break;
+        }
+    }
+    
+    if (hasPeople) {
+        [self redrawInterface];
+        [self checkEvents];
+    } else {
+        [EndingsViewController triggerEndingWithController:[UIApplication sharedApplication].keyWindow.rootViewController endingId:DEFEAT_ENDING_ID];
+    }
 }
 
 - (void)checkEvents {
