@@ -12,6 +12,12 @@
 #import "PPDangerResultController.h"
 #import "PPEventResultController.h"
 
+@interface PPDangerView()
+
+@property (nonatomic) BOOL wasTapped;
+
+@end
+
 @implementation PPDangerView
 
 - (void)setCity:(PPCity *)city
@@ -70,6 +76,12 @@
 }
 
 - (void)eventPressed:(UITapGestureRecognizer *)tap {
+    if (self.wasTapped) {
+        return;
+    }
+    
+    self.wasTapped = YES;
+    
     PPDangerAbilityView *view = (PPDangerAbilityView *)tap.view;
     PPEventAbility *ability = view.eventAbility;
     
@@ -79,6 +91,12 @@
 
 - (void)abilityPressed:(UITapGestureRecognizer *)tap
 {
+    if (self.wasTapped) {
+        return;
+    }
+    
+    self.wasTapped = YES;
+    
     PPDangerAbilityView *view = (PPDangerAbilityView *)tap.view;
     PPAbility *ability = view.ability;
     
