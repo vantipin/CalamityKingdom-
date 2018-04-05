@@ -1600,8 +1600,8 @@
                                 <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="KZG-LZ-beU">
-                                <rect key="frame" x="40" y="397" width="684" height="62"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="KZG-LZ-beU">
+                                <rect key="frame" x="40" y="397" width="684" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
                                 <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1641,7 +1641,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Q9b-JP-L8x">
-                                <rect key="frame" x="41" y="397" width="684" height="62"/>
+                                <rect key="frame" x="41" y="397" width="684" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
                                 <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

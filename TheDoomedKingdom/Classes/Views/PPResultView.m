@@ -35,7 +35,30 @@
     
     [[SoundController sharedInstance] playBattleWin];
     
-    self.finalLabel.text = [NSString stringWithFormat:@"Жертвы: %li", (long)died];
+    PPGameConstant *gc = [PPGame instance].gameConstants;
+    NSMutableString *final = [NSMutableString string];
+    
+    if (died > 0) {
+        [final appendFormat:@"Жертвы: %li", died];
+    }
+    
+    if (ability.manaCost != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.mana.name, (long)ability.manaCost];
+    }
+    
+    if (ability.kingRepCost != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.king_rep.name, (long)ability.kingRepCost];
+    }
+    
+    if (ability.peopleRepCost != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.people_rep.name, (long)ability.peopleRepCost];
+    }
+    
+    if (ability.corruptCost != 0) {
+        [final appendFormat:@"%@%@: %li", final.length > 0 ? @", " : @"", gc.corrupt.name, (long)ability.corruptCost];
+    }
+    
+    self.finalLabel.text = final;
     
     affCity.currentDanger = nil;
 }
