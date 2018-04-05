@@ -39,7 +39,7 @@
     NSMutableString *final = [NSMutableString string];
     
     if (died > 0) {
-        [final appendFormat:@"Жертвы: %li", died];
+        [final appendFormat:@"Жертвы: %li", (long)died];
     }
     
     if (ability.manaCost != 0) {
