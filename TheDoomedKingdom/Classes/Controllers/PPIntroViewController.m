@@ -8,7 +8,6 @@
 
 #import "PPIntroViewController.h"
 #import "SoundController.h"
-#import "PPBaseGameController.h"
 #import "PPEndingsViewController.h"
 
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
@@ -146,10 +145,17 @@
     }
     else {
         //start the game
-        PPBaseGameController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"MainScreenStoryId"];
-        if (controller) {
-            self.view.window.rootViewController = controller;
-        }
+        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainScreenStoryId"];
+        
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        
+        [UIView transitionFromView:window.rootViewController.view
+                            toView:viewController.view
+                          duration:0.65f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        completion:^(BOOL finished){
+                            window.rootViewController = viewController;
+                        }];
     }
 }
 

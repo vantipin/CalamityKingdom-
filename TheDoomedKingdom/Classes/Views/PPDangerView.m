@@ -105,10 +105,12 @@
     
     [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:NO];
     
+     __weak __typeof(self) weakSelf = self;
+    
     __block PPDangerProgressController *cntroller = [PPDangerProgressController showWithDanger:_city.currentDanger andAbility:ability andCompletionBlock:^(BOOL result) {
         [[[UIApplication sharedApplication] keyWindow] setUserInteractionEnabled:YES];
         [cntroller hide:nil];
-        [PPDangerResultController showWithDanger:self->_city.currentDanger andAbility:ability];
+        [PPDangerResultController showWithDanger:weakSelf.city.currentDanger andAbility:ability];
     }];
     
 }

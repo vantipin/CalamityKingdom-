@@ -16,13 +16,15 @@
 #define filePathWithName(fileEndPath) [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] bundlePath],(fileEndPath)]
 
 @interface PPEndingsViewController ()
-{
-    BOOL displayinTextInProcess;
-}
 
 @property (nonatomic) IBOutlet UIImageView *imageInfo;
 @property (nonatomic) IBOutlet UIButton *buttonContinue;
 @property (nonatomic) IBOutlet UITextView *textViewInfo;
+
+@property (nonatomic) IBOutlet UIButton *closeButton;
+
+
+@property (nonatomic) BOOL displayinTextInProcess;
 
 @property (nonatomic) NSInteger endingId;
 
@@ -46,10 +48,13 @@
     NSString *endingIdString = [NSString stringWithFormat:@"%li", (long)self.endingId];
     NSArray *endings = [[PPGame instance].endings filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"self.identifier == %@", endingIdString]];
     
-    [self setEnding:[endings lastObject]];
-
-    displayinTextInProcess = true;
+    
+    
+    _displayinTextInProcess = true;
     self.textViewInfo.text = @"";
+    [self.closeButton setHidden:YES];
+    
+    [self setEnding:[endings lastObject]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,17 +81,19 @@
     
     float timeToDisplayChar = 0.003;
     
+    __weak __typeof(self) weakSelf = self;
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),^{
         for (int i = 0; i < text.length; i++) {
             dispatch_async(dispatch_get_main_queue(),^{
                 NSString *stringToAdd = [text substringWithRange:NSMakeRange(i, 1)];
-                self.textViewInfo.text = [self.textViewInfo.text stringByAppendingString:stringToAdd];
+                weakSelf.textViewInfo.text = [weakSelf.textViewInfo.text stringByAppendingString:stringToAdd];
             });
             
-            [NSThread sleepForTimeInterval:self->displayinTextInProcess ? timeToDisplayChar : 0];
+            [NSThread sleepForTimeInterval:weakSelf.displayinTextInProcess ? timeToDisplayChar : 0];
         }
         
-        self->displayinTextInProcess = false;
+        weakSelf.displayinTextInProcess = false;
     });
     
     
@@ -94,6 +101,7 @@
 
 + (void)showWithEndingId:(NSInteger)endingId {
     PPEndingsViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"EndingStoryId"];
+    viewController.endingId = endingId;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     
@@ -113,24 +121,35 @@
 - (IBAction)continueButtonTap:(id)sender {
     
     //display text piece
-    if (displayinTextInProcess) {
+    if (_displayinTextInProcess) {
         //clear text box and start from beginning
-        displayinTextInProcess = false;
+        _displayinTextInProcess = false;
         self.buttonContinue.userInteractionEnabled = false;
         [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self
                                        selector: @selector(buttonEnabled) userInfo: nil repeats: NO];
-    }
-    else {
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            PPIntroViewController *controller = [self.storyboard instantiateInitialViewController];
-            
-            if (controller) {
-                [UIApplication sharedApplication].delegate.window.rootViewController = controller;
-            }
-        });
-        
+    } else {
+        [self.closeButton setHidden:NO];
     }
 }
 
+- (void)startOver {
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        PPIntroViewController *viewController = [self.storyboard instantiateInitialViewController];
+        UIWindow *window = [UIApplication sharedApplication].keyWindow;
+        
+        [UIView transitionFromView:window.rootViewController.view
+                            toView:viewController.view
+                          duration:0.65f
+                           options:UIViewAnimationOptionTransitionCrossDissolve
+                        completion:^(BOOL finished){
+                            window.rootViewController = viewController;
+                        }];
+    });
+}
+
+- (IBAction)closeButtonPressed:(id)sender {
+    [self startOver];
+}
 
 @end
+
