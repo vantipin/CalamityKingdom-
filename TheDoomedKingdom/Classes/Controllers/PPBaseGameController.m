@@ -338,6 +338,10 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
+    if (self.skipUpdates) {
+        return;
+    }
+    
     [super viewWillAppear:animated];
     
     [self parseGameAnimatable:NO];

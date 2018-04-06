@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *cityViews;
 @property (strong, nonatomic) IBOutletCollection(id) NSArray *playerAbilities;
 
+@property (nonatomic) BOOL skipUpdates;
+
 - (IBAction)plusHour:(id)sender;
 
 - (IBAction)libraryPressed:(id)sender;

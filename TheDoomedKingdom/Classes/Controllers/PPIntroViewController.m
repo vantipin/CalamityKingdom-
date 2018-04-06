@@ -145,8 +145,8 @@
     }
     else {
         //start the game
-        UIViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainScreenStoryId"];
-        
+        PPEndingsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainScreenStoryId"];
+        viewController.skipUpdates = YES;
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
         [UIView transitionFromView:window.rootViewController.view
@@ -154,6 +154,7 @@
                           duration:0.65f
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         completion:^(BOOL finished){
+                            viewController.skipUpdates = false;
                             window.rootViewController = viewController;
                         }];
     }

@@ -10,6 +10,8 @@
 
 @interface PPEndingsViewController : UIViewController
 
+@property (nonatomic) BOOL skipUpdates;
+
 //call like
 + (void)showWithEndingId:(NSInteger)endingId;
 
