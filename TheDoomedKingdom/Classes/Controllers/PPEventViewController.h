@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) PPEvent *event;
 
-+ (instancetype)showWithEvent:(PPEvent *)event;
++ (instancetype)showWithEvent:(PPEvent *)event completion:(void (^)(void))completion;
 - (void)hide;
 
 @end

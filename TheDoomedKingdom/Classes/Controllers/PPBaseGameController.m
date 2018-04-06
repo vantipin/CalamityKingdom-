@@ -17,7 +17,7 @@
 #import "PPCityInfoController.h"
 #import "PPCityDangerController.h"
 #import "SoundController.h"
-#import "EndingsViewController.h"
+#import "PPEndingsViewController.h"
 #import "PPDangerProgressController.h"
 #import "PPEventViewController.h"
 #import "PPLibraryViewController.h"
@@ -27,6 +27,8 @@
 @property (nonatomic, strong) PPCityDangerController *dController;
 @property (nonatomic, strong) PPEventViewController *eventController;
 @property (strong, nonatomic) IBOutletCollection(UIView) NSArray *fieldControls;
+
+@property (nonatomic) BOOL wasTapped;
 
 @end
 
@@ -139,11 +141,27 @@
 }
 
 - (void)showResolveDangerPopup:(PPCity *)city {
-    self.dController = [PPCityDangerController showWithCity:city];
+    if (self.wasTapped) {
+        return;
+    }
+    
+    self.wasTapped = YES;
+
+    self.dController = [PPCityDangerController showWithCity:city completion:^{
+        self.wasTapped = NO;
+    }];
 }
 
 - (void)showCityInfoPopup:(PPCity *)city {
-    self.dController = (PPCityDangerController *)[PPCityInfoController showWithCity:city];
+    if (self.wasTapped) {
+        return;
+    }
+    
+    self.wasTapped = YES;
+
+    self.dController = (PPCityDangerController *)[PPCityInfoController showWithCity:city completion:^{
+        self.wasTapped = NO;
+    }];
 }
 
 
@@ -287,7 +305,7 @@
         [self redrawInterface];
         [self checkEvents];
     } else {
-        [EndingsViewController triggerEndingWithController:[UIApplication sharedApplication].keyWindow.rootViewController endingId:DEFEAT_ENDING_ID];
+        [PPEndingsViewController showWithEndingId:DEFEAT_ENDING_ID];
     }
 }
 
@@ -295,7 +313,15 @@
     PPEvent *event = [[PPGame instance] currDayEvent];
     
     if (event) {
-        self.eventController = [PPEventViewController showWithEvent:event];
+        if (self.wasTapped) {
+            return;
+        }
+        
+        self.wasTapped = YES;
+        
+        self.eventController = [PPEventViewController showWithEvent:event completion:^{
+            self.wasTapped = NO;
+        }];
     }
 }
 
@@ -303,7 +329,7 @@
     [PPGame instance].daysCount += 1;
     
     if ([[PPGame instance] leftTimeHours] <= 0) {
-        [EndingsViewController triggerEndingWithController:self endingId:WON_ENDING_ID];
+        [PPEndingsViewController showWithEndingId:WON_ENDING_ID];
     } else {
         [[PPGame instance] player].mana += [PPGame instance].gameConstants.mana_regen.constValue.integerValue;
 
@@ -334,7 +360,15 @@
 
 - (IBAction)libraryPressed:(id)sender
 {
-    [PPLibraryViewController show];
+    if (self.wasTapped) {
+        return;
+    }
+    
+    self.wasTapped = YES;
+    
+    [PPLibraryViewController showWithCompletion:^{
+        self.wasTapped = NO;
+    }];
 }
 
 @end

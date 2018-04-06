@@ -20,7 +20,7 @@
     [(PPDangerView *)self.view setEvent:self.event];
 }
 
-+ (instancetype)showWithEvent:(PPEvent *)event {
++ (instancetype)showWithEvent:(PPEvent *)event completion:(void (^)(void))completion {
     UIViewController *main = [UIApplication sharedApplication].keyWindow.rootViewController;
     UIView *closeView = [[UIView alloc] initWithFrame:main.view.bounds];
     closeView.tag = 9999;
@@ -53,6 +53,8 @@
     
     [UIView animateWithDuration:0.35 animations:^{
         [controller.view setAlpha:1.];
+    } completion:^(BOOL finished) {
+        completion();
     }];
     
     return controller;

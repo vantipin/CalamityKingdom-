@@ -52,8 +52,8 @@
 		D52413611C5E33C900EB1FF4 /* PPCityInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413521C5E33C900EB1FF4 /* PPCityInfoController.m */; };
 		D52413621C5E33C900EB1FF4 /* PPCityDangerController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413541C5E33C900EB1FF4 /* PPCityDangerController.m */; };
 		D52413631C5E33C900EB1FF4 /* PPBaseGameController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413561C5E33C900EB1FF4 /* PPBaseGameController.m */; };
-		D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413581C5E33C900EB1FF4 /* IntroViewController.m */; };
-		D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */; };
+		D52413641C5E33C900EB1FF4 /* PPIntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413581C5E33C900EB1FF4 /* PPIntroViewController.m */; };
+		D52413661C5E33C900EB1FF4 /* PPEndingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D524135C1C5E33C900EB1FF4 /* PPEndingsViewController.m */; };
 		D52413751C5E353300EB1FF4 /* PPResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = D52413671C5E353300EB1FF4 /* PPResultView.m */; };
 		D52413771C5E353300EB1FF4 /* PPPlayerAbilityView.m in Sources */ = {isa = PBXBuildFile; fileRef = D524136B1C5E353300EB1FF4 /* PPPlayerAbilityView.m */; };
 		D52413781C5E353300EB1FF4 /* PPDangerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D524136D1C5E353300EB1FF4 /* PPDangerView.m */; };
@@ -275,10 +275,10 @@
 		D52413551C5E33C900EB1FF4 /* PPCityDangerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPCityDangerController.h; sourceTree = "<group>"; };
 		D52413561C5E33C900EB1FF4 /* PPBaseGameController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPBaseGameController.m; sourceTree = "<group>"; };
 		D52413571C5E33C900EB1FF4 /* PPBaseGameController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPBaseGameController.h; sourceTree = "<group>"; };
-		D52413581C5E33C900EB1FF4 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
-		D52413591C5E33C900EB1FF4 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
-		D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EndingsViewController.m; sourceTree = "<group>"; };
-		D524135D1C5E33C900EB1FF4 /* EndingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EndingsViewController.h; sourceTree = "<group>"; };
+		D52413581C5E33C900EB1FF4 /* PPIntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIntroViewController.m; sourceTree = "<group>"; };
+		D52413591C5E33C900EB1FF4 /* PPIntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIntroViewController.h; sourceTree = "<group>"; };
+		D524135C1C5E33C900EB1FF4 /* PPEndingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPEndingsViewController.m; sourceTree = "<group>"; };
+		D524135D1C5E33C900EB1FF4 /* PPEndingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPEndingsViewController.h; sourceTree = "<group>"; };
 		D52413671C5E353300EB1FF4 /* PPResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPResultView.m; sourceTree = "<group>"; };
 		D52413681C5E353300EB1FF4 /* PPResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPResultView.h; sourceTree = "<group>"; };
 		D524136B1C5E353300EB1FF4 /* PPPlayerAbilityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPlayerAbilityView.m; sourceTree = "<group>"; };
@@ -534,10 +534,10 @@
 		D524125B1C5C8E9800EB1FF4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D524135D1C5E33C900EB1FF4 /* EndingsViewController.h */,
-				D524135C1C5E33C900EB1FF4 /* EndingsViewController.m */,
-				D52413591C5E33C900EB1FF4 /* IntroViewController.h */,
-				D52413581C5E33C900EB1FF4 /* IntroViewController.m */,
+				D524135D1C5E33C900EB1FF4 /* PPEndingsViewController.h */,
+				D524135C1C5E33C900EB1FF4 /* PPEndingsViewController.m */,
+				D52413591C5E33C900EB1FF4 /* PPIntroViewController.h */,
+				D52413581C5E33C900EB1FF4 /* PPIntroViewController.m */,
 				D52413571C5E33C900EB1FF4 /* PPBaseGameController.h */,
 				D52413561C5E33C900EB1FF4 /* PPBaseGameController.m */,
 				D52413551C5E33C900EB1FF4 /* PPCityDangerController.h */,
@@ -908,7 +908,7 @@
 				TargetAttributes = {
 					D524122E1C5C8DBD00EB1FF4 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 32HRM4B73R;
+						DevelopmentTeam = AXT7HT56A4;
 					};
 				};
 			};
@@ -1148,9 +1148,9 @@
 				D51D032D1C97E11700FE1467 /* PPLibraryItem.m in Sources */,
 				D524135F1C5E33C900EB1FF4 /* PPDangerResultController.m in Sources */,
 				D52413771C5E353300EB1FF4 /* PPPlayerAbilityView.m in Sources */,
-				D52413661C5E33C900EB1FF4 /* EndingsViewController.m in Sources */,
+				D52413661C5E33C900EB1FF4 /* PPEndingsViewController.m in Sources */,
 				D570C07220741984000C9E2F /* PPEventResultController.m in Sources */,
-				D52413641C5E33C900EB1FF4 /* IntroViewController.m in Sources */,
+				D52413641C5E33C900EB1FF4 /* PPIntroViewController.m in Sources */,
 				D52413781C5E353300EB1FF4 /* PPDangerView.m in Sources */,
 				D51224C5200D57410006C6E3 /* PPEventAbility.m in Sources */,
 				D559CD7A1FBA5B400053D8C2 /* PPTable.m in Sources */,
@@ -1316,7 +1316,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 32HRM4B73R;
+				DEVELOPMENT_TEAM = AXT7HT56A4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TheDoomedKingdom/PPCalamityKingdom.pch;
 				INFOPLIST_FILE = TheDoomedKingdom/Info.plist;
@@ -1336,7 +1336,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 32HRM4B73R;
+				DEVELOPMENT_TEAM = AXT7HT56A4;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TheDoomedKingdom/PPCalamityKingdom.pch;
 				INFOPLIST_FILE = TheDoomedKingdom/Info.plist;

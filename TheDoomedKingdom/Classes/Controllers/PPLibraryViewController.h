@@ -10,7 +10,7 @@
 
 @interface PPLibraryViewController : UIViewController
 
-+ (instancetype)show;
++ (instancetype)showWithCompletion:(void (^)(void))completion;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descrLabel;
 

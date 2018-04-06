@@ -9,7 +9,7 @@
 #import "PPEventResultView.h"
 #import "PPGame.h"
 #import "SoundController.h"
-//#import "EndingsViewController.h"
+//#import "PPEndingsViewController.h"
 
 @implementation PPEventResultView
 

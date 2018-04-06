@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) PPCity *city;
 
-+ (instancetype)showWithCity:(PPCity *)city;
++ (instancetype)showWithCity:(PPCity *)city completion:(void (^)(void))completion;
 - (IBAction)hide:(id)sender;
 
 @end

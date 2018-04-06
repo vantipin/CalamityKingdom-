@@ -1,15 +1,15 @@
 //
-//  IntroViewController.m
+//  PPIntroViewController.m
 //  TheDoomedKingdom
 //
 //  Created by Vlad Antipin on 1/31/16.
 //  Copyright © 2016 PP. All rights reserved.
 //
 
-#import "IntroViewController.h"
+#import "PPIntroViewController.h"
 #import "SoundController.h"
 #import "PPBaseGameController.h"
-#import "EndingsViewController.h"
+#import "PPEndingsViewController.h"
 
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
 #define filePathWithName(fileEndPath) [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] bundlePath],(fileEndPath)]
@@ -28,7 +28,7 @@
 #define replica_8 @"На гибель в течение десяти дней."
 //- экран королевства и начало игры
 
-@interface IntroViewController ()
+@interface PPIntroViewController ()
 {
     BOOL displayinTextInProcess;
     int displayingCursor;
@@ -43,7 +43,7 @@
 
 @end
 
-@implementation IntroViewController
+@implementation PPIntroViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

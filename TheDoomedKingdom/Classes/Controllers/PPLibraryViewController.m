@@ -66,8 +66,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-+ (instancetype)show
-{
++ (instancetype)showWithCompletion:(void (^)(void))completion {
     UIViewController *main = [UIApplication sharedApplication].keyWindow.rootViewController;
     PPClosePopupView *closeView = [[PPClosePopupView alloc] initWithFrame:main.view.bounds];
     closeView.tag = 9999;
@@ -88,6 +87,8 @@
     
     [UIView animateWithDuration:0.35 animations:^{
         [controller.view setAlpha:1.];
+    } completion:^(BOOL finished) {
+        completion();
     }];
     
     return controller;

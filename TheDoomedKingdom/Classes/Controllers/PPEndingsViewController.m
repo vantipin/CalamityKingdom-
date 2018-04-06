@@ -1,13 +1,13 @@
 //
-//  EndingsViewController.m
+//  PPEndingsViewController.m
 //  TheDoomedKingdom
 //
 //  Created by Vlad Antipin on 1/31/16.
 //  Copyright © 2016 PP. All rights reserved.
 //
 
-#import "EndingsViewController.h"
-#import "IntroViewController.h"
+#import "PPEndingsViewController.h"
+#import "PPIntroViewController.h"
 #import "SoundController.h"
 #import "PPEnding.h"
 #import "PPGame.h"
@@ -15,7 +15,7 @@
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
 #define filePathWithName(fileEndPath) [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] bundlePath],(fileEndPath)]
 
-@interface EndingsViewController ()
+@interface PPEndingsViewController ()
 {
     BOOL displayinTextInProcess;
 }
@@ -28,7 +28,7 @@
 
 @end
 
-@implementation EndingsViewController
+@implementation PPEndingsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -62,7 +62,6 @@
     
     [[SoundController sharedInstance] playSoundName:ending.endingSound];
     
-    
     self.imageInfo.alpha = 0;
     NSString *text = ending.text;
     UIImage *image = [UIImage imageNamed:ending.imageName];
@@ -72,6 +71,9 @@
         self.imageInfo.image = image;
     } completion:nil];
     
+    self.textViewInfo.font = [UIFont fontWithName:@"Helvetica" size:23];
+    self.textViewInfo.textColor = kRGB(255, 254, 212, 1);
+    
     float timeToDisplayChar = 0.003;
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0),^{
@@ -79,25 +81,29 @@
             dispatch_async(dispatch_get_main_queue(),^{
                 NSString *stringToAdd = [text substringWithRange:NSMakeRange(i, 1)];
                 self.textViewInfo.text = [self.textViewInfo.text stringByAppendingString:stringToAdd];
-                self.textViewInfo.font = [UIFont fontWithName:@"Helvetica" size:23];
-                self.textViewInfo.textColor = kRGB(255, 254, 212, 1);
             });
             
             [NSThread sleepForTimeInterval:self->displayinTextInProcess ? timeToDisplayChar : 0];
         }
+        
         self->displayinTextInProcess = false;
-        [self.buttonContinue setTitle:@"Нажмите чтобы начать заново." forState:UIControlStateNormal];
-        self.buttonContinue.titleLabel.font = [UIFont fontWithName:@"Helvetica" size:33];
     });
     
     
 }
 
-+ (void)triggerEndingWithController:(UIViewController *)controller endingId:(NSInteger)endingId {
-    EndingsViewController *endingController = [controller.storyboard instantiateViewControllerWithIdentifier:@"EndingStoryId"];
-    if (controller) {
-        controller.view.window.rootViewController = endingController;
-    }
++ (void)showWithEndingId:(NSInteger)endingId {
+    PPEndingsViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"EndingStoryId"];
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    [UIView transitionFromView:window.rootViewController.view
+                        toView:viewController.view
+                      duration:0.65f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    completion:^(BOOL finished){
+                        window.rootViewController = viewController;
+                    }];
 }
 
 - (void)buttonEnabled {
@@ -116,7 +122,7 @@
     }
     else {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            IntroViewController *controller = [self.storyboard instantiateInitialViewController];
+            PPIntroViewController *controller = [self.storyboard instantiateInitialViewController];
             
             if (controller) {
                 [UIApplication sharedApplication].delegate.window.rootViewController = controller;

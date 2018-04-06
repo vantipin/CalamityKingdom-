@@ -10,7 +10,7 @@
 #import "PPEventResultView.h"
 #import "PPClosePopupView.h"
 #import "PPGame.h"
-#import "EndingsViewController.h"
+#import "PPEndingsViewController.h"
 
 typedef void(^CompletionBlock)(BOOL result);
 
@@ -73,7 +73,7 @@ typedef void(^CompletionBlock)(BOOL result);
 - (void)hide:(id)sender
 {
     if (self.eventAbility.ending > 0) {
-         [EndingsViewController triggerEndingWithController:[UIApplication sharedApplication].keyWindow.rootViewController endingId:self.eventAbility.ending];
+         [PPEndingsViewController showWithEndingId:self.eventAbility.ending];
         return;
     }
     
