@@ -10,6 +10,7 @@
 
 @interface PPIntroViewController : UIViewController
 
+@property (nonatomic) BOOL skipUpdates;
 
 
 @end

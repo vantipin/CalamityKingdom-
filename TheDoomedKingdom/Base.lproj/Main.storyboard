@@ -17,6 +17,26 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Landing Controller-->
+        <scene sceneID="Et0-Mz-CKD">
+            <objects>
+                <viewController storyboardIdentifier="PPLandingControllerID" id="7HP-jW-0jr" customClass="PPLandingController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6a6-yM-EhH">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="landingScreen.png" id="veq-fi-BBq">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePf-6J-DPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-462" y="729"/>
+        </scene>
         <!--Base Game Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -1882,6 +1902,7 @@
         <image name="background.png" width="1008" height="756"/>
         <image name="capital.png" width="194" height="194"/>
         <image name="fisherman.png" width="185" height="169"/>
+        <image name="landingScreen.png" width="1024" height="768"/>
         <image name="lumberer.png" width="185" height="169"/>
         <image name="quest_popup.png" width="54" height="71"/>
         <image name="town.png" width="179" height="166"/>

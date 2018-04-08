@@ -154,7 +154,7 @@
                           duration:0.65f
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         completion:^(BOOL finished){
-                            viewController.skipUpdates = false;
+                            viewController.skipUpdates = NO;
                             window.rootViewController = viewController;
                         }];
     }

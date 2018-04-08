@@ -196,6 +196,9 @@
 		D5D0CC772072D41700CEF068 /* EventDemonIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6D2072D41700CEF068 /* EventDemonIcon@2x.png */; };
 		D5D0CC782072D41700CEF068 /* EventKingIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */; };
 		D5D0CC7B2072D74000CEF068 /* PPEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */; };
+		D5D47353207AA568002F91AC /* landingScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D47351207AA564002F91AC /* landingScreen@2x.png */; };
+		D5D47354207AA568002F91AC /* landingScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = D5D47352207AA566002F91AC /* landingScreen.png */; };
+		D5D47357207AA5DB002F91AC /* PPLandingController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D47356207AA5DB002F91AC /* PPLandingController.m */; };
 		D5EE66FA1FF2FA5E000E862B /* PPGoogleBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D5EE66F91FF2FA5E000E862B /* PPGoogleBaseModel.m */; };
 		EF4E2941C1CE20A89BFA82C9 /* libPods-TheDoomedKingdom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 975D19DF0B3C07815038CBBB /* libPods-TheDoomedKingdom.a */; };
 /* End PBXBuildFile section */
@@ -436,6 +439,10 @@
 		D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = EventKingIcon.png; sourceTree = "<group>"; };
 		D5D0CC792072D74000CEF068 /* PPEventViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPEventViewController.h; sourceTree = "<group>"; };
 		D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPEventViewController.m; sourceTree = "<group>"; };
+		D5D47351207AA564002F91AC /* landingScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "landingScreen@2x.png"; sourceTree = "<group>"; };
+		D5D47352207AA566002F91AC /* landingScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = landingScreen.png; sourceTree = "<group>"; };
+		D5D47355207AA5DB002F91AC /* PPLandingController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPLandingController.h; sourceTree = "<group>"; };
+		D5D47356207AA5DB002F91AC /* PPLandingController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PPLandingController.m; sourceTree = "<group>"; };
 		D5D555A42015567900C2C9A2 /* SmartJSONAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SmartJSONAdapter.h; sourceTree = "<group>"; };
 		D5D555A52015567900C2C9A2 /* SmartJSONAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SmartJSONAdapter.m; sourceTree = "<group>"; };
 		D5EB55361C6745480085CA22 /* PPCalamityKingdom.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PPCalamityKingdom.pch; sourceTree = "<group>"; };
@@ -556,6 +563,8 @@
 				D51D033F1C97EB6900FE1467 /* PPLibraryViewController.m */,
 				D5D0CC792072D74000CEF068 /* PPEventViewController.h */,
 				D5D0CC7A2072D74000CEF068 /* PPEventViewController.m */,
+				D5D47355207AA5DB002F91AC /* PPLandingController.h */,
+				D5D47356207AA5DB002F91AC /* PPLandingController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -703,6 +712,8 @@
 		D588F2831C84D96A0054FE61 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				D5D47352207AA566002F91AC /* landingScreen.png */,
+				D5D47351207AA564002F91AC /* landingScreen@2x.png */,
 				D5D0CC682072D41600CEF068 /* EventDemonIcon.png */,
 				D5D0CC6D2072D41700CEF068 /* EventDemonIcon@2x.png */,
 				D5D0CC6E2072D41700CEF068 /* EventKingIcon.png */,
@@ -985,6 +996,7 @@
 				D5CFB5191C969AE1002D3E77 /* PBMiddle.png in Resources */,
 				D57C365A1C85C8BB006CBA2D /* Lasco-Regular.otf in Resources */,
 				D5D0CC752072D41700CEF068 /* EventMagIcon@2x.png in Resources */,
+				D5D47353207AA568002F91AC /* landingScreen@2x.png in Resources */,
 				D5CFB5071C930542002D3E77 /* SummonPBIcon@2x.png in Resources */,
 				D5CFB50D1C930542002D3E77 /* PBBigProgress@2x.png in Resources */,
 				D588F2C41C84D96A0054FE61 /* 4_1.png in Resources */,
@@ -1066,6 +1078,7 @@
 				D5530FBC1CA03FB10064A220 /* TownRuined@2x.png in Resources */,
 				D588F3001C84D9940054FE61 /* battle_win.wav in Resources */,
 				D588F2EA1C84D96A0054FE61 /* Town2City@2x.png in Resources */,
+				D5D47354207AA568002F91AC /* landingScreen.png in Resources */,
 				D5CFB5051C930542002D3E77 /* ChaosPBIcon@2x.png in Resources */,
 				D5AD9584201684A40026E5B8 /* Archimags.json in Resources */,
 				D524123D1C5C8DBD00EB1FF4 /* Main.storyboard in Resources */,
@@ -1139,6 +1152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D524126E1C5CA42100EB1FF4 /* PPCity.m in Sources */,
+				D5D47357207AA5DB002F91AC /* PPLandingController.m in Sources */,
 				D524126B1C5C95B500EB1FF4 /* PPAbility.m in Sources */,
 				D51D03401C97EB6900FE1467 /* PPLibraryViewController.m in Sources */,
 				D570C06F2074167D000C9E2F /* PPEventResultView.m in Sources */,

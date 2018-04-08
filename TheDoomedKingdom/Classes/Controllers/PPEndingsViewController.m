@@ -141,6 +141,7 @@
 - (void)startOver {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         PPIntroViewController *viewController = [self.storyboard instantiateInitialViewController];
+        viewController.skipUpdates = YES;
         UIWindow *window = [UIApplication sharedApplication].keyWindow;
         
         [UIView transitionFromView:window.rootViewController.view
@@ -148,6 +149,7 @@
                           duration:0.65f
                            options:UIViewAnimationOptionTransitionCrossDissolve
                         completion:^(BOOL finished){
+                            viewController.skipUpdates = NO;
                             window.rootViewController = viewController;
                         }];
     });
