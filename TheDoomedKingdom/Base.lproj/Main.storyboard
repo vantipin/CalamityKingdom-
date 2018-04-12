@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" colorMatched="YES" initialViewController="7HP-jW-0jr">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -29,18 +29,81 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <view contentMode="scaleToFill" misplaced="YES" id="a5x-Us-DiP">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.31" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                        <real key="value" value="0.20000000000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                        <size key="value" width="0.0" height="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" misplaced="YES" id="89N-t8-c0a" customClass="PPProgressBarView">
+                                <rect key="frame" x="179" y="660" width="667" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="tJB-1J-01d">
+                                <rect key="frame" x="409" y="318" width="206" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832746478875" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="СТАРТ"/>
+                                <connections>
+                                    <action selector="startPressed:" destination="7HP-jW-0jr" eventType="touchUpInside" id="gy0-NC-L50"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D3Q-m4-gGj">
+                                <rect key="frame" x="409" y="391" width="206" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Настройки"/>
+                                <connections>
+                                    <action selector="optionsPressed:" destination="7HP-jW-0jr" eventType="touchUpInside" id="5G3-Qv-iTq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fKn-Fu-KLB">
+                                <rect key="frame" x="409" y="464" width="206" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Титры"/>
+                                <connections>
+                                    <action selector="creditsPressed:" destination="7HP-jW-0jr" eventType="touchUpInside" id="49y-wp-DDE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <connections>
+                        <outlet property="progressBar" destination="89N-t8-c0a" id="0Tr-nq-6P2"/>
+                        <outletCollection property="controlButtons" destination="tJB-1J-01d" id="yby-rf-YYT"/>
+                        <outletCollection property="controlButtons" destination="D3Q-m4-gGj" id="tUm-Rk-9pi"/>
+                        <outletCollection property="controlButtons" destination="fKn-Fu-KLB" id="PZF-aN-SrG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePf-6J-DPV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-462" y="729"/>
+            <point key="canvasLocation" x="-574" y="729"/>
         </scene>
         <!--Base Game Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="MainScreenStoryId" id="BYZ-38-t0r" customClass="PPBaseGameController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPBaseGameControllerID" id="BYZ-38-t0r" customClass="PPBaseGameController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,17 +272,14 @@
                                     <outlet property="valueLabel" destination="NvX-pL-omN" id="HLY-oL-9d5"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" id="N93-Zd-ITk" userLabel="Player View">
-                                <rect key="frame" x="0.0" y="20" width="313" height="143"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QbJ-i1-lCc">
+                                <rect key="frame" x="25" y="27" width="132" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MagIcon.png" id="z6r-m0-TEV">
-                                        <rect key="frame" x="25" y="7" width="132" height="134"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
+                                <state key="normal" image="MagIcon.png"/>
+                                <connections>
+                                    <action selector="magePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hdz-WV-amT"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" id="sz0-MV-4F1" userLabel="Big City 0" customClass="PPCityView">
                                 <rect key="frame" x="456" y="208" width="144" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1122,8 +1182,8 @@
                         <outletCollection property="fieldControls" destination="RA1-Dy-JRw" id="BA4-ct-ct9"/>
                         <outletCollection property="fieldControls" destination="aKP-e2-9QP" id="7vW-hk-e5O"/>
                         <outletCollection property="fieldControls" destination="sz0-MV-4F1" id="JM9-6W-F1m"/>
-                        <outletCollection property="fieldControls" destination="N93-Zd-ITk" id="PqZ-T9-ukD"/>
                         <outletCollection property="fieldControls" destination="a1c-L9-4Ur" id="Jrr-DO-Qlf"/>
+                        <outletCollection property="fieldControls" destination="QbJ-i1-lCc" id="E6w-FK-cQY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1142,7 +1202,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="nZF-ee-HMb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="intro1.png" id="nZF-ee-HMb">
                                 <rect key="frame" x="190" y="195" width="642" height="483"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1902,6 +1962,7 @@
         <image name="background.png" width="1008" height="756"/>
         <image name="capital.png" width="194" height="194"/>
         <image name="fisherman.png" width="185" height="169"/>
+        <image name="intro1.png" width="1991" height="1458"/>
         <image name="landingScreen.png" width="1024" height="768"/>
         <image name="lumberer.png" width="185" height="169"/>
         <image name="quest_popup.png" width="54" height="71"/>

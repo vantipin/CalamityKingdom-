@@ -7,7 +7,7 @@
 //
 
 #import "PPEndingsViewController.h"
-#import "PPIntroViewController.h"
+#import "PPLandingController.h"
 #import "SoundController.h"
 #import "PPEnding.h"
 #import "PPGame.h"
@@ -45,10 +45,10 @@
         return;
     }
     
-    UIImage* image = [UIImage imageWithContentsOfFile:filePathWithName(@"background.png")];
-    self.view.layer.contents = (id)image.CGImage;
-    self.view.layer.masksToBounds = true;
-    
+//    UIImage* image = [UIImage imageWithContentsOfFile:filePathWithName(@"background.png")];
+//    self.view.layer.contents = (id)image.CGImage;
+//    self.view.layer.masksToBounds = true;
+//    
     [super viewWillAppear:animated];
     
     NSString *endingIdString = [NSString stringWithFormat:@"%li", (long)self.endingId];
@@ -105,7 +105,7 @@
 
 + (void)showWithEndingId:(NSInteger)endingId {
     PPEndingsViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"EndingStoryId"];
-    viewController.skipUpdates = YES;
+    
     viewController.endingId = endingId;
     
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
@@ -115,8 +115,10 @@
                       duration:0.65f
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     completion:^(BOOL finished){
-                        viewController.skipUpdates = NO;
+                        
+                        viewController.skipUpdates = YES;
                         window.rootViewController = viewController;
+                        viewController.skipUpdates = NO;
                     }];
 }
 
@@ -140,18 +142,7 @@
 
 - (void)startOver {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        PPIntroViewController *viewController = [self.storyboard instantiateInitialViewController];
-        viewController.skipUpdates = YES;
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        
-        [UIView transitionFromView:window.rootViewController.view
-                            toView:viewController.view
-                          duration:0.65f
-                           options:UIViewAnimationOptionTransitionCrossDissolve
-                        completion:^(BOOL finished){
-                            viewController.skipUpdates = NO;
-                            window.rootViewController = viewController;
-                        }];
+        [PPLandingController show];
     });
 }
 

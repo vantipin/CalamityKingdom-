@@ -7,6 +7,7 @@
 //
 
 #import "PPLandingController.h"
+#import "PPIntroViewController.h"
 
 #define PPLandingControllerID @"PPLandingControllerID"
 
@@ -18,7 +19,6 @@
 
 + (void)show {
     PPLandingController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:PPLandingControllerID];
-    viewController.skipUpdates = YES;
 
     UIWindow *window = [UIApplication sharedApplication].keyWindow;
     
@@ -27,8 +27,9 @@
                       duration:0.65f
                        options:UIViewAnimationOptionTransitionCrossDissolve
                     completion:^(BOOL finished){
-                        viewController.skipUpdates = NO;
+                        viewController.skipUpdates = YES;
                         window.rootViewController = viewController;
+                        viewController.skipUpdates = NO;
                     }];
 }
 
@@ -40,6 +41,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+- (IBAction)startPressed:(id)sender {
+    [PPIntroViewController show];
+}
+
+- (IBAction)creditsPressed:(id)sender {
+    
+}
+
+- (IBAction)optionsPressed:(id)sender {
+    
 }
 
 

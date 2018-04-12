@@ -20,6 +20,8 @@
 
 @property (nonatomic) BOOL skipUpdates;
 
++ (void)show;
+
 - (IBAction)plusHour:(id)sender;
 
 - (IBAction)libraryPressed:(id)sender;

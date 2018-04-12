@@ -9,6 +9,7 @@
 #import "PPIntroViewController.h"
 #import "SoundController.h"
 #import "PPEndingsViewController.h"
+#import "PPBaseGameController.h"
 
 #define kRGB(r, g, b, a) [UIColor colorWithRed:(r)/255. green:(g)/255. blue:(b)/255. alpha:(a)]
 #define filePathWithName(fileEndPath) [NSString stringWithFormat:@"%@/%@",[[NSBundle mainBundle] bundlePath],(fileEndPath)]
@@ -24,7 +25,7 @@
 //(У архимага появляется облачко с текстом "упс")
 //(Показываем башню)
 #define replica_7 @"Тем самым архимаг обрек Безмятежное Королевство"
-#define replica_8 @"На гибель в течение десяти дней."
+#define replica_8 @"На гибель в течение тридцати дней."
 //- экран королевства и начало игры
 
 @interface PPIntroViewController ()
@@ -43,6 +44,22 @@
 @end
 
 @implementation PPIntroViewController
+
++ (void)show {
+    PPIntroViewController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"PPIntroViewControllerID"];
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    [UIView transitionFromView:window.rootViewController.view
+                        toView:viewController.view
+                      duration:0.65f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    completion:^(BOOL finished){
+                        viewController.skipUpdates = YES;
+                        window.rootViewController = viewController;
+                        viewController.skipUpdates = NO;
+                    }];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -68,9 +85,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    UIImage* image = [UIImage imageWithContentsOfFile:filePathWithName(@"background.png")];
-    self.view.layer.contents = (id)image.CGImage;
-    self.view.layer.masksToBounds = true;
+    if (self.skipUpdates) {
+        return;
+    }
+//    
+//    UIImage *image = [UIImage imageWithContentsOfFile:filePathWithName(@"background.png")];
+//    self.view.layer.contents = (id)image.CGImage;
+//    self.view.layer.masksToBounds = true;
     
     [super viewWillAppear:animated];
     
@@ -78,7 +99,9 @@
     [[SoundController sharedInstance] resume];
     
     //start display text
-    [self displayText:dataSource[displayingCursor]];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self displayText:self->dataSource[self->displayingCursor]];
+    });
 }
 
 - (void)displayText:(NSString *)text {
@@ -89,8 +112,8 @@
     float timeToDisplayChar = 0.009;
     
     if (displayingCursor == 6) {
-        
         self.imageInfo.alpha = 0;
+        
         [UIView animateWithDuration:0.3 animations:^{
             self.imageInfo.alpha = 1;
             self.imageInfo.image = [UIImage imageNamed:@"intro2.png"];
@@ -110,6 +133,7 @@
 
             [NSThread sleepForTimeInterval:self->displayinTextInProcess ? timeToDisplayChar : 0];
         }
+        
         self->displayinTextInProcess = false;
         self->displayingCursor ++;
         
@@ -127,7 +151,6 @@
 }
 
 - (IBAction)continueButtonTap:(id)sender {
-    
     if (displayingCursor <= dataSource.count - 1) {
         //display text piece
         if (displayinTextInProcess) {
@@ -136,27 +159,12 @@
             self.buttonContinue.userInteractionEnabled = false;
             [NSTimer scheduledTimerWithTimeInterval: 0.5 target: self
                                            selector: @selector(buttonEnabled) userInfo: nil repeats: NO];
-        }
-        else {
+        } else {
             //start displaying text
             [self displayText:dataSource[displayingCursor]];
         }
-        
-    }
-    else {
-        //start the game
-        PPEndingsViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainScreenStoryId"];
-        viewController.skipUpdates = YES;
-        UIWindow *window = [UIApplication sharedApplication].keyWindow;
-        
-        [UIView transitionFromView:window.rootViewController.view
-                            toView:viewController.view
-                          duration:0.65f
-                           options:UIViewAnimationOptionTransitionCrossDissolve
-                        completion:^(BOOL finished){
-                            viewController.skipUpdates = NO;
-                            window.rootViewController = viewController;
-                        }];
+    } else {
+        [PPBaseGameController show];
     }
 }
 

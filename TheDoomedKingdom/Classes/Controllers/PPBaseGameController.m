@@ -21,6 +21,7 @@
 #import "PPDangerProgressController.h"
 #import "PPEventViewController.h"
 #import "PPLibraryViewController.h"
+#import "PPLandingController.h"
 
 @interface PPBaseGameController ()
 
@@ -33,8 +34,42 @@
 @end
 
 @implementation PPBaseGameController
+
 - (IBAction)updatePressed:(id)sender {
     [self parseGameAnimatable:YES];
+}
+
+- (IBAction)magePressed:(id)sender {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Меню" message:@"Показать меню?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [PPLandingController show];
+    }];
+    
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alert addAction:okAction];
+    [alert addAction:cancelAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
++ (void)show {
+    PPBaseGameController *viewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"PPBaseGameControllerID"];
+    
+    
+    UIWindow *window = [UIApplication sharedApplication].keyWindow;
+    
+    [UIView transitionFromView:window.rootViewController.view
+                        toView:viewController.view
+                      duration:0.65f
+                       options:UIViewAnimationOptionTransitionCrossDissolve
+                    completion:^(BOOL finished){
+                       
+                        viewController.skipUpdates = YES;
+                        window.rootViewController = viewController;
+                        viewController.skipUpdates = NO;
+                    }];
 }
 
 - (void)parseGameAnimatable:(BOOL)withAnimation {
@@ -81,6 +116,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    for (NSInteger viewIndex = 0; viewIndex < self.view.subviews.count; viewIndex++) {
+        UIView *view = self.view.subviews[viewIndex];
+        view.alpha = (viewIndex == 0 || viewIndex == self.view.subviews.count - 1) ? 1 : 0;
+    }
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateUI:) name:@"UPDATE" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearUI:) name:@"CLEAR" object:nil];
@@ -222,17 +262,11 @@
 
 - (void)checkAndRedraw
 {
-    //    if (self.dController && self.dController.view.superview && [self.dController class] != [PPCityInfoController class]) {
-    //        [self.dController hide:nil];
-    //    }
-    
     NSMutableArray *dangersInProgress = [@[] mutableCopy];
     
     NSArray *dangerToApply = [[PPGame instance] dangersToApply];
     
     if (dangerToApply && dangerToApply.count > 0) {
-//        BOOL wasDanger = NO;
-        
         for (PPDanger *danger in dangerToApply) {
             if (danger.predefinedCity) {
                 PPCity *city = danger.predefinedCity;
@@ -255,11 +289,6 @@
                 NSArray *freeCities = [[PPGame instance] freeCities];
                 
                 if (freeCities && freeCities.count > 0) {
-//                    if (!wasDanger) {
-//                        [[SoundController sharedInstance] playEvent];
-//                        wasDanger = YES;
-//                    }
-                    
                     NSInteger randomIndex = arc4random() % freeCities.count;
                     PPCity *affectedCity = freeCities[randomIndex];
                     affectedCity.currentDanger = danger;
