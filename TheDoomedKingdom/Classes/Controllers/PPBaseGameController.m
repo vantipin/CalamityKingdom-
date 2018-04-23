@@ -93,12 +93,10 @@
             }];
         }
         
-        [[PPGame instance] parseGameWithUpdate:withAnimation completion:^(BOOL success, NSError *error) {
-            if (success) {
-                [SVProgressHUD showSuccessWithStatus:@"Игра успешно обновлена!"];
-            } else {
-                [SVProgressHUD showErrorWithStatus:[NSString stringWithFormat:@"ОЙ-ЕЙ-ЕЙ! Ошибка при обновлении: %@", error.localizedDescription]];
-            }
+        [[PPGame instance] parseGameWithUpdate:withAnimation progress:^(CGFloat progress) {
+//            <#code#>
+        } completion:^(BOOL success, NSError *error) {
+            [SVProgressHUD dismiss];
             
             [self checkAndRedraw];
             

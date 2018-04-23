@@ -14,6 +14,7 @@
 @class PPCity, PPEvent;
 
 typedef void (^PPGameCallback)(BOOL success, NSError *error);
+typedef void (^PPProgressCallback)(CGFloat progress);
 
 @interface PPGame : NSObject
 
@@ -37,7 +38,9 @@ typedef void (^PPGameCallback)(BOOL success, NSError *error);
 @property (nonatomic, readonly) NSInteger leftTimeHours; // Time left for trigger ending
 
 + (PPGame *)instance;
-- (void)parseGameWithUpdate:(BOOL)withUpdate completion:(PPGameCallback)completion;
+- (void)parseGameWithUpdate:(BOOL)withUpdate
+                   progress:(PPProgressCallback)progress
+                 completion:(PPGameCallback)completion;
 
 - (NSArray *)firedDangers; // Dangers for apply default damage
 

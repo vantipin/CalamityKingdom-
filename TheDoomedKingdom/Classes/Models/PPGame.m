@@ -82,12 +82,12 @@ static PPGame *instance = nil;
     return self;
 }
 
-- (void)updateGame:(PPGameCallback)completion {
+- (void)updateGame:(PPGameCallback)completion progress:(PPProgressCallback)progress {
     NSLog(@"START LOADING");
-    [self loadSheet:0 completion:completion];
+    [self loadSheet:0 progress:progress completion:completion];
 }
 
-- (void)loadGameOffline:(PPGameCallback)completion {
+- (void)loadGameOffline:(PPGameCallback)completion progress:(PPProgressCallback)progress {
     NSString *type = @"json";
     
     for (PPTable *table in self.sheets) {
@@ -133,6 +133,8 @@ static PPGame *instance = nil;
                 return;
             }
         }
+        
+        progress((CGFloat)([self.sheets indexOfObject:table] + 1) / (CGFloat)[self.sheets count]);
     }
     
     self.player = [PPPlayer new];
@@ -449,7 +451,7 @@ static PPGame *instance = nil;
     return status;
 }
 
-- (void)loadSheet:(NSInteger)sheetIndex completion:(PPGameCallback)completion {
+- (void)loadSheet:(NSInteger)sheetIndex progress:(PPProgressCallback)progress completion:(PPGameCallback)completion {
     if (sheetIndex >= self.sheets.count) {
         NSLog(@"Sheet index ERRROR!");
         return;
@@ -463,9 +465,9 @@ static PPGame *instance = nil;
     __block PPSheet loadedSheet = table.sheet;
     
     Class modelClass = [self modelClassBySheet:table.sheet];
-    NSString *status = [self updateStatusBySheet:table.sheet];
-
-    [SVProgressHUD showWithStatus:status];
+//    NSString *status = [self updateStatusBySheet:table.sheet];
+//
+//    [SVProgressHUD showWithStatus:status];
 
     
     [GoogleDocsServiceLayer objectsForWorksheetKey:table.worksheetId sheetId:table.sheetId modelClass:modelClass callback:^(NSArray *objects, NSError *error) {
@@ -479,6 +481,8 @@ static PPGame *instance = nil;
             [self configureObjects:filteredObjects forSheet:loadedSheet];
             [self saveObjects:filteredObjects forSheet:loadedSheet];
             
+            progress((CGFloat)(sheetIndex + 1) / (CGFloat)[self.sheets count]);
+            
             weakSelf.loadedSheets += loadedSheet;
             
             if (weakSelf.loadedSheets == PPSheetAll) {
@@ -490,7 +494,7 @@ static PPGame *instance = nil;
                     completion(YES, nil);
                 }
             } else {
-                [weakSelf loadSheet:sheetIndex + 1 completion:completion];
+                [weakSelf loadSheet:sheetIndex + 1 progress:progress completion:completion];
             }
         } else {
             NSLog(@"SHEET ERROR!!! = %@", error);
@@ -504,15 +508,17 @@ static PPGame *instance = nil;
     }];
 }
 
-- (void)parseGameWithUpdate:(BOOL)withUpdate completion:(PPGameCallback)completion {
+- (void)parseGameWithUpdate:(BOOL)withUpdate
+                   progress:(PPProgressCallback)progress
+                 completion:(PPGameCallback)completion {
     [self reinitGame];
     
     if (withUpdate) {
-        [SVProgressHUD show];
+//        [SVProgressHUD show];
         
-        [self updateGame:completion];
+        [self updateGame:completion progress:progress];
     } else {
-        [self loadGameOffline:completion];
+        [self loadGameOffline:completion progress:progress];
     }
 }
 
