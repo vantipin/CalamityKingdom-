@@ -31,6 +31,9 @@
 		75C1342D21F5E1D600AD796C /* Library.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341B21F5E1D500AD796C /* Library.json */; };
 		75C1342E21F5E1D600AD796C /* Archimags.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341C21F5E1D500AD796C /* Archimags.json */; };
 		75C1342F21F5E1D600AD796C /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341D21F5E1D500AD796C /* Cities.json */; };
+		75C1343121F5E3CD00AD796C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C1343021F5E3CD00AD796C /* Constants.swift */; };
+		75C1343321F5EA1F00AD796C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343221F5EA1F00AD796C /* QuartzCore.framework */; };
+		75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343421F5EA2400AD796C /* SpriteKit.framework */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +65,9 @@
 		75C1341B21F5E1D500AD796C /* Library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Library.json; sourceTree = "<group>"; };
 		75C1341C21F5E1D500AD796C /* Archimags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Archimags.json; sourceTree = "<group>"; };
 		75C1341D21F5E1D500AD796C /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
+		75C1343021F5E3CD00AD796C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		75C1343221F5EA1F00AD796C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		75C1343421F5EA2400AD796C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */,
+				75C1343321F5EA1F00AD796C /* QuartzCore.framework in Frameworks */,
 				E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -112,6 +120,7 @@
 				75C133F121F5DAD400AD796C /* Resources */,
 				75C133DD21F5BE4A00AD796C /* AppDelegate.swift */,
 				75C133F721F5DDFB00AD796C /* R.generated.swift */,
+				75C1343021F5E3CD00AD796C /* Constants.swift */,
 			);
 			path = Calamity;
 			sourceTree = "<group>";
@@ -196,6 +205,8 @@
 		864043F4B91793D9C87279DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				75C1343421F5EA2400AD796C /* SpriteKit.framework */,
+				75C1343221F5EA1F00AD796C /* QuartzCore.framework */,
 				DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */,
 			);
 			name = Frameworks;
@@ -370,6 +381,7 @@
 				75C133F421F5DAD400AD796C /* ViewController.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
 				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
+				75C1343121F5E3CD00AD796C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
