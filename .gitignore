@@ -19,3 +19,4 @@ xcuserdata
 *.nib
 *.orig
 Pods/
+*.generated.swift

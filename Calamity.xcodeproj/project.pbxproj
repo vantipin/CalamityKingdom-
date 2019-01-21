@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133DD21F5BE4A00AD796C /* AppDelegate.swift */; };
+		75C133F421F5DAD400AD796C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F021F5DAD400AD796C /* ViewController.swift */; };
+		75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F721F5DDFB00AD796C /* R.generated.swift */; };
+		75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C133FE21F5DE1A00AD796C /* Assets.xcassets */; };
+		75C1340721F5DE3500AD796C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */; };
+		75C1340821F5DE3500AD796C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340521F5DE3500AD796C /* Main.storyboard */; };
+		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.release.xcconfig"; sourceTree = "<group>"; };
+		75C133DA21F5BE4A00AD796C /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		75C133DD21F5BE4A00AD796C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		75C133F021F5DAD400AD796C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		75C133F321F5DAD400AD796C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		75C133F721F5DDFB00AD796C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		75C133FE21F5DE1A00AD796C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		75C1340421F5DE3500AD796C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		75C1340621F5DE3500AD796C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
+		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		75C133D721F5BE4A00AD796C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B03FF6AC3D5D705B54F03F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */,
+				3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		75C133D121F5BE4A00AD796C = {
+			isa = PBXGroup;
+			children = (
+				75C133DC21F5BE4A00AD796C /* Calamity */,
+				75C133DB21F5BE4A00AD796C /* Products */,
+				6B03FF6AC3D5D705B54F03F6 /* Pods */,
+				864043F4B91793D9C87279DB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		75C133DB21F5BE4A00AD796C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				75C133DA21F5BE4A00AD796C /* Calamity.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		75C133DC21F5BE4A00AD796C /* Calamity */ = {
+			isa = PBXGroup;
+			children = (
+				75C133EF21F5DAD400AD796C /* Controllers */,
+				75C133F121F5DAD400AD796C /* Resources */,
+				75C133DD21F5BE4A00AD796C /* AppDelegate.swift */,
+				75C133F721F5DDFB00AD796C /* R.generated.swift */,
+			);
+			path = Calamity;
+			sourceTree = "<group>";
+		};
+		75C133EF21F5DAD400AD796C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				75C133F021F5DAD400AD796C /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		75C133F121F5DAD400AD796C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75C133FE21F5DE1A00AD796C /* Assets.xcassets */,
+				75C133F221F5DAD400AD796C /* plists */,
+				75C1340221F5DE3500AD796C /* Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75C133F221F5DAD400AD796C /* plists */ = {
+			isa = PBXGroup;
+			children = (
+				75C133F321F5DAD400AD796C /* Info.plist */,
+			);
+			path = plists;
+			sourceTree = "<group>";
+		};
+		75C1340221F5DE3500AD796C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */,
+				75C1340521F5DE3500AD796C /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		864043F4B91793D9C87279DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		75C133D921F5BE4A00AD796C /* Calamity */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 75C133EC21F5BE4C00AD796C /* Build configuration list for PBXNativeTarget "Calamity" */;
+			buildPhases = (
+				A4DD1D5B4F3330BF098A2B80 /* [CP] Check Pods Manifest.lock */,
+				75C133F621F5DCDF00AD796C /* ShellScript */,
+				75C133D621F5BE4A00AD796C /* Sources */,
+				75C133D721F5BE4A00AD796C /* Frameworks */,
+				75C133D821F5BE4A00AD796C /* Resources */,
+				3D480CB6804C718DBB8B8D49 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Calamity;
+			productName = Calamity;
+			productReference = 75C133DA21F5BE4A00AD796C /* Calamity.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		75C133D221F5BE4A00AD796C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = GameJam;
+				TargetAttributes = {
+					75C133D921F5BE4A00AD796C = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = 75C133D521F5BE4A00AD796C /* Build configuration list for PBXProject "Calamity" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 75C133D121F5BE4A00AD796C;
+			productRefGroup = 75C133DB21F5BE4A00AD796C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				75C133D921F5BE4A00AD796C /* Calamity */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		75C133D821F5BE4A00AD796C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C1340821F5DE3500AD796C /* Main.storyboard in Resources */,
+				75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */,
+				75C1340721F5DE3500AD796C /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D480CB6804C718DBB8B8D49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Calamity/Pods-Calamity-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleDocsBackend/GoogleDocsBackend.framework",
+				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
+				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDocsBackend.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Calamity/Pods-Calamity-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		75C133F621F5DCDF00AD796C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
+		A4DD1D5B4F3330BF098A2B80 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Calamity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		75C133D621F5BE4A00AD796C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C133F421F5DAD400AD796C /* ViewController.swift in Sources */,
+				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
+				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C1340421F5DE3500AD796C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		75C1340521F5DE3500AD796C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				75C1340621F5DE3500AD796C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		75C133EA21F5BE4C00AD796C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		75C133EB21F5BE4C00AD796C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		75C133ED21F5BE4C00AD796C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Calamity/Resources/plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.calamity.kingdom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		75C133EE21F5BE4C00AD796C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "$(SRCROOT)/Calamity/Resources/plists/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.calamity.kingdom;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		75C133D521F5BE4A00AD796C /* Build configuration list for PBXProject "Calamity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C133EA21F5BE4C00AD796C /* Debug */,
+				75C133EB21F5BE4C00AD796C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		75C133EC21F5BE4C00AD796C /* Build configuration list for PBXNativeTarget "Calamity" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				75C133ED21F5BE4C00AD796C /* Debug */,
+				75C133EE21F5BE4C00AD796C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 75C133D221F5BE4A00AD796C /* Project object */;
+}
