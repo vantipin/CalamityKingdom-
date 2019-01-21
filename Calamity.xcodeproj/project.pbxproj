@@ -34,6 +34,8 @@
 		75C1343121F5E3CD00AD796C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C1343021F5E3CD00AD796C /* Constants.swift */; };
 		75C1343321F5EA1F00AD796C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343221F5EA1F00AD796C /* QuartzCore.framework */; };
 		75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343421F5EA2400AD796C /* SpriteKit.framework */; };
+		75C1343721F5ED0B00AD796C /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343621F5ED0B00AD796C /* Popups.storyboard */; };
+		75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343821F5ED2700AD796C /* IntroEnding.storyboard */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		75C1343021F5E3CD00AD796C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		75C1343221F5EA1F00AD796C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		75C1343421F5EA2400AD796C /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		75C1343621F5ED0B00AD796C /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
+		75C1343821F5ED2700AD796C /* IntroEnding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroEnding.storyboard; sourceTree = "<group>"; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,6 +163,8 @@
 			children = (
 				75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */,
 				75C1340521F5DE3500AD796C /* Main.storyboard */,
+				75C1343621F5ED0B00AD796C /* Popups.storyboard */,
+				75C1343821F5ED2700AD796C /* IntroEnding.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -278,10 +284,12 @@
 				75C1340821F5DE3500AD796C /* Main.storyboard in Resources */,
 				75C1342721F5E1D600AD796C /* Constants.json in Resources */,
 				75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */,
+				75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */,
 				75C1342D21F5E1D600AD796C /* Library.json in Resources */,
 				75C1342221F5E1D600AD796C /* time_ticking.wav in Resources */,
 				75C1341E21F5E1D600AD796C /* DomCasual.ttf in Resources */,
 				75C1342921F5E1D600AD796C /* Events.json in Resources */,
+				75C1343721F5ED0B00AD796C /* Popups.storyboard in Resources */,
 				75C1342A21F5E1D600AD796C /* Disasters.json in Resources */,
 				75C1342121F5E1D600AD796C /* battle_win.wav in Resources */,
 				75C1342421F5E1D600AD796C /* casting.m4a in Resources */,
