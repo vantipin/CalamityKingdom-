@@ -42,5 +42,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>DomCasual.ttf</string>
+		<string>Lasco-Regular.otf</string>
+		<string>Lasco-Bold.otf</string>
+	</array>
 </dict>
 </plist>

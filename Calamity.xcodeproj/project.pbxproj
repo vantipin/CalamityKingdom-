@@ -13,6 +13,24 @@
 		75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C133FE21F5DE1A00AD796C /* Assets.xcassets */; };
 		75C1340721F5DE3500AD796C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */; };
 		75C1340821F5DE3500AD796C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340521F5DE3500AD796C /* Main.storyboard */; };
+		75C1341E21F5E1D600AD796C /* DomCasual.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340A21F5E1D500AD796C /* DomCasual.ttf */; };
+		75C1341F21F5E1D600AD796C /* Lasco-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340B21F5E1D500AD796C /* Lasco-Regular.otf */; };
+		75C1342021F5E1D600AD796C /* Lasco-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340C21F5E1D500AD796C /* Lasco-Bold.otf */; };
+		75C1342121F5E1D600AD796C /* battle_win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340E21F5E1D500AD796C /* battle_win.wav */; };
+		75C1342221F5E1D600AD796C /* time_ticking.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340F21F5E1D500AD796C /* time_ticking.wav */; };
+		75C1342321F5E1D600AD796C /* battle_loosing.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341021F5E1D500AD796C /* battle_loosing.wav */; };
+		75C1342421F5E1D600AD796C /* casting.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341121F5E1D500AD796C /* casting.m4a */; };
+		75C1342521F5E1D600AD796C /* danger_happen.wav in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341221F5E1D500AD796C /* danger_happen.wav */; };
+		75C1342621F5E1D600AD796C /* main_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341321F5E1D500AD796C /* main_music.mp3 */; };
+		75C1342721F5E1D600AD796C /* Constants.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341521F5E1D500AD796C /* Constants.json */; };
+		75C1342821F5E1D600AD796C /* Replies.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341621F5E1D500AD796C /* Replies.json */; };
+		75C1342921F5E1D600AD796C /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341721F5E1D500AD796C /* Events.json */; };
+		75C1342A21F5E1D600AD796C /* Disasters.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341821F5E1D500AD796C /* Disasters.json */; };
+		75C1342B21F5E1D600AD796C /* EventReplies.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341921F5E1D500AD796C /* EventReplies.json */; };
+		75C1342C21F5E1D600AD796C /* Endings.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341A21F5E1D500AD796C /* Endings.json */; };
+		75C1342D21F5E1D600AD796C /* Library.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341B21F5E1D500AD796C /* Library.json */; };
+		75C1342E21F5E1D600AD796C /* Archimags.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341C21F5E1D500AD796C /* Archimags.json */; };
+		75C1342F21F5E1D600AD796C /* Cities.json in Resources */ = {isa = PBXBuildFile; fileRef = 75C1341D21F5E1D500AD796C /* Cities.json */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +44,24 @@
 		75C133FE21F5DE1A00AD796C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75C1340421F5DE3500AD796C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75C1340621F5DE3500AD796C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75C1340A21F5E1D500AD796C /* DomCasual.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DomCasual.ttf; sourceTree = "<group>"; };
+		75C1340B21F5E1D500AD796C /* Lasco-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lasco-Regular.otf"; sourceTree = "<group>"; };
+		75C1340C21F5E1D500AD796C /* Lasco-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lasco-Bold.otf"; sourceTree = "<group>"; };
+		75C1340E21F5E1D500AD796C /* battle_win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = battle_win.wav; sourceTree = "<group>"; };
+		75C1340F21F5E1D500AD796C /* time_ticking.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = time_ticking.wav; sourceTree = "<group>"; };
+		75C1341021F5E1D500AD796C /* battle_loosing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = battle_loosing.wav; sourceTree = "<group>"; };
+		75C1341121F5E1D500AD796C /* casting.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = casting.m4a; sourceTree = "<group>"; };
+		75C1341221F5E1D500AD796C /* danger_happen.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = danger_happen.wav; sourceTree = "<group>"; };
+		75C1341321F5E1D500AD796C /* main_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = main_music.mp3; sourceTree = "<group>"; };
+		75C1341521F5E1D500AD796C /* Constants.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Constants.json; sourceTree = "<group>"; };
+		75C1341621F5E1D500AD796C /* Replies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Replies.json; sourceTree = "<group>"; };
+		75C1341721F5E1D500AD796C /* Events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Events.json; sourceTree = "<group>"; };
+		75C1341821F5E1D500AD796C /* Disasters.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Disasters.json; sourceTree = "<group>"; };
+		75C1341921F5E1D500AD796C /* EventReplies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = EventReplies.json; sourceTree = "<group>"; };
+		75C1341A21F5E1D500AD796C /* Endings.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Endings.json; sourceTree = "<group>"; };
+		75C1341B21F5E1D500AD796C /* Library.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Library.json; sourceTree = "<group>"; };
+		75C1341C21F5E1D500AD796C /* Archimags.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Archimags.json; sourceTree = "<group>"; };
+		75C1341D21F5E1D500AD796C /* Cities.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Cities.json; sourceTree = "<group>"; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,7 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				75C133FE21F5DE1A00AD796C /* Assets.xcassets */,
+				75C1340921F5E1D500AD796C /* Fonts */,
+				75C1341421F5E1D500AD796C /* GameObjects */,
 				75C133F221F5DAD400AD796C /* plists */,
+				75C1340D21F5E1D500AD796C /* Sounds */,
 				75C1340221F5DE3500AD796C /* Views */,
 			);
 			path = Resources;
@@ -113,6 +152,45 @@
 				75C1340521F5DE3500AD796C /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		75C1340921F5E1D500AD796C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				75C1340A21F5E1D500AD796C /* DomCasual.ttf */,
+				75C1340B21F5E1D500AD796C /* Lasco-Regular.otf */,
+				75C1340C21F5E1D500AD796C /* Lasco-Bold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		75C1340D21F5E1D500AD796C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				75C1340E21F5E1D500AD796C /* battle_win.wav */,
+				75C1340F21F5E1D500AD796C /* time_ticking.wav */,
+				75C1341021F5E1D500AD796C /* battle_loosing.wav */,
+				75C1341121F5E1D500AD796C /* casting.m4a */,
+				75C1341221F5E1D500AD796C /* danger_happen.wav */,
+				75C1341321F5E1D500AD796C /* main_music.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		75C1341421F5E1D500AD796C /* GameObjects */ = {
+			isa = PBXGroup;
+			children = (
+				75C1341521F5E1D500AD796C /* Constants.json */,
+				75C1341621F5E1D500AD796C /* Replies.json */,
+				75C1341721F5E1D500AD796C /* Events.json */,
+				75C1341821F5E1D500AD796C /* Disasters.json */,
+				75C1341921F5E1D500AD796C /* EventReplies.json */,
+				75C1341A21F5E1D500AD796C /* Endings.json */,
+				75C1341B21F5E1D500AD796C /* Library.json */,
+				75C1341C21F5E1D500AD796C /* Archimags.json */,
+				75C1341D21F5E1D500AD796C /* Cities.json */,
+			);
+			path = GameObjects;
 			sourceTree = "<group>";
 		};
 		864043F4B91793D9C87279DB /* Frameworks */ = {
@@ -184,9 +262,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75C1342821F5E1D600AD796C /* Replies.json in Resources */,
+				75C1341F21F5E1D600AD796C /* Lasco-Regular.otf in Resources */,
 				75C1340821F5DE3500AD796C /* Main.storyboard in Resources */,
+				75C1342721F5E1D600AD796C /* Constants.json in Resources */,
 				75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */,
+				75C1342D21F5E1D600AD796C /* Library.json in Resources */,
+				75C1342221F5E1D600AD796C /* time_ticking.wav in Resources */,
+				75C1341E21F5E1D600AD796C /* DomCasual.ttf in Resources */,
+				75C1342921F5E1D600AD796C /* Events.json in Resources */,
+				75C1342A21F5E1D600AD796C /* Disasters.json in Resources */,
+				75C1342121F5E1D600AD796C /* battle_win.wav in Resources */,
+				75C1342421F5E1D600AD796C /* casting.m4a in Resources */,
+				75C1342321F5E1D600AD796C /* battle_loosing.wav in Resources */,
+				75C1342E21F5E1D600AD796C /* Archimags.json in Resources */,
+				75C1342B21F5E1D600AD796C /* EventReplies.json in Resources */,
+				75C1342F21F5E1D600AD796C /* Cities.json in Resources */,
 				75C1340721F5DE3500AD796C /* LaunchScreen.storyboard in Resources */,
+				75C1342C21F5E1D600AD796C /* Endings.json in Resources */,
+				75C1342621F5E1D600AD796C /* main_music.mp3 in Resources */,
+				75C1342521F5E1D600AD796C /* danger_happen.wav in Resources */,
+				75C1342021F5E1D600AD796C /* Lasco-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
