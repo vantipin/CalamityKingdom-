@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM6-6e-Ifw">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,32 +18,14 @@
         <!--Landing Controller-->
         <scene sceneID="jdN-ZD-VYr">
             <objects>
-                <viewController storyboardIdentifier="PPLandingControllerID" id="mM6-6e-Ifw" customClass="LandingController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPLandingControllerID" modalTransitionStyle="crossDissolve" id="mM6-6e-Ifw" customClass="LandingController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEm-eK-EcT">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="landingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-1f-49U">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-1f-49U">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qyM-vm-nbf">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.31" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                        <size key="value" width="0.0" height="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J">
                                 <rect key="frame" x="179" y="660" width="667" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -86,8 +68,15 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a6O-1f-49U" secondAttribute="trailing" id="CzO-Wl-uxP"/>
+                            <constraint firstItem="a6O-1f-49U" firstAttribute="top" secondItem="xu4-Co-vuH" secondAttribute="top" id="LaJ-97-7yi"/>
+                            <constraint firstAttribute="bottom" secondItem="a6O-1f-49U" secondAttribute="bottom" id="b41-2F-fbS"/>
+                            <constraint firstItem="a6O-1f-49U" firstAttribute="leading" secondItem="EEm-eK-EcT" secondAttribute="leading" id="zOX-Fk-uC7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="xu4-Co-vuH"/>
                     </view>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="progressBar" destination="UMI-Bc-C9J" id="cwZ-FA-x8q"/>
                         <outletCollection property="controlButtons" destination="Idp-5H-doa" collectionClass="NSMutableArray" id="B9j-g7-LxA"/>
@@ -97,14 +86,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I72-6k-7ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-448.4375" y="427.1484375"/>
+            <point key="canvasLocation" x="-448.52216748768473" y="426.39999999999998"/>
         </scene>
         <!--Base Game Controller-->
         <scene sceneID="TsX-cs-6xG">
             <objects>
                 <viewController storyboardIdentifier="PPBaseGameControllerID" id="EdJ-X8-34u" customClass="BaseGameController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edv-2c-G2r">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameField" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-O1-TVK">
@@ -1129,23 +1118,6 @@
                                     <action selector="updatePressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="rBh-iT-0Wu"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ltR-Wp-0fp">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.31" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
-                                        <real key="value" value="0.20000000000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
-                                        <size key="value" width="0.0" height="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4Sp-SO-6hW"/>

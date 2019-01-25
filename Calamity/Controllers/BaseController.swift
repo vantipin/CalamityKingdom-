@@ -9,7 +9,6 @@
 import UIKit
 
 class BaseController: UIViewController {
-    
     var skipUpdates = false
 
     override func viewDidLoad() {
@@ -18,7 +17,14 @@ class BaseController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return false
+    }
+    
     /*
     // MARK: - Navigation
 
