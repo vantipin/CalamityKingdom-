@@ -7,8 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75B7229321FB22370004F75B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229221FB22370004F75B /* Settings.swift */; };
+		75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229421FB25A60004F75B /* GoogleBaseModel.swift */; };
+		75B7229A21FB2A760004F75B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229921FB2A760004F75B /* BaseController.swift */; };
+		75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229B21FB2A8E0004F75B /* CityInfoController.swift */; };
+		75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229E21FB2AD00004F75B /* EndingsViewController.swift */; };
+		75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722A021FB2ADF0004F75B /* IntroViewController.swift */; };
+		75B722A821FB2F4D0004F75B /* BaseGameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722A721FB2F4D0004F75B /* BaseGameController.swift */; };
+		75B722AA21FB2F790004F75B /* LandingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722A921FB2F790004F75B /* LandingController.swift */; };
+		75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722AB21FB2FB10004F75B /* CityDangerController.swift */; };
+		75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722AD21FB2FD30004F75B /* DangerProgressController.swift */; };
+		75B722B021FB2FF20004F75B /* DangerResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722AF21FB2FF20004F75B /* DangerResultController.swift */; };
+		75B722B221FB307D0004F75B /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B121FB307D0004F75B /* LibraryController.swift */; };
+		75B722B421FB30B10004F75B /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B321FB30B10004F75B /* EventController.swift */; };
+		75B722B621FB30D80004F75B /* EventResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B521FB30D80004F75B /* EventResultController.swift */; };
 		75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133DD21F5BE4A00AD796C /* AppDelegate.swift */; };
-		75C133F421F5DAD400AD796C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F021F5DAD400AD796C /* ViewController.swift */; };
 		75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F721F5DDFB00AD796C /* R.generated.swift */; };
 		75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C133FE21F5DE1A00AD796C /* Assets.xcassets */; };
 		75C1340721F5DE3500AD796C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1340321F5DE3500AD796C /* LaunchScreen.storyboard */; };
@@ -41,9 +54,22 @@
 
 /* Begin PBXFileReference section */
 		3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.release.xcconfig"; sourceTree = "<group>"; };
+		75B7229221FB22370004F75B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		75B7229421FB25A60004F75B /* GoogleBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
+		75B7229921FB2A760004F75B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
+		75B7229B21FB2A8E0004F75B /* CityInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoController.swift; sourceTree = "<group>"; };
+		75B7229E21FB2AD00004F75B /* EndingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingsViewController.swift; sourceTree = "<group>"; };
+		75B722A021FB2ADF0004F75B /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		75B722A721FB2F4D0004F75B /* BaseGameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseGameController.swift; sourceTree = "<group>"; };
+		75B722A921FB2F790004F75B /* LandingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingController.swift; sourceTree = "<group>"; };
+		75B722AB21FB2FB10004F75B /* CityDangerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDangerController.swift; sourceTree = "<group>"; };
+		75B722AD21FB2FD30004F75B /* DangerProgressController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerProgressController.swift; sourceTree = "<group>"; };
+		75B722AF21FB2FF20004F75B /* DangerResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerResultController.swift; sourceTree = "<group>"; };
+		75B722B121FB307D0004F75B /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
+		75B722B321FB30B10004F75B /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
+		75B722B521FB30D80004F75B /* EventResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResultController.swift; sourceTree = "<group>"; };
 		75C133DA21F5BE4A00AD796C /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C133DD21F5BE4A00AD796C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		75C133F021F5DAD400AD796C /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		75C133F321F5DAD400AD796C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75C133F721F5DDFB00AD796C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		75C133FE21F5DE1A00AD796C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,6 +125,82 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		75B7228F21FAFA720004F75B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75B7229421FB25A60004F75B /* GoogleBaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		75B7229121FB22370004F75B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				75B7229221FB22370004F75B /* Settings.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		75B7229821FB2A520004F75B /* CityInfo */ = {
+			isa = PBXGroup;
+			children = (
+				75B7229B21FB2A8E0004F75B /* CityInfoController.swift */,
+			);
+			path = CityInfo;
+			sourceTree = "<group>";
+		};
+		75B7229D21FB2AC10004F75B /* IntroEnding */ = {
+			isa = PBXGroup;
+			children = (
+				75B7229E21FB2AD00004F75B /* EndingsViewController.swift */,
+				75B722A021FB2ADF0004F75B /* IntroViewController.swift */,
+			);
+			path = IntroEnding;
+			sourceTree = "<group>";
+		};
+		75B722A221FB2F360004F75B /* BaseGame */ = {
+			isa = PBXGroup;
+			children = (
+				75B722A721FB2F4D0004F75B /* BaseGameController.swift */,
+			);
+			path = BaseGame;
+			sourceTree = "<group>";
+		};
+		75B722A321FB2F360004F75B /* Danger */ = {
+			isa = PBXGroup;
+			children = (
+				75B722AB21FB2FB10004F75B /* CityDangerController.swift */,
+				75B722AD21FB2FD30004F75B /* DangerProgressController.swift */,
+				75B722AF21FB2FF20004F75B /* DangerResultController.swift */,
+			);
+			path = Danger;
+			sourceTree = "<group>";
+		};
+		75B722A421FB2F360004F75B /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				75B722A921FB2F790004F75B /* LandingController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		75B722A521FB2F370004F75B /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				75B722B321FB30B10004F75B /* EventController.swift */,
+				75B722B521FB30D80004F75B /* EventResultController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		75B722A621FB2F370004F75B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				75B722B121FB307D0004F75B /* LibraryController.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		75C133D121F5BE4A00AD796C = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +222,8 @@
 		75C133DC21F5BE4A00AD796C /* Calamity */ = {
 			isa = PBXGroup;
 			children = (
+				75B7229121FB22370004F75B /* Managers */,
+				75B7228F21FAFA720004F75B /* Models */,
 				75C133EF21F5DAD400AD796C /* Controllers */,
 				75C133F121F5DAD400AD796C /* Resources */,
 				75C133DD21F5BE4A00AD796C /* AppDelegate.swift */,
@@ -132,7 +236,14 @@
 		75C133EF21F5DAD400AD796C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				75C133F021F5DAD400AD796C /* ViewController.swift */,
+				75B722A221FB2F360004F75B /* BaseGame */,
+				75B722A321FB2F360004F75B /* Danger */,
+				75B722A521FB2F370004F75B /* Event */,
+				75B722A421FB2F360004F75B /* Landing */,
+				75B722A621FB2F370004F75B /* Library */,
+				75B7229D21FB2AC10004F75B /* IntroEnding */,
+				75B7229821FB2A520004F75B /* CityInfo */,
+				75B7229921FB2A760004F75B /* BaseController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -182,12 +293,12 @@
 		75C1340D21F5E1D500AD796C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				75C1340E21F5E1D500AD796C /* battle_win.wav */,
-				75C1340F21F5E1D500AD796C /* time_ticking.wav */,
 				75C1341021F5E1D500AD796C /* battle_loosing.wav */,
+				75C1340E21F5E1D500AD796C /* battle_win.wav */,
 				75C1341121F5E1D500AD796C /* casting.m4a */,
 				75C1341221F5E1D500AD796C /* danger_happen.wav */,
 				75C1341321F5E1D500AD796C /* main_music.mp3 */,
+				75C1340F21F5E1D500AD796C /* time_ticking.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -386,10 +497,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75C133F421F5DAD400AD796C /* ViewController.swift in Sources */,
+				75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */,
+				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
+				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
+				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
+				75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */,
+				75B722B421FB30B10004F75B /* EventController.swift in Sources */,
+				75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */,
+				75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */,
+				75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */,
 				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
 				75C1343121F5E3CD00AD796C /* Constants.swift in Sources */,
+				75B722AA21FB2F790004F75B /* LandingController.swift in Sources */,
+				75B722B021FB2FF20004F75B /* DangerResultController.swift in Sources */,
+				75B722A821FB2F4D0004F75B /* BaseGameController.swift in Sources */,
+				75B722B621FB30D80004F75B /* EventResultController.swift in Sources */,
+				75B7229321FB22370004F75B /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,7 +663,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Calamity/Resources/plists/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -559,7 +683,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/Calamity/Resources/plists/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

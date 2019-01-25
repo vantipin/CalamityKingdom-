@@ -13,7 +13,7 @@
         <!--Endings View Controller-->
         <scene sceneID="EHn-PH-nJ3">
             <objects>
-                <viewController storyboardIdentifier="EndingStoryId" id="CAW-Bb-g5i" customClass="PPEndingsViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EndingStoryId" id="CAW-Bb-g5i" customClass="EndingsViewController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T95-5Z-Wxl">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,7 +68,7 @@
         <!--Intro View Controller-->
         <scene sceneID="NmW-UO-W0x">
             <objects>
-                <viewController storyboardIdentifier="PPIntroViewControllerID" id="gAC-pT-Lau" customClass="PPIntroViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPIntroViewControllerID" id="gAC-pT-Lau" customClass="IntroViewController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PsK-8x-RdS">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

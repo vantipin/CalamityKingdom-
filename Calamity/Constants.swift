@@ -46,6 +46,14 @@ struct Sheet: OptionSet {
     static let all: Sheet = [.cities, .disasters, .replies, .endings, .archimags, .library, .events, .eventReplies, .constants]
 }
 
+enum GameSound: String {
+    case battleLoosing = "battle_loosing.wav"
+    case battleWin = "battle_win.wav"
+    case timeTicking = "time_ticking.wav"
+    case casting = "casting.m4a"
+    case dangerHappen = "danger_happen.wav"
+}
+
 enum AbilityType: Int {
     case telekinesis = 1
     case appeal

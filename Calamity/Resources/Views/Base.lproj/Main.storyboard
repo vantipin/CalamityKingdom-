@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM6-6e-Ifw">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -18,7 +18,7 @@
         <!--Landing Controller-->
         <scene sceneID="jdN-ZD-VYr">
             <objects>
-                <viewController storyboardIdentifier="PPLandingControllerID" id="mM6-6e-Ifw" customClass="PPLandingController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPLandingControllerID" id="mM6-6e-Ifw" customClass="LandingController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEm-eK-EcT">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,7 +44,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J" customClass="PPProgressBarView">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J">
                                 <rect key="frame" x="179" y="660" width="667" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,7 +61,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="СТАРТ"/>
                                 <connections>
-                                    <action selector="startPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Xsk-6i-3KK"/>
+                                    <action selector="startPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="QNZ-Iz-wsT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-jT-68o">
@@ -71,7 +71,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Настройки"/>
                                 <connections>
-                                    <action selector="optionsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="3cL-YV-M0a"/>
+                                    <action selector="settingsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Vhb-cB-psP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-Eg-MFg">
@@ -81,7 +81,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Титры"/>
                                 <connections>
-                                    <action selector="creditsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Qcn-ly-rsY"/>
+                                    <action selector="creditsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Ey9-MG-H7c"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,10 +89,10 @@
                         <viewLayoutGuide key="safeArea" id="xu4-Co-vuH"/>
                     </view>
                     <connections>
-                        <outlet property="progressBar" destination="UMI-Bc-C9J" id="j4B-09-1id"/>
-                        <outletCollection property="controlButtons" destination="Idp-5H-doa" id="B9j-g7-LxA"/>
-                        <outletCollection property="controlButtons" destination="PBe-jT-68o" id="L00-6T-xkL"/>
-                        <outletCollection property="controlButtons" destination="q9N-Eg-MFg" id="BLP-IP-kJi"/>
+                        <outlet property="progressBar" destination="UMI-Bc-C9J" id="cwZ-FA-x8q"/>
+                        <outletCollection property="controlButtons" destination="Idp-5H-doa" collectionClass="NSMutableArray" id="B9j-g7-LxA"/>
+                        <outletCollection property="controlButtons" destination="PBe-jT-68o" collectionClass="NSMutableArray" id="L00-6T-xkL"/>
+                        <outletCollection property="controlButtons" destination="q9N-Eg-MFg" collectionClass="NSMutableArray" id="BLP-IP-kJi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I72-6k-7ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -102,7 +102,7 @@
         <!--Base Game Controller-->
         <scene sceneID="TsX-cs-6xG">
             <objects>
-                <viewController storyboardIdentifier="PPBaseGameControllerID" id="EdJ-X8-34u" customClass="PPBaseGameController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PPBaseGameControllerID" id="EdJ-X8-34u" customClass="BaseGameController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edv-2c-G2r">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
