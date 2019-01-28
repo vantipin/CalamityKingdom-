@@ -6,7 +6,9 @@
 //  Copyright © 2019 GameJam. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+let isCompact: Bool = UIApplication.shared.keyWindow!.rootViewController!.view!.traitCollection.horizontalSizeClass == .compact
 
 struct ContentUrl {
     static let disasterSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/od6")

@@ -21,6 +21,9 @@
 		75B722B221FB307D0004F75B /* LibraryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B121FB307D0004F75B /* LibraryController.swift */; };
 		75B722B421FB30B10004F75B /* EventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B321FB30B10004F75B /* EventController.swift */; };
 		75B722B621FB30D80004F75B /* EventResultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B521FB30D80004F75B /* EventResultController.swift */; };
+		75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B821FF3BBE0004F75B /* SettingsController.swift */; };
+		75B722BB21FF3BF10004F75B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B722BA21FF3BF10004F75B /* Settings.storyboard */; };
+		75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722BD21FF410B0004F75B /* SettingsCell.swift */; };
 		75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133DD21F5BE4A00AD796C /* AppDelegate.swift */; };
 		75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F721F5DDFB00AD796C /* R.generated.swift */; };
 		75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C133FE21F5DE1A00AD796C /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		75B722B121FB307D0004F75B /* LibraryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryController.swift; sourceTree = "<group>"; };
 		75B722B321FB30B10004F75B /* EventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventController.swift; sourceTree = "<group>"; };
 		75B722B521FB30D80004F75B /* EventResultController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventResultController.swift; sourceTree = "<group>"; };
+		75B722B821FF3BBE0004F75B /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		75B722BA21FF3BF10004F75B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		75B722BD21FF410B0004F75B /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		75C133DA21F5BE4A00AD796C /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C133DD21F5BE4A00AD796C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C133F321F5DAD400AD796C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -201,6 +207,23 @@
 			path = Library;
 			sourceTree = "<group>";
 		};
+		75B722B721FF3BB00004F75B /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				75B722BC21FF3FF30004F75B /* Cells */,
+				75B722B821FF3BBE0004F75B /* SettingsController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		75B722BC21FF3FF30004F75B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				75B722BD21FF410B0004F75B /* SettingsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		75C133D121F5BE4A00AD796C = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +259,7 @@
 		75C133EF21F5DAD400AD796C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				75B722B721FF3BB00004F75B /* Settings */,
 				75B722A221FB2F360004F75B /* BaseGame */,
 				75B722A321FB2F360004F75B /* Danger */,
 				75B722A521FB2F370004F75B /* Event */,
@@ -276,6 +300,7 @@
 				75C1340521F5DE3500AD796C /* Main.storyboard */,
 				75C1343621F5ED0B00AD796C /* Popups.storyboard */,
 				75C1343821F5ED2700AD796C /* IntroEnding.storyboard */,
+				75B722BA21FF3BF10004F75B /* Settings.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +418,7 @@
 				75C1342821F5E1D600AD796C /* Replies.json in Resources */,
 				75C1341F21F5E1D600AD796C /* Lasco-Regular.otf in Resources */,
 				75C1340821F5DE3500AD796C /* Main.storyboard in Resources */,
+				75B722BB21FF3BF10004F75B /* Settings.storyboard in Resources */,
 				75C1342721F5E1D600AD796C /* Constants.json in Resources */,
 				75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */,
 				75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */,
@@ -497,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */,
 				75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */,
 				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
 				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
@@ -512,6 +539,7 @@
 				75B722AA21FB2F790004F75B /* LandingController.swift in Sources */,
 				75B722B021FB2FF20004F75B /* DangerResultController.swift in Sources */,
 				75B722A821FB2F4D0004F75B /* BaseGameController.swift in Sources */,
+				75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */,
 				75B722B621FB30D80004F75B /* EventResultController.swift in Sources */,
 				75B7229321FB22370004F75B /* Settings.swift in Sources */,
 			);
