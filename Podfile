@@ -7,4 +7,5 @@ target 'Calamity' do
   pod "GoogleDocsBackend", :git => "https://github.com/pyro2927/GoogleDocsBackend.git"
   pod 'SVProgressHUD'
   pod 'R.swift'
+  pod "GTProgressBar"
 end
