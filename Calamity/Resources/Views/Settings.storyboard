@@ -47,7 +47,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuV-3g-hYc">
-                                                            <rect key="frame" x="0.0" y="49" width="220" height="1"/>
+                                                            <rect key="frame" x="0.0" y="49" width="260" height="1"/>
                                                             <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="bcO-Tv-XPk"/>
@@ -73,7 +73,10 @@
                                                             </variation>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-wc-i0X">
-                                                            <rect key="frame" x="158" y="9.6666666666666643" width="51" height="31"/>
+                                                            <rect key="frame" x="198" y="9.6666666666666643" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="switchActionWithSender:" destination="agb-Ww-vRV" eventType="valueChanged" id="2uh-j2-PtR"/>
+                                                            </connections>
                                                         </switch>
                                                     </subviews>
                                                 </view>
@@ -91,6 +94,7 @@
                                                 <connections>
                                                     <outlet property="iconImageView" destination="Dle-7f-a25" id="9KC-ph-tlI"/>
                                                     <outlet property="lineView" destination="xuV-3g-hYc" id="0Fs-qc-MYu"/>
+                                                    <outlet property="switchControl" destination="Xnq-wc-i0X" id="LCy-CG-VxQ"/>
                                                     <outlet property="titleLabel" destination="9V3-Xp-3Rh" id="ysO-2e-qmF"/>
                                                 </connections>
                                             </collectionViewCell>

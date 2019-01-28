@@ -61,7 +61,9 @@ class LandingController: BaseController {
     }
 
     @IBAction func settingsPressed(_ sender: Any) {
-        
+        if let controller = R.storyboard.settings.settingsController() {
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     @IBAction func creditsPressed(_ sender: Any) {
