@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-typealias GoogleDocsAPICompletionBlock = (_ success:Bool, _ result: [AnyHashable : Any]?, _ error: Error?) -> Void
+typealias GoogleDocsAPICompletionBlock = (_ success: Bool, _ result: [AnyHashable : Any]?, _ error: Error?) -> Void
 
 class GoogleDocsSpreadsheetAPIClient {
     let baseUrl = "https://spreadsheets.google.com/"

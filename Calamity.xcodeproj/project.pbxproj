@@ -11,7 +11,6 @@
 		757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */; };
 		757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */; };
 		75B7229321FB22370004F75B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229221FB22370004F75B /* Settings.swift */; };
-		75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229421FB25A60004F75B /* GoogleBaseModel.swift */; };
 		75B7229A21FB2A760004F75B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229921FB2A760004F75B /* BaseController.swift */; };
 		75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229B21FB2A8E0004F75B /* CityInfoController.swift */; };
 		75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229E21FB2AD00004F75B /* EndingsViewController.swift */; };
@@ -57,6 +56,15 @@
 		75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343421F5EA2400AD796C /* SpriteKit.framework */; };
 		75C1343721F5ED0B00AD796C /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343621F5ED0B00AD796C /* Popups.storyboard */; };
 		75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343821F5ED2700AD796C /* IntroEnding.storyboard */; };
+		D5630F6B2200FE0F003565C1 /* GameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6A2200FE0F003565C1 /* GameConstant.swift */; };
+		D5630F6F220102A7003565C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6E220102A7003565C1 /* Game.swift */; };
+		D5630F7122010632003565C1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7022010632003565C1 /* Player.swift */; };
+		D5630F7922010C8A003565C1 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7522010C8A003565C1 /* Constant.swift */; };
+		D5630F7A22010C8A003565C1 /* Danger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7622010C8A003565C1 /* Danger.swift */; };
+		D5630F7B22010C8A003565C1 /* Ability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7722010C8A003565C1 /* Ability.swift */; };
+		D5630F7C22010C8A003565C1 /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */; };
+		D5630F7E22010CA1003565C1 /* DangerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7D22010CA1003565C1 /* DangerResult.swift */; };
+		D5630F8022011072003565C1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7F22011072003565C1 /* City.swift */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +74,6 @@
 		757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsServiceLayer.swift; sourceTree = "<group>"; };
 		757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Helper.swift"; sourceTree = "<group>"; };
 		75B7229221FB22370004F75B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		75B7229421FB25A60004F75B /* GoogleBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
 		75B7229921FB2A760004F75B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		75B7229B21FB2A8E0004F75B /* CityInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoController.swift; sourceTree = "<group>"; };
 		75B7229E21FB2AD00004F75B /* EndingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingsViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +122,15 @@
 		75C1343621F5ED0B00AD796C /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
 		75C1343821F5ED2700AD796C /* IntroEnding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroEnding.storyboard; sourceTree = "<group>"; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
+		D5630F6A2200FE0F003565C1 /* GameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstant.swift; sourceTree = "<group>"; };
+		D5630F6E220102A7003565C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		D5630F7022010632003565C1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		D5630F7522010C8A003565C1 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D5630F7622010C8A003565C1 /* Danger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Danger.swift; sourceTree = "<group>"; };
+		D5630F7722010C8A003565C1 /* Ability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ability.swift; sourceTree = "<group>"; };
+		D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
+		D5630F7D22010CA1003565C1 /* DangerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerResult.swift; sourceTree = "<group>"; };
+		D5630F7F22011072003565C1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -152,7 +168,11 @@
 		75B7228F21FAFA720004F75B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				75B7229421FB25A60004F75B /* GoogleBaseModel.swift */,
+				D5630F7422010C8A003565C1 /* Google */,
+				D5630F6A2200FE0F003565C1 /* GameConstant.swift */,
+				D5630F6E220102A7003565C1 /* Game.swift */,
+				D5630F7022010632003565C1 /* Player.swift */,
+				D5630F7D22010CA1003565C1 /* DangerResult.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -401,6 +421,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D5630F7422010C8A003565C1 /* Google */ = {
+			isa = PBXGroup;
+			children = (
+				D5630F7522010C8A003565C1 /* Constant.swift */,
+				D5630F7F22011072003565C1 /* City.swift */,
+				D5630F7622010C8A003565C1 /* Danger.swift */,
+				D5630F7722010C8A003565C1 /* Ability.swift */,
+				D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */,
+			);
+			path = Google;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -560,16 +592,20 @@
 			files = (
 				757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */,
 				75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */,
-				75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */,
 				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
 				75B722C32200482D0004F75B /* GDBModel.swift in Sources */,
+				D5630F7A22010C8A003565C1 /* Danger.swift in Sources */,
+				D5630F6B2200FE0F003565C1 /* GameConstant.swift in Sources */,
 				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
+				D5630F7C22010C8A003565C1 /* GoogleBaseModel.swift in Sources */,
 				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,
 				75B722C522004C150004F75B /* GDBSheet.swift in Sources */,
 				757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */,
+				D5630F7122010632003565C1 /* Player.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
 				75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */,
 				75B722B421FB30B10004F75B /* EventController.swift in Sources */,
+				D5630F7B22010C8A003565C1 /* Ability.swift in Sources */,
 				75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */,
 				75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */,
 				757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */,
@@ -577,10 +613,14 @@
 				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
 				75C1343121F5E3CD00AD796C /* Constants.swift in Sources */,
 				75B722AA21FB2F790004F75B /* LandingController.swift in Sources */,
+				D5630F7922010C8A003565C1 /* Constant.swift in Sources */,
 				75B722B021FB2FF20004F75B /* DangerResultController.swift in Sources */,
+				D5630F6F220102A7003565C1 /* Game.swift in Sources */,
 				75B722A821FB2F4D0004F75B /* BaseGameController.swift in Sources */,
 				75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */,
 				75B722B621FB30D80004F75B /* EventResultController.swift in Sources */,
+				D5630F7E22010CA1003565C1 /* DangerResult.swift in Sources */,
+				D5630F8022011072003565C1 /* City.swift in Sources */,
 				75B7229321FB22370004F75B /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

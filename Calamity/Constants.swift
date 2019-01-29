@@ -10,6 +10,8 @@ import UIKit
 
 let isCompact: Bool = UIApplication.shared.keyWindow!.rootViewController!.view!.traitCollection.horizontalSizeClass == .compact
 
+let UndefValue = -1
+
 struct ContentUrl {
     static let disasterSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/od6")
     static let repliesSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/o1e9lp4")
@@ -22,7 +24,7 @@ struct ContentUrl {
     static let constantsSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oj5lh0f")
 }
 
-struct Ability {
+struct Variable {
     static let minValue = 0
     static let maxValue = 100
 }
@@ -62,6 +64,18 @@ enum AbilityType: Int {
     case hypnosis
     case chaos
     case nobody
+}
+
+enum DangerType: Int {
+    case disaster = 1
+    case monsters
+    case plague
+    case curse
+}
+
+enum GameEnding: Int {
+    case won = 1
+    case defeat = 3
 }
 
 enum ParseKey: String {

@@ -54,9 +54,9 @@ extension SettingsController: UICollectionViewDataSource {
     func titleAtOption(option: Setting) -> String {
         switch option {
         case .music:
-            return "Music"
+            return "Музыка"
         case .sound:
-            return "Sound"
+            return "Звуки"
         }
     }
     

@@ -9,7 +9,7 @@
 import UIKit
 import Mantle
 
-typealias GoogleDocsServiceLayerCompletionBlock = (_ objects:[MTLModel]?, _ error: Error?) -> Void
+typealias GoogleDocsServiceLayerCompletionBlock = (_ objects: [MTLModel]?, _ error: Error?) -> Void
 
 class GoogleDocsServiceLayer {
     static var cellRegex: NSRegularExpression {
