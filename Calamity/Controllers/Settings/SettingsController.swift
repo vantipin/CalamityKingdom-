@@ -39,7 +39,7 @@ class SettingsController: BaseController {
         
         switch option {
         case .music:
-            Settings.shared.isSoundsOn = sender.isOn
+            Settings.shared.isMusicOn = sender.isOn
         case .sound:
             Settings.shared.isSoundsOn = sender.isOn
         }
