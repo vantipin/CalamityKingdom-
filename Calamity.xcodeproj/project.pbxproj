@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */; };
 		757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */; };
+		757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */; };
 		75B7229321FB22370004F75B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229221FB22370004F75B /* Settings.swift */; };
 		75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229421FB25A60004F75B /* GoogleBaseModel.swift */; };
 		75B7229A21FB2A760004F75B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229921FB2A760004F75B /* BaseController.swift */; };
@@ -63,6 +64,7 @@
 		3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.release.xcconfig"; sourceTree = "<group>"; };
 		757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsSpreadsheetAPIClient.swift; sourceTree = "<group>"; };
 		757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsServiceLayer.swift; sourceTree = "<group>"; };
+		757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Helper.swift"; sourceTree = "<group>"; };
 		75B7229221FB22370004F75B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		75B7229421FB25A60004F75B /* GoogleBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
 		75B7229921FB2A760004F75B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -137,6 +139,14 @@
 				3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		757DDA372200815C002B29D5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		75B7228F21FAFA720004F75B /* Models */ = {
@@ -281,6 +291,7 @@
 		75C133DC21F5BE4A00AD796C /* Calamity */ = {
 			isa = PBXGroup;
 			children = (
+				757DDA372200815C002B29D5 /* Helpers */,
 				75B7229121FB22370004F75B /* Managers */,
 				75B7228F21FAFA720004F75B /* Models */,
 				75C133EF21F5DAD400AD796C /* Controllers */,
@@ -555,6 +566,7 @@
 				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
 				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,
 				75B722C522004C150004F75B /* GDBSheet.swift in Sources */,
+				757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
 				75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */,
 				75B722B421FB30B10004F75B /* EventController.swift in Sources */,
