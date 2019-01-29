@@ -14,11 +14,18 @@ class SettingsController: BaseController {
         case sound
     }
     
+    let optionsCount = 2
     
     @IBOutlet weak var itemsCollection: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     // MARK: - Actions
@@ -41,7 +48,7 @@ class SettingsController: BaseController {
 
 extension SettingsController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return optionsCount
     }
     
     func titleAtOption(option: Setting) -> String {
@@ -72,7 +79,7 @@ extension SettingsController: UICollectionViewDataSource {
         cell.titleLabel.text = self.titleAtOption(option: option)
         cell.iconImageView.image = self.iconImageAtOption(option: option)
         cell.switchControl.tag = indexPath.row
-        cell.lineView.isHidden = indexPath.row == 1
+        cell.lineView.isHidden = indexPath.row == optionsCount - 1
         
         if option == .music {
             cell.switchControl.isOn = Settings.shared.isMusicOn

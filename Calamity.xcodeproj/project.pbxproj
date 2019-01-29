@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */; };
+		757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */; };
 		75B7229321FB22370004F75B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229221FB22370004F75B /* Settings.swift */; };
 		75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229421FB25A60004F75B /* GoogleBaseModel.swift */; };
 		75B7229A21FB2A760004F75B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229921FB2A760004F75B /* BaseController.swift */; };
@@ -24,6 +26,8 @@
 		75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722B821FF3BBE0004F75B /* SettingsController.swift */; };
 		75B722BB21FF3BF10004F75B /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75B722BA21FF3BF10004F75B /* Settings.storyboard */; };
 		75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722BD21FF410B0004F75B /* SettingsCell.swift */; };
+		75B722C32200482D0004F75B /* GDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722C22200482D0004F75B /* GDBModel.swift */; };
+		75B722C522004C150004F75B /* GDBSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B722C422004C150004F75B /* GDBSheet.swift */; };
 		75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133DD21F5BE4A00AD796C /* AppDelegate.swift */; };
 		75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75C133F721F5DDFB00AD796C /* R.generated.swift */; };
 		75C1340121F5DE1B00AD796C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75C133FE21F5DE1A00AD796C /* Assets.xcassets */; };
@@ -57,6 +61,8 @@
 
 /* Begin PBXFileReference section */
 		3FCF4EB8DF017CE5D6E1736C /* Pods-Calamity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.release.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.release.xcconfig"; sourceTree = "<group>"; };
+		757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsSpreadsheetAPIClient.swift; sourceTree = "<group>"; };
+		757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsServiceLayer.swift; sourceTree = "<group>"; };
 		75B7229221FB22370004F75B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		75B7229421FB25A60004F75B /* GoogleBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
 		75B7229921FB2A760004F75B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		75B722B821FF3BBE0004F75B /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		75B722BA21FF3BF10004F75B /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		75B722BD21FF410B0004F75B /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		75B722C22200482D0004F75B /* GDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBModel.swift; sourceTree = "<group>"; };
+		75B722C422004C150004F75B /* GDBSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDBSheet.swift; sourceTree = "<group>"; };
 		75C133DA21F5BE4A00AD796C /* Calamity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calamity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75C133DD21F5BE4A00AD796C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75C133F321F5DAD400AD796C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -142,6 +150,7 @@
 		75B7229121FB22370004F75B /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				75B722BF220047BD0004F75B /* GoogleDocs */,
 				75B7229221FB22370004F75B /* Settings.swift */,
 			);
 			path = Managers;
@@ -222,6 +231,33 @@
 				75B722BD21FF410B0004F75B /* SettingsCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		75B722BF220047BD0004F75B /* GoogleDocs */ = {
+			isa = PBXGroup;
+			children = (
+				75B722C12200480C0004F75B /* Models */,
+				75B722C02200480C0004F75B /* Services */,
+			);
+			path = GoogleDocs;
+			sourceTree = "<group>";
+		};
+		75B722C02200480C0004F75B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */,
+				757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		75B722C12200480C0004F75B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				75B722C22200482D0004F75B /* GDBModel.swift */,
+				75B722C422004C150004F75B /* GDBSheet.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		75C133D121F5BE4A00AD796C = {
@@ -452,18 +488,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Calamity/Pods-Calamity-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDocsBackend/GoogleDocsBackend.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTProgressBar.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDocsBackend.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
@@ -482,7 +516,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -513,16 +547,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */,
 				75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */,
 				75B7229521FB25A60004F75B /* GoogleBaseModel.swift in Sources */,
 				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
+				75B722C32200482D0004F75B /* GDBModel.swift in Sources */,
 				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
 				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,
+				75B722C522004C150004F75B /* GDBSheet.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
 				75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */,
 				75B722B421FB30B10004F75B /* EventController.swift in Sources */,
 				75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */,
 				75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */,
+				757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */,
 				75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */,
 				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
 				75C1343121F5E3CD00AD796C /* Constants.swift in Sources */,

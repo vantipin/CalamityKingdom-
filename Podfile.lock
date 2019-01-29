@@ -1,67 +1,38 @@
 PODS:
-  - AFNetworking (2.1.0):
-    - AFNetworking/NSURLConnection (= 2.1.0)
-    - AFNetworking/NSURLSession (= 2.1.0)
-    - AFNetworking/Reachability (= 2.1.0)
-    - AFNetworking/Security (= 2.1.0)
-    - AFNetworking/Serialization (= 2.1.0)
-    - AFNetworking/UIKit (= 2.1.0)
-  - AFNetworking/NSURLConnection (2.1.0):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.1.0):
-    - AFNetworking/NSURLConnection
-  - AFNetworking/Reachability (2.1.0)
-  - AFNetworking/Security (2.1.0)
-  - AFNetworking/Serialization (2.1.0)
-  - AFNetworking/UIKit (2.1.0):
-    - AFNetworking/NSURLConnection
-  - GoogleDocsBackend (0.1.2):
-    - AFNetworking (~> 2.1.0)
-    - Mantle (~> 1.3.1)
+  - Alamofire (4.8.1)
   - GTProgressBar (0.3.2)
-  - Mantle (1.3.1):
-    - Mantle/extobjc (= 1.3.1)
-  - Mantle/extobjc (1.3.1)
-  - R.swift (5.0.1):
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
+  - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
-  - GoogleDocsBackend (from `https://github.com/pyro2927/GoogleDocsBackend.git`)
+  - Alamofire
   - GTProgressBar
+  - Mantle
   - R.swift
   - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
-    - AFNetworking
+    - Alamofire
     - GTProgressBar
     - Mantle
     - R.swift
     - R.swift.Library
     - SVProgressHUD
 
-EXTERNAL SOURCES:
-  GoogleDocsBackend:
-    :git: https://github.com/pyro2927/GoogleDocsBackend.git
-
-CHECKOUT OPTIONS:
-  GoogleDocsBackend:
-    :commit: a97b1cdb5ed99701f8aabd5b297c6436479870af
-    :git: https://github.com/pyro2927/GoogleDocsBackend.git
-
 SPEC CHECKSUMS:
-  AFNetworking: d397c9a76a60c670cbcd33f3ff2c5f961f724cbc
-  GoogleDocsBackend: 12261c991afc4b1788e24788423efa5dc7b86c12
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   GTProgressBar: 3aa9731127b3ef193935d450928c3bd0f46bb1c4
-  Mantle: a516570b84c3cefb34b02647a6588a087dddc490
-  R.swift: a8e1a7e7f38441282fbcb7a3c266076eb38b77ba
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
+  R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 54b4d79c9d82029fd0fe3335790c25a40c1e4c73
+PODFILE CHECKSUM: ab93190a5102c69ef639045a7ad994ddcbd69a8a
 
 COCOAPODS: 1.5.3
