@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Mantle
 
 class GoogleBaseModel: GDBModel {
     var identifier: String = "";

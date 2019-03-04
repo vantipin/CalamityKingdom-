@@ -10,12 +10,12 @@ import UIKit
 
 class DangerResult {
     var helpAbilityType: AbilityType = .nobody
-    var peopleCountToDie: [CGFloat] = []
-    var defaultDieCoef: CGFloat = 0
+    var peopleCountToDie: [Int] = []
+    var defaultDieCoef = 0
     
-    private var diedPeople: CGFloat = CGFloat(UndefValue)
+    private var diedPeople = UndefValue
     
-    func peopleCountToDieWithType() -> CGFloat {
+    func peopleCountToDieWithType() -> Int {
         if diedPeople >= 0 {
             return diedPeople
         }

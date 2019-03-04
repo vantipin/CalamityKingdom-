@@ -99,7 +99,37 @@ enum DangerType: Int {
             name = "danger_curse"
         }
         
-        return UIImage(named: name)!
+        return UIImage(named: name) ?? UIImage()
+    }
+}
+
+enum EventType: Int {
+    case nothing = 0
+    case king = 1
+    case demon
+    case mage
+    case swords
+    case torch
+    
+    func iconImage() -> UIImage {
+        var name = ""
+        
+        switch self {
+        case .king:
+            name = "EventKingIcon"
+        case .demon:
+            name = "EventDemonIcon"
+        case .mage:
+            name = "EventMagIcon"
+        case .swords:
+            name = "EventSwordsIcon"
+        case .torch:
+            name = "EventTorchIcon"
+        default:
+            break
+        }
+        
+        return UIImage(named: name) ?? UIImage()
     }
 }
 

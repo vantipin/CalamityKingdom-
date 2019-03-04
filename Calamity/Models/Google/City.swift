@@ -46,9 +46,9 @@ class City: GoogleBaseModel {
         result.helpAbilityType = abilityType
         
         if abilityType == .nobody {
-            died = Int(min(result.defaultDieCoef * CGFloat(initPeopleCount), CGFloat(currPeopleCount)))
+            died = Int(min(CGFloat(result.defaultDieCoef) * CGFloat(initPeopleCount), CGFloat(currPeopleCount)))
         } else {
-            died = Int(min(result.defaultDieCoef * CGFloat(initPeopleCount), CGFloat(currPeopleCount)))
+            died = Int(min(CGFloat(result.defaultDieCoef) * CGFloat(initPeopleCount), CGFloat(currPeopleCount)))
         }
         
         currPeopleCount -= died

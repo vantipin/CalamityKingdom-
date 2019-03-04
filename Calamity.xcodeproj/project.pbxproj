@@ -57,6 +57,9 @@
 		75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343421F5EA2400AD796C /* SpriteKit.framework */; };
 		75C1343721F5ED0B00AD796C /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343621F5ED0B00AD796C /* Popups.storyboard */; };
 		75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343821F5ED2700AD796C /* IntroEnding.storyboard */; };
+		D539C787222DD105004390E0 /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C786222DD105004390E0 /* Ending.swift */; };
+		D539C789222DD1A7004390E0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C788222DD1A7004390E0 /* Event.swift */; };
+		D539C78B222DD596004390E0 /* EventAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C78A222DD596004390E0 /* EventAbility.swift */; };
 		D5630F6B2200FE0F003565C1 /* GameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6A2200FE0F003565C1 /* GameConstant.swift */; };
 		D5630F6F220102A7003565C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6E220102A7003565C1 /* Game.swift */; };
 		D5630F7122010632003565C1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7022010632003565C1 /* Player.swift */; };
@@ -124,6 +127,9 @@
 		75C1343621F5ED0B00AD796C /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
 		75C1343821F5ED2700AD796C /* IntroEnding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroEnding.storyboard; sourceTree = "<group>"; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
+		D539C786222DD105004390E0 /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
+		D539C788222DD1A7004390E0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		D539C78A222DD596004390E0 /* EventAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAbility.swift; sourceTree = "<group>"; };
 		D5630F6A2200FE0F003565C1 /* GameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstant.swift; sourceTree = "<group>"; };
 		D5630F6E220102A7003565C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D5630F7022010632003565C1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -432,6 +438,9 @@
 				D5630F7522010C8A003565C1 /* Constant.swift */,
 				D5630F7622010C8A003565C1 /* Danger.swift */,
 				D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */,
+				D539C786222DD105004390E0 /* Ending.swift */,
+				D539C788222DD1A7004390E0 /* Event.swift */,
+				D539C78A222DD596004390E0 /* EventAbility.swift */,
 			);
 			path = Google;
 			sourceTree = "<group>";
@@ -612,9 +621,11 @@
 				75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */,
 				75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */,
 				757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */,
+				D539C789222DD1A7004390E0 /* Event.swift in Sources */,
 				75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */,
 				75C133F821F5DDFB00AD796C /* R.generated.swift in Sources */,
 				75C1343121F5E3CD00AD796C /* Constants.swift in Sources */,
+				D539C787222DD105004390E0 /* Ending.swift in Sources */,
 				75B722AA21FB2F790004F75B /* LandingController.swift in Sources */,
 				75B2A0F9222D4677004CBF8E /* Archimage.swift in Sources */,
 				D5630F7922010C8A003565C1 /* Constant.swift in Sources */,
@@ -624,6 +635,7 @@
 				75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */,
 				75B722B621FB30D80004F75B /* EventResultController.swift in Sources */,
 				D5630F7E22010CA1003565C1 /* DangerResult.swift in Sources */,
+				D539C78B222DD596004390E0 /* EventAbility.swift in Sources */,
 				D5630F8022011072003565C1 /* City.swift in Sources */,
 				75B7229321FB22370004F75B /* Settings.swift in Sources */,
 			);
