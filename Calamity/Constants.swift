@@ -71,6 +71,36 @@ enum DangerType: Int {
     case monsters
     case plague
     case curse
+    
+    func name() -> String {
+        switch self {
+        case .disaster:
+            return "Стихия"
+        case .monsters:
+            return "Чудовища"
+        case .plague:
+            return "Мор"
+        case .curse:
+            return "Проклятие"
+        }
+    }
+    
+    func iconImage() -> UIImage {
+        var name = ""
+        
+        switch self {
+        case .disaster:
+            name = "danger_elements"
+        case .monsters:
+            name = "danger_monsters"
+        case .plague:
+            name = "danger_plages"
+        case .curse:
+            name = "danger_curse"
+        }
+        
+        return UIImage(named: name)!
+    }
 }
 
 enum GameEnding: Int {

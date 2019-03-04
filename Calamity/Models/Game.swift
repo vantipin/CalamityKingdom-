@@ -16,4 +16,7 @@ class Game: NSObject {
     
     var gameConstants: GameConstant? = nil
     var player: Player = Player()
+    var dangers: [Danger] = []
+//    var events: [Event] = []
+//    var endings: [Ending] = []
 }
