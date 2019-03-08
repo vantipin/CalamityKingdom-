@@ -233,3 +233,8 @@ enum ParseKey: String {
     case time = "time"
     case result = "result"
 }
+
+enum GameError: Error {
+    case unknownError
+    case parseOfflineError
+}

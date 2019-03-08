@@ -17,7 +17,7 @@ class Player {
     var peopleRep: Int
     var corrupt: Int
     
-    init() {
+    func initialize() {
         guard let constants = Game.instance.gameConstants,
             let plMana = constants.mana,
             let kRep = constants.king_rep,
@@ -34,5 +34,12 @@ class Player {
         kingRep = kRep.constValue
         peopleRep = pRep.constValue
         corrupt = corr.constValue
+    }
+    
+    init() {
+        mana = 0
+        kingRep = 0
+        peopleRep = 0
+        corrupt = 0
     }
 }

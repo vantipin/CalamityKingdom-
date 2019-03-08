@@ -52,6 +52,12 @@ class LandingController: BaseController {
             
             self.progressBar.alpha = 1
         }
+        
+        Game.instance.parseGame(withUpdate: false, progress: { (progress) in
+            print("Parse progress: \(progress)")
+        }) { (success, error) in
+            print("Parsed - \(success), error = \(error)")
+        }
     }
 
     // MARK: - Actions

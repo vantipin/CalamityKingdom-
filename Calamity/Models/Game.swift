@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Mantle
 
 typealias GameCallback = (_ success: Bool, _ error: Error?) -> Void
 typealias ProgressCallback = (_ progress: CGFloat) -> Void
@@ -15,7 +16,7 @@ class Game: NSObject {
     static let instance = Game()
     
     var gameConstants: GameConstant? = nil
-    var player: Player = Player()
+    let player: Player = Player()
     var dangers: [Danger] = []
     var events: [Event] = []
     var endings: [Ending] = []
@@ -114,8 +115,70 @@ class Game: NSObject {
         loadSheet(sheetIndex: 0, progress: progress, completion: completion)
     }
     
+    func configure(objects: [GDBModel], sheet: Sheet) {
+        
+    }
+    
+    func filePath(sheet: Sheet) -> String? {
+        let fileName = sheet.sheetName
+        let fileExtension = "json"
+        
+        let bookSettingsPath = "\(fileName).\(fileExtension)"
+        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
+        let filePath = docDir?.appending(bookSettingsPath)
+        return filePath
+    }
+    
     func loadGameOffline(progress: ProgressCallback?, completion: GameCallback?) {
-        //    https://github.com/apple/swift-evolution/blob/master/proposals/0161-key-paths.md
+        let type = "json"
+        
+        for (index, table) in sheets.enumerated() {
+            let fileName = table.sheet.sheetName
+            
+            guard let filePath = self.filePath(sheet: table.sheet) else {
+                completion?(false, GameError.parseOfflineError)
+                return
+            }
+            
+            if !FileManager.default.fileExists(atPath: filePath) {
+                if let bundleSettingsPath = Bundle.main.path(forResource: fileName, ofType: type), FileManager.default.fileExists(atPath: bundleSettingsPath) {
+                    
+                    do {
+                        try FileManager.default.copyItem(atPath: bundleSettingsPath, toPath: filePath)
+                    } catch {
+                        completion?(false, GameError.parseOfflineError)
+                        return
+                    }
+                }
+            }
+            
+            do {
+                let jsonData = try Data(contentsOf: URL(fileURLWithPath: filePath))
+                
+                guard jsonData.count > 0 else { continue }
+
+                let jsonArray = try JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? Array<[AnyHashable : Any]> ?? []
+                
+                var objects: [GDBModel] = []
+                let modelClass: AnyClass = table.sheet.modelClass
+                
+                for obj in jsonArray {
+                    let model = try MTLJSONAdapter.model(of: modelClass, fromJSONDictionary: obj)
+                    objects.append(model as! GDBModel)
+                }
+                
+                self.configure(objects: objects, sheet: table.sheet)
+            } catch(let error) {
+                print("error = \(error)")
+                completion?(false, GameError.parseOfflineError)
+                return
+            }
+            
+            progress?(CGFloat(index + 1) / CGFloat(sheets.count))
+        }
+        
+        player.initialize()
+        completion?(true, nil)
     }
     
     func loadSheet(sheetIndex: Int, progress: ProgressCallback?, completion: GameCallback?) {
