@@ -69,6 +69,8 @@
 		D5630F7C22010C8A003565C1 /* GoogleBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */; };
 		D5630F7E22010CA1003565C1 /* DangerResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7D22010CA1003565C1 /* DangerResult.swift */; };
 		D5630F8022011072003565C1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7F22011072003565C1 /* City.swift */; };
+		D5B91A25223286510019F592 /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B91A24223286510019F592 /* LibraryItem.swift */; };
+		D5B91A2722330B620019F592 /* GoogleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B91A2622330B620019F592 /* GoogleTable.swift */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +141,8 @@
 		D5630F7822010C8A003565C1 /* GoogleBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleBaseModel.swift; sourceTree = "<group>"; };
 		D5630F7D22010CA1003565C1 /* DangerResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangerResult.swift; sourceTree = "<group>"; };
 		D5630F7F22011072003565C1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		D5B91A24223286510019F592 /* LibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
+		D5B91A2622330B620019F592 /* GoogleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTable.swift; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -294,6 +298,7 @@
 			children = (
 				75B722C22200482D0004F75B /* GDBModel.swift */,
 				75B722C422004C150004F75B /* GDBSheet.swift */,
+				D5B91A2622330B620019F592 /* GoogleTable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				D539C786222DD105004390E0 /* Ending.swift */,
 				D539C788222DD1A7004390E0 /* Event.swift */,
 				D539C78A222DD596004390E0 /* EventAbility.swift */,
+				D5B91A24223286510019F592 /* LibraryItem.swift */,
 			);
 			path = Google;
 			sourceTree = "<group>";
@@ -604,10 +610,12 @@
 			files = (
 				757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */,
 				75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */,
+				D5B91A25223286510019F592 /* LibraryItem.swift in Sources */,
 				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
 				75B722C32200482D0004F75B /* GDBModel.swift in Sources */,
 				D5630F7A22010C8A003565C1 /* Danger.swift in Sources */,
 				D5630F6B2200FE0F003565C1 /* GameConstant.swift in Sources */,
+				D5B91A2722330B620019F592 /* GoogleTable.swift in Sources */,
 				75B722AE21FB2FD30004F75B /* DangerProgressController.swift in Sources */,
 				D5630F7C22010C8A003565C1 /* GoogleBaseModel.swift in Sources */,
 				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,

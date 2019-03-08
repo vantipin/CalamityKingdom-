@@ -13,15 +13,15 @@ let isCompact: Bool = UIApplication.shared.keyWindow!.rootViewController!.view!.
 let UndefValue = -1
 
 struct ContentUrl {
-    static let disasterSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/od6")
-    static let repliesSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/o1e9lp4")
-    static let citiesSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/ommsews")
-    static let endingsSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/ocghpen")
-    static let archimagsSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oagl4ao")
-    static let librarySheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/okm6ig0")
-    static let eventsSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oe9dn37")
-    static let eventRepliesSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/odwe38y")
-    static let constantsSheetUrl = URL(string: "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oj5lh0f")
+    static let disasterSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/od6"
+    static let repliesSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/o1e9lp4"
+    static let citiesSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/ommsews"
+    static let endingsSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/ocghpen"
+    static let archimagsSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oagl4ao"
+    static let librarySheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/okm6ig0"
+    static let eventsSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oe9dn37"
+    static let eventRepliesSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/odwe38y"
+    static let constantsSheetUrl = "https://spreadsheets.google.com/feeds/worksheets/1cOaBRJ4vhP9oPt-sA0P9TiCY8RksoGHG-d8C5anUIR0/public/basic/oj5lh0f"
 }
 
 struct Variable {
@@ -29,14 +29,10 @@ struct Variable {
     static let maxValue = 100
 }
 
-struct NotificationName {
-    static let clearDanger = "clearDanger"
-    static let clearEvent = "clearEvent"
-}
-
 struct Sheet: OptionSet {
     let rawValue: Int
     
+    static let none = Sheet(rawValue: 0)
     static let cities = Sheet(rawValue: 1 << 0)
     static let disasters = Sheet(rawValue: 1 << 1)
     static let replies = Sheet(rawValue: 1 << 2)
@@ -48,6 +44,91 @@ struct Sheet: OptionSet {
     static let constants = Sheet(rawValue: 1 << 8)
     
     static let all: Sheet = [.cities, .disasters, .replies, .endings, .archimags, .library, .events, .eventReplies, .constants]
+    
+    func parseStatus() -> String {
+        switch self.rawValue {
+        case Sheet.cities.rawValue:
+            return "Парсим города"
+        case Sheet.disasters.rawValue:
+            return "Парсим опасности"
+        case Sheet.replies.rawValue:
+            return "Парсим результаты опасностей"
+        case Sheet.endings.rawValue:
+            return "Парсим концовки"
+        case Sheet.archimags.rawValue:
+            return "Парсим архимагов"
+        case Sheet.library.rawValue:
+            return "Парсим библиотеку"
+        case Sheet.events.rawValue:
+            return "Парсим события"
+        case Sheet.eventReplies.rawValue:
+            return "Парсим результаты событий"
+        case Sheet.constants.rawValue:
+            return "Парсим константы"
+        default:
+            return ""
+        }
+    }
+    
+    var sheetName: String {
+        switch self.rawValue {
+        case Sheet.cities.rawValue:
+            return "Cities"
+        case Sheet.disasters.rawValue:
+            return "Disasters"
+        case Sheet.replies.rawValue:
+            return "Replies"
+        case Sheet.endings.rawValue:
+            return "Endings"
+        case Sheet.archimags.rawValue:
+            return "Archimags"
+        case Sheet.library.rawValue:
+            return "Library"
+        case Sheet.events.rawValue:
+            return "Events"
+        case Sheet.eventReplies.rawValue:
+            return "EventReplies"
+        case Sheet.constants.rawValue:
+            return "Constants"
+        default:
+            return ""
+        }
+    }
+    
+    var modelClass: AnyClass {
+        switch self.rawValue {
+        case Sheet.cities.rawValue:
+            return City.self
+        case Sheet.disasters.rawValue:
+            return Danger.self
+        case Sheet.replies.rawValue:
+            return Ability.self
+        case Sheet.endings.rawValue:
+            return Ending.self
+        case Sheet.archimags.rawValue:
+            return Archimage.self
+        case Sheet.library.rawValue:
+            return LibraryItem.self
+        case Sheet.events.rawValue:
+            return Event.self
+        case Sheet.eventReplies.rawValue:
+            return EventAbility.self
+        case Sheet.constants.rawValue:
+            return Constant.self
+        default:
+            return GoogleBaseModel.self
+        }
+    }
+}
+
+enum GameNotificationName: String {
+    case clearDanger = "clearDanger"
+    case clearEvent = "clearEvent"
+    case update = "update"
+    
+    func notificationName() -> NSNotification.Name {
+        return NSNotification.Name(rawValue: self.rawValue)
+    }
 }
 
 enum GameSound: String {
