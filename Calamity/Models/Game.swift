@@ -116,7 +116,66 @@ class Game: NSObject {
     }
     
     func configure(objects: [GDBModel], sheet: Sheet) {
-        
+        switch sheet.rawValue {
+        case Sheet.cities.rawValue:
+            for cityObj in objects {
+                guard let city = cityObj as? City else { continue }
+                
+                cities.append(city)
+            }
+        case Sheet.disasters.rawValue:
+            for dangerObj in objects {
+                guard let danger = dangerObj as? Danger else { continue }
+                
+                danger.result.peopleCountToDie = [danger.defaultDieCoef]
+                danger.result.defaultDieCoef = danger.defaultDieCoef
+                dangers.append(danger)
+            }
+        case Sheet.replies.rawValue:
+            for abilityObj in objects {
+                guard let ability = abilityObj as? Ability, let danger = self.dangers.filter({ (danger) -> Bool in
+                    return danger.identifier == ability.dangerId
+                }).first else { continue }
+                
+                danger.result.peopleCountToDie.append(ability.damage / CGFloat(100))
+                danger.appendAbility(ability: ability)
+            }
+        case Sheet.endings.rawValue:
+            if let endObjects = objects as? [Ending] {
+                endings = endObjects
+            }
+        case Sheet.archimags.rawValue:
+            break
+        case Sheet.library.rawValue:
+            if let libraryObjects = objects as? [LibraryItem] {
+                libraryItems = libraryObjects
+            }
+        case Sheet.events.rawValue:
+            if let eventObjects = objects as? [Event] {
+                events = eventObjects
+            }
+        case Sheet.eventReplies.rawValue:
+            for replyObj in objects {
+                guard let ability = replyObj as? EventAbility, let event = self.events.filter({ (event) -> Bool in
+                    return event.identifier == ability.eventId
+                }).first else { continue }
+                
+                event.appendAbility(ability: ability)
+            }
+        case Sheet.constants.rawValue:
+            let gc = GameConstant()
+            
+            for constObj in objects {
+                guard let constant = constObj as? Constant else { continue }
+                
+                gc[keyPath: GameConstant.keyPath(fromId: constant.identifier)] = constant
+            }
+            
+            gameConstants = gc
+            
+        default:
+            break
+        }
     }
     
     func filePath(sheet: Sheet) -> String? {
