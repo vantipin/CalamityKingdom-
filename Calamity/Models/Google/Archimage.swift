@@ -9,10 +9,10 @@
 import UIKit
 
 class Archimage: GoogleBaseModel {
-    var name: String = ""
-    var popularity: Int = 0
+    @objc var name: String = ""
+    @objc var popularity: Int = 0
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return  [
             "identifier" : "id",
             "name": "name",

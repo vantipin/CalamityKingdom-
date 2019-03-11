@@ -9,11 +9,11 @@
 import UIKit
 
 class Ending: GoogleBaseModel {
-    var text = ""
-    var imageName = ""
-    var endingSound = ""
+    @objc var text = ""
+    @objc var imageName = ""
+    @objc var endingSound = ""
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "ending_id",
             "text": "text",

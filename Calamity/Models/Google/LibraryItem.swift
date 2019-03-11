@@ -9,11 +9,11 @@
 import UIKit
 
 class LibraryItem: GoogleBaseModel {
-    var itemName = ""
-    var day: Int = 0
-    var itemDescription = ""
+    @objc var itemName = ""
+    @objc var day: Int = 0
+    @objc var itemDescription = ""
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "id",
             "itemName": "name",

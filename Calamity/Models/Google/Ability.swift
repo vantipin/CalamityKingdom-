@@ -9,12 +9,21 @@
 import UIKit
 
 class Ability: GoogleBaseModel {
-    var dangerId: String = ""
-    var abilityType: AbilityType = .nobody
+    @objc var dangerId: String = ""
+    var abilityType: AbilityType {
+        get {
+            return AbilityType(rawValue: parsedType?.intValue ?? UndefValue) ?? .nobody
+        }
+        set {
+            parsedType = NSNumber(value: abilityType.rawValue)
+        }
+    }
+    
+    @objc private var parsedType: NSNumber?
     
     private var designedAbilityName: String? = nil
     
-    var manaCost = 0 {
+    @objc var manaCost = 0 {
         didSet {
             let computed = min(max(manaCost, Variable.minValue), Variable.maxValue)
             
@@ -24,7 +33,7 @@ class Ability: GoogleBaseModel {
         }
     }
     
-    var kingRepCost = 0 {
+    @objc var kingRepCost = 0 {
         didSet {
             let computed = min(max(kingRepCost, Variable.minValue), Variable.maxValue)
             
@@ -34,7 +43,7 @@ class Ability: GoogleBaseModel {
         }
     }
     
-    var peopleRepCost = 0 {
+    @objc var peopleRepCost = 0 {
         didSet {
             let computed = min(max(peopleRepCost, Variable.minValue), Variable.maxValue)
             
@@ -44,7 +53,7 @@ class Ability: GoogleBaseModel {
         }
     }
     
-    var corruptCost = 0 {
+    @objc var corruptCost = 0 {
         didSet {
             let computed = min(max(corruptCost, Variable.minValue), Variable.maxValue)
             
@@ -54,18 +63,18 @@ class Ability: GoogleBaseModel {
         }
     }
     
-    var damage: CGFloat = 0
-    var timeToDestroyDanger = 0
+    @objc var damage: CGFloat = 0
+    @objc var timeToDestroyDanger = 0
     
-    var abilityDescription = ""
+    @objc var abilityDescription = ""
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return  [
             "dangerId" : "id_disaster",
             "identifier" : "id_reply",
             "abilityName" : "text",
             "abilityDescription": "result",
-            "abilityType": "type",
+            "parsedType": "type",
             "manaCost": "mana",
             "kingRepCost": "king_rep",
             "peopleRepCost": "people_rep",
@@ -75,7 +84,7 @@ class Ability: GoogleBaseModel {
         ]
     }
     
-    var abilityName: String? {
+    @objc var abilityName: String? {
         get {
             guard nil == designedAbilityName else {
                 return designedAbilityName

@@ -7,23 +7,34 @@
 //
 
 import UIKit
+import Mantle
 
 class GoogleBaseModel: GDBModel {
-    var identifier: String = "";
+    @objc var identifier: String = "";
     
     class func withoutNil() -> Bool {
         return true
     }
     
-    func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return ["identifier" : "id"]
     }
     
     func dictionaryValue() -> [AnyHashable : Any]! {
-        if let keyPaths = self.jsonKeyPathsByPropertyKey() {
+        if let keyPaths = type(of: self).jsonKeyPathsByPropertyKey() {
             return self.dictionaryWithValues(forKeys: (Array(keyPaths.keys) as! [String]))
         }
         
         return [:]
+    }
+    
+    @objc class func zeroTransformer() -> ValueTransformer {
+        return MTLValueTransformer(usingForwardBlock: { (value, _, _) -> Any? in
+            guard let str = value as? String, str.count > 0 else { return NSNumber(value: UndefValue) }
+            return NSNumber(value: Int(str) ?? UndefValue)
+        }, reverse: { (value, _, _) -> Any? in
+            guard let eventValue = value as? NSNumber else { return "" }
+            return eventValue.intValue != UndefValue ? "\(eventValue)" : ""
+        })
     }
 }

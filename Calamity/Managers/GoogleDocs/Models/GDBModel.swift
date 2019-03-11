@@ -17,11 +17,11 @@ class GDBModel: MTLModel, MTLJSONSerializing {
         return formatter
     }
     
-    static func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [:]
     }
 
-    class func googleDocsDateJSONTransformer() -> ValueTransformer {
+    @objc class func googleDocsDateJSONTransformer() -> ValueTransformer {
         return MTLValueTransformer(usingForwardBlock: { (value, _, _) -> Any? in
             return self.googleDocsDateFormatter.date(from: value as? String ?? "")
         }, reverse: { (value, _, _) -> Any? in

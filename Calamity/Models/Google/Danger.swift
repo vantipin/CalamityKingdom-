@@ -9,15 +9,27 @@
 import UIKit
 
 class Danger: GoogleBaseModel {
-    var name = ""
-    var dangerDescription = ""
+    @objc var name = ""
+    @objc var dangerDescription = ""
     
-    var dangerType: DangerType = .curse
+    @objc var defaultDieCoef: CGFloat = CGFloat(UndefValue)
+    
+    var dangerType: DangerType {
+        get {
+            return DangerType(rawValue: parsedType?.intValue ?? UndefValue) ?? .disaster
+        }
+        set {
+            parsedType = NSNumber(value: dangerType.rawValue)
+        }
+    }
+    
+    @objc private var parsedType: NSNumber?
+    
     
     var result: DangerResult = DangerResult()
     var abilitiesToRemove: [Ability] = []
     
-    var timeToAppear: Int = 0
+    @objc var timeToAppear: Int = 0
     var affectedCity: City? = nil
     
     var removed: Bool = false
@@ -26,13 +38,13 @@ class Danger: GoogleBaseModel {
     var predefinedCity: City? = nil
     var predefinedTime: Int = 0
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "id_disaster",
             "defaultDieCoef" : "default_die",
             "name": "name",
             "dangerDescription": "description",
-            "dangerType": "type",
+            "parsedType": "type",
             "timeToAppear": "day",
         ]
     }

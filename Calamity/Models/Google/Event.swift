@@ -7,24 +7,32 @@
 //
 
 import UIKit
-import Mantle
 
 class Event: GoogleBaseModel {
-    var name = ""
-    var type: EventType = .nothing
+    @objc var name = ""
+    var type: EventType {
+        get {
+            return EventType(rawValue: parsedType?.intValue ?? UndefValue) ?? .nothing
+        }
+        set {
+            parsedType = NSNumber(value: type.rawValue)
+        }
+    }
+    
+    @objc private var parsedType: NSNumber?
     
     var days: IndexSet = IndexSet()
     var abilities: [EventAbility] = []
     
-    var ifMana: Int = UndefValue
-    var ifKingRep: Int = UndefValue
-    var ifPeopleRep: Int = UndefValue
-    var ifCorrupt: Int = UndefValue
+    @objc var ifMana: Int = UndefValue
+    @objc var ifKingRep: Int = UndefValue
+    @objc var ifPeopleRep: Int = UndefValue
+    @objc var ifCorrupt: Int = UndefValue
     
     var defaultDiePercent: CGFloat = 0
-    var eventDescription: String = ""
+    @objc var eventDescription: String = ""
     
-    var dayString: String = "" {
+    @objc var dayString: String = "" {
         didSet {
             let numbers = dayString.components(separatedBy: ", ")
             
@@ -40,11 +48,11 @@ class Event: GoogleBaseModel {
         }
     }
 
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "id",
             "name" : "name",
-            "type" : "type",
+            "parsedType" : "type",
             "dayString" : "day",
             "ifMana" : "if_mana",
             "ifKingRep" : "if_king_rep",
@@ -54,17 +62,7 @@ class Event: GoogleBaseModel {
         ]
     }
     
-    class func zeroTransformer() -> ValueTransformer {
-        return MTLValueTransformer(usingForwardBlock: { (value, _, _) -> Any? in
-            guard let str = value as? String, str.count > 0 else { return NSNumber(value: UndefValue) }
-            return NSNumber(value: Int(str) ?? UndefValue)
-        }, reverse: { (value, _, _) -> Any? in
-            guard let eventValue = value as? NSNumber else { return "" }
-            return eventValue.intValue != UndefValue ? "\(eventValue)" : ""
-        })
-    }
-
-    static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
         let keysToTransform = ["if_mana",
                                "if_king_rep",
                                "if_people_rep",

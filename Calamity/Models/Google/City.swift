@@ -9,10 +9,10 @@
 import UIKit
 
 class City: GoogleBaseModel {
-    var name: String = ""
-    var cityDescription: String = ""
+    @objc var name: String = ""
+    @objc var cityDescription: String = ""
     
-    var initPeopleCount: Int = 0 {
+    @objc var initPeopleCount: Int = 0 {
         didSet {
             currPeopleCount = initPeopleCount
         }
@@ -20,19 +20,28 @@ class City: GoogleBaseModel {
     
     var currPeopleCount: Int = 0
     var currentDanger: Danger? = nil
-    var type: DangerType = .disaster
+    var type: DangerType {
+        get {
+            return DangerType(rawValue: parsedType?.intValue ?? UndefValue) ?? .disaster
+        }
+        set {
+            parsedType = NSNumber(value: type.rawValue)
+        }
+    }
+    
+    @objc private var parsedType: NSNumber?
     
     var cityInDanger: Bool {
         return (nil != currentDanger)
     }
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "id",
             "name": "name",
             "cityDescription": "description",
             "initPeopleCount": "people",
-            "type" : "type"
+            "parsedType" : "type"
         ]
     }
 

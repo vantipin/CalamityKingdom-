@@ -26,8 +26,8 @@ class GoogleDocsServiceLayer {
                 
                 entries.forEach({ (entry) in
                     do {
-                        let obj: GDBSheet = try MTLJSONAdapter.model(of: GDBSheet.self, fromJSONDictionary: entry) as! GDBSheet
-                        objects.append(obj)
+                        let obj = try MTLJSONAdapter.model(of: GDBSheet.self, fromJSONDictionary: entry)
+                        objects.append(obj as! GDBSheet)
                     } catch {
                         print("Error = \(error)")
                     }
@@ -79,8 +79,8 @@ class GoogleDocsServiceLayer {
                     
                     if nextRow != row {
                         do {
-                            let obj = try MTLJSONAdapter.model(of: modelClass, fromJSONDictionary: nextObject) as! GDBModel
-                            objects.append(obj)
+                            let obj = try MTLJSONAdapter.model(of: modelClass, fromJSONDictionary: nextObject)
+                            objects.append(obj as! GDBModel)
                         } catch {
                             print("Error = \(error)")
                         }
@@ -96,8 +96,8 @@ class GoogleDocsServiceLayer {
                 })
                 
                 do {
-                    let obj = try MTLJSONAdapter.model(of: modelClass, fromJSONDictionary: nextObject) as! GDBModel
-                    objects.append(obj)
+                    let obj = try MTLJSONAdapter.model(of: modelClass, fromJSONDictionary: nextObject)
+                    objects.append(obj as! GDBModel)
                 } catch {
                     print("Error = \(error)")
                 }

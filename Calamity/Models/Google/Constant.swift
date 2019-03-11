@@ -9,16 +9,36 @@
 import UIKit
 
 class Constant: GoogleBaseModel {
-    var name: String = ""
-    var constDescription: String = ""
-    var constValue: Int = 0
+    @objc var name: String = ""
+    @objc var constDescription: String = ""
+    @objc var parsedConstValue: NSNumber?
     
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    var constValue: Int {
+        get {
+            return parsedConstValue?.intValue ?? UndefValue
+        }
+        set {
+            parsedConstValue = NSNumber(value: constValue)
+        }
+    }
+    
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return  [
             "identifier" : "id",
             "name": "name",
             "constDescription": "description",
-            "constValue": "value"
+            "parsedConstValue": "value"
         ]
     }
+    
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+        let keysToTransform = ["value"]
+        
+        if keysToTransform.contains(key) {
+            return Constant.zeroTransformer()
+        }
+        
+        return ValueTransformer()
+    }
+    
 }

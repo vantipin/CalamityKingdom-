@@ -9,20 +9,20 @@
 import UIKit
 
 class EventAbility: GoogleBaseModel {
-    var eventId = ""
-    var cost: Int = 0
+    @objc var eventId = ""
+    @objc var cost: Int = 0
     
-    var abilityName = ""
-    var abilityDescription = ""
+    @objc var abilityName = ""
+    @objc var abilityDescription = ""
     
-    var mana: Int = 0
-    var kingRep: Int = 0
-    var peopleRep: Int = 0
-    var corrupt: Int = 0
+    @objc var mana: Int = 0
+    @objc var kingRep: Int = 0
+    @objc var peopleRep: Int = 0
+    @objc var corrupt: Int = 0
     
-    var ending: Int = 0
+    @objc var ending: Int = 0
   
-    override func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
+    override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "eventId" : "id_event",
             "identifier" : "id_reply",
