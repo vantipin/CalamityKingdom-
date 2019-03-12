@@ -11,6 +11,7 @@
 		757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */; };
 		757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */; };
 		75B2A0F9222D4677004CBF8E /* Archimage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B2A0F8222D4677004CBF8E /* Archimage.swift */; };
+		75B434362237C6A300B8B6DC /* SmartJSONAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B434352237C6A300B8B6DC /* SmartJSONAdapter.swift */; };
 		75B7229321FB22370004F75B /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229221FB22370004F75B /* Settings.swift */; };
 		75B7229A21FB2A760004F75B /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229921FB2A760004F75B /* BaseController.swift */; };
 		75B7229C21FB2A8E0004F75B /* CityInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B7229B21FB2A8E0004F75B /* CityInfoController.swift */; };
@@ -80,6 +81,7 @@
 		757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDocsServiceLayer.swift; sourceTree = "<group>"; };
 		757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Helper.swift"; sourceTree = "<group>"; };
 		75B2A0F8222D4677004CBF8E /* Archimage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Archimage.swift; sourceTree = "<group>"; };
+		75B434352237C6A300B8B6DC /* SmartJSONAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartJSONAdapter.swift; sourceTree = "<group>"; };
 		75B7229221FB22370004F75B /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		75B7229921FB2A760004F75B /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		75B7229B21FB2A8E0004F75B /* CityInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInfoController.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 			children = (
 				757DDA3322006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift */,
 				757DDA3522007233002B29D5 /* GoogleDocsServiceLayer.swift */,
+				75B434352237C6A300B8B6DC /* SmartJSONAdapter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -611,6 +614,7 @@
 				757DDA3622007233002B29D5 /* GoogleDocsServiceLayer.swift in Sources */,
 				75B722B921FF3BBE0004F75B /* SettingsController.swift in Sources */,
 				D5B91A25223286510019F592 /* LibraryItem.swift in Sources */,
+				75B434362237C6A300B8B6DC /* SmartJSONAdapter.swift in Sources */,
 				75B722B221FB307D0004F75B /* LibraryController.swift in Sources */,
 				75B722C32200482D0004F75B /* GDBModel.swift in Sources */,
 				D5630F7A22010C8A003565C1 /* Danger.swift in Sources */,

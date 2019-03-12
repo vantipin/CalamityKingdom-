@@ -12,9 +12,7 @@ import Mantle
 class GoogleBaseModel: GDBModel {
     @objc var identifier: String = "";
     
-    class func withoutNil() -> Bool {
-        return true
-    }
+    
     
     override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return ["identifier" : "id"]
@@ -36,5 +34,11 @@ class GoogleBaseModel: GDBModel {
             guard let eventValue = value as? NSNumber else { return "" }
             return eventValue.intValue != UndefValue ? "\(eventValue)" : ""
         })
+    }
+}
+
+extension GoogleBaseModel: SmartJSONAdapting {
+    static func withoutNil() -> Bool {
+        return true
     }
 }

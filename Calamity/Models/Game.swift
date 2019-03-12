@@ -16,7 +16,7 @@ class Game: NSObject {
     static let instance = Game()
     
     var gameConstants: GameConstant? = nil
-    let player: Player = Player()
+    var player: Player = Player()
     var dangers: [Danger] = []
     var events: [Event] = []
     var endings: [Ending] = []
@@ -111,7 +111,7 @@ class Game: NSObject {
         player.name = "Вася"
     }
     
-    func updateGame(progress: ProgressCallback?, completion: GameCallback?) {
+    private func updateGame(progress: ProgressCallback?, completion: GameCallback?) {
         loadSheet(sheetIndex: 0, progress: progress, completion: completion)
     }
     
@@ -178,23 +178,13 @@ class Game: NSObject {
         }
     }
     
-    func filePath(sheet: Sheet) -> String? {
-        let fileName = sheet.sheetName
-        let fileExtension = "json"
-        
-        let bookSettingsPath = "\(fileName).\(fileExtension)"
-        let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
-        let filePath = docDir?.appending(bookSettingsPath)
-        return filePath
-    }
-    
-    func loadGameOffline(progress: ProgressCallback?, completion: GameCallback?) {
+    private func loadGameOffline(progress: ProgressCallback?, completion: GameCallback?) {
         let type = "json"
         
         for (index, table) in sheets.enumerated() {
             let fileName = table.sheet.sheetName
             
-            guard let filePath = self.filePath(sheet: table.sheet) else {
+            guard let filePath = table.sheet.filePath() else {
                 completion?(false, GameError.parseOfflineError)
                 return
             }
@@ -240,11 +230,70 @@ class Game: NSObject {
         completion?(true, nil)
     }
     
-    func loadSheet(sheetIndex: Int, progress: ProgressCallback?, completion: GameCallback?) {
-        //    https://github.com/apple/swift-evolution/blob/master/proposals/0161-key-paths.md
+    private func save(objects: [GoogleBaseModel], forSheet sheet: Sheet) {
+        do {
+            let jsons = try objects.compactMap {
+                return try SmartJSONAdapter.jsonDictionary(fromModel: $0)
+            }
+            
+            let jsonData = try JSONSerialization.data(withJSONObject: jsons, options: .prettyPrinted)
+            
+            guard let path = sheet.filePath() else {
+                print("Save models sheet path error: \(sheet)")
+                return
+            }
+            
+            try jsonData.write(to: URL(fileURLWithPath: path), options: .atomic)
+        } catch {
+            print("Save models error!")
+        }
     }
     
-    func parseGame(withUpdate: Bool, progress: ProgressCallback?, completion: GameCallback?) {
+    func loadSheet(sheetIndex: Int, progress: ProgressCallback?, completion: GameCallback?) {
+        guard sheetIndex < sheets.count else {
+            print("Sheet index ERROR!")
+            return
+        }
+
+        let table = sheets[sheetIndex]
+        let loadingSheet = table.sheet
+        
+        let modelClass: AnyClass = loadingSheet.modelClass
+        
+        GoogleDocsServiceLayer.objects(worksheetKey: table.worksheetId, sheetId: table.sheetId, modelClass: modelClass) { [weak self] (objects, error) in
+            guard let self = self, error == nil else {
+                completion?(false, error)
+                return
+            }
+            
+            let filteredObject = objects?.filter({ (model) -> Bool in
+                guard let model = model as? GoogleBaseModel else { return false }
+                return model.identifier.count > 0
+            })
+            
+            guard let googleModels = filteredObject as? [GoogleBaseModel] else {
+                completion?(false, nil)
+                return
+            }
+            
+            self.configure(objects: googleModels, sheet: loadingSheet)
+            self.save(objects: googleModels, forSheet: loadingSheet)
+            
+            progress?(CGFloat(sheetIndex + 1) / CGFloat(self.sheets.count))
+            self.loadedSheet = Sheet(rawValue: self.loadedSheet.rawValue + loadingSheet.rawValue)
+            
+            if self.loadedSheet == .all {
+                print("All loaded without errors")
+                self.player = Player()
+                completion?(true, nil)
+            } else {
+                self.loadSheet(sheetIndex: sheetIndex + 1, progress: progress, completion: completion)
+            }
+        }
+        
+    }
+    
+    public func parseGame(withUpdate: Bool, progress: ProgressCallback?, completion: GameCallback?) {
         reinitGame()
         
         if withUpdate {
@@ -254,7 +303,7 @@ class Game: NSObject {
         }
     }
     
-    func checkState() {
+    public func checkState() {
         NotificationCenter.default.post(name: GameNotificationName.update.notificationName(), object: nil)
     }
 }
