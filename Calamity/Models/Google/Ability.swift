@@ -12,14 +12,18 @@ class Ability: GoogleBaseModel {
     @objc var dangerId: String = ""
     var abilityType: AbilityType {
         get {
-            return AbilityType(rawValue: parsedType?.intValue ?? UndefValue) ?? .nobody
+            guard let type = parsedType, let intType = Int(type), let ability = AbilityType(rawValue: intType) else {
+                return .nobody
+            }
+            
+            return ability
         }
         set {
-            parsedType = NSNumber(value: abilityType.rawValue)
+            parsedType = "\(abilityType.rawValue)"
         }
     }
     
-    @objc private var parsedType: NSNumber?
+    @objc private var parsedType: String?
     
     private var designedAbilityName: String? = nil
     
@@ -63,8 +67,22 @@ class Ability: GoogleBaseModel {
         }
     }
     
-    @objc var damage: CGFloat = 0
+    
+    var damage: CGFloat = 0
+    @objc private var parsedDamage: String? {
+        didSet {
+            guard let parsed = parsedDamage, let formatter = NumberFormatter().number(from: parsed) else { return }
+            damage = CGFloat(truncating: formatter)
+        }
+    }
+    
     @objc var timeToDestroyDanger = 0
+    @objc private var parsedTimeToDestroy: String? {
+        didSet {
+            guard let parsed = parsedTimeToDestroy, let intValue = Int(parsed) else { return }
+            timeToDestroyDanger = intValue
+        }
+    }
     
     @objc var abilityDescription = ""
     
@@ -79,8 +97,8 @@ class Ability: GoogleBaseModel {
             "kingRepCost": "king_rep",
             "peopleRepCost": "people_rep",
             "corruptCost": "corrupt",
-            "timeToDestroyDanger": "time",
-            "damage": "damage"
+            "parsedTimeToDestroy": "time",
+            "parsedDamage": "damage"
         ]
     }
     
@@ -108,6 +126,19 @@ class Ability: GoogleBaseModel {
         set {
             designedAbilityName = abilityName
         }
+    }
+    
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+        let keysToTransform = ["manaCost",
+                               "kingRepCost",
+                               "peopleRepCost",
+                               "corruptCost"]
+        
+        if keysToTransform.contains(key) {
+            return Ability.intTransformer()
+        }
+        
+        return ValueTransformer()
     }
     
     func abilityActionString() -> String {

@@ -27,7 +27,14 @@ class GDBModel: MTLModel, MTLJSONSerializing {
         }, reverse: { (value, _, _) -> Any? in
             return self.googleDocsDateFormatter.string(from: value as? Date ?? Date())
         })
-
+    }
+    
+    @objc class func intTransformer() -> ValueTransformer {
+        return MTLValueTransformer(usingForwardBlock: { (value, _, _) -> Any? in
+            return Int(value as? String ?? "") ?? 0
+        }, reverse: { (value, _, _) -> Any? in
+            return "\(value as? Int ?? 0)"
+        })
     }
 }
 

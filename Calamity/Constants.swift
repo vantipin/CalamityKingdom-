@@ -124,7 +124,7 @@ struct Sheet: OptionSet {
         let fileName = self.sheetName
         let fileExtension = "json"
         
-        let bookSettingsPath = "\(fileName).\(fileExtension)"
+        let bookSettingsPath = "/\(fileName).\(fileExtension)"
         let docDir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).last
         let filePath = docDir?.appending(bookSettingsPath)
         return filePath

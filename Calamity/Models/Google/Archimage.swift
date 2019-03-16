@@ -19,4 +19,14 @@ class Archimage: GoogleBaseModel {
             "popularity": "popularity",
         ]
     }
+    
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+        let keysToTransform = ["popularity"]
+        
+        if keysToTransform.contains(key) {
+            return Archimage.intTransformer()
+        }
+        
+        return ValueTransformer()
+    }
 }

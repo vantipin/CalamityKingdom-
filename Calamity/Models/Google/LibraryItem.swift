@@ -21,4 +21,14 @@ class LibraryItem: GoogleBaseModel {
             "day": "day"
         ]
     }
+    
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+        let keysToTransform = ["day"]
+        
+        if keysToTransform.contains(key) {
+            return LibraryItem.intTransformer()
+        }
+        
+        return ValueTransformer()
+    }
 }

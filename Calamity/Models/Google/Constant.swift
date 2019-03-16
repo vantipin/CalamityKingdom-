@@ -11,14 +11,15 @@ import UIKit
 class Constant: GoogleBaseModel {
     @objc var name: String = ""
     @objc var constDescription: String = ""
-    @objc var parsedConstValue: NSNumber?
+    @objc var parsedConstValue: String?
     
     var constValue: Int {
         get {
-            return parsedConstValue?.intValue ?? UndefValue
+            guard let parsedValue = parsedConstValue else { return UndefValue }
+            return Int(parsedValue) ?? UndefValue
         }
         set {
-            parsedConstValue = NSNumber(value: constValue)
+            parsedConstValue = "\(constValue)"
         }
     }
     

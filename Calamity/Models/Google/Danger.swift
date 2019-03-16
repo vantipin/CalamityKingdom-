@@ -12,24 +12,45 @@ class Danger: GoogleBaseModel {
     @objc var name = ""
     @objc var dangerDescription = ""
     
-    @objc var defaultDieCoef: CGFloat = CGFloat(UndefValue)
-    
-    var dangerType: DangerType {
-        get {
-            return DangerType(rawValue: parsedType?.intValue ?? UndefValue) ?? .disaster
-        }
-        set {
-            parsedType = NSNumber(value: dangerType.rawValue)
+    var defaultDieCoef: CGFloat = CGFloat(UndefValue)
+    @objc private var parsedDieCoef: String? {
+        didSet {
+            guard let parsedDie = parsedDieCoef, let formatter = NumberFormatter().number(from: parsedDie) else {
+                defaultDieCoef = CGFloat(UndefValue)
+                return
+            }
+            
+            defaultDieCoef = CGFloat(truncating: formatter)
         }
     }
     
-    @objc private var parsedType: NSNumber?
+    var dangerType: DangerType {
+        get {
+            guard let parsedValue = parsedType else { return .disaster }
+            return DangerType(rawValue: Int(parsedValue) ?? UndefValue) ?? .disaster
+        }
+        set {
+            parsedType = "\(dangerType.rawValue)"
+        }
+    }
     
-    
+    @objc private var parsedType: String?
+
     var result: DangerResult = DangerResult()
     var abilitiesToRemove: [Ability] = []
     
-    @objc var timeToAppear: Int = 0
+    var timeToAppear: Int = 0
+    @objc private var parsedAppearTime: String? {
+        didSet {
+            guard let appearTime = parsedAppearTime, let time = Int(appearTime) else {
+                timeToAppear = 0
+                return
+            }
+            
+            timeToAppear = time
+        }
+    }
+    
     var affectedCity: City? = nil
     
     var removed: Bool = false
@@ -41,11 +62,11 @@ class Danger: GoogleBaseModel {
     override class func jsonKeyPathsByPropertyKey() -> [AnyHashable : Any]! {
         return [
             "identifier" : "id_disaster",
-            "defaultDieCoef" : "default_die",
+            "parsedDieCoef" : "default_die",
             "name": "name",
             "dangerDescription": "description",
             "parsedType": "type",
-            "timeToAppear": "day",
+            "parsedAppearTime": "day",
         ]
     }
     

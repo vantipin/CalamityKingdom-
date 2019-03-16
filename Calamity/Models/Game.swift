@@ -243,6 +243,8 @@ class Game: NSObject {
                 return
             }
             
+            print("Save models of \(objects.first.self?.classForCoder ?? GoogleBaseModel.self) for path \(path)")
+            
             try jsonData.write(to: URL(fileURLWithPath: path), options: .atomic)
         } catch {
             print("Save models error!")

@@ -36,4 +36,19 @@ class EventAbility: GoogleBaseModel {
             "cost" : "cost"
         ]
     }
+    
+    @objc static func jsonTransformer(forKey key: String!) -> ValueTransformer! {
+        let keysToTransform = ["cost",
+                               "mana",
+                               "kingRep",
+                               "peopleRep",
+                               "corrupt",
+                               "ending"]
+        
+        if keysToTransform.contains(key) {
+            return Ability.intTransformer()
+        }
+        
+        return ValueTransformer()
+    }
 }
