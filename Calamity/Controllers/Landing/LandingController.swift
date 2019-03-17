@@ -11,15 +11,18 @@ import UIKit
 class LandingController: BaseController {
     var wasUpdated = false
     @IBOutlet var controlButtons: [UIButton]!
-    @IBOutlet weak var progressBar: UIView!
+    @IBOutlet weak var progressBar: ProgressBarView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        progressBar.setProgress(0)
+        
         controlButtons.forEach { (button) in
             button.alpha = 0
         }
-        // Do any additional setup after loading the view.
+        
+        progressBar.alpha = 0
     }
     
     class func show(){
@@ -46,17 +49,23 @@ class LandingController: BaseController {
         UIView.animate(withDuration: 0.3) { [weak self] in
             guard let self = self else { return }
             
-            self.controlButtons.forEach { (button) in
-                button.alpha = 1
-            }
-            
             self.progressBar.alpha = 1
         }
         
-        Game.instance.parseGame(withUpdate: true, progress: { (progress) in
-            print("Parse progress: \(progress)")
+        Game.instance.parseGame(withUpdate: true, progress: { [weak self] (progress) in
+            self?.progressBar.setProgress(progress, animated: true)
         }) { (success, error) in
             print("Parsed - \(success), error = \(error?.localizedDescription ?? "No error")")
+            
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                guard let self = self else { return }
+                
+                self.controlButtons.forEach { (button) in
+                    button.alpha = 1
+                }
+                
+                self.progressBar.alpha = 0
+            }
         }
     }
 

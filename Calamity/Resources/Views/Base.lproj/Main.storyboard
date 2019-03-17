@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM6-6e-Ifw">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina5_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,18 +20,26 @@
             <objects>
                 <viewController storyboardIdentifier="PPLandingControllerID" modalTransitionStyle="crossDissolve" id="mM6-6e-Ifw" customClass="LandingController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEm-eK-EcT">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-1f-49U">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J">
-                                <rect key="frame" x="179" y="653" width="666" height="76.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
+                                <rect key="frame" x="142" y="286" width="528" height="69"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="69" id="Nnw-fn-fdM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="style">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-jT-68o">
-                                <rect key="frame" x="384" y="334" width="256" height="100"/>
+                                <rect key="frame" x="304.66666666666669" y="163" width="203" height="49"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Настройки"/>
@@ -43,7 +51,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-Eg-MFg">
-                                <rect key="frame" x="384" y="444" width="256" height="100"/>
+                                <rect key="frame" x="304.66666666666669" y="222" width="203" height="48.666666666666686"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Титры"/>
@@ -55,7 +63,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-5H-doa">
-                                <rect key="frame" x="384" y="224" width="256" height="100"/>
+                                <rect key="frame" x="304.66666666666669" y="104.33333333333333" width="203" height="48.666666666666671"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="СТАРТ"/>
@@ -72,16 +80,15 @@
                             <constraint firstItem="PBe-jT-68o" firstAttribute="width" secondItem="EEm-eK-EcT" secondAttribute="width" multiplier="0.25" id="4ev-sH-Kkc"/>
                             <constraint firstItem="PBe-jT-68o" firstAttribute="centerX" secondItem="EEm-eK-EcT" secondAttribute="centerX" id="76F-X5-CNB"/>
                             <constraint firstAttribute="trailing" secondItem="a6O-1f-49U" secondAttribute="trailing" id="CzO-Wl-uxP"/>
-                            <constraint firstItem="UMI-Bc-C9J" firstAttribute="centerY" secondItem="EEm-eK-EcT" secondAttribute="centerY" multiplier="1.8" id="DQI-6u-gbW"/>
                             <constraint firstItem="q9N-Eg-MFg" firstAttribute="top" secondItem="PBe-jT-68o" secondAttribute="bottom" constant="10" id="Eu1-FD-8gU"/>
                             <constraint firstItem="PBe-jT-68o" firstAttribute="height" secondItem="EEm-eK-EcT" secondAttribute="height" multiplier="0.13" id="Klu-G5-BEW"/>
                             <constraint firstItem="a6O-1f-49U" firstAttribute="top" secondItem="EEm-eK-EcT" secondAttribute="top" id="LaJ-97-7yi"/>
                             <constraint firstItem="UMI-Bc-C9J" firstAttribute="centerX" secondItem="EEm-eK-EcT" secondAttribute="centerX" id="OGa-si-4Gu"/>
                             <constraint firstItem="PBe-jT-68o" firstAttribute="top" secondItem="Idp-5H-doa" secondAttribute="bottom" constant="10" id="QiX-FJ-w24"/>
+                            <constraint firstAttribute="bottom" secondItem="UMI-Bc-C9J" secondAttribute="bottom" constant="20" id="Tgo-nl-NZe"/>
                             <constraint firstItem="PBe-jT-68o" firstAttribute="centerY" secondItem="EEm-eK-EcT" secondAttribute="centerY" id="Ud2-VZ-VvL"/>
                             <constraint firstItem="q9N-Eg-MFg" firstAttribute="centerX" secondItem="EEm-eK-EcT" secondAttribute="centerX" id="ZDb-kA-fjn"/>
                             <constraint firstAttribute="bottom" secondItem="a6O-1f-49U" secondAttribute="bottom" id="b41-2F-fbS"/>
-                            <constraint firstItem="UMI-Bc-C9J" firstAttribute="height" secondItem="EEm-eK-EcT" secondAttribute="height" multiplier="0.1" id="g2c-ga-gid"/>
                             <constraint firstItem="PBe-jT-68o" firstAttribute="height" secondItem="Idp-5H-doa" secondAttribute="height" id="gf9-WC-AHj"/>
                             <constraint firstItem="q9N-Eg-MFg" firstAttribute="width" secondItem="Idp-5H-doa" secondAttribute="width" id="koU-fW-OVT"/>
                             <constraint firstItem="Idp-5H-doa" firstAttribute="centerX" secondItem="EEm-eK-EcT" secondAttribute="centerX" id="mb8-Wd-sMB"/>
@@ -109,7 +116,7 @@
             <objects>
                 <viewController storyboardIdentifier="PPBaseGameControllerID" id="EdJ-X8-34u" customClass="BaseGameController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edv-2c-G2r">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameField" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-O1-TVK">
