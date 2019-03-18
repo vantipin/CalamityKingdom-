@@ -294,9 +294,11 @@
                                     <outlet property="valueLabel" destination="5Dh-kF-ZbH" id="NGX-ch-IAA"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-zc-NRu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-zc-NRu">
                                 <rect key="frame" x="25" y="27" width="132" height="134"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eGz-zc-NRu" secondAttribute="height" multiplier="66:67" id="NfG-l0-leZ"/>
+                                </constraints>
                                 <state key="normal" image="MagIcon"/>
                                 <connections>
                                     <action selector="magePressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="IoU-3J-g6m"/>
@@ -1136,9 +1138,11 @@
                                     <action selector="plusHour:" destination="EdJ-X8-34u" eventType="touchUpInside" id="ird-pZ-or3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-jm-iF6" userLabel="Library Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P2a-jm-iF6" userLabel="Library Button">
                                 <rect key="frame" x="839" y="20" width="165" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="P2a-jm-iF6" secondAttribute="height" multiplier="55:42" id="GjF-5A-ze4"/>
+                                </constraints>
                                 <state key="normal" image="LibraryIcon"/>
                                 <connections>
                                     <action selector="libraryPressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="Qhy-6S-mwj"/>
@@ -1154,6 +1158,14 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="P2a-jm-iF6" firstAttribute="height" secondItem="Edv-2c-G2r" secondAttribute="height" multiplier="126/768" id="10H-sG-Y56"/>
+                            <constraint firstItem="eGz-zc-NRu" firstAttribute="top" secondItem="4Sp-SO-6hW" secondAttribute="top" constant="7" id="3hf-PR-DHo"/>
+                            <constraint firstItem="4Sp-SO-6hW" firstAttribute="trailing" secondItem="P2a-jm-iF6" secondAttribute="trailing" constant="20" id="NoS-3l-H4m"/>
+                            <constraint firstItem="eGz-zc-NRu" firstAttribute="height" secondItem="Edv-2c-G2r" secondAttribute="height" multiplier="134/768" id="RlH-hv-3QB"/>
+                            <constraint firstItem="P2a-jm-iF6" firstAttribute="top" secondItem="4Sp-SO-6hW" secondAttribute="top" id="TaS-02-RF8"/>
+                            <constraint firstItem="eGz-zc-NRu" firstAttribute="leading" secondItem="4Sp-SO-6hW" secondAttribute="leading" constant="25" id="qFo-ys-Y5H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4Sp-SO-6hW"/>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>

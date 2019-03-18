@@ -248,9 +248,9 @@ class ColourfulProgressView: UIView {
     func viewsDictionary() -> [String : Any] {
         let viewsDictionary = [
             "backgroundView" : backgroundView,
-            "fillingView()" : fillingView,
-            "initialLabel()" : initialLabel,
-            "finalLabel()" : finalLabel
+            "fillingView" : fillingView,
+            "initialLabel" : initialLabel,
+            "finalLabel" : finalLabel
         ]
         
         var viewsMutableDictionary: [String : Any] = [:]
