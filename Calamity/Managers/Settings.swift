@@ -11,7 +11,8 @@ import AVFoundation
 
 final class Settings {
     static let shared = Settings()
-    var backgroundMusicPlayer: AVAudioPlayer!
+    private var soundPlayer: AVAudioPlayer? = nil
+    private var backgroundMusicPlayer: AVAudioPlayer!
     
     var isMusicOn: Bool {
         get { return !UserDefaults.standard.bool(forKey: "settings.music.off") }
@@ -46,13 +47,46 @@ final class Settings {
         }
         
         backgroundMusicPlayer.numberOfLoops = -1
-        backgroundMusicPlayer.prepareToPlay()
-        backgroundMusicPlayer.play()
+        
+        if backgroundMusicPlayer.prepareToPlay() {
+            backgroundMusicPlayer.play()
+        }
     }
     
     func stopMusic() {
         if let player = backgroundMusicPlayer {
             player.stop()
+        }
+    }
+    
+    class func play(sound: GameSound) {
+        guard Settings.shared.isSoundsOn else { return }
+        
+        if let player = Settings.shared.soundPlayer {
+            player.stop()
+        }
+
+        if let url = Bundle.main.url(forResource: sound.rawValue, withExtension: sound.ext()) {
+            do {
+                Settings.shared.soundPlayer = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print("Could not create audio player")
+                return
+            }
+        } else {
+            print("Could not find the file \(sound.rawValue).\(sound.ext())")
+        }
+        
+        guard let player = Settings.shared.soundPlayer else { return }
+        
+        player.numberOfLoops = 0
+        
+        if player.prepareToPlay() {
+            if sound == .battleLoosing || sound == .battleWin {
+                Settings.shared.backgroundMusicPlayer.stop()
+            }
+            
+            player.play()
         }
     }
 }

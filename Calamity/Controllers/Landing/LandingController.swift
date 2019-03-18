@@ -27,6 +27,8 @@ class LandingController: BaseController {
     
     class func show(){
         if let controller = R.storyboard.main.ppLandingControllerID(), let window = UIApplication.shared.keyWindow, let root = window.rootViewController {
+            Settings.shared.isMusicOn = Settings.shared.isMusicOn
+            
             UIView.transition(from: root.view,
                               to: controller.view,
                               duration: 0.65,
@@ -38,7 +40,7 @@ class LandingController: BaseController {
         }
         
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

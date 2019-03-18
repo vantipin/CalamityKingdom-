@@ -35,7 +35,7 @@ import UIKit
     
     private var progress: CGFloat = 0
     
-    @IBInspectable var withIcon = false
+    @IBInspectable var withIcon: Int = 0
 
     @IBInspectable open var style: Int = 0 {
         didSet {
@@ -100,7 +100,7 @@ import UIKit
     }
     
     func configureIcon() {
-        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, withIcon else { return }
+        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, withIcon > 0 else { return }
         
         let image: UIImage?
         
@@ -203,13 +203,20 @@ import UIKit
     func initialize() {
         clipsToBounds = false
         backgroundColor = UIColor.clear
-        let bgImageView = UIImageView(frame: bounds)
+        let bgImageView = UIImageView(frame: .zero)
         bgImageView.clipsToBounds = false
         bgImageView.backgroundColor = UIColor.clear
         bgImageView.tag = bgImageViewTag
         addSubview(bgImageView)
         
-        bgImageView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
+        bgImageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        let attributes: [NSLayoutConstraint.Attribute] = [.top, .bottom, .right, .left]
+        
+        NSLayoutConstraint.activate(attributes.map {
+            NSLayoutConstraint(item: bgImageView, attribute: $0, relatedBy: .equal, toItem: self, attribute: $0, multiplier: 1, constant: 0)
+        })
+        
         bgImageView.contentMode = .scaleToFill
     }
 }

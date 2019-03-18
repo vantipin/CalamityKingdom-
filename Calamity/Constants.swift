@@ -142,11 +142,26 @@ enum GameNotificationName: String {
 }
 
 enum GameSound: String {
-    case battleLoosing = "battle_loosing.wav"
-    case battleWin = "battle_win.wav"
-    case timeTicking = "time_ticking.wav"
-    case casting = "casting.m4a"
-    case dangerHappen = "danger_happen.wav"
+    case battleLoosing = "battle_loosing"
+    case battleWin = "battle_win"
+    case timeTicking = "time_ticking"
+    case casting = "casting"
+    case dangerHappen = "danger_happen"
+    
+    func ext() -> String {
+        switch self {
+        case .battleLoosing:
+            return "wav"
+        case .battleWin:
+            return "wav"
+        case .timeTicking:
+            return "wav"
+        case .casting:
+            return "m4a"
+        case .dangerHappen:
+            return "wav"
+        }
+    }
 }
 
 enum AbilityType: Int {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mM6-6e-Ifw">
-    <device id="retina5_9" orientation="landscape">
+    <device id="ipad12_9" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,14 +20,14 @@
             <objects>
                 <viewController storyboardIdentifier="PPLandingControllerID" modalTransitionStyle="crossDissolve" id="mM6-6e-Ifw" customClass="LandingController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EEm-eK-EcT">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="a6O-1f-49U">
-                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
-                                <rect key="frame" x="142" y="286" width="528" height="69"/>
+                                <rect key="frame" x="239" y="935" width="888" height="69"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="Nnw-fn-fdM"/>
@@ -42,7 +42,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-jT-68o">
-                                <rect key="frame" x="304.66666666666669" y="163" width="203" height="49"/>
+                                <rect key="frame" x="512.5" y="445.5" width="341.5" height="133"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Настройки"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-Eg-MFg">
-                                <rect key="frame" x="304.66666666666669" y="222" width="203" height="48.666666666666686"/>
+                                <rect key="frame" x="512.5" y="588.5" width="341.5" height="133"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="Титры"/>
@@ -66,7 +66,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-5H-doa">
-                                <rect key="frame" x="304.66666666666669" y="104.33333333333333" width="203" height="48.666666666666671"/>
+                                <rect key="frame" x="512.5" y="302.5" width="341.5" height="133"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <state key="normal" title="СТАРТ"/>
@@ -119,7 +119,7 @@
             <objects>
                 <viewController storyboardIdentifier="PPBaseGameControllerID" id="EdJ-X8-34u" customClass="BaseGameController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Edv-2c-G2r">
-                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GameField" translatesAutoresizingMaskIntoConstraints="NO" id="Bes-O1-TVK">
