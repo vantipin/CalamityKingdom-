@@ -1,11 +1,33 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 78,
+          "left" : 78
+        }
+      },
       "idiom" : "universal",
       "filename" : "PBBig.png",
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "tile",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 158,
+          "left" : 152
+        }
+      },
       "idiom" : "universal",
       "filename" : "PBBig@2x.png",
       "scale" : "2x"

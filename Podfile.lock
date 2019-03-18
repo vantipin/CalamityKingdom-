@@ -7,14 +7,12 @@ PODS:
   - R.swift (5.0.2):
     - R.swift.Library (~> 5.0.0)
   - R.swift.Library (5.0.0)
-  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - Alamofire
   - GTProgressBar
   - Mantle
   - R.swift
-  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -23,7 +21,6 @@ SPEC REPOS:
     - Mantle
     - R.swift
     - R.swift.Library
-    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
@@ -31,8 +28,7 @@ SPEC CHECKSUMS:
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
-  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: ab93190a5102c69ef639045a7ad994ddcbd69a8a
+PODFILE CHECKSUM: 72dea1b698b25ae1741a5901375e4792c650153e
 
 COCOAPODS: 1.5.3

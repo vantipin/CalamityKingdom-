@@ -57,7 +57,7 @@ class LandingController: BaseController {
         }) { (success, error) in
             print("Parsed - \(success), error = \(error?.localizedDescription ?? "No error")")
             
-            UIView.animate(withDuration: 0.3) { [weak self] in
+            UIView.animate(withDuration: 0.5) { [weak self] in
                 guard let self = self else { return }
                 
                 self.controlButtons.forEach { (button) in

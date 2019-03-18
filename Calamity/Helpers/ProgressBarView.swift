@@ -21,8 +21,9 @@ import UIKit
     case chaos
 }
 
-@IBDesignable
-class ProgressBarView: UIView {
+@IBDesignable open class ProgressBarView: UIView {
+    let layerTagKey = "tag"
+    
     let smallIconSize: CGFloat = 32
     let bgImageViewTag = 334
     let iconLayerTag = 335
@@ -36,63 +37,57 @@ class ProgressBarView: UIView {
     
     @IBInspectable var withIcon = false
 
-    @IBInspectable var style: Int = ProgressViewStyle.small.rawValue {
+    @IBInspectable open var style: Int = 0 {
         didSet {
             self._style = ProgressViewStyle(rawValue: style) ?? .small
         }
     }
-    @IBInspectable var icon: Int = ProgressViewIcon.tele.rawValue {
+    
+    // Icon only for style == ProgressViewStyle.small
+    @IBInspectable open var icon: Int = 0 {
         didSet {
             self._icon = ProgressViewIcon(rawValue: icon) ?? .tele
         }
     }
     
-    private var _style: ProgressViewStyle = .small
+    private var _style: ProgressViewStyle = .small {
+        didSet {
+            configureStyle()
+        }
+    }
     private var _icon: ProgressViewIcon = .tele
     
     func setProgress(_ progress: CGFloat, animated: Bool = false, duration: CGFloat = 0.2) {
         self.progress = progress
         
-        let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView
+        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView,
+            let progressLayerView = bgImageView.viewWithTag(progressLayerTag) as? UIImageView else { return }
+
+        let inset: UIEdgeInsets
         
-        if bgImageView != nil {
-            var progressLayerView: UIImageView? = nil
-            
-            for view in bgImageView?.subviews ?? [] {
-                if view.tag == progressLayerTag {
-                    progressLayerView = view as? UIImageView
-                    break
-                }
-            }
-            
-            let inset: UIEdgeInsets
-            
-            switch _style {
-            case .small:
-                inset = smallProgressInset
-            case .middle:
-                inset = middleProgressInset
-            case .big:
-                inset = bigProgressInset
-            }
-            
-            if progressLayerView != nil {
-                let elementFrame: CGRect? = bgImageView?.layer.bounds
-                let finalFrame = CGRect(x: inset.left, y: inset.top, width: ((elementFrame?.size.width ?? 0.0) - inset.left - inset.right) * progress, height: (elementFrame?.size.height ?? 0.0) - inset.top - inset.bottom)
-                
-                UIView.animate(withDuration: TimeInterval(animated ? duration : 0.0), delay: 0.0, options: .curveLinear, animations: {
-                    progressLayerView?.frame = finalFrame
-                })
-            }
+        switch _style {
+        case .small:
+            inset = smallProgressInset
+        case .middle:
+            inset = middleProgressInset
+        case .big:
+            inset = bigProgressInset
         }
+        
+        let elementFrame: CGRect = bgImageView.layer.bounds
+        let finalFrame = CGRect(x: inset.left, y: inset.top, width: (elementFrame.size.width - inset.left - inset.right) * progress, height: elementFrame.size.height - inset.top - inset.bottom)
+        
+        UIView.animate(withDuration: TimeInterval(animated ? duration : 0.0), delay: 0.0, options: .curveLinear, animations: {
+            progressLayerView.frame = finalFrame
+        })
     }
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         initialize()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
         initialize()
@@ -105,119 +100,104 @@ class ProgressBarView: UIView {
     }
     
     func configureIcon() {
-        let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView
+        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, withIcon else { return }
         
-        if withIcon && bgImageView != nil {
-            let imageName: String
-            
-            switch _icon {
-            case .hypno:
-                imageName = "HypnoPBIcon"
-            case .summon:
-                imageName = "SummonPBIcon"
-            case .chaos:
-                imageName = "ChaosPBIcon"
-            case .tele:
-                imageName = "TelePBIcon"
-            }
-            
-            var iconLayer: CALayer? = nil
-            
-            for layer in bgImageView?.layer.sublayers ?? [] {
-                let tag: Int = (layer.value(forKey: "tag") as? NSNumber)?.intValue ?? 0
-                
-                if tag == iconLayerTag {
-                    iconLayer = layer
-                    break
-                }
-            }
-            
-            if iconLayer == nil {
-                iconLayer = CALayer()
-                iconLayer?.backgroundColor = UIColor.clear.cgColor
-                iconLayer?.setValue(NSNumber(value: iconLayerTag), forKey: "tag")
-                iconLayer?.frame = CGRect(x: smallIconSize / 2, y: ((bgImageView?.frame.size.height ?? 0.0) - smallIconSize) / 2.0, width: smallIconSize, height: smallIconSize)
-                if let iconLayer = iconLayer {
-                    bgImageView?.layer.addSublayer(iconLayer)
-                }
-            }
-            
-            let iconImage = UIImage(named: imageName)
-            
-            iconLayer?.contents = iconImage?.cgImage
+        let image: UIImage?
+        
+        switch _icon {
+        case .hypno:
+            image = R.image.hypnoPBIcon()
+        case .summon:
+            image = R.image.summonPBIcon()
+        case .chaos:
+            image = R.image.chaosPBIcon()
+        case .tele:
+            image = R.image.telePBIcon()
         }
+        
+        var iconLayer: CALayer? = nil
+        
+        for layer in bgImageView.layer.sublayers ?? [] {
+            let tag: Int = (layer.value(forKey: layerTagKey) as? NSNumber)?.intValue ?? 0
+            
+            if tag == iconLayerTag {
+                iconLayer = layer
+                break
+            }
+        }
+        
+        if iconLayer == nil {
+            iconLayer = CALayer()
+            iconLayer?.backgroundColor = UIColor.clear.cgColor
+            iconLayer?.setValue(NSNumber(value: iconLayerTag), forKey: layerTagKey)
+            iconLayer?.frame = CGRect(x: smallIconSize / 2, y: (bgImageView.frame.size.height - smallIconSize) / 2.0, width: smallIconSize, height: smallIconSize)
+            
+            if let iconLayer = iconLayer {
+                bgImageView.layer.addSublayer(iconLayer)
+            }
+        }
+        
+        iconLayer?.contents = image?.cgImage
     }
     
     func configureProgress() {
-        let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView
+        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView else { return }
         
-        if bgImageView != nil {
-            var progressLayerView: UIImageView? = nil
-            var image: UIImage? = nil
+        var progressLayerView = bgImageView.viewWithTag(progressLayerTag) as? UIImageView
+        var image: UIImage? = nil
+        
+        let inset: UIEdgeInsets
+        
+        switch _style {
+        case .small:
+            image = R.image.pbSmallProgress()
+            inset = smallProgressInset
             
-            let inset: UIEdgeInsets
-            
-            switch _style {
-            case .small:
-                image = UIImage(named: "PBSmallProgress")?.stretchableImage(withLeftCapWidth: Int(5.0), topCapHeight: Int(7.5))
-                inset = smallProgressInset
-                
-                configureIcon()
-            case .middle:
-                image = UIImage(named: "PBMiddleProgress")?.stretchableImage(withLeftCapWidth: Int(5.0), topCapHeight: Int(22.0))
-                inset = middleProgressInset
-            case .big:
-                image = UIImage(named: "PBBigProgress")?.stretchableImage(withLeftCapWidth: Int(5.0), topCapHeight: Int(40.0))
-                inset = bigProgressInset
-            }
-            
-            for view in bgImageView?.subviews ?? [] {
-                if view.tag == progressLayerTag {
-                    progressLayerView = view as? UIImageView
-                    break
-                }
-            }
-            
-            if progressLayerView == nil {
-                progressLayerView = UIImageView()
-                progressLayerView?.backgroundColor = UIColor.clear
-                progressLayerView?.tag = progressLayerTag
-                
-                if let progressLayerView = progressLayerView {
-                    bgImageView?.addSubview(progressLayerView)
-                }
-            }
-            
-            let elementFrame: CGRect? = bgImageView?.bounds
-            
-            progressLayerView?.frame = CGRect(x: inset.left, y: inset.top, width: (elementFrame?.size.width ?? 0.0) - inset.left - inset.right, height: (elementFrame?.size.height ?? 0.0) - inset.top - inset.bottom)
-            
-            progressLayerView?.image = image
+            configureIcon()
+        case .middle:
+            image = R.image.pbMiddleProgress()
+            inset = middleProgressInset
+        case .big:
+            image = R.image.pbBigProgress()
+            inset = bigProgressInset
         }
+        
+        if progressLayerView == nil {
+            progressLayerView = UIImageView()
+            progressLayerView?.backgroundColor = UIColor.clear
+            progressLayerView?.tag = progressLayerTag
+            
+            if let progressLayerView = progressLayerView {
+                bgImageView.addSubview(progressLayerView)
+            }
+        }
+        
+        let elementFrame: CGRect = bgImageView.bounds
+        
+        progressLayerView?.frame = CGRect(x: inset.left, y: inset.top, width: elementFrame.size.width - inset.left - inset.right, height: elementFrame.size.height - inset.top - inset.bottom)
+        
+        progressLayerView?.image = image
     }
     
     func configureStyle() {
-        let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView
+        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, bgImageView.image == nil else { return }
         
-        if bgImageView != nil {
-            var image: UIImage? = nil
-            
-            switch _style {
-            case .small:
-                image = UIImage(named: "PBSmall")?.stretchableImage(withLeftCapWidth: 10, topCapHeight: 13)
-                
-                configureIcon()
-            case .middle:
-                image = UIImage(named: "PBMiddle")?.stretchableImage(withLeftCapWidth: 44, topCapHeight: 35)
-            case .big:
-                image = UIImage(named: "PBBig")?.stretchableImage(withLeftCapWidth: 79, topCapHeight: 52)
+        var image: UIImage? = nil
+        
+        switch _style {
+        case .small:
+            image = R.image.pbSmall()
+            configureIcon()
+        case .middle:
+            image = R.image.pbMiddle()
+        case .big:
+            image = R.image.pbBig()
 
-            }
-            
-            bgImageView?.image = image
-            
-            configureProgress()
         }
+        
+        bgImageView.image = image
+        
+        configureProgress()
     }
     
     func initialize() {
@@ -230,9 +210,6 @@ class ProgressBarView: UIView {
         addSubview(bgImageView)
         
         bgImageView.autoresizingMask = [.flexibleLeftMargin, .flexibleRightMargin, .flexibleTopMargin, .flexibleBottomMargin]
-        
         bgImageView.contentMode = .scaleToFill
-        
-        configureStyle()
     }
 }

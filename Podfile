@@ -6,7 +6,6 @@ target 'Calamity' do
   
   pod 'Mantle'
   pod 'Alamofire'
-  pod 'SVProgressHUD'
   pod 'R.swift'
   pod 'GTProgressBar'
 end
