@@ -29,7 +29,7 @@ class ColourfulProgressView: UIView {
     @IBInspectable var borderLineWidth: Int = 0
     @IBInspectable var currentValue: Int = 0
     @IBInspectable var maximumValue: Int = 0
-    @IBInspectable var showLabels = false
+    @IBInspectable var showLabels: Bool = false
     
     private lazy var backgroundView: UIView = {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: backgroundViewHeight()))

@@ -28,7 +28,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMI-Bc-C9J" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
                                 <rect key="frame" x="179" y="679" width="666" height="69"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="Nnw-fn-fdM"/>
                                 </constraints>
