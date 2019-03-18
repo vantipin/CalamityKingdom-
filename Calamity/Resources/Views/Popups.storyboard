@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,7 +21,7 @@
         <!--City Info Controller-->
         <scene sceneID="gTc-To-zf3">
             <objects>
-                <viewController storyboardIdentifier="CityInfoControllerId" id="OVu-5a-r1u" customClass="CityInfoController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CityInfoControllerId" id="OVu-5a-r1u" customClass="CityInfoController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hJP-CO-aqm" customClass="PPCityView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="ClosePopupIcon"/>
                             </button>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-3s-Dlf" customClass="EAColourfulProgressView">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-3s-Dlf" customClass="ColourfulProgressView" customModule="Calamity" customModuleProvider="target">
                                 <rect key="frame" x="39" y="375" width="685" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbA-22-i74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="532"/>
+            <point key="canvasLocation" x="2362" y="500"/>
         </scene>
         <!--Danger Progress Controller-->
         <scene sceneID="Flg-gY-4oi">
