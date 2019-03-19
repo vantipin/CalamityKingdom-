@@ -58,11 +58,9 @@
 		75C1343521F5EA2400AD796C /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75C1343421F5EA2400AD796C /* SpriteKit.framework */; };
 		75C1343721F5ED0B00AD796C /* Popups.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343621F5ED0B00AD796C /* Popups.storyboard */; };
 		75C1343921F5ED2700AD796C /* IntroEnding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75C1343821F5ED2700AD796C /* IntroEnding.storyboard */; };
-		D52D90C6223EF3AE002B6A49 /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52D90C5223EF3AE002B6A49 /* ProgressBarView.swift */; };
 		D539C787222DD105004390E0 /* Ending.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C786222DD105004390E0 /* Ending.swift */; };
 		D539C789222DD1A7004390E0 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C788222DD1A7004390E0 /* Event.swift */; };
 		D539C78B222DD596004390E0 /* EventAbility.swift in Sources */ = {isa = PBXBuildFile; fileRef = D539C78A222DD596004390E0 /* EventAbility.swift */; };
-		D561C00A223FFF29001A22D5 /* ColourfulProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D561C009223FFF29001A22D5 /* ColourfulProgressView.swift */; };
 		D5630F6B2200FE0F003565C1 /* GameConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6A2200FE0F003565C1 /* GameConstant.swift */; };
 		D5630F6F220102A7003565C1 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F6E220102A7003565C1 /* Game.swift */; };
 		D5630F7122010632003565C1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7022010632003565C1 /* Player.swift */; };
@@ -74,6 +72,10 @@
 		D5630F8022011072003565C1 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5630F7F22011072003565C1 /* City.swift */; };
 		D5B91A25223286510019F592 /* LibraryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B91A24223286510019F592 /* LibraryItem.swift */; };
 		D5B91A2722330B620019F592 /* GoogleTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B91A2622330B620019F592 /* GoogleTable.swift */; };
+		D5CF61882241A411009C4B4E /* PlayerAbilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF61842241A411009C4B4E /* PlayerAbilityView.swift */; };
+		D5CF61892241A411009C4B4E /* CityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF61852241A411009C4B4E /* CityView.swift */; };
+		D5CF618D2241A462009C4B4E /* ColourfulProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF618B2241A462009C4B4E /* ColourfulProgressView.swift */; };
+		D5CF618E2241A462009C4B4E /* ProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5CF618C2241A462009C4B4E /* ProgressBarView.swift */; };
 		E2A69087F58D1EFDB4ED2B3B /* Pods_Calamity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */; };
 /* End PBXBuildFile section */
 
@@ -133,11 +135,9 @@
 		75C1343621F5ED0B00AD796C /* Popups.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Popups.storyboard; sourceTree = "<group>"; };
 		75C1343821F5ED2700AD796C /* IntroEnding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IntroEnding.storyboard; sourceTree = "<group>"; };
 		9CA6C1C314D624CE4621DEAE /* Pods-Calamity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calamity.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Calamity/Pods-Calamity.debug.xcconfig"; sourceTree = "<group>"; };
-		D52D90C5223EF3AE002B6A49 /* ProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		D539C786222DD105004390E0 /* Ending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ending.swift; sourceTree = "<group>"; };
 		D539C788222DD1A7004390E0 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		D539C78A222DD596004390E0 /* EventAbility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventAbility.swift; sourceTree = "<group>"; };
-		D561C009223FFF29001A22D5 /* ColourfulProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourfulProgressView.swift; sourceTree = "<group>"; };
 		D5630F6A2200FE0F003565C1 /* GameConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstant.swift; sourceTree = "<group>"; };
 		D5630F6E220102A7003565C1 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D5630F7022010632003565C1 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -149,6 +149,10 @@
 		D5630F7F22011072003565C1 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		D5B91A24223286510019F592 /* LibraryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryItem.swift; sourceTree = "<group>"; };
 		D5B91A2622330B620019F592 /* GoogleTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTable.swift; sourceTree = "<group>"; };
+		D5CF61842241A411009C4B4E /* PlayerAbilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerAbilityView.swift; sourceTree = "<group>"; };
+		D5CF61852241A411009C4B4E /* CityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityView.swift; sourceTree = "<group>"; };
+		D5CF618B2241A462009C4B4E /* ColourfulProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourfulProgressView.swift; sourceTree = "<group>"; };
+		D5CF618C2241A462009C4B4E /* ProgressBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBarView.swift; sourceTree = "<group>"; };
 		DA9FDFCEC2BD1B7D7285645E /* Pods_Calamity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Calamity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,8 +183,6 @@
 			isa = PBXGroup;
 			children = (
 				757DDA382200815C002B29D5 /* DispatchQueue+Helper.swift */,
-				D52D90C5223EF3AE002B6A49 /* ProgressBarView.swift */,
-				D561C009223FFF29001A22D5 /* ColourfulProgressView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -316,6 +318,9 @@
 			isa = PBXGroup;
 			children = (
 				75C133DC21F5BE4A00AD796C /* Calamity */,
+				75C133DD21F5BE4A00AD796C /* AppDelegate.swift */,
+				75C1343021F5E3CD00AD796C /* Constants.swift */,
+				75C133F721F5DDFB00AD796C /* R.generated.swift */,
 				75C133DB21F5BE4A00AD796C /* Products */,
 				6B03FF6AC3D5D705B54F03F6 /* Pods */,
 				864043F4B91793D9C87279DB /* Frameworks */,
@@ -333,14 +338,12 @@
 		75C133DC21F5BE4A00AD796C /* Calamity */ = {
 			isa = PBXGroup;
 			children = (
+				75C133EF21F5DAD400AD796C /* Controllers */,
+				D5CF61812241A411009C4B4E /* GameViews */,
 				757DDA372200815C002B29D5 /* Helpers */,
 				75B7229121FB22370004F75B /* Managers */,
 				75B7228F21FAFA720004F75B /* Models */,
-				75C133EF21F5DAD400AD796C /* Controllers */,
 				75C133F121F5DAD400AD796C /* Resources */,
-				75C133DD21F5BE4A00AD796C /* AppDelegate.swift */,
-				75C133F721F5DDFB00AD796C /* R.generated.swift */,
-				75C1343021F5E3CD00AD796C /* Constants.swift */,
 			);
 			path = Calamity;
 			sourceTree = "<group>";
@@ -458,6 +461,25 @@
 				D5B91A24223286510019F592 /* LibraryItem.swift */,
 			);
 			path = Google;
+			sourceTree = "<group>";
+		};
+		D5CF61812241A411009C4B4E /* GameViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5CF618A2241A462009C4B4E /* ProgressViews */,
+				D5CF61842241A411009C4B4E /* PlayerAbilityView.swift */,
+				D5CF61852241A411009C4B4E /* CityView.swift */,
+			);
+			path = GameViews;
+			sourceTree = "<group>";
+		};
+		D5CF618A2241A462009C4B4E /* ProgressViews */ = {
+			isa = PBXGroup;
+			children = (
+				D5CF618B2241A462009C4B4E /* ColourfulProgressView.swift */,
+				D5CF618C2241A462009C4B4E /* ProgressBarView.swift */,
+			);
+			path = ProgressViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -582,7 +604,7 @@
 				"$TEMP_DIR/rswift-lastrun",
 			);
 			outputPaths = (
-				"$SRCROOT/R.generated.swift",
+				$SRCROOT/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -627,12 +649,13 @@
 				75B7229A21FB2A760004F75B /* BaseController.swift in Sources */,
 				75B722C522004C150004F75B /* GDBSheet.swift in Sources */,
 				757DDA392200815D002B29D5 /* DispatchQueue+Helper.swift in Sources */,
+				D5CF61882241A411009C4B4E /* PlayerAbilityView.swift in Sources */,
 				D5630F7122010632003565C1 /* Player.swift in Sources */,
 				75C133DE21F5BE4A00AD796C /* AppDelegate.swift in Sources */,
-				D561C00A223FFF29001A22D5 /* ColourfulProgressView.swift in Sources */,
 				75B722AC21FB2FB10004F75B /* CityDangerController.swift in Sources */,
 				75B722B421FB30B10004F75B /* EventController.swift in Sources */,
 				D5630F7B22010C8A003565C1 /* Ability.swift in Sources */,
+				D5CF61892241A411009C4B4E /* CityView.swift in Sources */,
 				75B7229F21FB2AD00004F75B /* EndingsViewController.swift in Sources */,
 				75B722A121FB2ADF0004F75B /* IntroViewController.swift in Sources */,
 				757DDA3422006680002B29D5 /* GoogleDocsSpreadsheetAPIClient.swift in Sources */,
@@ -643,14 +666,15 @@
 				D539C787222DD105004390E0 /* Ending.swift in Sources */,
 				75B722AA21FB2F790004F75B /* LandingController.swift in Sources */,
 				75B2A0F9222D4677004CBF8E /* Archimage.swift in Sources */,
-				D52D90C6223EF3AE002B6A49 /* ProgressBarView.swift in Sources */,
 				D5630F7922010C8A003565C1 /* Constant.swift in Sources */,
 				75B722B021FB2FF20004F75B /* DangerResultController.swift in Sources */,
+				D5CF618D2241A462009C4B4E /* ColourfulProgressView.swift in Sources */,
 				D5630F6F220102A7003565C1 /* Game.swift in Sources */,
 				75B722A821FB2F4D0004F75B /* BaseGameController.swift in Sources */,
 				75B722BE21FF410B0004F75B /* SettingsCell.swift in Sources */,
 				75B722B621FB30D80004F75B /* EventResultController.swift in Sources */,
 				D5630F7E22010CA1003565C1 /* DangerResult.swift in Sources */,
+				D5CF618E2241A462009C4B4E /* ProgressBarView.swift in Sources */,
 				D539C78B222DD596004390E0 /* EventAbility.swift in Sources */,
 				D5630F8022011072003565C1 /* City.swift in Sources */,
 				75B7229321FB22370004F75B /* Settings.swift in Sources */,

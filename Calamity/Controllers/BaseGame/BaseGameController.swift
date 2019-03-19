@@ -9,6 +9,13 @@
 import UIKit
 
 class BaseGameController: BaseController {
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var fieldContentView: UIView!
+    @IBOutlet weak var timeLabel: UILabel!
+
+    @IBOutlet var fieldControls: [UIView]!
+    @IBOutlet var cityViews: [UIView]!
+    @IBOutlet var playerAbilities: [UIView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,15 +23,35 @@ class BaseGameController: BaseController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        guard !skipUpdates else { return }
+        
+        
     }
-    */
+    
+    class func show() {
+        
+    }
+    
+
+    // MARK: - Actions
+    
+    @IBAction func magePressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func updatePressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func libraryPressed(_ sender: Any) {
+        
+    }
+    
+    @IBAction func sleepPressed(_ sender: Any) {
+        
+    }
 
 }

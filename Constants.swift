@@ -172,6 +172,32 @@ enum AbilityType: Int {
     case nobody
 }
 
+enum CityType: Int {
+    case capital = 1
+    case town2
+    case town1
+    case villageLumberers
+    case villageVariors
+    case villageFishermans
+    
+    func imageName() -> String {
+        switch self {
+        case .capital:
+            return "CapitalCity"
+        case .town2:
+            return "Town2City"
+        case .town1:
+            return "Town1City"
+        case .villageLumberers:
+            return "VillageLumbererCity"
+        case .villageVariors:
+            return "VillageVariorsCity"
+        case .villageFishermans:
+            return "VillageFishermansCity"
+        }
+    }
+}
+
 enum DangerType: Int {
     case disaster = 1
     case monsters

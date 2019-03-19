@@ -172,9 +172,7 @@ import UIKit
             }
         }
         
-        let elementFrame: CGRect = bgImageView.bounds
-        
-        progressLayerView?.frame = CGRect(x: inset.left, y: inset.top, width: elementFrame.size.width - inset.left - inset.right, height: elementFrame.size.height - inset.top - inset.bottom)
+        progressLayerView?.frame = CGRect(x: inset.left, y: inset.top, width: 0, height: self.bounds.height - inset.top - inset.bottom)
         
         progressLayerView?.image = image
     }

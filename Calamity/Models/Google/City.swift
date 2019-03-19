@@ -32,17 +32,14 @@ class City: GoogleBaseModel {
     var currPeopleCount: Int = 0
     var currentDanger: Danger? = nil
 
-    var type: DangerType {
-        get {
-            guard let parsedValue = parsedType else { return .disaster }
-            return DangerType(rawValue: Int(parsedValue) ?? UndefValue) ?? .disaster
-        }
-        set {
-            parsedType = "\(type)"
+    var type: CityType = .capital
+    
+    @objc private var parsedType: String? {
+        didSet {
+            guard let parsedValue = parsedType else { return }
+            type = CityType(rawValue: Int(parsedValue) ?? UndefValue) ?? .capital
         }
     }
-    
-    @objc private var parsedType: String?
     
     var cityInDanger: Bool {
         return (nil != currentDanger)
