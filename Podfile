@@ -7,7 +7,6 @@ target 'Calamity' do
   pod 'Mantle'
   pod 'Alamofire'
   pod 'R.swift'
-  pod 'GTProgressBar'
 end
 
 post_install do |installer|

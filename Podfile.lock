@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.8.1)
-  - GTProgressBar (0.3.2)
   - Mantle (2.1.0):
     - Mantle/extobjc (= 2.1.0)
   - Mantle/extobjc (2.1.0)
@@ -10,25 +9,22 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - GTProgressBar
   - Mantle
   - R.swift
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
-    - GTProgressBar
     - Mantle
     - R.swift
     - R.swift.Library
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  GTProgressBar: 3aa9731127b3ef193935d450928c3bd0f46bb1c4
   Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   R.swift: 81455d81467763cbd3f4d79d938d05f4ac4c0228
   R.swift.Library: 0bf390e729bc10bb2c9e4fb78bd043164a7be4ff
 
-PODFILE CHECKSUM: 72dea1b698b25ae1741a5901375e4792c650153e
+PODFILE CHECKSUM: 0b414f03b8812079df23ff45335fe66e083d58df
 
 COCOAPODS: 1.6.1

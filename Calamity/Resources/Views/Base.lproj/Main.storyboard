@@ -13,6 +13,9 @@
         <array key="DomCasual.ttf">
             <string>DomCasualNormal</string>
         </array>
+        <array key="Lasco-Bold.otf">
+            <string>Lasco-Bold</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Landing Controller-->
@@ -44,10 +47,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PBe-jT-68o">
                                 <rect key="frame" x="384" y="334" width="256" height="100"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="30"/>
                                 <state key="normal" title="Настройки"/>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="20"/>
                                 </variation>
                                 <connections>
                                     <action selector="settingsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Vhb-cB-psP"/>
@@ -56,10 +59,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q9N-Eg-MFg">
                                 <rect key="frame" x="384" y="444" width="256" height="100"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="30"/>
                                 <state key="normal" title="Титры"/>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="20"/>
                                 </variation>
                                 <connections>
                                     <action selector="creditsPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="Ey9-MG-H7c"/>
@@ -68,10 +71,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-5H-doa">
                                 <rect key="frame" x="384" y="224" width="256" height="100"/>
                                 <color key="backgroundColor" red="0.2666666667" green="0.85490196080000003" blue="0.36470588240000001" alpha="0.69789832750000003" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="30"/>
                                 <state key="normal" title="СТАРТ"/>
                                 <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="Lasco-Bold" family="Lasco" pointSize="20"/>
                                 </variation>
                                 <connections>
                                     <action selector="startPressed:" destination="mM6-6e-Ifw" eventType="touchUpInside" id="QNZ-Iz-wsT"/>
@@ -126,13 +129,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-0t-dLD" userLabel="Ability 0" customClass="PPPlayerAbilityView">
-                                <rect key="frame" x="20" y="170" width="187" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-zc-NRu" userLabel="Person Icon">
+                                <rect key="frame" x="25" y="27" width="132" height="134"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eGz-zc-NRu" secondAttribute="height" multiplier="66:67" id="NfG-l0-leZ"/>
+                                </constraints>
+                                <state key="normal" image="MagIcon"/>
+                                <connections>
+                                    <action selector="magePressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="IoU-3J-g6m"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p7u-0t-dLD" userLabel="Ability 0" customClass="PPPlayerAbilityView">
+                                <rect key="frame" x="20" y="170" width="166" height="26"/>
                                 <subviews>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ixx-uM-h6x" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ixx-uM-h6x" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="withIcon">
@@ -146,35 +157,47 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUf-qW-NN0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUf-qW-NN0">
                                         <rect key="frame" x="18" y="1" width="117" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-FI-qp9">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biJ-FI-qp9">
                                         <rect key="frame" x="127" y="1" width="32" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="God-Kb-ck0"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="MUf-qW-NN0" firstAttribute="leading" secondItem="p7u-0t-dLD" secondAttribute="leading" constant="18" id="0Xx-Uc-oPt"/>
+                                    <constraint firstAttribute="bottom" secondItem="biJ-FI-qp9" secondAttribute="bottom" constant="-1" id="4sG-oe-Bfe"/>
+                                    <constraint firstItem="biJ-FI-qp9" firstAttribute="top" secondItem="p7u-0t-dLD" secondAttribute="top" constant="1" id="68Q-Cy-VtF"/>
+                                    <constraint firstItem="Ixx-uM-h6x" firstAttribute="top" secondItem="p7u-0t-dLD" secondAttribute="top" id="Huk-zn-BXK"/>
+                                    <constraint firstAttribute="bottom" secondItem="MUf-qW-NN0" secondAttribute="bottom" constant="-1" id="ITK-Os-xSd"/>
+                                    <constraint firstItem="MUf-qW-NN0" firstAttribute="top" secondItem="p7u-0t-dLD" secondAttribute="top" constant="1" id="KXL-18-hPG"/>
+                                    <constraint firstAttribute="trailing" secondItem="MUf-qW-NN0" secondAttribute="trailing" constant="31" id="Sjd-Zr-SQ4"/>
+                                    <constraint firstAttribute="trailing" secondItem="biJ-FI-qp9" secondAttribute="trailing" constant="7" id="Vr2-i0-hZa"/>
+                                    <constraint firstItem="Ixx-uM-h6x" firstAttribute="leading" secondItem="p7u-0t-dLD" secondAttribute="leading" id="WLY-TC-4Fu"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ixx-uM-h6x" secondAttribute="trailing" id="Xmo-l1-7A8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ixx-uM-h6x" secondAttribute="bottom" id="asg-6k-6Yh"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="nameLabel" destination="MUf-qW-NN0" id="HKz-mU-iZZ"/>
                                     <outlet property="progressBar" destination="Ixx-uM-h6x" id="3aX-Cc-YDf"/>
                                     <outlet property="valueLabel" destination="biJ-FI-qp9" id="Pro-a2-Fs4"/>
                                 </connections>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1wJ-yJ-Rv6" userLabel="Ability 1" customClass="PPPlayerAbilityView">
-                                <rect key="frame" x="20" y="203" width="187" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wJ-yJ-Rv6" userLabel="Ability 1" customClass="PPPlayerAbilityView">
+                                <rect key="frame" x="20" y="202" width="166" height="26"/>
                                 <subviews>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Bi-fp-mmU" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Bi-fp-mmU" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="style">
@@ -188,35 +211,47 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-z8-O91">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4r-z8-O91">
                                         <rect key="frame" x="18" y="1" width="117" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-km-mwA">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4hZ-km-mwA">
                                         <rect key="frame" x="127" y="1" width="32" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="DrH-4h-L6P"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="g4r-z8-O91" secondAttribute="trailing" constant="31" id="2OE-Gr-ksH"/>
+                                    <constraint firstItem="g4r-z8-O91" firstAttribute="leading" secondItem="1wJ-yJ-Rv6" secondAttribute="leading" constant="18" id="6Kx-oQ-ta7"/>
+                                    <constraint firstAttribute="bottom" secondItem="g4r-z8-O91" secondAttribute="bottom" constant="-1" id="FDx-eT-gM0"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Bi-fp-mmU" secondAttribute="trailing" id="Fb8-JG-ag9"/>
+                                    <constraint firstAttribute="bottom" secondItem="6Bi-fp-mmU" secondAttribute="bottom" id="J7t-67-9IJ"/>
+                                    <constraint firstItem="6Bi-fp-mmU" firstAttribute="leading" secondItem="1wJ-yJ-Rv6" secondAttribute="leading" id="TW6-iP-LzL"/>
+                                    <constraint firstItem="4hZ-km-mwA" firstAttribute="top" secondItem="1wJ-yJ-Rv6" secondAttribute="top" constant="1" id="cpJ-ht-jCl"/>
+                                    <constraint firstAttribute="bottom" secondItem="4hZ-km-mwA" secondAttribute="bottom" constant="-1" id="kl4-da-4rz"/>
+                                    <constraint firstItem="g4r-z8-O91" firstAttribute="top" secondItem="1wJ-yJ-Rv6" secondAttribute="top" constant="1" id="n5R-da-NZL"/>
+                                    <constraint firstAttribute="trailing" secondItem="4hZ-km-mwA" secondAttribute="trailing" constant="7" id="nfe-Bg-IgY"/>
+                                    <constraint firstItem="6Bi-fp-mmU" firstAttribute="top" secondItem="1wJ-yJ-Rv6" secondAttribute="top" id="o05-zt-DLN"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="nameLabel" destination="g4r-z8-O91" id="LSz-8U-6k6"/>
                                     <outlet property="progressBar" destination="6Bi-fp-mmU" id="zOO-HG-3Oa"/>
                                     <outlet property="valueLabel" destination="4hZ-km-mwA" id="JoM-ZU-1Hn"/>
                                 </connections>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kba-bG-N7C" userLabel="Ability 2" customClass="PPPlayerAbilityView">
-                                <rect key="frame" x="20" y="235" width="187" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kba-bG-N7C" userLabel="Ability 2" customClass="PPPlayerAbilityView">
+                                <rect key="frame" x="20" y="234" width="166" height="26"/>
                                 <subviews>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-S2-jd1" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS8-S2-jd1" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="style">
@@ -230,35 +265,47 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3X-2Y-TiT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3X-2Y-TiT">
                                         <rect key="frame" x="18" y="1" width="117" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9d-do-Ije">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9d-do-Ije">
                                         <rect key="frame" x="127" y="1" width="32" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="msD-8u-EpC"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="AS8-S2-jd1" firstAttribute="top" secondItem="kba-bG-N7C" secondAttribute="top" id="6Me-4B-Nla"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9d-do-Ije" secondAttribute="trailing" constant="7" id="JNy-Y8-3RR"/>
+                                    <constraint firstAttribute="trailing" secondItem="AS8-S2-jd1" secondAttribute="trailing" id="VHZ-Qi-VU5"/>
+                                    <constraint firstItem="O3X-2Y-TiT" firstAttribute="leading" secondItem="kba-bG-N7C" secondAttribute="leading" constant="18" id="VlU-l5-ui7"/>
+                                    <constraint firstItem="H9d-do-Ije" firstAttribute="top" secondItem="kba-bG-N7C" secondAttribute="top" constant="1" id="W3Q-lz-bMG"/>
+                                    <constraint firstAttribute="bottom" secondItem="AS8-S2-jd1" secondAttribute="bottom" id="Yw5-ha-i9n"/>
+                                    <constraint firstAttribute="trailing" secondItem="O3X-2Y-TiT" secondAttribute="trailing" constant="31" id="ZmA-4y-IgT"/>
+                                    <constraint firstItem="AS8-S2-jd1" firstAttribute="leading" secondItem="kba-bG-N7C" secondAttribute="leading" id="ed2-1Q-U42"/>
+                                    <constraint firstAttribute="bottom" secondItem="O3X-2Y-TiT" secondAttribute="bottom" constant="-1" id="oIz-RJ-YOy"/>
+                                    <constraint firstItem="O3X-2Y-TiT" firstAttribute="top" secondItem="kba-bG-N7C" secondAttribute="top" constant="1" id="xRm-Cr-eb3"/>
+                                    <constraint firstAttribute="bottom" secondItem="H9d-do-Ije" secondAttribute="bottom" constant="-1" id="yKZ-h7-pS4"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="nameLabel" destination="O3X-2Y-TiT" id="wXC-lv-VhF"/>
                                     <outlet property="progressBar" destination="AS8-S2-jd1" id="CEf-hA-92Z"/>
                                     <outlet property="valueLabel" destination="H9d-do-Ije" id="9ao-dZ-0kU"/>
                                 </connections>
                             </view>
-                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ygY-BI-QHc" userLabel="Ability 3" customClass="PPPlayerAbilityView">
-                                <rect key="frame" x="20" y="268" width="187" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygY-BI-QHc" userLabel="Ability 3" customClass="PPPlayerAbilityView">
+                                <rect key="frame" x="20" y="266" width="166" height="26"/>
                                 <subviews>
-                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IB8-1Y-gbh" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IB8-1Y-gbh" customClass="ProgressBarView" customModule="Calamity" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="166" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="style">
@@ -272,38 +319,42 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-wX-yZ2">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Телекинез" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xh-wX-yZ2">
                                         <rect key="frame" x="18" y="1" width="117" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dh-kF-ZbH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Dh-kF-ZbH">
                                         <rect key="frame" x="127" y="1" width="32" height="26"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="75f-mW-K2C"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IB8-1Y-gbh" firstAttribute="top" secondItem="ygY-BI-QHc" secondAttribute="top" id="5Rr-bW-aTK"/>
+                                    <constraint firstAttribute="bottom" secondItem="8xh-wX-yZ2" secondAttribute="bottom" constant="-1" id="94s-4h-9To"/>
+                                    <constraint firstAttribute="bottom" secondItem="IB8-1Y-gbh" secondAttribute="bottom" id="D2q-31-rWo"/>
+                                    <constraint firstAttribute="trailing" secondItem="8xh-wX-yZ2" secondAttribute="trailing" constant="31" id="DzI-ce-yIs"/>
+                                    <constraint firstItem="5Dh-kF-ZbH" firstAttribute="top" secondItem="ygY-BI-QHc" secondAttribute="top" constant="1" id="Ek2-3z-Zjx"/>
+                                    <constraint firstItem="IB8-1Y-gbh" firstAttribute="leading" secondItem="ygY-BI-QHc" secondAttribute="leading" id="H6R-76-ZEc"/>
+                                    <constraint firstAttribute="trailing" secondItem="IB8-1Y-gbh" secondAttribute="trailing" id="Hi4-kn-ACa"/>
+                                    <constraint firstItem="8xh-wX-yZ2" firstAttribute="leading" secondItem="ygY-BI-QHc" secondAttribute="leading" constant="18" id="bjc-EH-ia3"/>
+                                    <constraint firstItem="8xh-wX-yZ2" firstAttribute="top" secondItem="ygY-BI-QHc" secondAttribute="top" constant="1" id="cnw-rg-iXl"/>
+                                    <constraint firstAttribute="trailing" secondItem="5Dh-kF-ZbH" secondAttribute="trailing" constant="7" id="ns5-da-KY5"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Dh-kF-ZbH" secondAttribute="bottom" constant="-1" id="wcV-OP-tK1"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="nameLabel" destination="8xh-wX-yZ2" id="CgQ-4D-jHe"/>
                                     <outlet property="progressBar" destination="IB8-1Y-gbh" id="wUX-bJ-vuK"/>
                                     <outlet property="valueLabel" destination="5Dh-kF-ZbH" id="NGX-ch-IAA"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGz-zc-NRu">
-                                <rect key="frame" x="25" y="27" width="132" height="134"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="eGz-zc-NRu" secondAttribute="height" multiplier="66:67" id="NfG-l0-leZ"/>
-                                </constraints>
-                                <state key="normal" image="MagIcon"/>
-                                <connections>
-                                    <action selector="magePressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="IoU-3J-g6m"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wbJ-CU-eUg" userLabel="Big City 0" customClass="PPCityView">
                                 <rect key="frame" x="456" y="208" width="144" height="199"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1119,21 +1170,37 @@
                                     <outlet property="progressBar" destination="veM-jM-pec" id="C3S-18-tUR"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-FE-WhI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JdA-FE-WhI">
                                 <rect key="frame" x="783" y="158" width="218" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="JdA-FE-WhI" secondAttribute="height" multiplier="218:57" id="EcH-dx-3ha"/>
+                                    <constraint firstAttribute="height" constant="57" id="PeQ-E4-Ck6">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="54"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.60784313729999995" green="0.61960784310000006" blue="0.63529411759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="1" height="1"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="30"/>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itN-qr-FhJ">
-                                <rect key="frame" x="8" y="702" width="244" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itN-qr-FhJ">
+                                <rect key="frame" x="8" y="705" width="231" height="54"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.36105617089999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="itN-qr-FhJ" secondAttribute="height" multiplier="244:57" id="965-LI-gQB"/>
+                                    <constraint firstAttribute="height" constant="54" id="WUz-MB-JoD">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="35"/>
+                                    </constraint>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="46"/>
                                 <state key="normal" title="СПАТЬ"/>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="plusHour:" destination="EdJ-X8-34u" eventType="touchUpInside" id="ird-pZ-or3"/>
                                 </connections>
@@ -1148,9 +1215,14 @@
                                     <action selector="libraryPressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="Qhy-6S-mwj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s07-FY-Bm6" userLabel="Update Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s07-FY-Bm6" userLabel="Update Button">
                                 <rect key="frame" x="8" y="624" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s07-FY-Bm6" secondAttribute="height" multiplier="1:1" id="CC7-PN-SXc"/>
+                                    <constraint firstAttribute="width" constant="70" id="eg0-wI-oHs">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="43"/>
+                                    </constraint>
+                                </constraints>
                                 <state key="normal" image="UpdateIcon"/>
                                 <connections>
                                     <action selector="updatePressed:" destination="EdJ-X8-34u" eventType="touchUpInside" id="rBh-iT-0Wu"/>
@@ -1159,12 +1231,34 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="1wJ-yJ-Rv6" firstAttribute="height" secondItem="p7u-0t-dLD" secondAttribute="height" id="0pp-g6-huU"/>
                             <constraint firstItem="P2a-jm-iF6" firstAttribute="height" secondItem="Edv-2c-G2r" secondAttribute="height" multiplier="126/768" id="10H-sG-Y56"/>
+                            <constraint firstItem="JdA-FE-WhI" firstAttribute="top" secondItem="P2a-jm-iF6" secondAttribute="bottom" constant="12" id="18U-Kh-QXM"/>
                             <constraint firstItem="eGz-zc-NRu" firstAttribute="top" secondItem="4Sp-SO-6hW" secondAttribute="top" constant="7" id="3hf-PR-DHo"/>
+                            <constraint firstItem="ygY-BI-QHc" firstAttribute="trailing" secondItem="kba-bG-N7C" secondAttribute="trailing" id="5iZ-MB-J39"/>
+                            <constraint firstItem="itN-qr-FhJ" firstAttribute="leading" secondItem="4Sp-SO-6hW" secondAttribute="leading" constant="8" id="5qL-SN-o07"/>
+                            <constraint firstItem="4Sp-SO-6hW" firstAttribute="bottom" secondItem="itN-qr-FhJ" secondAttribute="bottom" constant="9" id="6Cn-OY-poA"/>
+                            <constraint firstItem="p7u-0t-dLD" firstAttribute="height" secondItem="eGz-zc-NRu" secondAttribute="height" multiplier="26/134" id="Ez5-2n-QtO"/>
+                            <constraint firstItem="kba-bG-N7C" firstAttribute="top" secondItem="1wJ-yJ-Rv6" secondAttribute="bottom" constant="6" id="MZI-Gk-Hrx"/>
                             <constraint firstItem="4Sp-SO-6hW" firstAttribute="trailing" secondItem="P2a-jm-iF6" secondAttribute="trailing" constant="20" id="NoS-3l-H4m"/>
+                            <constraint firstItem="1wJ-yJ-Rv6" firstAttribute="trailing" secondItem="p7u-0t-dLD" secondAttribute="trailing" id="OD4-tR-uO4"/>
+                            <constraint firstItem="kba-bG-N7C" firstAttribute="trailing" secondItem="1wJ-yJ-Rv6" secondAttribute="trailing" id="Q5P-eB-pNU"/>
+                            <constraint firstItem="ygY-BI-QHc" firstAttribute="leading" secondItem="kba-bG-N7C" secondAttribute="leading" id="Qec-Su-gus"/>
                             <constraint firstItem="eGz-zc-NRu" firstAttribute="height" secondItem="Edv-2c-G2r" secondAttribute="height" multiplier="134/768" id="RlH-hv-3QB"/>
+                            <constraint firstItem="1wJ-yJ-Rv6" firstAttribute="top" secondItem="p7u-0t-dLD" secondAttribute="bottom" constant="6" id="SSi-JE-Fev"/>
                             <constraint firstItem="P2a-jm-iF6" firstAttribute="top" secondItem="4Sp-SO-6hW" secondAttribute="top" id="TaS-02-RF8"/>
+                            <constraint firstItem="ygY-BI-QHc" firstAttribute="height" secondItem="p7u-0t-dLD" secondAttribute="height" id="YLP-kp-Tdi"/>
+                            <constraint firstItem="kba-bG-N7C" firstAttribute="leading" secondItem="1wJ-yJ-Rv6" secondAttribute="leading" id="acp-B4-mcS"/>
+                            <constraint firstItem="p7u-0t-dLD" firstAttribute="width" secondItem="eGz-zc-NRu" secondAttribute="width" multiplier="166/132" id="afT-IN-B4E"/>
+                            <constraint firstItem="ygY-BI-QHc" firstAttribute="top" secondItem="kba-bG-N7C" secondAttribute="bottom" constant="6" id="ecM-Kj-LZF"/>
+                            <constraint firstItem="kba-bG-N7C" firstAttribute="height" secondItem="p7u-0t-dLD" secondAttribute="height" id="lEC-Y6-uoV"/>
+                            <constraint firstItem="itN-qr-FhJ" firstAttribute="top" secondItem="s07-FY-Bm6" secondAttribute="bottom" constant="11" id="mUi-zE-Uot"/>
+                            <constraint firstItem="1wJ-yJ-Rv6" firstAttribute="leading" secondItem="p7u-0t-dLD" secondAttribute="leading" id="nq8-z4-ZuD"/>
                             <constraint firstItem="eGz-zc-NRu" firstAttribute="leading" secondItem="4Sp-SO-6hW" secondAttribute="leading" constant="25" id="qFo-ys-Y5H"/>
+                            <constraint firstItem="p7u-0t-dLD" firstAttribute="top" secondItem="eGz-zc-NRu" secondAttribute="bottom" constant="9" id="upn-Yk-Pe9"/>
+                            <constraint firstItem="4Sp-SO-6hW" firstAttribute="trailing" secondItem="JdA-FE-WhI" secondAttribute="trailing" constant="23" id="wFh-DS-Zzc"/>
+                            <constraint firstItem="p7u-0t-dLD" firstAttribute="leading" secondItem="eGz-zc-NRu" secondAttribute="leading" constant="-5" id="zIj-6A-LS2"/>
+                            <constraint firstItem="s07-FY-Bm6" firstAttribute="leading" secondItem="4Sp-SO-6hW" secondAttribute="leading" constant="8" id="zsv-KY-6Ae"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Sp-SO-6hW"/>
                     </view>

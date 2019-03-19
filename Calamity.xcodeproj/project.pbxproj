@@ -367,19 +367,19 @@
 				75C133FE21F5DE1A00AD796C /* Assets.xcassets */,
 				75C1340921F5E1D500AD796C /* Fonts */,
 				75C1341421F5E1D500AD796C /* GameObjects */,
-				75C133F221F5DAD400AD796C /* plists */,
+				75C133F221F5DAD400AD796C /* Plists */,
 				75C1340D21F5E1D500AD796C /* Sounds */,
 				75C1340221F5DE3500AD796C /* Views */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		75C133F221F5DAD400AD796C /* plists */ = {
+		75C133F221F5DAD400AD796C /* Plists */ = {
 			isa = PBXGroup;
 			children = (
 				75C133F321F5DAD400AD796C /* Info.plist */,
 			);
-			path = plists;
+			path = Plists;
 			sourceTree = "<group>";
 		};
 		75C1340221F5DE3500AD796C /* Views */ = {
@@ -559,14 +559,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Calamity/Pods-Calamity-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/Mantle/Mantle.framework",
 				"${BUILT_PRODUCTS_DIR}/R.swift.Library/Rswift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mantle.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Rswift.framework",
 			);
