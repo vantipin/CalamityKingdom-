@@ -25,17 +25,33 @@ import UIKit
     let layerTagKey = "tag"
     
     let smallIconSize: CGFloat = 32
-    let bgImageViewTag = 334
+    let smallIconAspect = CGFloat(16) / CGFloat(13)
+    
     let iconLayerTag = 335
-    let progressLayerTag = 336
     
     let smallProgressInset = UIEdgeInsets(top: 6, left: 9, bottom: 6, right: 9)
     let middleProgressInset = UIEdgeInsets(top: 12, left: 34, bottom: 12, right: 34)
     let bigProgressInset = UIEdgeInsets(top: 22, left: 60, bottom: 22, right: 60)
     
+    private lazy var backgroundView: UIImageView = {
+        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleToFill
+        view.backgroundColor = backgroundColor
+        return view
+    }()
+    
+    private lazy var progressLayerView: UIImageView = {
+        let view = UIImageView(frame: CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = .scaleToFill
+        view.backgroundColor = backgroundColor
+        return view
+    }()
+    
     private var progress: CGFloat = 0
     
-    @IBInspectable var withIcon: Int = 0
+    @IBInspectable var withIcon: Bool = false
 
     @IBInspectable open var style: Int = 0 {
         didSet {
@@ -57,28 +73,28 @@ import UIKit
     }
     private var _icon: ProgressViewIcon = .tele
     
-    func setProgress(_ progress: CGFloat, animated: Bool = false, duration: CGFloat = 0.2) {
-        self.progress = progress
-        
-        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView,
-            let progressLayerView = bgImageView.viewWithTag(progressLayerTag) as? UIImageView else { return }
-
-        let inset: UIEdgeInsets
-        
+    func progressInset() -> UIEdgeInsets {
         switch _style {
         case .small:
-            inset = smallProgressInset
+            return smallProgressInset
         case .middle:
-            inset = middleProgressInset
+            return middleProgressInset
         case .big:
-            inset = bigProgressInset
+            return bigProgressInset
         }
+    }
+    
+    func setProgress(_ progress: CGFloat, animated: Bool = false, duration: CGFloat = 0.2) {
+        self.progress = progress
+
+        let inset = progressInset()
         
-        let elementFrame: CGRect = bgImageView.layer.bounds
+        let elementFrame: CGRect = backgroundView.layer.bounds
         let finalFrame = CGRect(x: inset.left, y: inset.top, width: (elementFrame.size.width - inset.left - inset.right) * progress, height: elementFrame.size.height - inset.top - inset.bottom)
         
-        UIView.animate(withDuration: TimeInterval(animated ? duration : 0.0), delay: 0.0, options: .curveLinear, animations: {
-            progressLayerView.frame = finalFrame
+        UIView.animate(withDuration: TimeInterval(animated ? duration : 0.0), delay: 0.0, options: .curveLinear, animations: { [weak self] in
+            guard let self = self else { return }
+            self.progressLayerView.frame = finalFrame
         })
     }
     
@@ -99,8 +115,40 @@ import UIKit
         initialize()
     }
     
+    func viewsDictionary() -> [String : Any] {
+        let viewsDictionary = [
+            "backgroundView" : backgroundView,
+            "progressLayerView" : progressLayerView
+        ]
+        
+        var viewsMutableDictionary: [String : Any] = [:]
+        
+        viewsDictionary.forEach { (key, obj) in
+            viewsMutableDictionary[key.replacingOccurrences(of: "self.", with: "")] = obj
+        }
+        
+        return viewsMutableDictionary
+    }
+    
+    func viewMetrics() -> [String : Any]? {
+        let inset = progressInset()
+        
+        return [
+            "leftPadding": NSNumber(value: Float(inset.left)),
+            "rightPadding": NSNumber(value: Float(inset.right)),
+            "topPadding": NSNumber(value: Float(inset.top)),
+            "botPadding": NSNumber(value: Float(inset.bottom)),
+            "fvHeight": NSNumber(value: Float(progressViewHeight()))
+        ]
+    }
+    
+    func progressViewHeight() -> CGFloat {
+        let inset = progressInset()
+        return backgroundView.bounds.size.height - inset.top - inset.bottom
+    }
+    
     func configureIcon() {
-        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, withIcon > 0 else { return }
+        guard withIcon else { return }
         
         let image: UIImage?
         
@@ -117,7 +165,7 @@ import UIKit
         
         var iconLayer: CALayer? = nil
         
-        for layer in bgImageView.layer.sublayers ?? [] {
+        for layer in backgroundView.layer.sublayers ?? [] {
             let tag: Int = (layer.value(forKey: layerTagKey) as? NSNumber)?.intValue ?? 0
             
             if tag == iconLayerTag {
@@ -130,10 +178,10 @@ import UIKit
             iconLayer = CALayer()
             iconLayer?.backgroundColor = UIColor.clear.cgColor
             iconLayer?.setValue(NSNumber(value: iconLayerTag), forKey: layerTagKey)
-            iconLayer?.frame = CGRect(x: smallIconSize / 2, y: (bgImageView.frame.size.height - smallIconSize) / 2.0, width: smallIconSize, height: smallIconSize)
+            iconLayer?.frame = CGRect(x: smallIconSize / 2, y: (backgroundView.frame.size.height - smallIconSize) / 2.0, width: smallIconSize, height: smallIconSize)
             
             if let iconLayer = iconLayer {
-                bgImageView.layer.addSublayer(iconLayer)
+                backgroundView.layer.addSublayer(iconLayer)
             }
         }
         
@@ -141,44 +189,23 @@ import UIKit
     }
     
     func configureProgress() {
-        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView else { return }
-        
-        var progressLayerView = bgImageView.viewWithTag(progressLayerTag) as? UIImageView
         var image: UIImage? = nil
-        
-        let inset: UIEdgeInsets
         
         switch _style {
         case .small:
             image = R.image.pbSmallProgress()
-            inset = smallProgressInset
-            
             configureIcon()
         case .middle:
             image = R.image.pbMiddleProgress()
-            inset = middleProgressInset
         case .big:
             image = R.image.pbBigProgress()
-            inset = bigProgressInset
         }
         
-        if progressLayerView == nil {
-            progressLayerView = UIImageView()
-            progressLayerView?.backgroundColor = UIColor.clear
-            progressLayerView?.tag = progressLayerTag
-            
-            if let progressLayerView = progressLayerView {
-                bgImageView.addSubview(progressLayerView)
-            }
-        }
-        
-        progressLayerView?.frame = CGRect(x: inset.left, y: inset.top, width: 0, height: self.bounds.height - inset.top - inset.bottom)
-        
-        progressLayerView?.image = image
+        progressLayerView.image = image
     }
     
     func configureStyle() {
-        guard let bgImageView = viewWithTag(bgImageViewTag) as? UIImageView, bgImageView.image == nil else { return }
+        guard backgroundView.image == nil else { return }
         
         var image: UIImage? = nil
         
@@ -193,7 +220,7 @@ import UIKit
 
         }
         
-        bgImageView.image = image
+        backgroundView.image = image
         
         configureProgress()
     }
@@ -201,20 +228,23 @@ import UIKit
     func initialize() {
         clipsToBounds = false
         backgroundColor = UIColor.clear
-        let bgImageView = UIImageView(frame: .zero)
-        bgImageView.clipsToBounds = false
-        bgImageView.backgroundColor = UIColor.clear
-        bgImageView.tag = bgImageViewTag
-        addSubview(bgImageView)
-        
-        bgImageView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(backgroundView)
         
         let attributes: [NSLayoutConstraint.Attribute] = [.top, .bottom, .right, .left]
         
         NSLayoutConstraint.activate(attributes.map {
-            NSLayoutConstraint(item: bgImageView, attribute: $0, relatedBy: .equal, toItem: self, attribute: $0, multiplier: 1, constant: 0)
+            NSLayoutConstraint(item: backgroundView, attribute: $0, relatedBy: .equal, toItem: self, attribute: $0, multiplier: 1, constant: 0)
         })
         
-        bgImageView.contentMode = .scaleToFill
+        backgroundView.addSubview(progressLayerView)
+        
+        let inset = progressInset()
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: progressLayerView, attribute: .top, relatedBy: .equal, toItem: backgroundView, attribute: .top, multiplier: 1, constant: inset.top),
+            NSLayoutConstraint(item: progressLayerView, attribute: .bottom, relatedBy: .equal, toItem: backgroundView, attribute: .bottom, multiplier: 1, constant: -inset.bottom),
+            NSLayoutConstraint(item: progressLayerView, attribute: .left, relatedBy: .equal, toItem: backgroundView, attribute: .left, multiplier: 1, constant: inset.left),
+//            NSLayoutConstraint(item: progressLayerView, attribute: .width, relatedBy: .equal, toItem: backgroundView, attribute: .leading, multiplier: 1, constant: 0)
+            ])
     }
 }

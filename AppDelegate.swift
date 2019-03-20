@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//        for family in UIFont.familyNames {
+//            print("\(family): -\(UIFont.fontNames(forFamilyName: family))")
+//        }
         
         return true
     }

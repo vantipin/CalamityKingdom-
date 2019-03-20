@@ -51,7 +51,7 @@ class ColourfulProgressView: UIView {
         label.text = "0"
         label.textColor = self.labelTextColor
         
-        if let font = UIFont(name: "Helvetica Neue", size: 12) {
+        if let font = R.font.lasco(size: 12) {
             label.font = font
         }
         
@@ -65,7 +65,7 @@ class ColourfulProgressView: UIView {
         label.text = String(format: "%li", maximumValue)
         label.textColor = labelTextColor
         
-        if let font = UIFont(name: "Helvetica Neue", size: 12) {
+        if let font = R.font.lasco(size: 12) {
             label.font = font
         }
         
@@ -266,7 +266,6 @@ class ColourfulProgressView: UIView {
         return [
             "bPadding": NSNumber(value: borderLineWidth),
             "mPadding": NSNumber(value: ColourfulProgressViewTopMargin),
-            "bvHeight": NSNumber(value: Float(backgroundViewHeight())),
             "fvHeight": NSNumber(value: Float(fillingViewHeight()))
         ]
     }
