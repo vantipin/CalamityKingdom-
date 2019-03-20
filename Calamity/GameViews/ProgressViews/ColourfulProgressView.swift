@@ -122,9 +122,7 @@ class ColourfulProgressView: UIView {
             
         backgroundView.addConstraints(constraints)
         
-        if let attribute = NSLayoutConstraint.Attribute(rawValue: 0) {
-            fillingWidthConstraint = NSLayoutConstraint(item: fillingView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: attribute, multiplier: 1, constant: fillingViewWidth())
-        }
+        fillingWidthConstraint = NSLayoutConstraint(item: fillingView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: fillingViewWidth())
         
         if let fillingWidthConstraint = fillingWidthConstraint {
             fillingView.addConstraint(fillingWidthConstraint)
