@@ -134,8 +134,10 @@ struct Sheet: OptionSet {
 enum GameNotificationName: String {
     case clearDanger = "clearDanger"
     case clearEvent = "clearEvent"
-    case update = "update"
-    
+    case updateUI = "updateUI"
+    case clearUI = "clearUI"
+    case timerTick = "timerTick"
+
     func notificationName() -> NSNotification.Name {
         return NSNotification.Name(rawValue: self.rawValue)
     }
@@ -265,9 +267,9 @@ enum EventType: Int {
     }
 }
 
-enum GameEnding: Int {
-    case won = 1
-    case defeat = 3
+enum GameEnding: String {
+    case won = "1"
+    case defeat = "3"
 }
 
 enum ParseKey: String {

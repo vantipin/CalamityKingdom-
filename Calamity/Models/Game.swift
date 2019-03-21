@@ -306,6 +306,6 @@ class Game: NSObject {
     }
     
     public func checkState() {
-        NotificationCenter.default.post(name: GameNotificationName.update.notificationName(), object: nil)
+        NotificationCenter.default.post(name: GameNotificationName.updateUI.notificationName(), object: nil)
     }
 }
