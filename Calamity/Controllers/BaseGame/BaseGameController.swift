@@ -39,7 +39,9 @@ class BaseGameController: BaseController {
     // MARK: - Actions
     
     @IBAction func magePressed(_ sender: Any) {
-        
+        if let controller = SettingsController.controller(withExit: true) {
+            self.present(controller, animated: true, completion: nil)
+        }
     }
     
     @IBAction func updatePressed(_ sender: Any) {

@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            print("\(family): -\(UIFont.fontNames(forFamilyName: family))")
 //        }
         
+        if !UIDevice.current.hasHapticFeedback {
+            Settings.shared.isVibrationOn = false
+        }
+        
         return true
     }
 

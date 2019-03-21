@@ -13,21 +13,26 @@ class LandingController: BaseController {
     @IBOutlet var controlButtons: [UIButton]!
     @IBOutlet weak var progressBar: ProgressBarView!
     
+    var withUpdate: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         progressBar.setProgress(0)
         
-        controlButtons.forEach { (button) in
-            button.alpha = 0
+        if withUpdate {
+            controlButtons.forEach { (button) in
+                button.alpha = 0
+            }
         }
         
         progressBar.alpha = 0
     }
     
-    class func show(){
+    class func show(withUpdate: Bool = true) {
         if let controller = R.storyboard.main.ppLandingControllerID(), let window = UIApplication.shared.keyWindow, let root = window.rootViewController {
             Settings.shared.isMusicOn = Settings.shared.isMusicOn
+            controller.withUpdate = withUpdate
             
             UIView.transition(from: root.view,
                               to: controller.view,
@@ -44,7 +49,7 @@ class LandingController: BaseController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        guard !wasUpdated else { return }
+        guard !wasUpdated, withUpdate else { return }
     
         wasUpdated = true
         
@@ -78,7 +83,7 @@ class LandingController: BaseController {
     }
 
     @IBAction func settingsPressed(_ sender: Any) {
-        if let controller = R.storyboard.settings.settingsController() {
+        if let controller = SettingsController.controller() {
             self.present(controller, animated: true, completion: nil)
         }
     }

@@ -32,6 +32,11 @@ final class Settings {
         set { UserDefaults.standard.set(!newValue, forKey: "settings.sounds.off") }
     }
     
+    var isVibrationOn: Bool {
+        get { return !UserDefaults.standard.bool(forKey: "settings.vibration.off") }
+        set { UserDefaults.standard.set(!newValue, forKey: "settings.vibration.off") }
+    }
+    
     func playBackgroundMusic(filename: String) {
         let url = Bundle.main.url(forResource: filename, withExtension: "mp3")
         

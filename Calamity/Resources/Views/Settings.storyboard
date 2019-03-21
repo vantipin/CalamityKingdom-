@@ -30,7 +30,7 @@
                                 <rect key="frame" x="256" y="37.666666666666657" width="300" height="300"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="X0h-yF-EU0">
-                                        <rect key="frame" x="0.0" y="100" width="300" height="200"/>
+                                        <rect key="frame" x="0.0" y="80" width="300" height="220"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="HaN-LA-Z4h">
                                             <size key="itemSize" width="260" height="50"/>
@@ -131,7 +131,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="X0h-yF-EU0" firstAttribute="leading" secondItem="r6U-N8-OSG" secondAttribute="leading" id="2B8-NY-5BW"/>
-                                    <constraint firstItem="X0h-yF-EU0" firstAttribute="top" secondItem="s8E-6Y-kji" secondAttribute="bottom" constant="40" id="CdF-y3-NbG"/>
+                                    <constraint firstItem="X0h-yF-EU0" firstAttribute="top" secondItem="s8E-6Y-kji" secondAttribute="bottom" constant="20" id="CdF-y3-NbG"/>
                                     <constraint firstAttribute="height" constant="300" id="Ggs-te-r9M"/>
                                     <constraint firstAttribute="width" constant="300" id="Ksc-fd-2fA"/>
                                     <constraint firstItem="ebM-Zw-FjV" firstAttribute="leading" secondItem="r6U-N8-OSG" secondAttribute="leading" constant="5" id="MFO-Xr-wUw"/>
@@ -157,6 +157,7 @@
                         <viewLayoutGuide key="safeArea" id="vMH-3c-Uh9"/>
                     </view>
                     <connections>
+                        <outlet property="heightConstaint" destination="Ggs-te-r9M" id="or3-Wv-iaF"/>
                         <outlet property="itemsCollection" destination="X0h-yF-EU0" id="2Ro-2F-tyj"/>
                     </connections>
                 </viewController>
