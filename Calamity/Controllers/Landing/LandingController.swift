@@ -30,7 +30,10 @@ class LandingController: BaseController {
     }
     
     class func show(withUpdate: Bool = true) {
-        if let controller = R.storyboard.main.ppLandingControllerID(), let window = UIApplication.shared.keyWindow, let root = window.rootViewController {
+        if let controller = R.storyboard.main.ppLandingControllerID(),
+            let window = UIApplication.shared.keyWindow,
+            let root = window.rootViewController {
+            
             Settings.shared.isMusicOn = Settings.shared.isMusicOn
             controller.withUpdate = withUpdate
             
@@ -43,7 +46,6 @@ class LandingController: BaseController {
                 controller.skipUpdates = false
             }
         }
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -79,7 +81,7 @@ class LandingController: BaseController {
     // MARK: - Actions
     
     @IBAction func startPressed(_ sender: Any) {
-        
+        BaseGameController.show()
     }
 
     @IBAction func settingsPressed(_ sender: Any) {
@@ -91,6 +93,4 @@ class LandingController: BaseController {
     @IBAction func creditsPressed(_ sender: Any) {
         
     }
-    
-    
 }

@@ -36,7 +36,7 @@ public extension UIDevice {
 }
 
 class SettingsController: BaseController {
-    private let baseHeight: CGFloat = 100
+    private let baseHeight: CGFloat = 110
     private let cellHeight: CGFloat = 50
     
     enum Setting: Int {

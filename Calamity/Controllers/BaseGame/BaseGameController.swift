@@ -15,11 +15,16 @@ class BaseGameController: BaseController {
 
     @IBOutlet var fieldControls: [UIView]!
     @IBOutlet var cityViews: [UIView]!
-    @IBOutlet var playerAbilities: [UIView]!
+    @IBOutlet var playerAbilities: [PlayerAbilityView]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for view in playerAbilities {
+            guard let playerAbility = PlayerAbility(rawValue: view.tag) else { return }
+            view.ability = playerAbility
+        }
+        
         // Do any additional setup after loading the view.
     }
     
@@ -28,13 +33,28 @@ class BaseGameController: BaseController {
         
         guard !skipUpdates else { return }
         
-        
+        parseGame(withUpdateAndAnimation: false)
     }
     
     class func show() {
-        
+        if let controller = R.storyboard.main.baseGameControllerID(),
+            let window = UIApplication.shared.keyWindow,
+            let root = window.rootViewController {
+            
+            UIView.transition(from: root.view,
+                              to: controller.view,
+                              duration: 0.65,
+                              options: .transitionCrossDissolve) { (finished) in
+                                controller.skipUpdates = true
+                                window.rootViewController = controller
+                                controller.skipUpdates = false
+            }
+        }
     }
     
+    func parseGame(withUpdateAndAnimation animated: Bool) {
+        
+    }
 
     // MARK: - Actions
     
@@ -44,6 +64,7 @@ class BaseGameController: BaseController {
         }
     }
     
+    // For test purposes only
     @IBAction func updatePressed(_ sender: Any) {
         
     }
@@ -56,4 +77,10 @@ class BaseGameController: BaseController {
         
     }
 
+}
+
+extension BaseGameController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return fieldContentView
+    }
 }

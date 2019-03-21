@@ -97,10 +97,66 @@ import UIKit
         return view
     }()
     
+    var name: String = "" {
+        didSet {
+            guard name.count > 0, withIcon else {
+                if oldValue.count > 0 {
+                    initialLabel.removeFromSuperview()
+                }
+                return
+            }
+            
+            initialLabel.text = name
+            configureInitialLabel()
+        }
+    }
+    
+    private lazy var initialLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
+        label.textColor = UIColor(red: 1, green: 245 / 255, blue: 202 / 255, alpha: 1)
+        label.textAlignment = .left
+        
+        if let font = R.font.domCasualNormal(size: CGFloat(Int(progressLayerView.bounds.height * 0.9))){
+            label.font = font
+        }
+        
+        return label
+    }()
+    
+    var value: String = "" {
+        didSet {
+            guard value.count > 0, withIcon else {
+                if oldValue.count > 0 {
+                    finalLabel.removeFromSuperview()
+                }
+                return
+            }
+            
+            finalLabel.text = value
+            configureFinalLabel()
+        }
+    }
+    
+    private lazy var finalLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = ""
+        label.textColor = .white
+        label.textAlignment = .left
+        
+        if let font = R.font.domCasualNormal(size: CGFloat(Int(progressLayerView.bounds.height * 0.9))){
+            label.font = font
+        }
+        
+        return label
+    }()
+    
     private var iconLoaded = false
     
     private var progressWidthConstraint: NSLayoutConstraint? = nil
-    private var progress: CGFloat = 100
+    private var progress: CGFloat = 0
     
     @IBInspectable var withIcon: Bool = false {
         didSet {
@@ -172,13 +228,43 @@ import UIKit
         return (backgroundView.bounds.size.width - insets.left - insets.right) * progress
     }
     
+    func configureFinalLabel() {
+        guard finalLabel.superview == nil, withIcon else { return }
+        self.backgroundView.addSubview(finalLabel)
+        
+        let insets = _style.insets()
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: finalLabel, attribute: .top, relatedBy: .equal, toItem: backgroundView, attribute: .top, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: finalLabel, attribute: .bottom, relatedBy: .equal, toItem: backgroundView, attribute: .bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: finalLabel, attribute: .trailing, relatedBy: .equal, toItem: backgroundView, attribute: .trailing, multiplier: 1, constant: -insets.right),
+            NSLayoutConstraint(item: finalLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: finalLabel.font.pointSize * 1.6),
+            ]
+        )
+    }
+    
+    func configureInitialLabel() {
+        guard initialLabel.superview == nil, withIcon else { return }
+        self.backgroundView.addSubview(initialLabel)
+        
+//        let insets = _style.insets()
+        
+        NSLayoutConstraint.activate([
+            NSLayoutConstraint(item: initialLabel, attribute: .top, relatedBy: .equal, toItem: backgroundView, attribute: .top, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: initialLabel, attribute: .bottom, relatedBy: .equal, toItem: backgroundView, attribute: .bottom, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: initialLabel, attribute: .trailing, relatedBy: .equal, toItem: backgroundView, attribute: .trailing, multiplier: 1, constant: 0),
+            NSLayoutConstraint(item: initialLabel, attribute: .leading, relatedBy: .equal, toItem: backgroundView, attribute: .leading, multiplier: 1, constant: backgroundView.bounds.height * smallIconAspect / 2 + 2),
+            ]
+        )
+    }
+    
     func configureIcon() {
         guard withIcon else { return }
         
         iconView.removeFromSuperview()
         backgroundView.addSubview(iconView)
 
-        iconView.image =  _icon.image()
+        iconView.image = _icon.image()
         
         NSLayoutConstraint.activate([
             NSLayoutConstraint(item: iconView, attribute: .centerY, relatedBy: .equal, toItem: backgroundView, attribute: .centerY, multiplier: 1, constant: 0),
@@ -208,6 +294,7 @@ import UIKit
     }
     
     private func configureProgressConstraints() {
+        progressLayerView.removeConstraints(progressLayerView.constraints)
         progressLayerView.removeFromSuperview()
         backgroundView.insertSubview(progressLayerView, at: 0)
         
