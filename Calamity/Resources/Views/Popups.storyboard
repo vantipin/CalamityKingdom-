@@ -21,102 +21,167 @@
         <!--City Info Controller-->
         <scene sceneID="gTc-To-zf3">
             <objects>
-                <viewController storyboardIdentifier="CityInfoControllerId" id="OVu-5a-r1u" customClass="CityInfoController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hJP-CO-aqm" customClass="PPCityView">
-                        <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                <viewController storyboardIdentifier="CityInfoControllerId" modalTransitionStyle="crossDissolve" id="OVu-5a-r1u" customClass="CityInfoController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hJP-CO-aqm">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PopupBg" translatesAutoresizingMaskIntoConstraints="NO" id="UY8-W5-nuH">
-                                <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-1u-VGm">
-                                <rect key="frame" x="39" y="45" width="195" height="203"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vMp-0V-SGH">
-                                <rect key="frame" x="39" y="256" width="685" height="111"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="37"/>
-                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-7I-DpU">
-                                <rect key="frame" x="249" y="51" width="350" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="44"/>
-                                <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LN-q2-4u1">
-                                <rect key="frame" x="678" y="33" width="57" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="ClosePopupIcon"/>
-                            </button>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-3s-Dlf" customClass="ColourfulProgressView" customModule="Calamity" customModuleProvider="target">
-                                <rect key="frame" x="39" y="375" width="685" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="initialFillColor">
-                                        <color key="value" red="0.69019607839999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="oneThirdFillColor">
-                                        <color key="value" red="1" green="0.96690991319999997" blue="0.072569683339999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="finalFillColor">
-                                        <color key="value" red="0.4823529412" green="0.69019607839999997" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="twoThirdsFillColor">
-                                        <color key="value" red="0.39226083579999999" green="0.92827248090000003" blue="0.24482029420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="3"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
-                                        <integer key="value" value="0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                        <integer key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showLabels" value="NO"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
-                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntb-Pb-qbv">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cOJ-cx-JPh">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="748"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gR-B0-vI2" customClass="CityView" customModule="Calamity" customModuleProvider="target">
+                                <rect key="frame" x="127.5" y="135.5" width="769" height="497"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PopupBg" translatesAutoresizingMaskIntoConstraints="NO" id="UY8-W5-nuH">
+                                        <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DHx-1u-VGm">
+                                        <rect key="frame" x="39" y="45" width="195" height="203"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DHx-1u-VGm" secondAttribute="height" multiplier="195:203" id="wW3-lx-TYf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HdC-7I-DpU">
+                                        <rect key="frame" x="249" y="45" width="520" height="66.5"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="30"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="44"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="vMp-0V-SGH">
+                                        <rect key="frame" x="39" y="256" width="691" height="111"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="24"/>
+                                        <color key="textColor" red="1" green="0.96078431369999995" blue="0.79215686269999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="37"/>
+                                        </variation>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9LN-q2-4u1">
+                                        <rect key="frame" x="681" y="41" width="41" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="9LN-q2-4u1" secondAttribute="height" multiplier="1:1" id="31d-FB-P4j"/>
+                                        </constraints>
+                                        <state key="normal" image="ClosePopupIcon"/>
+                                    </button>
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-3s-Dlf" customClass="ColourfulProgressView" customModule="Calamity" customModuleProvider="target">
+                                        <rect key="frame" x="39" y="375" width="691" height="71"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tIv-3s-Dlf" secondAttribute="height" multiplier="691:71" id="74I-Ig-qde"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="initialFillColor">
+                                                <color key="value" red="0.69019607839999997" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="oneThirdFillColor">
+                                                <color key="value" red="1" green="0.96690991319999997" blue="0.072569683339999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="finalFillColor">
+                                                <color key="value" red="0.4823529412" green="0.69019607839999997" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="twoThirdsFillColor">
+                                                <color key="value" red="0.39226083579999999" green="0.92827248090000003" blue="0.24482029420000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="currentValue">
+                                                <integer key="value" value="0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                                <integer key="value" value="100"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="showLabels" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderLineWidth">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="containerColor">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-F7-R77">
+                                        <rect key="frame" x="39" y="375" width="691" height="71"/>
+                                        <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="28"/>
+                                        <color key="textColor" red="0.17254901959999999" green="0.14117647059999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=regular">
+                                            <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="769" id="0eC-mg-7z6"/>
+                                    <constraint firstItem="9LN-q2-4u1" firstAttribute="centerX" secondItem="8gR-B0-vI2" secondAttribute="centerX" multiplier="1403/769" id="0f1-jw-REu"/>
+                                    <constraint firstItem="vMp-0V-SGH" firstAttribute="centerX" secondItem="8gR-B0-vI2" secondAttribute="centerX" id="3Hk-Yd-JZs"/>
+                                    <constraint firstItem="HdC-7I-DpU" firstAttribute="width" secondItem="8gR-B0-vI2" secondAttribute="width" multiplier="520/769" id="7Zh-iQ-Stz"/>
+                                    <constraint firstItem="tIv-3s-Dlf" firstAttribute="centerY" secondItem="8gR-B0-vI2" secondAttribute="centerY" multiplier="821/497" id="9Sh-Y1-jVg"/>
+                                    <constraint firstItem="9LN-q2-4u1" firstAttribute="width" secondItem="UY8-W5-nuH" secondAttribute="width" multiplier="41/769" id="BbH-dZ-aZd"/>
+                                    <constraint firstItem="DHx-1u-VGm" firstAttribute="centerY" secondItem="8gR-B0-vI2" secondAttribute="centerY" multiplier="293/497" id="DUU-IH-kxA"/>
+                                    <constraint firstItem="vMp-0V-SGH" firstAttribute="centerY" secondItem="8gR-B0-vI2" secondAttribute="centerY" multiplier="623/497" id="DnQ-cE-lIr"/>
+                                    <constraint firstItem="HdC-7I-DpU" firstAttribute="top" secondItem="DHx-1u-VGm" secondAttribute="top" id="EoP-W1-Hg4"/>
+                                    <constraint firstItem="4qh-F7-R77" firstAttribute="top" secondItem="tIv-3s-Dlf" secondAttribute="top" id="Hia-6M-VWr"/>
+                                    <constraint firstItem="DHx-1u-VGm" firstAttribute="height" secondItem="8gR-B0-vI2" secondAttribute="height" multiplier="203/497" id="KWM-gk-w0J"/>
+                                    <constraint firstItem="4qh-F7-R77" firstAttribute="bottom" secondItem="tIv-3s-Dlf" secondAttribute="bottom" id="Mc9-ba-cTF"/>
+                                    <constraint firstItem="4qh-F7-R77" firstAttribute="trailing" secondItem="tIv-3s-Dlf" secondAttribute="trailing" id="NpW-KO-L0H"/>
+                                    <constraint firstAttribute="trailing" secondItem="HdC-7I-DpU" secondAttribute="trailing" id="TWM-qj-QgQ"/>
+                                    <constraint firstItem="vMp-0V-SGH" firstAttribute="height" secondItem="UY8-W5-nuH" secondAttribute="height" multiplier="111/497" id="Y0n-Lu-HUm"/>
+                                    <constraint firstItem="tIv-3s-Dlf" firstAttribute="width" secondItem="vMp-0V-SGH" secondAttribute="width" id="Y9e-gL-W05"/>
+                                    <constraint firstAttribute="trailing" secondItem="UY8-W5-nuH" secondAttribute="trailing" id="eE0-vw-Non"/>
+                                    <constraint firstItem="DHx-1u-VGm" firstAttribute="centerX" secondItem="8gR-B0-vI2" secondAttribute="centerX" multiplier="273/769" id="eSp-gp-zjf"/>
+                                    <constraint firstItem="UY8-W5-nuH" firstAttribute="leading" secondItem="8gR-B0-vI2" secondAttribute="leading" id="eg4-dn-Reg"/>
+                                    <constraint firstItem="9LN-q2-4u1" firstAttribute="centerY" secondItem="8gR-B0-vI2" secondAttribute="centerY" multiplier="123/497" id="lBU-Qh-Gah"/>
+                                    <constraint firstItem="tIv-3s-Dlf" firstAttribute="leading" secondItem="vMp-0V-SGH" secondAttribute="leading" id="o1q-ps-Uol"/>
+                                    <constraint firstItem="vMp-0V-SGH" firstAttribute="width" secondItem="UY8-W5-nuH" secondAttribute="width" multiplier="691/769" id="qt3-gH-SKr"/>
+                                    <constraint firstItem="UY8-W5-nuH" firstAttribute="top" secondItem="8gR-B0-vI2" secondAttribute="top" id="qxA-jY-UQR"/>
+                                    <constraint firstAttribute="bottom" secondItem="UY8-W5-nuH" secondAttribute="bottom" id="seh-ip-w4Y"/>
+                                    <constraint firstItem="HdC-7I-DpU" firstAttribute="height" secondItem="DHx-1u-VGm" secondAttribute="height" multiplier="64/195" id="t2U-jO-rNS"/>
+                                    <constraint firstItem="4qh-F7-R77" firstAttribute="leading" secondItem="tIv-3s-Dlf" secondAttribute="leading" id="vJ2-58-B2w"/>
+                                    <constraint firstAttribute="width" secondItem="8gR-B0-vI2" secondAttribute="height" multiplier="769:497" id="zaM-48-JG7"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cityIconImageView" destination="DHx-1u-VGm" id="ryj-i3-5tN"/>
+                                    <outlet property="currLiveLabel" destination="4qh-F7-R77" id="w7q-iZ-KCQ"/>
+                                    <outlet property="descrLabel" destination="vMp-0V-SGH" id="jN7-pW-Cn7"/>
+                                    <outlet property="nameLabel" destination="HdC-7I-DpU" id="8ch-Wo-6Co"/>
+                                    <outlet property="progressBar" destination="tIv-3s-Dlf" id="zC5-S9-nb4"/>
+                                </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4qh-F7-R77">
-                                <rect key="frame" x="56" y="375" width="654" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="DomCasualNormal" family="DomCasual" pointSize="42"/>
-                                <color key="textColor" red="0.17254901959999999" green="0.14117647059999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8gR-B0-vI2" firstAttribute="centerX" secondItem="hJP-CO-aqm" secondAttribute="centerX" id="9C7-1O-JXB"/>
+                            <constraint firstItem="ntb-Pb-qbv" firstAttribute="leading" secondItem="2Jv-rH-rPm" secondAttribute="leading" id="E3v-ia-ufO"/>
+                            <constraint firstItem="2Jv-rH-rPm" firstAttribute="bottom" secondItem="ntb-Pb-qbv" secondAttribute="bottom" id="S3M-ci-SAD"/>
+                            <constraint firstItem="ntb-Pb-qbv" firstAttribute="top" secondItem="2Jv-rH-rPm" secondAttribute="top" id="ZmN-Li-Wup"/>
+                            <constraint firstItem="2Jv-rH-rPm" firstAttribute="trailing" secondItem="ntb-Pb-qbv" secondAttribute="trailing" id="chl-JF-T6w"/>
+                            <constraint firstItem="8gR-B0-vI2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2Jv-rH-rPm" secondAttribute="top" constant="20" id="co0-0N-GW9"/>
+                            <constraint firstItem="2Jv-rH-rPm" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8gR-B0-vI2" secondAttribute="trailing" constant="20" id="hI4-6Y-saD"/>
+                            <constraint firstItem="8gR-B0-vI2" firstAttribute="centerY" secondItem="hJP-CO-aqm" secondAttribute="centerY" id="xrN-YM-3YZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="2Jv-rH-rPm"/>
-                        <connections>
-                            <outlet property="cityIconImageView" destination="DHx-1u-VGm" id="ZRA-io-aSk"/>
-                            <outlet property="currLiveLabel" destination="4qh-F7-R77" id="iAC-62-aia"/>
-                            <outlet property="descrLabel" destination="vMp-0V-SGH" id="v4d-Wg-Wz0"/>
-                            <outlet property="nameLabel" destination="HdC-7I-DpU" id="BdJ-Mq-R9V"/>
-                            <outlet property="progressBar" destination="tIv-3s-Dlf" id="bx2-ol-Kli"/>
-                        </connections>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="769" height="497"/>
+                    <connections>
+                        <outlet property="cityView" destination="8gR-B0-vI2" id="UL5-Va-Egm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MbA-22-i74" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2362" y="500"/>
+            <point key="canvasLocation" x="2361.9140625" y="500"/>
         </scene>
         <!--Danger Progress Controller-->
         <scene sceneID="Flg-gY-4oi">
             <objects>
-                <viewController storyboardIdentifier="PPDangerProgressControllerID" id="U71-XE-Sju" customClass="DangerProgressController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DangerProgressControllerID" id="U71-XE-Sju" customClass="DangerProgressController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dcR-QD-PF7" customClass="PPProgressView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +239,7 @@
         <!--City Danger Controller-->
         <scene sceneID="nc0-lc-qMh">
             <objects>
-                <viewController storyboardIdentifier="PPCityDangerControllerId" id="Xwm-y4-nrI" customClass="CityDangerController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CityDangerControllerId" id="Xwm-y4-nrI" customClass="CityDangerController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6md-OC-zex" customClass="PPDangerView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,7 +454,7 @@
         <!--Library Controller-->
         <scene sceneID="zAA-Nz-wJJ">
             <objects>
-                <viewController storyboardIdentifier="PPLibraryControllerId" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="tFN-VH-lht" customClass="LibraryController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LibraryControllerId" modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="tFN-VH-lht" customClass="LibraryController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0oB-zz-0PR">
                         <rect key="frame" x="0.0" y="0.0" width="699" height="421"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -448,7 +513,7 @@
         <!--Danger Result Controller-->
         <scene sceneID="phY-EH-6QQ">
             <objects>
-                <viewController storyboardIdentifier="PPDangerResultControllerID" id="l5t-FF-2wJ" customClass="DangerResultController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DangerResultControllerID" id="l5t-FF-2wJ" customClass="DangerResultController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OJc-0d-qOX" customClass="PPResultView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -489,7 +554,7 @@
         <!--Event Result Controller-->
         <scene sceneID="Xb5-Ew-jtU">
             <objects>
-                <viewController storyboardIdentifier="PPEventResultControllerID" id="8p5-yv-t65" customClass="EventResultController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventResultControllerID" id="8p5-yv-t65" customClass="EventResultController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F5S-3L-Zbi" customClass="PPEventResultView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -530,7 +595,7 @@
         <!--Event Controller-->
         <scene sceneID="oAS-qO-0z5">
             <objects>
-                <viewController storyboardIdentifier="PPEventViewControllerID" id="WCf-dg-FJw" customClass="EventController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventViewControllerID" id="WCf-dg-FJw" customClass="EventController" customModule="Calamity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fSN-SY-IhI" customClass="PPDangerView">
                         <rect key="frame" x="0.0" y="0.0" width="769" height="497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

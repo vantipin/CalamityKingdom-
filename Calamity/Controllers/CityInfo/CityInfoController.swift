@@ -9,7 +9,8 @@
 import UIKit
 
 class CityInfoController: BaseController {
-
+    @IBOutlet weak var cityView: CityView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
